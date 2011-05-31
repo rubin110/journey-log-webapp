@@ -5,7 +5,7 @@ $cid = $_GET['cid']; // Get the cid
 $possiblecid = array("CP0", "CP1A", "CP1B", "CP2A", "CP2B", "CP3", "CP4", "CP5", "CP6", "CP7", "BA", "BB", "X"); // List of valid cids
 if (in_array($cid, $possiblecid)) // Is it valid? If so go.
 	{
-		setcookie("jlog-cid", $cid, time()+86400); // Set cookies
+		setcookie("jlog-cid", $cid, time()+86400, "/", $_SERVER['SERVER_NAME']); // Set cookies
 	}
 	
 ?>
