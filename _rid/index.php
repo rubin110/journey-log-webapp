@@ -12,7 +12,11 @@ $rid = strtoupper($rid);
 	<title>index</title>
 </head>
 <body>
-	Journey Log n shit - Bind your Phone to your Runner ID</br>
-<?php echo $rid ?>
+	<h1>Journey Log - Runner ID Binding</h1>
+	<p>Your mobile device isn't bound to a Runner ID yet, please fill out the following information to bind.
+	<p>Journey Runner ID:<br><?php echo $rid ?>
+	<p>Journey registered email address:
+		
+	</br>
 </body>
 </html>
