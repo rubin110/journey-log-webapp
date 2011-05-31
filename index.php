@@ -5,6 +5,11 @@
 mobile_device_detect(true,false,true,true,true,true,true,'mobile/',false); */
 $rid = $_GET['rid'];
 $rid = strtoupper($rid);
+if (isset($_COOKIE["jlog-rid"])) // Is rid populated?
+	{ } // If it is do nothing special
+	else {
+		header( "Location: /_rid/?rid=$rid" ) ; // If it isn't push to rid registration
+	};
 ?>
 <html lang="en">
 <head>
