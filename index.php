@@ -4,7 +4,7 @@
 /* require_once('mobile_device_detect.php');
 mobile_device_detect(true,false,true,true,true,true,true,'mobile/',false); */
 $rid = $_GET['rid'];
-$rid = strtoupper($rid)
+$rid = strtoupper($rid);
 ?>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@ $rid = strtoupper($rid)
 	<title>index</title>
 </head>
 <body>
-	Hello</br>
+	Journey Log n shit</br>
 <?php echo $rid ?>
 </body>
 </html>

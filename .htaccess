@@ -1,5 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteRule ^([a-zA-Z0-9]+)/?$ index.php?rid=$1 [L]
+RewriteRule ^([a-zA-Z0-9]+)/?$ index.php?rid=$1 [R]
+RewriteRule ^css(/)?$  style.css [R] 
 </IfModule>
