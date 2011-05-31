@@ -1,0 +1,2 @@
+DROP TABLE jlog_data;
+DROP TABLE jlog_event;
