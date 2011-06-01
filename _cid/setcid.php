@@ -2,12 +2,15 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <?php
 $cid = $_GET['cid']; // Get the cid
-$possiblecid = array("CP0", "CP1A", "CP1B", "CP2A", "CP2B", "CP3", "CP4", "CP5", "CP6", "CP7", "BA", "BB", "X"); // List of valid cids
+$possiblecid = array("CP0", "CP1A", "CP1B", "CP2A", "CP2B", "CP3", "CP4", "CP5", "CP6", "CP7", "BA", "BB"); // List of valid cids
 if (in_array($cid, $possiblecid)) // Is it valid? If so go.
 	{
 		setcookie("jlog-cid", $cid, time()+86400, "/", $_SERVER['SERVER_NAME']); // Set cookies
 	}
-	
+	elseif ($cid == "X") // If $cid is X, then kill the cookie
+	{
+		setcookie("jlog-cid", $cid, time()-86400, "/", $_SERVER['SERVER_NAME'])
+	}
 ?>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@ if (in_array($cid, $possiblecid)) // Is it valid? If so go.
 <body>
 <a href="/_cog">Back</a><br><br>
 <?php
-if (isset($cid)) // Is cid populated?
+if (in_array($cid, $possiblecid)) // Is cid populated?
 	{
 		echo "<p><b><big>Your designation is now set to: $cid</b></big><br><br>"; // State new cid
 	};
