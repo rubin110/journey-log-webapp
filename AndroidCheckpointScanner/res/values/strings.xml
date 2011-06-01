@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, SelectCheckpoint!</string>
+    <string name="app_name">CheckPointScanner</string>
+    <string name="CP1">CP 1</string>
+    <string name="CP2">CP 2</string>
+    <string name="CP3">CP 3</string>
+    <string name="CP4">CP 4</string>
+    <string name="CP5">CP 5</string>
+    <string name="CP6">CP 6</string>
+    <string name="Finish">Finish</string>
+    <string name="Scan">Scan Barcode</string>
+    <string name="DefaultScanText">No scan data loaded yet.</string>
+    <string name="no_runner_id">No Runner ID Scanned</string>
+</resources>
