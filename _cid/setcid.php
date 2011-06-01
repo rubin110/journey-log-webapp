@@ -9,7 +9,7 @@ if (in_array($cid, $possiblecid)) // Is it valid? If so go.
 	}
 	elseif ($cid == "X") // If $cid is X, then kill the cookie
 	{
-		setcookie("jlog-cid", $cid, time()-86400, "/", $_SERVER['SERVER_NAME'])
+		setcookie("jlog-cid", $cid, time()-86400, "/", $_SERVER['SERVER_NAME']);
 	}
 ?>
 <html lang="en">
@@ -23,7 +23,10 @@ if (in_array($cid, $possiblecid)) // Is it valid? If so go.
 if (in_array($cid, $possiblecid)) // Is cid populated?
 	{
 		echo "<p><b><big>Your designation is now set to: $cid</b></big><br><br>"; // State new cid
-	};
+	}
+else {
+	echo "<p><b><big>Your designation isn't set</b></big><br><br>"; // State lack of designation
+}
 	?>
 Set your designation:<br>
 <a href="setcid.php?cid=CP0">CP0</a><br>
