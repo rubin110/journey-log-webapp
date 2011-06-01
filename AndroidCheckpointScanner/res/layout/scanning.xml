@@ -1,6 +1,0 @@
-
-    <FrameLayout android:id="@+id/frameLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
-        <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
-           <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/current_checkpoint" android:text="@string/UnknownCheckpoint"></TextView>
-        </LinearLayout>
-    </FrameLayout>
