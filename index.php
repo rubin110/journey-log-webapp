@@ -17,7 +17,7 @@ if ($jlogCID == 0) {
 } else if (is_valid_checkpoint($jlogCID)) {
 	//this is a valid checkpoint
 	print "Hello checkpoint ".$jlogCID;
-	header("Location: /_cp/?cid=".$jlogCID."&rid=".$runner_id);
+	header("Location: /_checkin.php?rid=".$runner_id);
 }
 
 if (is_valid_runner($jlogRID)) {

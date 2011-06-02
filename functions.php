@@ -67,6 +67,24 @@ function get_checkpoint_name($cid) {
 	return $row[0];
 }
 
+#Check a runner ($rid) into a checkpoint ($cid)
+function check_runner_in($cid, $rid) {
+	$device_id = "some device";
+	$user_agent = $_SERVER['HTTP_USER_AGENT'];
+	$ip_address = $_SERVER['REMOTE_ADDR'];
+	$mysqli = connectdb();
+	$stmt = $mysqli->prepare("INSERT INTO ".CHECKINS_TBL." (runner_id, checkpoint_id, device_id, user_agent, ip_address) VALUES (?,?,?,?,?)");
+	$stmt->bind_param('sisss', $rid, $cid, $device_id, $user_agent, $ip_address);
+	$stmt->execute();
+	if ($stmt->affected_rows > 0) {
+		$stmt->close();
+		return true;
+	} else {
+		$stmt->close();
+		return false;
+	}
+	
+}
 
 
 
