@@ -86,6 +86,17 @@ function check_runner_in($cid, $rid) {
 	
 }
 
+function is_already_checked_in($cid, $rid) {
+	$mysql = connectdb(true);
+	$query = "SELECT * FROM ".CHECKINS_TBL." WHERE checkpoint_id = ".$cid." and runner_id = ".$rid;
+	$result = mysql_query($query, $mysql);
+	if (mysql_num_rows($result) > 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 
 
 

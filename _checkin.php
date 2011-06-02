@@ -18,7 +18,12 @@ print "You wanted to check them in to ".get_checkpoint_name($jlogCID).", right?<
 if (check_runner_in($jlogCID, $runner_id)) {
 	print "Successfully checked in!";
 } else {
-	print "Well shit, something went wrong.";
+	//We should probably check and see if the runner's already been checked in and return a more descriptive message
+	if (is_already_checked_in($jlogCID, $runner_id)) {
+		print "Don't worry, this runner is already checked in here";
+	} else {
+		print "Well shit, something went wrong.";
+	}
 }
 
 
