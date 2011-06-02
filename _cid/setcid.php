@@ -2,6 +2,9 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <?php
 $cid = $_GET['cid']; // Get the cid
+
+$possibleCIDs = get_all_checkpoint_ids();
+
 $possiblecid = array("CP0", "CP1A", "CP1B", "CP2A", "CP2B", "CP3", "CP4", "CP5", "CP6", "CP7", "BA", "BB"); // List of valid cids
 if (in_array($cid, $possiblecid)) // Is it valid? If so go.
 	{

@@ -1,3 +1,12 @@
+<?
+/*
+Thomas's registration app will send us a runner id and an image
+We need to rename image to matche runner_id and place it in images folder
+We should also put an entry in the runners table and check them in to checkpoint 0
+*/
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
 <?php
