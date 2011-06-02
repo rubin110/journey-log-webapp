@@ -64,7 +64,6 @@ function get_checkpoint_name($cid) {
 	$query = "SELECT checkpoint_name FROM ".CHECKPOINTS_TBL." WHERE checkpoint_id = ".$cid;
 	$result = mysql_query($query);
 	$row = mysql_fetch_array($result);
-	print $row[0];
 	return $row[0];
 }
 
