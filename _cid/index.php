@@ -15,7 +15,7 @@ if (isset($_COOKIE["jlog-cid"])) {
 <body>
 <h2>Journey Log</h2>
 <? if (isset($cid)) { ?>
-<p>You are currently registered to <?php print get_checkpoint_name($cid); ?></p>
+<p>You are currently registered to: <?php print get_checkpoint_name($cid); ?></p>
 <? } else { ?>
 <p>You are not currently registered to a checkpoint</p>
 <? } ?>
@@ -24,7 +24,7 @@ if (isset($_COOKIE["jlog-cid"])) {
 <?
 	$all_checkpoints = get_all_checkpoint_ids();
 	foreach ($all_checkpoints as $checkpoint_id) {
-		print '<a href="setcid.php?cid='.$checkpoint_id.'">'.get_checkpoint_name($checkpoint_id).'</a><br />';
+		print '<h3><a href="setcid.php?cid='.$checkpoint_id.'">'.get_checkpoint_name($checkpoint_id).'</a></h3>';
 	}
 ?>
 </p>

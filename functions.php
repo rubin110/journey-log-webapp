@@ -52,7 +52,7 @@ function clean_runner_id($rid) {
 #Return an array of all checkpoint ids
 function get_all_checkpoint_ids() {
 	$mysqli = connectdb();
-	$result = $mysqli->query("SELECT checkpoint_id from ".CHECKPOINTS_TBL." WHERE 1");
+	$result = $mysqli->query("SELECT checkpoint_id from ".CHECKPOINTS_TBL." WHERE 1 ORDER BY checkpoint_name");
 	while ($row = $result->fetch_object()) {
 		$return_array[] = $row->checkpoint_id;
 	}
