@@ -36,6 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	if (is_runner_registered($runner_id)) {
 		print $runner_id." is already registered<br />";
+		//someone could get here if they scan a runner they just tagged but they don't have their cookie set. TODO: handle this!
+		//maybe we can print a form that says "If you tagged this person, enter your serial number here" and then reset their cookie?
 		die();
 	}
 	//show form
