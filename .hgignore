@@ -1,7 +1,0 @@
-syntax: glob
-*deploy.sh
-*.hgignore
-AndroidCheckpointScanner/.git*
-AndroidCheckpointScanner/.gitignore
-AndroidCheckpointScanner/.metadata*
-AndroidCheckpointScanner/bin
