@@ -118,6 +118,8 @@ function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
 		$stmt->close();
 		return false;
 	}
+	//TODO: don't forget to set the "is_tagged" field in the runner table for $runner_id
+	
 }
 
 
