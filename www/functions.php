@@ -35,7 +35,8 @@ function is_valid_checkpoint($id) {
 #Return true if this runner id exists in the database
 function is_valid_runner($id) {
 	$mysqli = connectdb();
-	$result = $mysqli->query("SELECT runner_id from ".RUNNERS_TBL." WHERE runner_id = ".$id);
+	$query = "SELECT runner_id FROM ".RUNNERS_TBL." WHERE runner_id = '".$id."'";
+	$result = $mysqli->query($query);
 	$row_cnt = $result->num_rows;
 	if ($row_cnt > 0) {
 		return true;
@@ -47,6 +48,11 @@ function is_valid_runner($id) {
 #Return runner_id with only alphanumeric characters and all uppercase
 function clean_runner_id($rid) {
 	return strtoupper(preg_replace("/[^a-zA-Z0-9\s]/", "", $rid));
+}
+
+#Return chaser_id with only alphanumeric characters and all uppercase
+function clean_chaser_id($chaser_id) {
+	return strtoupper(preg_replace("/[^a-zA-Z0-9\s]/", "", $chaser_id));
 }
 
 #Return an array of all checkpoint ids
@@ -97,8 +103,57 @@ function is_already_checked_in($cid, $rid) {
 	}
 }
 
+function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
+	$user_agent = $_SERVER['HTTP_USER_AGENT'];
+	$ip_address = $_SERVER['REMOTE_ADDR'];
+	$mysqli = connectdb();
+	$query = "INSERT INTO ".TAGS_TBL." (runner_id, tagger_id, loc_lat, loc_long, user_agent, ip_address) VALUES (?,?,?,?,?,?)";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('ssiiss', $runner_id, $tagger_id, $loc_lat, $loc_long, $user_agent, $ip_address);
+	$stmt->execute();
+	if ($stmt->affected_rows > 0) {
+		$stmt->close();
+		return true;
+	} else {
+		$stmt->close();
+		return false;
+	}
+}
 
 
+function register_runner($runner_id, $runner_name, $email_address) {
+	if (!is_valid_runner($runner_id)) {
+		print "Not a valid runner<br />";
+		return false;
+	}
+	$mysqli = connectdb();
+	$query = "UPDATE ".RUNNERS_TBL." SET player_name=?, player_email=?, is_registered=1 WHERE runner_id=?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('sss',$runner_name, $email_address, $runner_id);
+	$stmt->execute();
+	if ($stmt->affected_rows > 0) {
+		$stmt->close();
+		return true;
+	} else {
+		$stmt->close();
+		return false;
+	}
+}
 
-
-
+function tag_exists($tagger_id, $runner_id) {
+	if (!is_valid_runner($tagger_id) || !is_valid_runner($runner_id)) {
+		print "Invalid runner or tagger id<br/ >";
+		return false;
+	}
+	
+	$mysql = connectdb(true);
+	$query = "SELECT tag_id FROM ".TAGS_TBL." WHERE tagger_id = '".$tagger_id."' AND runner_id = '".$runner_id."'";
+	$result = mysql_query($query, $mysql);
+	if (mysql_num_rows($result) > 0) {
+		return true;
+	} else {
+		return false;
+	}
+	
+	
+}

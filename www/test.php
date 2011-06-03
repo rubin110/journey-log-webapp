@@ -1,9 +1,10 @@
 <?
 include('functions.php');
 
-$all = get_all_checkpoint_ids();
-foreach ($all as $check) {
-	print $check."<br />";
+if (is_valid_runner("123AB")) {
+	print "Valid runner";
+} else {
+	print "invalid runner";
 }
 
 ?>

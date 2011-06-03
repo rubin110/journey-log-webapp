@@ -10,22 +10,37 @@ $runner_id = clean_runner_id($_GET['rid']);
 $jlogCID = $_COOKIE["jlog-cid"];
 $jlogRID = $_COOKIE["jlog-rid"];
 
-if ($jlogCID == 0) {
-	//This is registration
-	print "Welcome to registration";
-	header("Location: /_reg/?rid=".$jlogRID);
-} else if (is_valid_checkpoint($jlogCID)) {
-	//this is a valid checkpoint
-	print "Hello checkpoint ".$jlogCID;
-	header("Location: /_checkin.php?rid=".$runner_id);
+if (empty($jlogRID)) {
+	if (DEBUG) print "RID cookie is empty<br />";
+}
+if (empty($jlogCID)) {
+	if (DEBUG) print "CID cookie is empty<br />";
 }
 
-if (is_valid_runner($jlogRID)) {
-	//This is a runner who tagged someone
-	print "Go to the tag page";
-} else if (empty($jlogRID)) {
-	//This is a runner that hasn't registered, i.e. doesn't have a cookie
-	print "Go to the runner bind page";
+//Is the checkpoint registered in cookies?
+if (empty($jlogCID)) {
+	//Checkpoint is not registered on device
+	if (DEBUG) print "You're not a checkpoint<br />";
+	if (!empty($jlogRID)) {
+		//runner id is set in cookie
+		if (DEBUG) print "You've got a runner id cookie<br />";
+		if ($jlogRID == $runner_id) {
+			//the cookie matches the scanned id
+			if (DEBUG) print "You can't tag yourself!";
+		} else {
+			//looks like someone got tagged!
+			if (DEBUG) print "You tagged someone!<br />";
+			header("Location: /_tag.php?rid=".$runner_id."&tid=".$jlogRID);
+		}
+	} else {
+		//we need to register this runner
+		if (DEBUG) print "You don't have a cookie!<br />";
+		header("Location: /_reg.php?rid=".$runner_id);
+	}
+} else if (is_valid_checkpoint($jlogCID)) {
+	//Checkpoint is registered on device and is a valid checkpoint
+	if (DEBUG) print "Hello checkpoint ".$jlogCID;
+//	header("Location: /_checkin.php?rid=".$runner_id);
 }
 
 ?>
