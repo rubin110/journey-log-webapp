@@ -1,0 +1,11 @@
+convert -background white -fill black -font "OCR A Std" -pointsize 72 label:R6IL0 label.png
+
+
+convert qrcode-test.png -background '#000000' -extent 0x127 -font OCR-A-Std-Regular -annotate 0+0 '12345' -fill '#FFFFFF' output.png
+
+convert qrcode-test.png -background white -font OCR-A-Std-Regular label:'12345' -gravity Center -append output.png
+
+qrencode -o - -s 8 -m 2 "http://jl.vc/12345"
+
+
+qrencode -o - -s 8 -m 2 "http://jl.vc/12345" | convert -background white -font OCR-A-Std-Regular label:'12345!' -gravity Center -append output.png
