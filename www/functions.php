@@ -140,6 +140,21 @@ function register_runner($runner_id, $runner_name, $email_address) {
 	}
 }
 
+function is_runner_registered($runner_id) {
+	$mysqli = connectdb();
+	$query = "SELECT is_registered FROM ".RUNNERS_TBL." WHERE runner_id = ?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('s', $runner_id);
+	$stmt->execute();
+	$stmt->bind_result($is_registered);
+	$stmt->fetch();
+	if ($is_registered) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 function tag_exists($tagger_id, $runner_id) {
 	if (!is_valid_runner($tagger_id) || !is_valid_runner($runner_id)) {
 		print "Invalid runner or tagger id<br/ >";

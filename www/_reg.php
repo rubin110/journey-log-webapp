@@ -33,6 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		print "Invalid runner";
 		die();
 	}
+	
+	if (is_runner_registered($runner_id)) {
+		print $runner_id." is already registered<br />";
+		die();
+	}
 	//show form
 ?>
 Looks like you aren't registered yet!<br />
