@@ -1,5 +1,6 @@
 <?
 //user has a jlog-rid cookie set, so this means they scanned the qr code of someone they tagged
+include('mobile-friendly.html');
 include('functions.php');
 
 $tagger_id = clean_chaser_id($_GET['tid']);

@@ -1,4 +1,5 @@
 <?
+include('mobile-friendly.html');
 include('functions.php');
 
 if (is_valid_runner("123AB")) {

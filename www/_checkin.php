@@ -1,4 +1,5 @@
 <?
+include('mobile-friendly.html');
 include('functions.php');
 
 $runner_id = clean_runner_id($_GET['rid']);

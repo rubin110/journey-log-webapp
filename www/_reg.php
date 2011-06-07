@@ -4,6 +4,7 @@ Thomas's registration app will send us a runner id and an image
 We need to rename image to matche runner_id and place it in images folder
 We should also put an entry in the runners table and check them in to checkpoint 0
 */
+include('mobile-friendly.html');
 include('functions.php');
 
 $runner_id = clean_runner_id($_GET['rid']);
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	if (is_runner_registered($runner_id)) {
 		print $runner_id." is already registered<br />";
-		//someone could get here if they scan a runner they just tagged but they don't have their cookie set. TODO: handle this!
+		print "Did you just tag this person? If so, please scan your QR code and register and then rescan their QR code so we can give you credit.<br />";
 		//maybe we can print a form that says "If you tagged this person, enter your serial number here" and then reset their cookie?
 		die();
 	}
