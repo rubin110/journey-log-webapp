@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			} else {
 				print "Oops, something is broken<br />";
 			}
-			if (is_player_tagge($runner_id)) {
+			if (is_runner_tagged($runner_id)) {
 				print "This runner has already been tagged!<br />";
 				die();
 			}

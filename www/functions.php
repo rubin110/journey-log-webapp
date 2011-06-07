@@ -129,13 +129,22 @@ function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
+	} else {
+		$stmt->close();
+		return false;
+	}
+	
+	$query = "UPDATE ".RUNNERS_TBL." SET is_tagged=1 WHERE runner_id=?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('s', $runner_id);
+	$stmt->execute();
+	if ($stmt->affected_rows > 0) {
+		$stmt->close();
 		return true;
 	} else {
 		$stmt->close();
 		return false;
 	}
-	//TODO: don't forget to set the "is_tagged" field in the runner table for $runner_id
-	
 }
 
 
@@ -171,6 +180,21 @@ function is_runner_registered($runner_id) {
 	} else {
 		return false;
 	}
+}
+
+function is_runner_tagged($runner_id) {
+	$mysqli = connectdb();
+	$query = "SELECT is_tagged FROM ".RUNNERS_TBL." WHERE runner_id = ?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('s', $runner_id);
+	$stmt->execute();
+	$stmt->bind_result($is_tagged);
+	$stmt->fetch();
+	if ($is_tagged) {
+		return true;
+	} else {
+		return false;
+	}	
 }
 
 function tag_exists($tagger_id, $runner_id) {
