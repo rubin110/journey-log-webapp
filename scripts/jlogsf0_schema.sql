@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `runners` (
 -- Dumping data for table `runners`
 --
 
-INSERT INTO `runners` (`runner_id`, `player_email`, `player_name`, `mugshot_url`, `is_registered`, `time_of_registration`, `is_tagged`) VALUES
+INSERT INTO `runners` (`runner_id`, `player_email`, `player_name`, `is_registered`, `time_of_registration`, `is_tagged`) VALUES
 ('123AB', 'edrabbit2@edrabbit.com', 'Ed', '', 1, '2011-06-02 23:23:52', 0),
 ('123AC', '', '', '', 0, '2011-06-02 23:26:22', 0);
 
