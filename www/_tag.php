@@ -7,6 +7,10 @@ $tagger_id = clean_chaser_id($_GET['tid']);
 $runner_id = clean_runner_id($_GET['rid']);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	if ((empty($_POST['tagger_id'])) || (empty($_POST['runner_id']))) {
+		print "Missing data to register tag. Please rescan runner's QR code<br />";
+		die();
+	}
 	$tagger_id = clean_chaser_id($_POST['tagger_id']);
 	$runner_id = clean_chaser_id($_POST['runner_id']);
 	$loc_lat = $_POST['latitude'];
@@ -27,6 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 				print "You've already tagged this runner.<br />";
 			} else {
 				print "Oops, something is broken<br />";
+			}
+			if (is_player_tagge($runner_id)) {
+				print "This runner has already been tagged!<br />";
+				die();
 			}
 		}
 	} else {

@@ -125,7 +125,7 @@ function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
 	$mysqli = connectdb();
 	$query = "INSERT INTO ".TAGS_TBL." (runner_id, tagger_id, loc_lat, loc_long, user_agent, ip_address) VALUES (?,?,?,?,?,?)";
 	$stmt = $mysqli->prepare($query);
-	$stmt->bind_param('ssiiss', $runner_id, $tagger_id, $loc_lat, $loc_long, $user_agent, $ip_address);
+	$stmt->bind_param('ssddss', $runner_id, $tagger_id, $loc_lat, $loc_long, $user_agent, $ip_address);
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
