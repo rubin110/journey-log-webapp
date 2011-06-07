@@ -2,6 +2,12 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^css(/)?$  style.css [R]
-RewriteRule ^/agent/reg/([a-zA-Z0-9]+)?$ index.php?rid=$1 [R]
+RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [R]
+
+
+RewriteRule ^agent/app/autoreg(/)?$ _autoregistration.php [R]
+RewriteRule ^agent/app/autocheckin/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)?$ _autocheckin.php?cid=$1&rid=$2 [R]
+
+RewriteRule ^register/([a-zA-Z0-9]+)?$  _reg.php?cid=$1 [R]
 RewriteRule ^([a-zA-Z0-9]+)?$ index.php?rid=$1 [R]
 </IfModule>

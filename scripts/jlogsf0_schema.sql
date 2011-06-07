@@ -91,7 +91,6 @@ CREATE TABLE IF NOT EXISTS `runners` (
   `runner_id` varchar(255) NOT NULL,
   `player_email` varchar(255) NOT NULL,
   `player_name` varchar(255) NOT NULL,
-  `mugshot_url` varchar(255) NOT NULL,
   `is_registered` tinyint(1) NOT NULL,
   `time_of_registration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `is_tagged` tinyint(1) NOT NULL DEFAULT '0',
