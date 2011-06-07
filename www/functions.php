@@ -73,6 +73,22 @@ function get_checkpoint_name($cid) {
 	return $row[0];
 }
 
+#Register runner
+function register_runner_app($rid) {
+	$mysqli = connectdb();
+	$query = "UPDATE ".RUNNERS_TBL." SET is_registered=1 WHERE runner_id=?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('s',$rid);
+	$stmt->execute();
+	if ($stmt->affected_rows > 0) {
+		$stmt->close();
+		return true;
+	} else {
+		$stmt->close();
+		return false;
+	}
+}
+
 #Check a runner ($rid) into a checkpoint ($cid)
 function check_runner_in($cid, $rid) {
 	$device_id = "some device";

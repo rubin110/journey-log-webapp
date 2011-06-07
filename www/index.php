@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
 <?php
+include('mobile-friendly.html');
 include('functions.php');
 
 /* require_once('mobile_device_detect.php');
@@ -40,7 +41,7 @@ if (empty($jlogCID)) {
 } else if (is_valid_checkpoint($jlogCID)) {
 	//Checkpoint is registered on device and is a valid checkpoint
 	if (DEBUG) print "Hello checkpoint ".$jlogCID;
-//	header("Location: /_checkin.php?rid=".$runner_id);
+	header("Location: /_checkin.php?rid=".$runner_id);
 }
 
 ?>
