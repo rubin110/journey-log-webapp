@@ -45,6 +45,22 @@ function is_valid_runner($id) {
 	}
 }
 
+function get_runner_name($rid) {
+	$mysql = connectdb(true);
+	$query = "SELECT player_name FROM ".RUNNERS_TBL." WHERE runner_id = '".$rid."'";
+	$result = mysql_query($query);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
+function get_runner_email($rid) {
+	$mysql = connectdb(true);
+	$query = "SELECT player_email FROM ".RUNNERS_TBL." WHERE runner_id = '".$rid."'";
+	$result = mysql_query($query);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
 #Return runner_id with only alphanumeric characters and all uppercase
 function clean_runner_id($rid) {
 	return strtoupper(preg_replace("/[^a-zA-Z0-9\s]/", "", $rid));
@@ -125,18 +141,7 @@ function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
 	$mysqli = connectdb();
 	$query = "INSERT INTO ".TAGS_TBL." (runner_id, tagger_id, loc_lat, loc_long, user_agent, ip_address) VALUES (?,?,?,?,?,?)";
 	$stmt = $mysqli->prepare($query);
-	$stmt->bind_param('ssddss', $runner_id, $tagger_id, $loc_lat, $loc_long, $user_agent, $ip_address);
-	$stmt->execute();
-	if ($stmt->affected_rows > 0) {
-		$stmt->close();
-	} else {
-		$stmt->close();
-		return false;
-	}
-	
-	$query = "UPDATE ".RUNNERS_TBL." SET is_tagged=1 WHERE runner_id=?";
-	$stmt = $mysqli->prepare($query);
-	$stmt->bind_param('s', $runner_id);
+	$stmt->bind_param('ssiiss', $runner_id, $tagger_id, $loc_lat, $loc_long, $user_agent, $ip_address);
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
@@ -145,6 +150,8 @@ function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
 		$stmt->close();
 		return false;
 	}
+	//TODO: don't forget to set the "is_tagged" field in the runner table for $runner_id
+	
 }
 
 
@@ -167,6 +174,20 @@ function register_runner($runner_id, $runner_name, $email_address) {
 	}
 }
 
+function update_runner($runner_id, $runner_name, $email_address) {
+	if (!is_valid_runner($runner_id)) {
+		print "Not a valid runner<br />";
+		return false;
+	}
+	$mysqli = connectdb();
+	$query = "UPDATE ".RUNNERS_TBL." SET player_name=?, player_email=?, is_registered=1 WHERE runner_id=?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('sss',$runner_name, $email_address, $runner_id);
+	$stmt->execute();
+	$stmt->close();
+	return true;
+	}
+
 function is_runner_registered($runner_id) {
 	$mysqli = connectdb();
 	$query = "SELECT is_registered FROM ".RUNNERS_TBL." WHERE runner_id = ?";
@@ -180,21 +201,6 @@ function is_runner_registered($runner_id) {
 	} else {
 		return false;
 	}
-}
-
-function is_runner_tagged($runner_id) {
-	$mysqli = connectdb();
-	$query = "SELECT is_tagged FROM ".RUNNERS_TBL." WHERE runner_id = ?";
-	$stmt = $mysqli->prepare($query);
-	$stmt->bind_param('s', $runner_id);
-	$stmt->execute();
-	$stmt->bind_result($is_tagged);
-	$stmt->fetch();
-	if ($is_tagged) {
-		return true;
-	} else {
-		return false;
-	}	
 }
 
 function tag_exists($tagger_id, $runner_id) {

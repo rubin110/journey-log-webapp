@@ -2,12 +2,21 @@
 include('mobile-friendly.html');
 include('functions.php');
 
+$cid = $_GET['cid']; // Get the cid
 $runner_id = clean_runner_id($_GET['rid']);
+
+
 if (!isset($_COOKIE["jlog-cid"])) {
 	//Oops, you don't have a cookie, return to checkpoint registration
 	header("Location: /_cid");
 }
 $jlogCID = intval($_COOKIE["jlog-cid"]);
+
+if ($cid == 0) {
+	//print 'HEY LOOK YOU ARE CHECKPOINT 0';
+	//header("Location: /agent/autoregistration/?rid=".$runner_id);
+	include('_autoregistration.php');
+}
 
 if ($runner_id) {
 	print "Look here motherfuckers, we're checking you into a checkpoint. Good job<br /><br />";

@@ -1,7 +1,7 @@
 <?
 #Register players via staff app
 #Accessed via agent/app/autoreg
-include('functions.php');
+//include('functions.php');
 $destination_folder = "/photos/";
 
 //Receives post data and insert into database
@@ -17,7 +17,7 @@ if ($key !== "doorhenge") {
 $runner_id = clean_runner_id($_POST['runner_id']);
 $photo_name = $runner_id.".jpg";
 
-print "<h2>Registering runner ".$runner_id."</h2>";
+print "<h2>Journey Log<br>Autoregistering runner ".$runner_id."</h2>";
 
 
 if ($_FILES["player_photo"]["error"] > 0)

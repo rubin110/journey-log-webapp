@@ -1,5 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
 <?php
 include('mobile-friendly.html');
 include('functions.php');
@@ -28,6 +26,7 @@ if (empty($jlogCID)) {
 		if ($jlogRID == $runner_id) {
 			//the cookie matches the scanned id
 			if (DEBUG) print "You can't tag yourself!";
+			header("Location: /_reg.php?rid=".$runner_id);
 		} else {
 			//looks like someone got tagged!
 			if (DEBUG) print "You tagged someone!<br />";
