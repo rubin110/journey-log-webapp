@@ -28,6 +28,7 @@ if (empty($jlogCID)) {
 		if ($jlogRID == $runner_id) {
 			//the cookie matches the scanned id
 			if (DEBUG) print "You can't tag yourself!";
+			header("Location: /_reg.php?rid=".$runner_id);
 		} else {
 			//looks like someone got tagged!
 			if (DEBUG) print "You tagged someone!<br />";

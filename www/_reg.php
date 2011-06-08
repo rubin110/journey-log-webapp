@@ -6,6 +6,7 @@ We should also put an entry in the runners table and check them in to checkpoint
 */
 include('mobile-friendly.html');
 include('functions.php');
+$jlogRID = $_COOKIE["jlog-rid"];
 
 $runner_id = clean_runner_id($_GET['rid']);
 
@@ -16,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$email_address = $_POST['email_address'];
 	
 	if (register_runner($runner_id, $runner_name, $email_address)) {
-		print "Successfully registered!";
+		print "Successfully registered! Your device is now bound to your Runner ID. Please scan your code again to view your stats, edit your registration info, or to unbind your phone from your Runner ID. Optional When you are tagged by someone chasing you: Give them your Runner ID code for them to scan. When you tag someone else as a chaser: Scan their Runner ID code on your own phone.";
 		//set cookie
 		setcookie("jlog-rid", $runner_id, time()+86400, "/", $_SERVER['SERVER_NAME']);
 	} else {
@@ -35,12 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		die();
 	}
 	
+	if ($runner_id == $jlogRID) {
+		print "You are you! Display some stats here, log out button, edit registration info.";
+		die ();
+	}
+	
 	if (is_runner_registered($runner_id)) {
 		print $runner_id." is already registered<br />";
 		print "Did you just tag this person? If so, please scan your QR code and register and then rescan their QR code so we can give you credit.<br />";
 		//maybe we can print a form that says "If you tagged this person, enter your serial number here" and then reset their cookie?
 		die();
-	}
+	} */
 	//show form
 ?>
 Looks like you aren't registered yet!<br />
