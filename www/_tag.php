@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	if (empty($loc_long)) {
 		$loc_long = 0;
 	}
-	print '<h3>Registering Tag</h3>
+	print '<h3>Checkin Tag</h3>
 	<p><span style="color:red;">Chaser '.$tagger_id.'</span> tagged <span style="color:blue;">Runner '.$runner_id.'</span> at '.$loc_lat.','.$loc_long.'.<br />';
 	if (is_valid_runner($tagger_id) && is_valid_runner($runner_id)) {
 		if (register_tag($tagger_id, $runner_id, $loc_lat, $loc_long)) {
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	  alert('Could not find location');
 	}
 </script>
-<h3>Checkin your Tag</h3>
+<h3>Checkin Tag</h3>
 <p>Note: Be sure the <span style="color:red;">Chaser</span> is scanning the <span style="color:blue;">Runner's</span> Runner ID on the <span style="color:red;">Chaser's</span> phone!
 <form name="tag_runner" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 <?php if (is_valid_runner($tagger_id)){
