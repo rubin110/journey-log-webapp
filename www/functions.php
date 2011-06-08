@@ -45,6 +45,22 @@ function is_valid_runner($id) {
 	}
 }
 
+function get_runner_name($rid) {
+	$mysql = connectdb(true);
+	$query = "SELECT player_name FROM ".RUNNERS_TBL." WHERE runner_id = '".$rid."'";
+	$result = mysql_query($query);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
+function get_runner_email($rid) {
+	$mysql = connectdb(true);
+	$query = "SELECT player_email FROM ".RUNNERS_TBL." WHERE runner_id = '".$rid."'";
+	$result = mysql_query($query);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
 #Return runner_id with only alphanumeric characters and all uppercase
 function clean_runner_id($rid) {
 	return strtoupper(preg_replace("/[^a-zA-Z0-9\s]/", "", $rid));
@@ -157,6 +173,20 @@ function register_runner($runner_id, $runner_name, $email_address) {
 		return false;
 	}
 }
+
+function update_runner($runner_id, $runner_name, $email_address) {
+	if (!is_valid_runner($runner_id)) {
+		print "Not a valid runner<br />";
+		return false;
+	}
+	$mysqli = connectdb();
+	$query = "UPDATE ".RUNNERS_TBL." SET player_name=?, player_email=?, is_registered=1 WHERE runner_id=?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('sss',$runner_name, $email_address, $runner_id);
+	$stmt->execute();
+	$stmt->close();
+	return true;
+	}
 
 function is_runner_registered($runner_id) {
 	$mysqli = connectdb();
