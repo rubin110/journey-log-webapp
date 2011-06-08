@@ -92,7 +92,7 @@ function get_checkpoint_name($cid) {
 #Register runner
 function register_runner_app($rid) {
 	$mysqli = connectdb();
-	$query = "UPDATE ".RUNNERS_TBL." SET is_registered=1 WHERE runner_id=?";
+	$query = "UPDATE ".RUNNERS_TBL." SET is_mugshot=1 WHERE runner_id=?";
 	$stmt = $mysqli->prepare($query);
 	$stmt->bind_param('s',$rid);
 	$stmt->execute();

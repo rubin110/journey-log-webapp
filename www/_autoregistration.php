@@ -1,7 +1,7 @@
 <?
 #Register players via staff app
 #Accessed via agent/app/autoreg
-//include('functions.php');
+include('functions.php');
 $destination_folder = "/photos/";
 
 //Receives post data and insert into database
