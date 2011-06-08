@@ -2,6 +2,8 @@
 include('mobile-friendly.html');
 include('functions.php');
 
+print '<h2>Journey Log</h2>';
+
 /* require_once('mobile_device_detect.php');
 mobile_device_detect(true,false,true,true,true,true,true,'mobile/',false); */
 $runner_id = clean_runner_id($_GET['rid']);
