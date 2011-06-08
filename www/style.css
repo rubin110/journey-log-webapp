@@ -2,8 +2,8 @@ body {
 	background-color: #000;
 	color: #FFF;
   	font-family: sans-serif;
-	padding: 2px;
-	margin: 2px;
+	/* padding: 2px;
+	margin: 2px; */
 }
 html {
     width: 320px;
@@ -25,11 +25,12 @@ a:focus {
 }
 
 p {
-	text-indent:20px;
+	/* text-indent:20px; */
 }
 
 h1, h2, h3 {
 	/* color: #DF9; */
+	text-align: center
 }
 
 img {

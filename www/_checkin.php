@@ -19,20 +19,27 @@ if ($cid == "0" || $jlogCID == "0") {
 }
 
 if ($runner_id) {
-	print "Look here motherfuckers, we're checking you into a checkpoint. Good job<br /><br />";
-
-	print "Runner is: ".$runner_id."<br />";
-
-	print "You wanted to check them in to ".get_checkpoint_name($jlogCID).", right?<br />";
+	//print "Look here motherfuckers, we're checking you into a checkpoint. Good job<br /><br />";
+	print '<h2>Journey Log - Checkin<br>'.get_checkpoint_name($jlogCID).'</h2>
+	';
 	
 	if (check_runner_in($jlogCID, $runner_id)) {
-		print "Successfully checked in!";
+		print '
+		<p><strong><big>Runner '.$runner_id.' is checked in.</big></strong>
+		<div style="font-size:14em;color:green;text-align: center;">&#10003;</div>
+		';
 	} else {
 		//We should probably check and see if the runner's already been checked in and return a more descriptive message
 		if (is_already_checked_in($jlogCID, $runner_id)) {
-			print "Don't worry, this runner is already checked in here";
+			print '
+			<p><strong><big>Runner '.$runner_id.' is already checked in.</big></strong>
+			<div style="font-size:14em;color:green;text-align: center;">&#10003;</div>
+			';
 		} else {
-			print "Well shit, something went wrong.";
+			print '
+			<h3>Whoops, something went wrong. Runner '.$runner_id.' might already be checked in.</h3>
+			<div style="font-size:14em;color:red;text-align: center;">?</div>
+			';
 		}
 	}
 } else {
