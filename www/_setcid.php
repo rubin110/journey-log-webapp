@@ -3,6 +3,8 @@
 <?php
 include('mobile-friendly.html');
 include('functions.php');
+
+print '<h2>Journey Log</h2>';
 $cid = $_GET['cid']; // Get the cid
 
 $possibleCIDs = get_all_checkpoint_ids();
@@ -10,7 +12,8 @@ $possibleCIDs[] = 9999;
 
 
 if (!in_array($cid, $possibleCIDs)) {
-	print "Checkpoint ID not found";
+	print '<h3>Checkpoint ID not found</h3>
+	<div style="font-size:14em;color:red;text-align: center;">?</div>';
 	die();
 }
 
@@ -21,7 +24,8 @@ if ($cid == 9999) {
 } else {
 	//set the cookie
 	setcookie("jlog-cid", $cid, time()+86400, "/", $_SERVER['SERVER_NAME']); //Set cookies
-	print "Cookie set to ".get_checkpoint_name($cid);
+	print '<h3>Phone bound to '.get_checkpoint_name($cid).'</h3>
+	<div style="font-size:14em;color:green;text-align: center;">&#9676;</div>';
 }
 
 

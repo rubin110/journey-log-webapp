@@ -10,7 +10,7 @@ $jlogRID = $_COOKIE["jlog-rid"];
 
 $runner_id = clean_runner_id($_GET['rid']);
 $act = $_GET['act'];
-
+print '<h2>Journey Log</h2>';
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	//form was posted, register the runner
 	$runner_id = $_POST['runner_id'];
@@ -19,28 +19,59 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	if ($act == "reg") {
 		register_runner($runner_id, $runner_name, $email_address);
-		print "Successfully registered! Your device is now bound to your Runner ID. Please scan your code again to view your stats, edit your registration info, or to unbind your phone from your Runner ID. Optional When you are tagged by someone chasing you: Give them your Runner ID code for them to scan. When you tag someone else as a chaser: Scan their Runner ID code on your own phone.";
+		print '
+		<h3>Successfully registered '.$runner_id.'!</h3>
+		<p>Your device is now bound to your Runner ID, do not let anyone else use your phone to scan codes unless you <a href="/clear">unbind your phone</a>!. Please scan your code again to view your stats, edit your registration info, or to unbind your phone from your Runner ID.
+		<h3>How to checkin tags</h3>
+		<p>This is optional but we encourage all players to participate in logging their tags!
+		<p><b>When you are tagged by someone chasing you:</b> Give them your Runner ID code for them to scan.
+		<p><b>When you tag someone else as a chaser:</b> Scan their Runner ID code on your own phone.
+		';
 		//set cookie
 		setcookie("jlog-rid", $runner_id, time()+86400, "/", $_SERVER['SERVER_NAME']);
 	}
 	else if ($act == "up") {
 		update_runner($runner_id, $runner_name, $email_address);
-		print "Successfully registered! Your device is now bound to your Runner ID. Please scan your code again to view your stats, edit your registration info, or to unbind your phone from your Runner ID. Optional When you are tagged by someone chasing you: Give them your Runner ID code for them to scan. When you tag someone else as a chaser: Scan their Runner ID code on your own phone.";
+		print '
+		<h3>Successfully updated '.$runner_id.'!</h3>
+		<p>Your device is now bound to your Runner ID, do not let anyone else use your phone to scan codes unless you <a href="/clear">unbind your phone</a>!. Please scan your code again to view your stats, edit your registration info, or to unbind your phone from your Runner ID.
+		<h3>How to checkin tags</h3>
+		<p>This is optional but we encourage all players to participate in logging their tags!
+		<p><b>When you are tagged by someone chasing you:</b> Give them your Runner ID code for them to scan.
+		<p><b>When you tag someone else as a chaser:</b> Scan their Runner ID code on your own phone.
+		';
 		//set cookie
 			setcookie("jlog-rid", $runner_id, time()+86400, "/", $_SERVER['SERVER_NAME']);
 		}
 	else if ($act == "bind") {
-		print "Your device is now bound to your Runner ID. Please scan your code again to view your stats, edit your registration info, or to unbind your phone from your Runner ID. Optional When you are tagged by someone chasing you: Give them your Runner ID code for them to scan. When you tag someone else as a chaser: Scan their Runner ID code on your own phone.";
+		print '
+		<h3>Successfully bound '.$runner_id.'!</h3>
+		<p>Your device is now bound to your Runner ID, do not let anyone else use your phone to scan codes unless you <a href="/clear">unbind your phone</a>!. Please scan your code again to view your stats, edit your registration info, or to unbind your phone from your Runner ID.
+		<h3>How to checkin tags</h3>
+		<p>This is optional but we encourage all players to participate in logging their tags!
+		<p><b>When you are tagged by someone chasing you:</b> Give them your Runner ID code for them to scan.
+		<p><b>When you tag someone else as a chaser:</b> Scan their Runner ID code on your own phone.
+		';
 		//set cookie
 			setcookie("jlog-rid", $runner_id, time()+86400, "/", $_SERVER['SERVER_NAME']);
-	} else {
+		}
+	else if ($act = "hand") {
+		header("Location: /_reg.php?rid=".$runner_id);
+	}
+		else {
 		print "Oops, something went horribly wrong.";
 	}
-	
+
+
 } else {
 
 	if ($runner_id == "") {
-		print "Please scan your QR code to register";
+		print 'Please scan your Runner ID code to register, or type it in here...
+		<form name="runner" action="'.$_SERVER['PHP_SELF'].'?act=hand" method="post">
+		<p><input type="text" name="runner_id" value="'.$runner_id.'">
+		<p><input type="submit" value="Submit"></p>
+		</form>
+		';
 		die();
 	}
 
@@ -51,13 +82,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	if ($runner_id == $jlogRID) {
 		print '
-			<h2>Journey - Log<br>
-			Runner ID: '.$runner_id.'</h2>
+			<h3>Runner ID: '.$runner_id.'</h3>
 			<p>Your phone is bound to Runner ID '.$runner_id.', you can now scan another player\'s Runner ID code to claim them as a tag.<br />
 
 			<form name="bind_runner" action="/clear" method="post">
 			<p><input type="submit" value="Unbind phone from Runner ID"></p>
 			</form>
+
+			
 
 			<form name="update_runner" action="'.$_SERVER['PHP_SELF'].'?act=up" method="post">
 			<input type="hidden" name="runner_id" value="'.$runner_id.'">
@@ -71,8 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	
 	if (is_runner_registered($runner_id)) {
 		print '
-		<h2>Journey - Log<br>
-		Runner ID: '.$runner_id.'</h2>
+		<h3>Runner ID: '.$runner_id.'</h3>
 		<p>Your phone is not bound to a Runner ID, you must bind your phone first before you can check in a tag against another player.<br />
 		
 		<form name="bind_runner" action="'.$_SERVER['PHP_SELF'].'?act=bind" method="post">

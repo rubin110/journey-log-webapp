@@ -7,6 +7,7 @@ print '<h2>Journey Log</h2>';
 /* require_once('mobile_device_detect.php');
 mobile_device_detect(true,false,true,true,true,true,true,'mobile/',false); */
 $runner_id = clean_runner_id($_GET['rid']);
+$cid = $_GET['cid']; // Get the cid
 
 $jlogCID = $_COOKIE["jlog-cid"];
 $jlogRID = $_COOKIE["jlog-rid"];
@@ -39,7 +40,7 @@ if (empty($jlogCID)) {
 		if (DEBUG) print "You don't have a cookie!<br />";
 		header("Location: /_reg.php?rid=".$runner_id);
 	}
-} else if (is_valid_checkpoint($jlogCID)) {
+} else if (is_valid_checkpoint($jlogCID) || is_valid_checkpoint($cid)) {
 	//Checkpoint is registered on device and is a valid checkpoint
 	if (DEBUG) print "Hello checkpoint ".$jlogCID;
 	header("Location: /_checkin.php?rid=".$runner_id);

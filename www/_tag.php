@@ -54,10 +54,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 </script>
 
 <form name="tag_runner" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-<input id="tagger_id" type="hidden" name="tagger_id" value="<?= $tagger_id ?>">
-<input id="runner_id" type="hidden" name="runner_id" value="<?= $runner_id ?>">
-<input id="latitude" type="hidden" name="latitude" value="">
-<input id="longitude" type="hidden" name="longitude" value="">
+<?php if (is_valid_runner($tagger_id)){
+print '<p><span style="color=red;">Pursuing Chaser: </span><br><input id="tagger_id" name="tagger_id" value="'.$tagger_id.'" readonly>';
+}
+else {
+	print '<p><span style="color=red;">Pursuing Chaser: </span><br><input id="tagger_id" name="tagger_id" value="">';
+};
+?>
+<p><span style="color=blue;">Tagged Runner: </span><br><input id="runner_id" name="runner_id" value="<?= $runner_id ?>">
+<p>Lat:<br><input id="latitude" type="text" name="latitude" value="" readonly>
+<p>Log:<br><input id="longitude" type="text" name="longitude" value="" readonly>
 <p><input type="submit" value="I tagged them!"></p>
 
 
