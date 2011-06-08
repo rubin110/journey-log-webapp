@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	print '<h3>Checkin Tag</h3>
 	<p><span style="color:red;">Chaser '.$tagger_id.'</span> tagged <span style="color:blue;">Runner '.$runner_id.'</span> at '.$loc_lat.','.$loc_long.'.<br />';
 	if (is_valid_runner($tagger_id) && is_valid_runner($runner_id)) {
-		if (register_tag($tagger_id, $runner_id, $loc_lat, $loc_long)) {
+		if (register_tag($tagger_id, $runner_id, $loc_lat, $loc_long, $loc_addr)) {
 			print '<h3>Your tag is checked in!</h3><div style="font-size:14em;color:green;text-align: center;">&#10003;</div>';
 		} else {
 			if (tag_exists($tagger_id, $runner_id)) {
@@ -70,7 +70,8 @@ else {
 ?>
 <p>Lat:<br><input id="latitude" type="text" name="latitude" value="" readonly>
 <p>Log:<br><input id="longitude" type="text" name="longitude" value="" readonly>
-<p><input type="submit" value="I tagged them!"></p>
+<p>Address or Intersection:<br><input id="longitude" type="text" name="address" value="">
+<p><input type="submit" value="Tag!"></p>
 
 
 <?
