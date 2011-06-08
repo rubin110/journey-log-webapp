@@ -91,8 +91,10 @@ CREATE TABLE IF NOT EXISTS `runners` (
   `runner_id` varchar(255) NOT NULL,
   `player_email` varchar(255) NOT NULL,
   `player_name` varchar(255) NOT NULL,
+  `is_mugshot` tinyint(1) NOT NULL,
+  `time_of_mugshot` varchar(255) timestamp NOT NULL,
   `is_registered` tinyint(1) NOT NULL,
-  `time_of_registration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `time_of_registration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_tagged` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`runner_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
