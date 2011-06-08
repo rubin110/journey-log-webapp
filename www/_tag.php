@@ -53,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 </script>
 <h3>Checkin Tag</h3>
+<p><a href="/register">Go to registered profile</a><br>
 <p>Note: Be sure the <span style="color:red;">Chaser</span> is scanning the <span style="color:blue;">Runner's</span> Runner ID on the <span style="color:red;">Chaser's</span> phone!
 <form name="tag_runner" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 <?php if (is_valid_runner($tagger_id)){

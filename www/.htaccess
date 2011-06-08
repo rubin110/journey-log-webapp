@@ -1,10 +1,10 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteRule ^css(/)?$  style.css [R]
-RewriteRule ^agent/set(/)?$  _setcid.php [R]
-RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [R]
+RewriteRule ^agent/set(/)?$  _setcid.php [L]
+RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [L]
 RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [R]
+RewriteRule ^register(/)?$  _reg.php [R]
 RewriteRule ^register/([a-zA-Z0-9]+)?$  _reg.php?rid=$1 [R]
 RewriteRule ^clear(/)?$  _clearallcookies.php [R]
 RewriteRule ^agent/autoregistration/([a-zA-Z0-9]+)?$ _autoregistration.php [R]

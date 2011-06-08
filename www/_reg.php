@@ -7,8 +7,10 @@ We should also put an entry in the runners table and check them in to checkpoint
 include('mobile-friendly.html');
 include('functions.php');
 $jlogRID = $_COOKIE["jlog-rid"];
-
 $runner_id = clean_runner_id($_GET['rid']);
+if (empty($runner_id)) {
+	$runner_id = $jlogRID;
+};
 $act = $_GET['act'];
 print '<h2>Journey Log</h2>';
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -65,7 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 } else {
 
-	if ($runner_id == "") {
+	if (empty($runner_id)) {
+		print $runner_id;
 		print 'Please scan your Runner ID code to register, or type it in here...
 		<form name="runner" action="'.$_SERVER['PHP_SELF'].'?act=hand" method="post">
 		<p><input type="text" name="runner_id" value="'.$runner_id.'">
