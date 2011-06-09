@@ -12,4 +12,9 @@
     <string name="Scan">Scan Barcode</string>
     <string name="DefaultScanText">No scan data loaded yet.</string>
     <string name="no_runner_id">No Runner ID Scanned</string>
+    <string name="rescan_scheckpoint_string">Scan Checkpoint QR</string>
+    <string name="submit_manual_checkpoint_string">Submit Text Checkpoint ID</string>
+    <string name="blank"></string>
+    <string name="or">or</string>
+    <string name="readyToScanString">Ready To Scan</string>
 </resources>
