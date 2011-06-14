@@ -11,13 +11,23 @@ import java.util.regex.Pattern;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
+import org.apache.http.HttpVersion;
 import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.FileEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.cookie.BasicClientCookie;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.CoreProtocolPNames;
+import org.apache.http.params.HttpParams;
+import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -34,6 +44,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
@@ -49,9 +60,8 @@ public class CheckpointScannerActivity extends Activity {
 	Location location = null;
 	SQLiteDatabase db = null;
 	Pattern cpFinder = Pattern.compile(".*\\bcid=([^&]*)");
-	DefaultHttpClient httpClient = new DefaultHttpClient();
-	private String cameraStoredRunnerId;
-	private String cameraStoredUrl;
+	DefaultHttpClient httpClient;
+	File runnerPhotoDirectory = null;
 	
 	private static final int CAMERA_CODE = 0;
 
@@ -60,6 +70,15 @@ public class CheckpointScannerActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_checkpoint);
+        
+        try {
+			runnerPhotoDirectory = new File(Environment.getExternalStorageDirectory().getCanonicalPath() + File.separator + "runner_photos");
+		} catch (IOException e) {
+		}
+        
+        HttpParams params = new BasicHttpParams();
+        params.setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
+        httpClient = new DefaultHttpClient(params);
         
         // Get a DB connection
     	RunnerOpenHelper dbOpenHelper = new RunnerOpenHelper(getApplicationContext());
@@ -159,6 +178,12 @@ public class CheckpointScannerActivity extends Activity {
 
 //        selectCheckpoint("1");      
 //        processRunner("runid","1",12345,"http://spidere.com/survivedc/log.cgi");
+
+		// start background job to try to upload failed checkin scans
+    	new Thread(new RetryFailedRunnerCheckinUploader(this)).start();
+
+    	// start background job to upload photos
+    	new Thread(new BackgroundPhotoUploader(this)).start();
     }
     
     private void updateCookie() {
@@ -171,24 +196,25 @@ public class CheckpointScannerActivity extends Activity {
 	}
 
 	public void updateSummaryText() {
-        String[] columns = {"count(*)", "sum(is_uploaded)"};
+        String[] columns = {"count(*)", "sum(is_uploaded)", "sum(is_photo_uploaded)"};
         Cursor cursor = db.query("runners", columns, null, null, null, null, null);
         Integer numScans = 0;
         Integer numUploaded = 0;
+        Integer numPhotosUploaded = 0;
         if (cursor.moveToFirst()) {
         	do {
 	        	numScans += cursor.getInt(0);        		
 	        	numUploaded += cursor.getInt(1);        		
+	        	numPhotosUploaded += cursor.getInt(2);
         	} while (cursor.moveToNext());
         }
         cursor.close();
-
-        if (numScans > numUploaded) {
-        	// start background job to try to upload failed scans
-        	new Thread(new RetryFailedRunnerCheckinUploader(this)).start();
-        }
         
-        ((TextView) findViewById(R.id.checkpointInfo)).setText(numScans.toString() + " scanned, " + numUploaded.toString() + " uploaded.");    	
+        if (isStartingCheckpoint()) {
+            ((TextView) findViewById(R.id.checkpointInfo)).setText(numScans.toString() + " scanned, " + numUploaded.toString() + " uploaded, " + numPhotosUploaded.toString() + " photos.");    	
+        } else {       
+        	((TextView) findViewById(R.id.checkpointInfo)).setText(numScans.toString() + " scanned, " + numUploaded.toString() + " uploaded.");
+        }
     }
 
     public Boolean hasWaitingRunners() {
@@ -199,7 +225,15 @@ public class CheckpointScannerActivity extends Activity {
         return(retVal);
     }
 
-    public void getLastCheckpointId() {
+	public boolean hasWaitingPhotos() {
+        String[] columns = {"runner_id"};
+        Cursor cursor = db.query("runners", columns, "is_photo_uploaded=0", null, null, null, "1");
+        Boolean retVal = (cursor.getCount() > 0);
+        cursor.close();    	
+        return(retVal);
+	}
+
+	public void getLastCheckpointId() {
         String[] columns = {"checkpoint_id"};
         Cursor cursor = db.query("last_checkpoint_id", columns, null, null, null, null, null);
         if (cursor.moveToFirst()) {
@@ -231,7 +265,20 @@ public class CheckpointScannerActivity extends Activity {
         }
         cursor.close();    	
     }
-    
+
+    public void uploadWaitingPhotos() {
+        String[] columns = {"runner_id", "url"};
+        Cursor cursor = db.query("runners", columns, "is_photo_uploaded=0", null, null, null, null);
+        if (cursor.moveToFirst()) {
+        	do {
+	        	String rId = cursor.getString(0);
+	        	String url = cursor.getString(1);
+	        	uploadPhoto(rId, url);
+        	} while (cursor.moveToNext());
+        }
+        cursor.close();    	
+    }
+
     public void scanForCheckpointId(View view) {
     	IntentIntegrator.initiateScan(CheckpointScannerActivity.this);
     }
@@ -263,73 +310,17 @@ public class CheckpointScannerActivity extends Activity {
 		}).start();
     }
     
-    public static File convertImageUriToFile (Uri imageUri, Activity activity)  {
-    	Cursor cursor = null;
-    	try {
-    	    String [] proj={MediaStore.Images.Media.DATA, MediaStore.Images.Media._ID, MediaStore.Images.ImageColumns.ORIENTATION};
-    	    cursor = activity.managedQuery( imageUri,
-    	            proj, // Which columns to return
-    	            null,       // WHERE clause; which rows to return (all rows)
-    	            null,       // WHERE clause selection arguments (none)
-    	            null); // Order-by clause (ascending by name)
-    	    int file_ColumnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-    	    int orientation_ColumnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.ImageColumns.ORIENTATION);
-    	    if (cursor.moveToFirst()) {
-    	        String orientation =  cursor.getString(orientation_ColumnIndex);
-    	        return new File(cursor.getString(file_ColumnIndex));
-    	    }
-    	    return null;
-    	} finally {
-    	    if (cursor != null) {
-    	        cursor.close();
-    	    }
-    	}
-	}
-
     
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-		String runnerId = cameraStoredRunnerId;
-		String url = cameraStoredUrl;
+		String runnerId = "";
 		
 		if (requestCode == CAMERA_CODE) {			
 		    if (resultCode == RESULT_OK) {
 		    	if (intent != null) {
 					Bundle extras = intent.getExtras();
 					runnerId = extras.getString("runner id");
-					url = extras.getString("runner url");
 		    	}
-
-				String splitContents[] = url.split("\\?");
-				url = splitContents[0];
-
-				String latString="";
-				String lonString="";
-				if (location != null) {
-					latString = ((Double)location.getLatitude()).toString();
-					lonString = ((Double)location.getLongitude()).toString();
-				}
-				Integer timestamp =  ((Long)(new Date().getTime())).intValue();
-		    	String timeString = new Integer(timestamp).toString();
-			    HttpResponse response = null;
-			    updateCookie();
-
-			    String urlString = url + "?cid=" + java.net.URLEncoder.encode(checkpointId) + "&rid=" + java.net.URLEncoder.encode(runnerId) + "&did=" + java.net.URLEncoder.encode(deviceId) + "&lat=" + java.net.URLEncoder.encode(latString) + "&lon=" + java.net.URLEncoder.encode(lonString) + "&ts=" + java.net.URLEncoder.encode(timeString);
-		        HttpPost httppost = new HttpPost(urlString);
-		        try {
-		    	    File photo = new File(Environment.getExternalStorageDirectory(), runnerId + ".jpg");
-                    FileEntity entity = new FileEntity(photo,"binary/octet-stream");
-                    entity.setChunked(true);
-                    httppost.setEntity(entity);
-                    
-		            // Execute HTTP Post Request
-		            response = httpClient.execute(httppost);			   
-				} catch (ClientProtocolException e) {
-					// Didn't work -- will hopefully be uploaded later
-				} catch (IOException e) {
-					// Didn't work -- will hopefully be uploaded later
-				} catch (Exception e) {
-					// didn't work
-				}
+		    	// nothing to do here -- the BackgroundPhotoUploader should take care of it
 		    } else if (resultCode == RESULT_CANCELED) {
 		    } else {
 		    }
@@ -372,7 +363,7 @@ public class CheckpointScannerActivity extends Activity {
 						runnerId = splitContents[splitContents.length-1];
 						
 						// if we're checkpoint 0, get a photo and upload it in the background
-						if (checkpointId.equals("0")) {
+						if (isStartingCheckpoint()) {
 							processRegistration(runnerId, ((Long)(new Date().getTime())).intValue(), contents);
 						} else {					
 							// otherwise, we're a regular checkpoint: process it as a checkin		
@@ -406,17 +397,38 @@ public class CheckpointScannerActivity extends Activity {
 		}
 	}
 
+	public boolean isStartingCheckpoint() {
+		return checkpointId.equals("0");
+	}
+
 	private void makeBackgroundRequest(String url) {
     	new Thread(new BackgroundHttpRequester(url, httpClient)).start();
 	}
 
 	private void processRegistration(String runnerId, int timestamp, String url) {
+    	// Store in local DB
+    	ContentValues runnerValues = new ContentValues(4);
+    	runnerValues.put("runner_id", runnerId);
+    	runnerValues.put("checkpoint_id", "0");
+    	runnerValues.put("timestamp", timestamp);
+    	runnerValues.put("is_uploaded", 0);	            	
+    	runnerValues.put("is_photo_uploaded", 0);	            	
+    	runnerValues.put("url", url);	            	
+    	db.insert("runners", null, runnerValues);
+    	
 		// in the background, process the runner's login
     	new Thread(new RunnerCheckinUploader(runnerId, "0", timestamp, url, this)).start();
 		
 		// Take a picture, which will upload the result to the webserver in the background; then go back to scanning
 		//define the file-name to save photo taken by Camera activity
-		String fileName = runnerId + ".jpg";
+		String fileName="runner.jpg";
+		File photo=null;
+		try {
+			fileName = runnerPhotoDirectory.getCanonicalPath() + File.separator + runnerId + ".jpg";
+			photo = new File(fileName);
+			photo.getParentFile().mkdirs();
+		} catch (IOException e1) {
+		}
 		//create parameters for Intent with filename
 		ContentValues values = new ContentValues();
 		values.put(MediaStore.Images.Media.TITLE, fileName);
@@ -424,13 +436,10 @@ public class CheckpointScannerActivity extends Activity {
 
 		//create new Intent
 		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-	    File photo = new File(Environment.getExternalStorageDirectory(),  runnerId + ".jpg");
 	    intent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(photo));
 		intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
 		intent.putExtra("runner url", url);
 		intent.putExtra("runner id", runnerId);
-		cameraStoredRunnerId = runnerId;
-		cameraStoredUrl = url;
 
 		startActivityForResult(intent, CAMERA_CODE);
 	}
@@ -509,6 +518,58 @@ public class CheckpointScannerActivity extends Activity {
 		return(response);
 	}
 
+	
+	/**
+	 * Try to actually upload this runner's photo to the webserver; update the database if successful
+	 * @param runnerId
+	 */
+	public HttpResponse uploadPhoto(String runnerId, String url) {
+    	//url = "http://thomaslotze.com/survivedc.php";
+    	//url = "http://mime.starset.net/journeylog/log.php";
+
+		File image = null;
+		try {
+			image = new File(runnerPhotoDirectory.getCanonicalPath() + File.separator + runnerId + ".jpg");
+		} catch (IOException e1) {
+		}
+
+		if (image.exists()) {
+		
+	    	// take out things from the url after the question mark
+			String splitContents[] = url.split("\\?");
+			url = splitContents[0];
+	
+	        try {
+	            HttpPost httppost = new HttpPost(url);
+	
+	            MultipartEntity multipartEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);  
+	            multipartEntity.addPart("rid", new StringBody(runnerId));
+	            multipartEntity.addPart("cid", new StringBody("0"));
+	            multipartEntity.addPart("did", new StringBody(deviceId));
+	            multipartEntity.addPart("photo", new FileBody(image));
+	            httppost.setEntity(multipartEntity);
+	
+	            HttpResponse response = httpClient.execute(httppost);	
+	            
+			    StatusLine statusLine = response.getStatusLine();
+			    if(statusLine.getStatusCode() == HttpStatus.SC_OK){
+//			        ByteArrayOutputStream out = new ByteArrayOutputStream();
+//			        response.getEntity().writeTo(out);
+//			        out.close();
+//			        String responseString = out.toString();
+			        ContentValues successValues = new ContentValues(1);
+			        successValues.put("is_photo_uploaded", 1);	            	
+			    	db.update("runners", successValues, "runner_id='" + runnerId + "'", null);
+			    }
+			    
+			    return(response);
+	        } catch (Exception e) {
+	            Log.e("BackgroundPhotoUploader", e.getLocalizedMessage(), e);
+	        }
+		}
+		return(null);
+	}
+
 	// Helper functions for location management
 	
 	// We only really want an approximation of geolocation, so once we get it, stop listening
@@ -553,7 +614,8 @@ public class CheckpointScannerActivity extends Activity {
 	                KEY_CHECKPOINT_ID + " TEXT, " +
 	                KEY_TIMESTAMP + " INTEGER, " +
 	                KEY_IS_UPLOADED + " INTEGER, " +
-	                KEY_URL + " TEXT);";
+	                KEY_URL + " TEXT, " +
+	                "is_photo_uploaded TEXT);";
 	    private static final String LAST_CP_TABLE_CREATE =
             "CREATE TABLE last_checkpoint_id (" +
             "checkpoint_id TEXT);";
@@ -570,4 +632,5 @@ public class CheckpointScannerActivity extends Activity {
 		public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) {
 		}
 	}
+
 }
