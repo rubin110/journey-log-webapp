@@ -9,6 +9,7 @@ CHECKID=`/bin/grep $NEWID runneridtable`
 if [ "$CHECKID" = "" ]
 	then
 	echo $NEWID >> runneridtable
-fi
+else
 echo "Found duplicate"
+fi
 done
