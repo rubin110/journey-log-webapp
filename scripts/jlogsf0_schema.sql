@@ -64,7 +64,6 @@ CREATE TABLE IF NOT EXISTS `checkpoints` (
 
 INSERT INTO `checkpoints` (`checkpoint_id`, `checkpoint_name`, `checkpoint_loc_lat`, `checkpoint_loc_long`) VALUES
 (0, 'Registration', 0, 0),
-(1, 'Checkpoint 1', 0, 0),
 (3, 'Checkpoint 3', NULL, NULL),
 (4, 'Checkpoint 4', NULL, NULL),
 (5, 'Checkpoint 5', NULL, NULL),
