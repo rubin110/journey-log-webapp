@@ -1,6 +1,7 @@
-
-    <FrameLayout android:id="@+id/frameLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
-        <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <TextView android:text="@string/no_runner_id" android:layout_width="fill_parent" android:gravity="center" android:id="@+id/scanned_runner_id" android:layout_height="fill_parent" android:layout_gravity="fill_horizontal" android:layout_weight="1" android:textSize="28sp" android:background="@drawable/icon"></TextView>
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout android:id="@+id/frameLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/icon">
+        <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" >
+            <TextView android:text="@string/no_runner_id" android:layout_width="fill_parent" android:gravity="center" android:id="@+id/scanned_runner_id" android:layout_height="fill_parent" android:layout_gravity="fill_horizontal" android:layout_weight="1" android:textSize="28sp"></TextView>
+            <TextView android:text="@string/no_runner_id" android:layout_width="fill_parent" android:gravity="center" android:id="@+id/checkpoint_id" android:layout_height="fill_parent" android:layout_gravity="fill_horizontal" android:layout_weight="1" android:textSize="28sp"></TextView>
 		</LinearLayout>
     </FrameLayout>

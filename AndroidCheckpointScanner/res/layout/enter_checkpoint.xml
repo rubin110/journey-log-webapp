@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/tableLayout1">
+    <Button android:onClick="scanForCheckpointId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rescan_scheckpoint_string" android:id="@+id/ScanCheckpointQRButton"></Button>
+    <TextView android:layout_width="wrap_content" android:id="@+id/textView1" android:text="@string/or" android:layout_height="wrap_content" android:gravity="center"></TextView>
+    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/ManualCPTextField" android:text="@string/blank"></EditText>
+    <Button android:onClick="submitCheckpointButton" android:layout_width="wrap_content" android:text="@string/submit_manual_checkpoint_string" android:layout_height="wrap_content" android:id="@+id/SubmitManualCPTextButton"></Button>
+	<TextView android:layout_span="2" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/DefaultScanText" android:id="@+id/checkpointInfo" android:gravity="center"></TextView>
+</TableLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/tableLayout1">
+    <TableRow android:id="@+id/tableRow1">
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/CP1" android:id="@+id/cp1_button" android:layout_weight="1" android:onClick="selectCheckpoint"></Button>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/CP2" android:id="@+id/cp2_button" android:layout_weight="1" android:onClick="selectCheckpoint"></Button>
+    </TableRow>
+	<TableRow android:id="@+id/tableRow2">
+	     <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/CP3" android:id="@+id/cp3_button" android:layout_weight="1" android:onClick="selectCheckpoint"></Button>
+	     <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/CP4" android:id="@+id/cp4_button" android:layout_weight="1" android:onClick="selectCheckpoint"></Button>
+	</TableRow>
+	<TableRow android:id="@+id/tableRow4">
+	     <Button android:layout_height="wrap_content" android:text="@string/CP5" android:id="@+id/cp5_button" android:layout_width="wrap_content" android:layout_weight="1" android:onClick="selectCheckpoint"></Button>
+	     <Button android:layout_height="wrap_content" android:text="@string/CP6" android:id="@+id/cp6_button" android:layout_width="wrap_content" android:layout_weight="1" android:onClick="selectCheckpoint"></Button>
+	</TableRow>
+	<TableRow android:id="@+id/tableRow5">
+	 	<Button android:layout_span="2" android:id="@+id/finish_button" android:text="@string/Finish" android:layout_height="wrap_content" android:layout_width="fill_parent" android:onClick="selectCheckpoint"></Button>
+	</TableRow>
+	<TableRow android:id="@+id/tableRow6">
+	  <TextView android:layout_span="2" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/DefaultScanText" android:id="@+id/checkpointInfo"></TextView>
+	</TableRow>
+</TableLayout>

@@ -3,3 +3,5 @@ syntax: glob
 *ignore
 *settings.php
 photos/
+AndroidCheckpontScanner/.git
+AndroidCheckpontScanner/bin

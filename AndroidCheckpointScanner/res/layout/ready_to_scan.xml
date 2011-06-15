@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout android:id="@+id/readyToScanFrameLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/icon">
+        <LinearLayout android:id="@+id/readyToScanLinearLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" >
+            <TextView android:layout_width="fill_parent" android:gravity="center" android:layout_height="fill_parent" android:layout_gravity="fill_horizontal" android:layout_weight="1" android:textSize="28sp" android:text="@string/blank" android:id="@+id/currentCheckpointConfirmationId"></TextView>
+            <TextView android:layout_width="fill_parent" android:gravity="center" android:layout_height="fill_parent" android:layout_gravity="fill_horizontal" android:layout_weight="1" android:textSize="28sp" android:text="@string/readyToScanString" android:id="@+id/readyToScanTextId"></TextView>
+		</LinearLayout>
+    </FrameLayout>
