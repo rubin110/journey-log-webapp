@@ -16,4 +16,5 @@ fi
 echo "Generation complete"
 echo "Double checking for duplicates"
 sort runneridtable | uniq -d
+echo "Done!" 
 done
