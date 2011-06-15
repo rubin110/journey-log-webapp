@@ -2,6 +2,7 @@
 COUNT="$1"
 echo "Making sure the runneridtable exists"
 touch runneridtable
+CURRENTNUMBER=0
 echo "Start generation"
 while  [ $COUNT -le $CURRENTNUMBER ]
 do
