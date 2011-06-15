@@ -8,8 +8,8 @@ while  [ "$CURRENTNUMBER" -lt "$COUNT"  ]
 do
 NEWID=`</dev/urandom tr -dc A-NP-Z1-9 | head -c5`	# Linux
 # NEWID=`echo $RANDOM`								# Mac
-CHECKID=`/usr/bin/grep $NEWID runneridtable` 		# Mac
-# CHECKID=`/bin/grep $NEWID runneridtable` 			# Linux
+# CHECKID=`/usr/bin/grep $NEWID runneridtable` 		# Mac
+CHECKID=`/bin/grep $NEWID runneridtable` 			# Linux
 if [ "$CHECKID" = "" ]
 	then
 	echo $NEWID >> runneridtable
