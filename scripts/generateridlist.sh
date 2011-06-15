@@ -3,7 +3,7 @@ COUNT="$1"
 echo "Making sure the runneridtable exists"
 touch runneridtable
 echo "Start generation"
-for i in {1..$COUNT}
+while  [ $COUNT -le $CURRENTNUMBER ]
 do
 NEWID=`</dev/urandom tr -dc A-NP-Z1-9 | head -c5`
 CHECKID=`/bin/grep $NEWID runneridtable`
@@ -13,8 +13,9 @@ if [ "$CHECKID" = "" ]
 else
 echo "Found duplicate"
 fi
+CURRENTNUMBER=`cat runnertable | wc -l`
+done
 echo "Generation complete"
 echo "Double checking for duplicates"
 sort runneridtable | uniq -d
-echo "Done!" 
-done
+echo "Done!"
