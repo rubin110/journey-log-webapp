@@ -20,7 +20,7 @@ do
 	-fill black -font OCRA-Medium -pointsize 75 -annotate +3472+4100 "RUNNERID: $i" \
 	-fill black -font OCRA-Medium -pointsize 75 -annotate +5630+1090 "RUNNERID: $i" \
 	-fill black -font Courier -pointsize 56 -annotate 90x90+2200+250 "$QUOTE" \
-	-depth 8 completed/$i-man.pdf
+	-depth 8 completed/$i-man.png
 	rm temp/$i-qr-l.png temp/$i-qr-s.png
 	n=$((n+1))
 done
