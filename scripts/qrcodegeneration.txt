@@ -15,6 +15,34 @@ convert qrcode-test.png -background white -font OCR-A-Std-Regular -pointsize 54 
 qrencode -o - -s 8 -m 2 "http://jl.vc/12345" | convert -background white -font OCR-A-Std-Regular label:'12345!' -gravity Center -append | potrace -b svg output.svg
 
 
-qrencode -o output.png -s 8 -m 2 "12345"
-convert output.png -background white -font OCR-A-Std-Regular -pointsize 50 label:'12345' -gravity center -depth 1 -monochrome -type Bilevel -append output.bmp
+qrencode -o output.png -s 8 -m 2 "http://jl.vc/12345"
+convert output.png -background white -font OCRA-Medium -pointsize 20 label:'RUNNERID ABCDE' -gravity center -depth 1 -monochrome -type Bilevel -append output.bmp
 potrace -a 0.5 -b svg -o output.svg output.bmp
+
+
+qrencode -o 12345-qr-l.png -s 73 -m 0 "http://jl.vc/12345"
+qrencode -o 12345-qr-s.png -s 33 -m 0 "http://jl.vc/12345"
+convert -composite journey-manifest.png 12345-qr-l.png -geometry 1825x1825+176+3130 -depth 8 12345-man.png
+convert -composite 12345-man.png 12345-qr-s.png -geometry 825x825+3470+4140 -depth 8 12345-man.png
+
+convert output.png -background white -font OCRA-Medium -pointsize 50 label:'12345' -gravity center -depth 1 -monochrome -type Bilevel -append output.bmp
+
+ convert -composite journey-manifest.png 12345.png -geometry 1825x1825+176+3110 -depth 8 test.png
+
+
+
+convert -composite input.png 12345-qr-l.png -geometry 1825x1825+176+3130 -depth 8 12345-man.png
+convert -composite 12345-man.png 12345-qr-s.png -geometry 825x825+3470+4140 -depth 8 12345-man.png
+convert -limit memory 0 -limit map 0 -size 6600x5100 xc:white journey-manifest.png -geometry +0+0 -composite 12345-qr-l.png -geometry +176+3130 -composite 12345-qr-s.png -geometry +3470+4140 12345-man.png
+
+qrencode -o 12345-qr-l.png -s 73 -m 0 "http://jl.vc/12345"
+qrencode -o 12345-qr-s.png -s 33 -m 0 "http://jl.vc/12345"
+convert -limit memory 0 -limit map 0 \
+journey-manifest.png \
+12345-qr-l.png -geometry +176+3130 -composite \
+12345-qr-s.png -geometry +3470+4140 -composite \
+12345-qr-s.png -geometry +5628+150 -composite \
+-fill black -font OCRA-Medium -pointsize 160 -annotate +240+3060 'RUNNERID: 12345' \
+-fill black -font OCRA-Medium -pointsize 75 -annotate +3472+4100 'RUNNERID: 12345' \
+-fill black -font OCRA-Medium -pointsize 75 -annotate +5630+1090 'RUNNERID: 12345' \
+-depth 8 12345-man.pdf
