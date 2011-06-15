@@ -46,3 +46,10 @@ journey-manifest.png \
 -fill black -font OCRA-Medium -pointsize 75 -annotate +3472+4100 'RUNNERID: 12345' \
 -fill black -font OCRA-Medium -pointsize 75 -annotate +5630+1090 'RUNNERID: 12345' \
 -depth 8 12345-man.pdf
+
+
+
+convert -limit memory 0 -limit map 0 \
+journey-manifest.png \
+-fill black -font Courier -pointsize 56 -annotate 90x90+2200+250 'Too frequent rewards indicate that the general is at the end of his resources too frequent punishments that he is in acute distress.' \
+-depth 8 -density 600x600 12345-man.pdf
