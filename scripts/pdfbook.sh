@@ -1,0 +1,1 @@
+convert completed/*.png -density 600x600 -depth 8 man.pdf
