@@ -1,9 +1,9 @@
 #!/bin/bash
-
+COUNT="$1"
 echo "Making sure the runneridtable exists"
 touch runneridtable
 echo "Start generation"
-for i in {1..$@}
+for i in {1.."$1"}
 do
 NEWID=`</dev/urandom tr -dc A-NP-Z1-9 | head -c5`
 CHECKID=`/bin/grep $NEWID runneridtable`
