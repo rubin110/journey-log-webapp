@@ -1,0 +1,14 @@
+<br /><%= @total_players %> players are running.
+
+<% @summarized_checkpoints.each do |summarized_checkpoint| %>
+<br />Checkpoint <%= summarized_checkpoint.checkpoint.checkpoint_name %>: <%= summarized_checkpoint.num_checked_in %> runners have checked in, most recently at <%= summarized_checkpoint.last_checkin_time %> 
+<% end %>
+
+<br />
+<h2>Activity at each checkpoint over time</h2>
+<%= @line_plot.html_safe %>
+
+<br />
+<h2>Distribution of runners, by furthest checkpoint reached, over time</h2>
+<%= @status_plot.html_safe %>
+

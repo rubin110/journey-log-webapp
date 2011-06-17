@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+thomas_caught:
+  chaser_id: ThomasRunnerId
+  runner_id: CaughtRunnerId
+  reported_timestamp: 2011-05-31 15:21:45
