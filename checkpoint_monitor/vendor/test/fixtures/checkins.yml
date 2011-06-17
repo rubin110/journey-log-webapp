@@ -1,0 +1,28 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+rubin_cp1:
+  runner_id: RubinRunnerId
+  checkpoint_id: cp1
+  longitude: 1.5
+  latitude: 1.5
+  device_id: MyString
+  reported_timestamp: 2011-05-31 15:12:01
+  checksum: MyString
+
+rubin_cp2:
+  runner_id: RubinRunnerId
+  checkpoint_id: cp2
+  longitude: 1.5
+  latitude: 1.5
+  device_id: MyString
+  reported_timestamp: 2011-05-31 15:22:01
+  checksum: MyString
+
+caught_cp1:
+  runner_id: CaughtRunnerId
+  checkpoint_id: cp1
+  longitude: 1.5
+  latitude: 1.5
+  device_id: ThomasDeviceId
+  reported_timestamp: 2011-05-31 15:12:03
+  checksum: MyString
