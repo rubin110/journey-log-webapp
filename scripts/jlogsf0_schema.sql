@@ -29,15 +29,16 @@ CREATE TABLE `checkins` (
   `checkin_time` datetime DEFAULT NULL,
   `device_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_agent` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `lng` float DEFAULT NULL,
-  `lat` float DEFAULT NULL,
+  `ip_address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lng` double DEFAULT NULL,
+  `lat` double DEFAULT NULL,
   `is_valid` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`checkin_id`),
   UNIQUE KEY `runner_id` (`runner_id`,`checkpoint_id`),
   KEY `checkin_id` (`checkin_id`),
-  KEY `index_checkins_on_checkin_time_and_checkpoint_id_and_is_valid` (`checkin_time`,`checkpoint_id`,`is_valid`),
-  KEY `index_checkins_on_checkpoint_id_and_checkin_time_and_is_valid` (`checkpoint_id`,`checkin_time`,`is_valid`),
   KEY `index_checkins_on_checkpoint_id` (`checkpoint_id`),
+  KEY `index_checkins_on_checkpoint_id_and_checkin_time_and_is_valid` (`checkpoint_id`,`checkin_time`,`is_valid`),
+  KEY `index_checkins_on_checkin_time_and_checkpoint_id_and_is_valid` (`checkin_time`,`checkpoint_id`,`is_valid`),
   KEY `index_checkins_on_lat` (`lat`),
   KEY `index_checkins_on_lng` (`lng`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -62,15 +63,15 @@ DROP TABLE IF EXISTS `checkpoints`;
 CREATE TABLE `checkpoints` (
   `checkpoint_id` int(11) DEFAULT NULL,
   `checkpoint_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `checkpoint_loc_lat` float DEFAULT NULL,
-  `checkpoint_loc_long` float DEFAULT NULL,
+  `checkpoint_loc_lat` double DEFAULT NULL,
+  `checkpoint_loc_long` double DEFAULT NULL,
   `is_mobile` tinyint(1) DEFAULT '0',
   `is_bonus` tinyint(1) DEFAULT '0',
   `checkpoint_position` int(11) DEFAULT NULL,
   KEY `checkpoint_id` (`checkpoint_id`),
+  KEY `index_checkpoints_on_checkpoint_position` (`checkpoint_position`),
   KEY `index_checkpoints_on_checkpoint_loc_lat` (`checkpoint_loc_lat`),
   KEY `index_checkpoints_on_checkpoint_loc_long` (`checkpoint_loc_long`),
-  KEY `index_checkpoints_on_checkpoint_position` (`checkpoint_position`),
   KEY `index_checkpoints_on_is_mobile_and_is_bonus` (`is_mobile`,`is_bonus`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -100,8 +101,8 @@ CREATE TABLE `runners` (
   `is_registered` tinyint(1) DEFAULT NULL,
   `time_of_registration` datetime DEFAULT NULL,
   `is_tagged` tinyint(1) DEFAULT NULL,
-  KEY `index_runners_on_is_tagged` (`is_tagged`),
-  KEY `runner_id` (`runner_id`)
+  KEY `runner_id` (`runner_id`),
+  KEY `index_runners_on_is_tagged` (`is_tagged`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -149,18 +150,18 @@ CREATE TABLE `tags` (
   `runner_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tagger_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tag_time` datetime DEFAULT NULL,
-  `loc_lat` float DEFAULT NULL,
-  `loc_long` float DEFAULT NULL,
+  `loc_lat` double DEFAULT NULL,
+  `loc_long` double DEFAULT NULL,
   `loc_addr` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `device_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_agent` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ip_address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`tag_id`),
   UNIQUE KEY `runner_id` (`runner_id`,`tagger_id`),
-  KEY `index_tags_on_loc_lat` (`loc_lat`),
-  KEY `index_tags_on_loc_long` (`loc_long`),
   KEY `tag_id` (`tag_id`),
-  KEY `index_tags_on_tagger_id_and_runner_id` (`tagger_id`,`runner_id`)
+  KEY `index_tags_on_tagger_id_and_runner_id` (`tagger_id`,`runner_id`),
+  KEY `index_tags_on_loc_lat` (`loc_lat`),
+  KEY `index_tags_on_loc_long` (`loc_long`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -182,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-06-17  8:09:37
+-- Dump completed on 2011-06-17  9:23:28
