@@ -16,7 +16,9 @@ $jlogCID = intval($_COOKIE["jlog-cid"]);
 if ($cid == "0" || $jlogCID == "0") {
 	//print 'HEY LOOK YOU ARE CHECKPOINT 0';
 	//header("Location: /agent/autoregistration/?rid=".$runner_id);
+	print "You are Registration!<br>";
 	include('_autoregistration.php');
+	exit;
 }
 
 if ($runner_id) {
