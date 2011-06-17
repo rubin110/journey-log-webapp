@@ -10,6 +10,8 @@ RewriteRule ^agent/set(/)?$  _cidindex.php [L]
 RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [L]
 RewriteRule ^agent/checkin(/)?$ _checkin.php [L]
 RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [L]
+RewriteRule ^agent/stats(/)?$ _stats.php [L]
+
 RewriteRule ^register(/)?$  _reg.php [L]
 RewriteRule ^register/([a-zA-Z0-9]+)?$  _reg.php?rid=$1 [L]
 RewriteRule ^tag(/)?$  _tag.php [L]
@@ -25,6 +27,10 @@ RewriteRule ^([a-zA-Z0-9]+)?$ agent/checkin/$1 [L]
 
 # Catch all
 RewriteRule ^([a-zA-Z0-9]+)?$ index.php?rid=$1 [L]
+
+# Missing images
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^images/.*\.jpg$ /_resources/404.jpg [L]
 </IfModule>
 
 # RewriteCond %{QUERY_STRING} blech=([a-zA-Z0-9]+)
