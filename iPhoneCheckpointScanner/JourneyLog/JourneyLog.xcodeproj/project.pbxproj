@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F00090C13A41BC2008F1974 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00090B13A41BC2008F1974 /* UIKit.framework */; };
+		7F00090E13A41BC2008F1974 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00090D13A41BC2008F1974 /* Foundation.framework */; };
+		7F00091013A41BC2008F1974 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00090F13A41BC2008F1974 /* CoreGraphics.framework */; };
+		7F00091213A41BC2008F1974 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00091113A41BC2008F1974 /* CoreData.framework */; };
+		7F00091813A41BC2008F1974 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F00091613A41BC2008F1974 /* InfoPlist.strings */; };
+		7F00091B13A41BC2008F1974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F00091A13A41BC2008F1974 /* main.m */; };
+		7F00091E13A41BC2008F1974 /* JourneyLogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F00091D13A41BC2008F1974 /* JourneyLogAppDelegate.m */; };
+		7F00092113A41BC2008F1974 /* JourneyLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F00091F13A41BC2008F1974 /* JourneyLog.xcdatamodeld */; };
+		7F00092413A41BC2008F1974 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F00092213A41BC2008F1974 /* MainWindow.xib */; };
+		7F00092713A41BC2008F1974 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F00092613A41BC2008F1974 /* MainViewController.m */; };
+		7F00092913A41BC2008F1974 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F00092813A41BC2008F1974 /* MainView.xib */; };
+		7F00092C13A41BC2008F1974 /* CameraOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F00092B13A41BC2008F1974 /* CameraOverlayViewController.m */; };
+		7F00092E13A41BC2008F1974 /* CameraOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F00092D13A41BC2008F1974 /* CameraOverlayView.xib */; };
+		7F00093513A41BC2008F1974 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00090B13A41BC2008F1974 /* UIKit.framework */; };
+		7F00093613A41BC2008F1974 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00090D13A41BC2008F1974 /* Foundation.framework */; };
+		7F00093713A41BC2008F1974 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00090F13A41BC2008F1974 /* CoreGraphics.framework */; };
+		7F00093813A41BC2008F1974 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00091113A41BC2008F1974 /* CoreData.framework */; };
+		7F00094013A41BC2008F1974 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F00093E13A41BC2008F1974 /* InfoPlist.strings */; };
+		7F00094313A41BC2008F1974 /* JourneyLogTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 7F00094213A41BC2008F1974 /* JourneyLogTests.h */; };
+		7F00094513A41BC2008F1974 /* JourneyLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F00094413A41BC2008F1974 /* JourneyLogTests.m */; };
+		7F00094F13A41DBA008F1974 /* PlayIcon_lo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00094E13A41DBA008F1974 /* PlayIcon_lo.png */; };
+		7F00095113A41DFC008F1974 /* PlayIcon_hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00095013A41DFC008F1974 /* PlayIcon_hi.png */; };
+		7F00096F13A41E65008F1974 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00096913A41E65008F1974 /* libzbar.a */; };
+		7F00097013A41E65008F1974 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00096913A41E65008F1974 /* libzbar.a */; };
+		7F00097113A41E65008F1974 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096B13A41E65008F1974 /* zbar-back.png */; };
+		7F00097213A41E65008F1974 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096B13A41E65008F1974 /* zbar-back.png */; };
+		7F00097313A41E65008F1974 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096C13A41E65008F1974 /* zbar-help.html */; };
+		7F00097413A41E65008F1974 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096C13A41E65008F1974 /* zbar-help.html */; };
+		7F00097513A41E65008F1974 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096D13A41E65008F1974 /* zbar-helpicons.png */; };
+		7F00097613A41E65008F1974 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096D13A41E65008F1974 /* zbar-helpicons.png */; };
+		7F00097713A41E65008F1974 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096E13A41E65008F1974 /* zbar-samples.png */; };
+		7F00097813A41E65008F1974 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F00096E13A41E65008F1974 /* zbar-samples.png */; };
+		7F0009A713A4263B008F1974 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0009A413A4263B008F1974 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7F0009A813A4263B008F1974 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0009A513A4263B008F1974 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7F0009A913A4263B008F1974 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0009A613A4263B008F1974 /* CoreVideo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7F0009AB13A42674008F1974 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0009AA13A42674008F1974 /* QuartzCore.framework */; };
+		7F0009AD13A4268A008F1974 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0009AC13A4268A008F1974 /* libiconv.dylib */; };
+		7F0009B813A43622008F1974 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = 7F0009B713A43622008F1974 /* tap.aif */; };
+		7F0009BA13A43784008F1974 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0009B913A43784008F1974 /* AudioToolbox.framework */; };
+		7F282E1413A6FF0100D40A22 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F282E1313A6FF0100D40A22 /* CoreLocation.framework */; };
+		7F282E1813A71E9800D40A22 /* PlayerRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F282E1713A71E9800D40A22 /* PlayerRegistration.m */; };
+		7F282E2113A740D300D40A22 /* ServerRequestDaemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F282E2013A740D300D40A22 /* ServerRequestDaemon.m */; };
+		7FD6078B13AAF59A00F28FD1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6073A13AAF59A00F28FD1 /* ASIAuthenticationDialog.m */; };
+		7FD6078C13AAF59A00F28FD1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6073D13AAF59A00F28FD1 /* ASIDataCompressor.m */; };
+		7FD6078D13AAF59A00F28FD1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6073F13AAF59A00F28FD1 /* ASIDataDecompressor.m */; };
+		7FD6078E13AAF59A00F28FD1 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6074113AAF59A00F28FD1 /* ASIDownloadCache.m */; };
+		7FD6078F13AAF59A00F28FD1 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6074313AAF59A00F28FD1 /* ASIFormDataRequest.m */; };
+		7FD6079013AAF59A00F28FD1 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6074513AAF59A00F28FD1 /* ASIHTTPRequest.m */; };
+		7FD6079113AAF59A00F28FD1 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6074913AAF59A00F28FD1 /* ASIInputStream.m */; };
+		7FD6079213AAF59A00F28FD1 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6074B13AAF59A00F28FD1 /* ASINetworkQueue.m */; };
+		7FD607B413AAFFF100F28FD1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD607B313AAFFF100F28FD1 /* Reachability.m */; };
+		7FD607B613AB007C00F28FD1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD607B513AB007C00F28FD1 /* CFNetwork.framework */; };
+		7FD607B813AB008E00F28FD1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD607B713AB008E00F28FD1 /* SystemConfiguration.framework */; };
+		7FD607BA13AB009700F28FD1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD607B913AB009700F28FD1 /* MobileCoreServices.framework */; };
+		7FD607BD13AB00B100F28FD1 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD607BC13AB00B100F28FD1 /* libz.1.2.3.dylib */; };
+		7FDE417F13A49218005E294D /* Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE417E13A49218005E294D /* Scan.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F00093913A41BC2008F1974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F0008FE13A41BC2008F1974 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F00090613A41BC2008F1974;
+			remoteInfo = JourneyLog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F00090713A41BC2008F1974 /* JourneyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JourneyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F00090B13A41BC2008F1974 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F00090D13A41BC2008F1974 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F00090F13A41BC2008F1974 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7F00091113A41BC2008F1974 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7F00091513A41BC2008F1974 /* JourneyLog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JourneyLog-Info.plist"; sourceTree = "<group>"; };
+		7F00091713A41BC2008F1974 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F00091913A41BC2008F1974 /* JourneyLog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JourneyLog-Prefix.pch"; sourceTree = "<group>"; };
+		7F00091A13A41BC2008F1974 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F00091C13A41BC2008F1974 /* JourneyLogAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JourneyLogAppDelegate.h; sourceTree = "<group>"; };
+		7F00091D13A41BC2008F1974 /* JourneyLogAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JourneyLogAppDelegate.m; sourceTree = "<group>"; };
+		7F00092013A41BC2008F1974 /* JourneyLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JourneyLog.xcdatamodel; sourceTree = "<group>"; };
+		7F00092313A41BC2008F1974 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7F00092513A41BC2008F1974 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7F00092613A41BC2008F1974 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7F00092813A41BC2008F1974 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		7F00092A13A41BC2008F1974 /* CameraOverlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraOverlayViewController.h; sourceTree = "<group>"; };
+		7F00092B13A41BC2008F1974 /* CameraOverlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraOverlayViewController.m; sourceTree = "<group>"; };
+		7F00092D13A41BC2008F1974 /* CameraOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraOverlayView.xib; sourceTree = "<group>"; };
+		7F00093413A41BC2008F1974 /* JourneyLogTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyLogTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F00093D13A41BC2008F1974 /* JourneyLogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JourneyLogTests-Info.plist"; sourceTree = "<group>"; };
+		7F00093F13A41BC2008F1974 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7F00094113A41BC2008F1974 /* JourneyLogTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JourneyLogTests-Prefix.pch"; sourceTree = "<group>"; };
+		7F00094213A41BC2008F1974 /* JourneyLogTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JourneyLogTests.h; sourceTree = "<group>"; };
+		7F00094413A41BC2008F1974 /* JourneyLogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JourneyLogTests.m; sourceTree = "<group>"; };
+		7F00094E13A41DBA008F1974 /* PlayIcon_lo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayIcon_lo.png; sourceTree = "<group>"; };
+		7F00095013A41DFC008F1974 /* PlayIcon_hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayIcon_hi.png; sourceTree = "<group>"; };
+		7F00095613A41E65008F1974 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		7F00095713A41E65008F1974 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		7F00095813A41E65008F1974 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		7F00095913A41E65008F1974 /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		7F00095A13A41E65008F1974 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		7F00095B13A41E65008F1974 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		7F00095C13A41E65008F1974 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		7F00095D13A41E65008F1974 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		7F00095E13A41E65008F1974 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		7F00095F13A41E65008F1974 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		7F00096013A41E65008F1974 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		7F00096113A41E65008F1974 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		7F00096213A41E65008F1974 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		7F00096313A41E65008F1974 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		7F00096413A41E65008F1974 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		7F00096513A41E65008F1974 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		7F00096613A41E65008F1974 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		7F00096713A41E65008F1974 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		7F00096813A41E65008F1974 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		7F00096913A41E65008F1974 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		7F00096B13A41E65008F1974 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		7F00096C13A41E65008F1974 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		7F00096D13A41E65008F1974 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		7F00096E13A41E65008F1974 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		7F0009A413A4263B008F1974 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7F0009A513A4263B008F1974 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		7F0009A613A4263B008F1974 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		7F0009AA13A42674008F1974 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7F0009AC13A4268A008F1974 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		7F0009B713A43622008F1974 /* tap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.aif; sourceTree = "<group>"; };
+		7F0009B913A43784008F1974 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7F282E1313A6FF0100D40A22 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7F282E1613A71E9800D40A22 /* PlayerRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerRegistration.h; path = JourneyLog/PlayerRegistration.h; sourceTree = "<group>"; };
+		7F282E1713A71E9800D40A22 /* PlayerRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerRegistration.m; path = JourneyLog/PlayerRegistration.m; sourceTree = "<group>"; };
+		7F282E1F13A740D300D40A22 /* ServerRequestDaemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRequestDaemon.h; sourceTree = "<group>"; };
+		7F282E2013A740D300D40A22 /* ServerRequestDaemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRequestDaemon.m; sourceTree = "<group>"; };
+		7FD6073913AAF59A00F28FD1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		7FD6073A13AAF59A00F28FD1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		7FD6073B13AAF59A00F28FD1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		7FD6073C13AAF59A00F28FD1 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		7FD6073D13AAF59A00F28FD1 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		7FD6073E13AAF59A00F28FD1 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		7FD6073F13AAF59A00F28FD1 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		7FD6074013AAF59A00F28FD1 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		7FD6074113AAF59A00F28FD1 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		7FD6074213AAF59A00F28FD1 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		7FD6074313AAF59A00F28FD1 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		7FD6074413AAF59A00F28FD1 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		7FD6074513AAF59A00F28FD1 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		7FD6074613AAF59A00F28FD1 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		7FD6074713AAF59A00F28FD1 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		7FD6074813AAF59A00F28FD1 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		7FD6074913AAF59A00F28FD1 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		7FD6074A13AAF59A00F28FD1 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		7FD6074B13AAF59A00F28FD1 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		7FD6074C13AAF59A00F28FD1 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		7FD607B213AAFFF100F28FD1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "../../pokeb-asi-http-request-2980421/External/Reachability/Reachability.h"; sourceTree = "<group>"; };
+		7FD607B313AAFFF100F28FD1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "../../pokeb-asi-http-request-2980421/External/Reachability/Reachability.m"; sourceTree = "<group>"; };
+		7FD607B513AB007C00F28FD1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7FD607B713AB008E00F28FD1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7FD607B913AB009700F28FD1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7FD607BB13AB00A100F28FD1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7FD607BC13AB00B100F28FD1 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		7FDE417D13A49218005E294D /* Scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scan.h; path = JourneyLog/Scan.h; sourceTree = "<group>"; };
+		7FDE417E13A49218005E294D /* Scan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scan.m; path = JourneyLog/Scan.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F00090413A41BC2008F1974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FD607BD13AB00B100F28FD1 /* libz.1.2.3.dylib in Frameworks */,
+				7F00091013A41BC2008F1974 /* CoreGraphics.framework in Frameworks */,
+				7FD607BA13AB009700F28FD1 /* MobileCoreServices.framework in Frameworks */,
+				7FD607B813AB008E00F28FD1 /* SystemConfiguration.framework in Frameworks */,
+				7FD607B613AB007C00F28FD1 /* CFNetwork.framework in Frameworks */,
+				7F282E1413A6FF0100D40A22 /* CoreLocation.framework in Frameworks */,
+				7F0009BA13A43784008F1974 /* AudioToolbox.framework in Frameworks */,
+				7F0009AD13A4268A008F1974 /* libiconv.dylib in Frameworks */,
+				7F0009AB13A42674008F1974 /* QuartzCore.framework in Frameworks */,
+				7F0009A713A4263B008F1974 /* AVFoundation.framework in Frameworks */,
+				7F0009A813A4263B008F1974 /* CoreMedia.framework in Frameworks */,
+				7F0009A913A4263B008F1974 /* CoreVideo.framework in Frameworks */,
+				7F00090C13A41BC2008F1974 /* UIKit.framework in Frameworks */,
+				7F00090E13A41BC2008F1974 /* Foundation.framework in Frameworks */,
+				7F00091213A41BC2008F1974 /* CoreData.framework in Frameworks */,
+				7F00096F13A41E65008F1974 /* libzbar.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F00093013A41BC2008F1974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F00093513A41BC2008F1974 /* UIKit.framework in Frameworks */,
+				7F00093613A41BC2008F1974 /* Foundation.framework in Frameworks */,
+				7F00093713A41BC2008F1974 /* CoreGraphics.framework in Frameworks */,
+				7F00093813A41BC2008F1974 /* CoreData.framework in Frameworks */,
+				7F00097013A41E65008F1974 /* libzbar.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F0008FC13A41BC2008F1974 = {
+			isa = PBXGroup;
+			children = (
+				7FD6073813AAF59A00F28FD1 /* ASIHTTPRequest */,
+				7F9AD11113A471000063CB52 /* Entities */,
+				7F00091313A41BC2008F1974 /* JourneyLog */,
+				7F00093B13A41BC2008F1974 /* JourneyLogTests */,
+				7F00090A13A41BC2008F1974 /* Frameworks */,
+				7F00090813A41BC2008F1974 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F00090813A41BC2008F1974 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F00090713A41BC2008F1974 /* JourneyLog.app */,
+				7F00093413A41BC2008F1974 /* JourneyLogTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F00090A13A41BC2008F1974 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FD607BC13AB00B100F28FD1 /* libz.1.2.3.dylib */,
+				7FD607BB13AB00A100F28FD1 /* CoreGraphics.framework */,
+				7FD607B913AB009700F28FD1 /* MobileCoreServices.framework */,
+				7FD607B713AB008E00F28FD1 /* SystemConfiguration.framework */,
+				7FD607B513AB007C00F28FD1 /* CFNetwork.framework */,
+				7F282E1313A6FF0100D40A22 /* CoreLocation.framework */,
+				7F0009B913A43784008F1974 /* AudioToolbox.framework */,
+				7F0009AC13A4268A008F1974 /* libiconv.dylib */,
+				7F0009AA13A42674008F1974 /* QuartzCore.framework */,
+				7F0009A413A4263B008F1974 /* AVFoundation.framework */,
+				7F0009A513A4263B008F1974 /* CoreMedia.framework */,
+				7F0009A613A4263B008F1974 /* CoreVideo.framework */,
+				7F00095213A41E65008F1974 /* ZBarSDK */,
+				7F00090B13A41BC2008F1974 /* UIKit.framework */,
+				7F00090D13A41BC2008F1974 /* Foundation.framework */,
+				7F00090F13A41BC2008F1974 /* CoreGraphics.framework */,
+				7F00091113A41BC2008F1974 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F00091313A41BC2008F1974 /* JourneyLog */ = {
+			isa = PBXGroup;
+			children = (
+				7F0009B613A435ED008F1974 /* Resources */,
+				7F00091C13A41BC2008F1974 /* JourneyLogAppDelegate.h */,
+				7F00091D13A41BC2008F1974 /* JourneyLogAppDelegate.m */,
+				7F00092213A41BC2008F1974 /* MainWindow.xib */,
+				7F00092513A41BC2008F1974 /* MainViewController.h */,
+				7F00092613A41BC2008F1974 /* MainViewController.m */,
+				7F00092813A41BC2008F1974 /* MainView.xib */,
+				7F00092A13A41BC2008F1974 /* CameraOverlayViewController.h */,
+				7F00092B13A41BC2008F1974 /* CameraOverlayViewController.m */,
+				7F00092D13A41BC2008F1974 /* CameraOverlayView.xib */,
+				7F00091F13A41BC2008F1974 /* JourneyLog.xcdatamodeld */,
+				7F00091413A41BC2008F1974 /* Supporting Files */,
+				7F282E1F13A740D300D40A22 /* ServerRequestDaemon.h */,
+				7F282E2013A740D300D40A22 /* ServerRequestDaemon.m */,
+			);
+			path = JourneyLog;
+			sourceTree = "<group>";
+		};
+		7F00091413A41BC2008F1974 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F00091513A41BC2008F1974 /* JourneyLog-Info.plist */,
+				7F00091613A41BC2008F1974 /* InfoPlist.strings */,
+				7F00091913A41BC2008F1974 /* JourneyLog-Prefix.pch */,
+				7F00091A13A41BC2008F1974 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F00093B13A41BC2008F1974 /* JourneyLogTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F00094213A41BC2008F1974 /* JourneyLogTests.h */,
+				7F00094413A41BC2008F1974 /* JourneyLogTests.m */,
+				7F00093C13A41BC2008F1974 /* Supporting Files */,
+			);
+			path = JourneyLogTests;
+			sourceTree = "<group>";
+		};
+		7F00093C13A41BC2008F1974 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F00093D13A41BC2008F1974 /* JourneyLogTests-Info.plist */,
+				7F00093E13A41BC2008F1974 /* InfoPlist.strings */,
+				7F00094113A41BC2008F1974 /* JourneyLogTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F00095213A41E65008F1974 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7F00095313A41E65008F1974 /* Headers */,
+				7F00096913A41E65008F1974 /* libzbar.a */,
+				7F00096A13A41E65008F1974 /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		7F00095313A41E65008F1974 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				7F00095413A41E65008F1974 /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		7F00095413A41E65008F1974 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7F00095513A41E65008F1974 /* zbar */,
+				7F00095F13A41E65008F1974 /* zbar.h */,
+				7F00096013A41E65008F1974 /* ZBarCaptureReader.h */,
+				7F00096113A41E65008F1974 /* ZBarHelpController.h */,
+				7F00096213A41E65008F1974 /* ZBarImage.h */,
+				7F00096313A41E65008F1974 /* ZBarImageScanner.h */,
+				7F00096413A41E65008F1974 /* ZBarReaderController.h */,
+				7F00096513A41E65008F1974 /* ZBarReaderView.h */,
+				7F00096613A41E65008F1974 /* ZBarReaderViewController.h */,
+				7F00096713A41E65008F1974 /* ZBarSDK.h */,
+				7F00096813A41E65008F1974 /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		7F00095513A41E65008F1974 /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				7F00095613A41E65008F1974 /* Decoder.h */,
+				7F00095713A41E65008F1974 /* Exception.h */,
+				7F00095813A41E65008F1974 /* Image.h */,
+				7F00095913A41E65008F1974 /* ImageScanner.h */,
+				7F00095A13A41E65008F1974 /* Processor.h */,
+				7F00095B13A41E65008F1974 /* Scanner.h */,
+				7F00095C13A41E65008F1974 /* Symbol.h */,
+				7F00095D13A41E65008F1974 /* Video.h */,
+				7F00095E13A41E65008F1974 /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		7F00096A13A41E65008F1974 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F00096B13A41E65008F1974 /* zbar-back.png */,
+				7F00096C13A41E65008F1974 /* zbar-help.html */,
+				7F00096D13A41E65008F1974 /* zbar-helpicons.png */,
+				7F00096E13A41E65008F1974 /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7F0009B613A435ED008F1974 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F0009B713A43622008F1974 /* tap.aif */,
+				7F00095013A41DFC008F1974 /* PlayIcon_hi.png */,
+				7F00094E13A41DBA008F1974 /* PlayIcon_lo.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7F9AD11113A471000063CB52 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7F282E1613A71E9800D40A22 /* PlayerRegistration.h */,
+				7F282E1713A71E9800D40A22 /* PlayerRegistration.m */,
+				7FDE417D13A49218005E294D /* Scan.h */,
+				7FDE417E13A49218005E294D /* Scan.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		7FD6073813AAF59A00F28FD1 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				7FD607B213AAFFF100F28FD1 /* Reachability.h */,
+				7FD607B313AAFFF100F28FD1 /* Reachability.m */,
+				7FD6073913AAF59A00F28FD1 /* ASIAuthenticationDialog.h */,
+				7FD6073A13AAF59A00F28FD1 /* ASIAuthenticationDialog.m */,
+				7FD6073B13AAF59A00F28FD1 /* ASICacheDelegate.h */,
+				7FD6073C13AAF59A00F28FD1 /* ASIDataCompressor.h */,
+				7FD6073D13AAF59A00F28FD1 /* ASIDataCompressor.m */,
+				7FD6073E13AAF59A00F28FD1 /* ASIDataDecompressor.h */,
+				7FD6073F13AAF59A00F28FD1 /* ASIDataDecompressor.m */,
+				7FD6074013AAF59A00F28FD1 /* ASIDownloadCache.h */,
+				7FD6074113AAF59A00F28FD1 /* ASIDownloadCache.m */,
+				7FD6074213AAF59A00F28FD1 /* ASIFormDataRequest.h */,
+				7FD6074313AAF59A00F28FD1 /* ASIFormDataRequest.m */,
+				7FD6074413AAF59A00F28FD1 /* ASIHTTPRequest.h */,
+				7FD6074513AAF59A00F28FD1 /* ASIHTTPRequest.m */,
+				7FD6074613AAF59A00F28FD1 /* ASIHTTPRequestConfig.h */,
+				7FD6074713AAF59A00F28FD1 /* ASIHTTPRequestDelegate.h */,
+				7FD6074813AAF59A00F28FD1 /* ASIInputStream.h */,
+				7FD6074913AAF59A00F28FD1 /* ASIInputStream.m */,
+				7FD6074A13AAF59A00F28FD1 /* ASINetworkQueue.h */,
+				7FD6074B13AAF59A00F28FD1 /* ASINetworkQueue.m */,
+				7FD6074C13AAF59A00F28FD1 /* ASIProgressDelegate.h */,
+			);
+			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F00090613A41BC2008F1974 /* JourneyLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F00094813A41BC2008F1974 /* Build configuration list for PBXNativeTarget "JourneyLog" */;
+			buildPhases = (
+				7F00090313A41BC2008F1974 /* Sources */,
+				7F00090413A41BC2008F1974 /* Frameworks */,
+				7F00090513A41BC2008F1974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JourneyLog;
+			productName = JourneyLog;
+			productReference = 7F00090713A41BC2008F1974 /* JourneyLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F00093313A41BC2008F1974 /* JourneyLogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F00094B13A41BC2008F1974 /* Build configuration list for PBXNativeTarget "JourneyLogTests" */;
+			buildPhases = (
+				7F00092F13A41BC2008F1974 /* Sources */,
+				7F00093013A41BC2008F1974 /* Frameworks */,
+				7F00093113A41BC2008F1974 /* Resources */,
+				7F00093213A41BC2008F1974 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F00093A13A41BC2008F1974 /* PBXTargetDependency */,
+			);
+			name = JourneyLogTests;
+			productName = JourneyLogTests;
+			productReference = 7F00093413A41BC2008F1974 /* JourneyLogTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F0008FE13A41BC2008F1974 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Perforce Software";
+			};
+			buildConfigurationList = 7F00090113A41BC2008F1974 /* Build configuration list for PBXProject "JourneyLog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7F0008FC13A41BC2008F1974;
+			productRefGroup = 7F00090813A41BC2008F1974 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F00090613A41BC2008F1974 /* JourneyLog */,
+				7F00093313A41BC2008F1974 /* JourneyLogTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F00090513A41BC2008F1974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F00091813A41BC2008F1974 /* InfoPlist.strings in Resources */,
+				7F00092413A41BC2008F1974 /* MainWindow.xib in Resources */,
+				7F00092913A41BC2008F1974 /* MainView.xib in Resources */,
+				7F00092E13A41BC2008F1974 /* CameraOverlayView.xib in Resources */,
+				7F00094F13A41DBA008F1974 /* PlayIcon_lo.png in Resources */,
+				7F00095113A41DFC008F1974 /* PlayIcon_hi.png in Resources */,
+				7F00097113A41E65008F1974 /* zbar-back.png in Resources */,
+				7F00097313A41E65008F1974 /* zbar-help.html in Resources */,
+				7F00097513A41E65008F1974 /* zbar-helpicons.png in Resources */,
+				7F00097713A41E65008F1974 /* zbar-samples.png in Resources */,
+				7F0009B813A43622008F1974 /* tap.aif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F00093113A41BC2008F1974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F00094013A41BC2008F1974 /* InfoPlist.strings in Resources */,
+				7F00094313A41BC2008F1974 /* JourneyLogTests.h in Resources */,
+				7F00097213A41E65008F1974 /* zbar-back.png in Resources */,
+				7F00097413A41E65008F1974 /* zbar-help.html in Resources */,
+				7F00097613A41E65008F1974 /* zbar-helpicons.png in Resources */,
+				7F00097813A41E65008F1974 /* zbar-samples.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F00093213A41BC2008F1974 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F00090313A41BC2008F1974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F00091B13A41BC2008F1974 /* main.m in Sources */,
+				7F00091E13A41BC2008F1974 /* JourneyLogAppDelegate.m in Sources */,
+				7F00092113A41BC2008F1974 /* JourneyLog.xcdatamodeld in Sources */,
+				7F00092713A41BC2008F1974 /* MainViewController.m in Sources */,
+				7F00092C13A41BC2008F1974 /* CameraOverlayViewController.m in Sources */,
+				7FDE417F13A49218005E294D /* Scan.m in Sources */,
+				7F282E1813A71E9800D40A22 /* PlayerRegistration.m in Sources */,
+				7F282E2113A740D300D40A22 /* ServerRequestDaemon.m in Sources */,
+				7FD6078B13AAF59A00F28FD1 /* ASIAuthenticationDialog.m in Sources */,
+				7FD6078C13AAF59A00F28FD1 /* ASIDataCompressor.m in Sources */,
+				7FD6078D13AAF59A00F28FD1 /* ASIDataDecompressor.m in Sources */,
+				7FD6078E13AAF59A00F28FD1 /* ASIDownloadCache.m in Sources */,
+				7FD6078F13AAF59A00F28FD1 /* ASIFormDataRequest.m in Sources */,
+				7FD6079013AAF59A00F28FD1 /* ASIHTTPRequest.m in Sources */,
+				7FD6079113AAF59A00F28FD1 /* ASIInputStream.m in Sources */,
+				7FD6079213AAF59A00F28FD1 /* ASINetworkQueue.m in Sources */,
+				7FD607B413AAFFF100F28FD1 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F00092F13A41BC2008F1974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F00094513A41BC2008F1974 /* JourneyLogTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F00093A13A41BC2008F1974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F00090613A41BC2008F1974 /* JourneyLog */;
+			targetProxy = 7F00093913A41BC2008F1974 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F00091613A41BC2008F1974 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F00091713A41BC2008F1974 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7F00092213A41BC2008F1974 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F00092313A41BC2008F1974 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7F00093E13A41BC2008F1974 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F00093F13A41BC2008F1974 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F00094613A41BC2008F1974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7F00094713A41BC2008F1974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		7F00094913A41BC2008F1974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JourneyLog/JourneyLog-Prefix.pch";
+				INFOPLIST_FILE = "JourneyLog/JourneyLog-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ZBarSDK\"",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7F00094A13A41BC2008F1974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JourneyLog/JourneyLog-Prefix.pch";
+				INFOPLIST_FILE = "JourneyLog/JourneyLog-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ZBarSDK\"",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7F00094C13A41BC2008F1974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JourneyLog.app/JourneyLog";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JourneyLogTests/JourneyLogTests-Prefix.pch";
+				INFOPLIST_FILE = "JourneyLogTests/JourneyLogTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ZBarSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7F00094D13A41BC2008F1974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JourneyLog.app/JourneyLog";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JourneyLogTests/JourneyLogTests-Prefix.pch";
+				INFOPLIST_FILE = "JourneyLogTests/JourneyLogTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ZBarSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F00090113A41BC2008F1974 /* Build configuration list for PBXProject "JourneyLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F00094613A41BC2008F1974 /* Debug */,
+				7F00094713A41BC2008F1974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F00094813A41BC2008F1974 /* Build configuration list for PBXNativeTarget "JourneyLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F00094913A41BC2008F1974 /* Debug */,
+				7F00094A13A41BC2008F1974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F00094B13A41BC2008F1974 /* Build configuration list for PBXNativeTarget "JourneyLogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F00094C13A41BC2008F1974 /* Debug */,
+				7F00094D13A41BC2008F1974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F00091F13A41BC2008F1974 /* JourneyLog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F00092013A41BC2008F1974 /* JourneyLog.xcdatamodel */,
+			);
+			currentVersion = 7F00092013A41BC2008F1974 /* JourneyLog.xcdatamodel */;
+			path = JourneyLog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7F0008FE13A41BC2008F1974 /* Project object */;
+}
