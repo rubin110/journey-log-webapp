@@ -1,4 +1,5 @@
 <?
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 include('mobile-friendly.html');
 include('functions.php');
 
@@ -22,7 +23,8 @@ if ($runner_id) {
 	//print "Look here motherfuckers, we're checking you into a checkpoint. Good job<br /><br />";
 	print '<h2>Journey Log - Checkin<br>'.get_checkpoint_name($jlogCID).'</h2>
 	';
-	
+
+	print 'Going to try to check in runner '.$runner_id.'<br />';	
 	if (check_runner_in($jlogCID, $runner_id)) {
 		print '
 		<p><strong><big>Runner '.$runner_id.' is checked in.</big></strong>

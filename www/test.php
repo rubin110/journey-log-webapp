@@ -1,11 +1,18 @@
 <?
-include('mobile-friendly.html');
 include('functions.php');
+print is_valid_runner('RUBIN');
 
-if (is_valid_runner("123AB")) {
-	print "Valid runner";
+if (function_exists('mysqli')) {
+    echo "Yes. mysqli is working<br />\n";
 } else {
-	print "invalid runner";
+    echo "No. mysqli isn't working :(<br />\n";
 }
 
+if (function_exists('mysqli_connect')) {
+    echo "Oh, wait. mysqli is actually working<br />\n";
+} else {
+    echo "No. mysqli really isn't working :(<br />\n";
+}
+
+phpinfo();
 ?>
