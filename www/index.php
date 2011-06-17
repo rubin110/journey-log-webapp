@@ -29,7 +29,7 @@ if (empty($jlogCID)) {
 		if ($jlogRID == $runner_id) {
 			//the cookie matches the scanned id
 			if (DEBUG) print "You can't tag yourself!";
-			header("Location: /_reg.php?rid=".$runner_id);
+			header("Location: /register/".$runner_id);
 		} else {
 			//looks like someone got tagged!
 			if (DEBUG) print "You tagged someone!<br />";
@@ -38,7 +38,7 @@ if (empty($jlogCID)) {
 	} else {
 		//we need to register this runner
 		if (DEBUG) print "You don't have a cookie!<br />";
-		header("Location: /_reg.php?rid=".$runner_id);
+		header("Location: /register/".$runner_id);
 	}
 } else if (is_valid_checkpoint($jlogCID) || is_valid_checkpoint($cid)) {
 	//Checkpoint is registered on device and is a valid checkpoint
