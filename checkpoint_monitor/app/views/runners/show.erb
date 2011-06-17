@@ -1,0 +1,17 @@
+<h1>Runner ID: <%= @runner.runner_id %></h1>
+
+<% if (@is_chaser) %>
+  <br />Currently a chaser.  As a chaser, has logged <%= @num_caught %> tags -- ranked <%= @num_with_more_catches + 1 %> out of <%= @num_chasers %> chasers with tags!
+  <% if (@num_caught > 0) %>
+    <br />Your descendants:
+    <%= @chaser_tree.html_safe %>
+  <% end %>
+<% else %>
+  <br />Not caught yet!
+<% end %>
+
+<br />As a runner, there are <%= @num_ahead_right_now %> ahead of you right now, out of <%= @num_runners %> runners.
+
+<% @your_place_by_checkin.each do |row| %>
+<br />As a runner, made it to checkpoint <%= row[0].checkpoint.checkpoint_name %> at <%= row[0].checkin_time %> (behind <%= row[1] %> other runners).
+<% end %>

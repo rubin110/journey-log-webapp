@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+cp1:
+  checkpoint_id: CP1
+  longitude: 1.5
+  latitude: 1.5
+
+cp2:
+  checkpoint_id: CP2
+  longitude: 1.5
+  latitude: 1.5

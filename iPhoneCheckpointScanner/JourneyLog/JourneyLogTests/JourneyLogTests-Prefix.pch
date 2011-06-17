@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'JourneyLogTests' target in the 'JourneyLogTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

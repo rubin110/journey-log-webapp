@@ -4,4 +4,5 @@ syntax: glob
 *settings.php
 photos/
 AndroidCheckpontScanner/.git
+iPhoneCheckpontScanner/JourneyLog/.git
 AndroidCheckpontScanner/bin

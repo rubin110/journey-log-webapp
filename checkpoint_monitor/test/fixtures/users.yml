@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+rubin:
+  runner_id: RubinRunnerId
+  photo_file: 
+  name: Rubin
+  email: rubin@starset.org
+  device_id: RubinDevice
+  browser_id: RubinBrowserId
+
+thomas:
+  runner_id: ThomasRunnerId
+  photo_file: 
+  name: Thomas Lotze
+  email: thomas.lotze@survivedc.org
+  device_id: ThomasDevice
+  browser_id: ThomasBrowserId
+
+captured:
+  runner_id: CapturedRunnerId
+  photo_file: 
+  name: Some Runner What Got Caught
+  email: caught@survivedc.org
+  device_id: CaughtDevice
+  browser_id: CaughtBrowserId
