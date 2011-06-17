@@ -1,5 +1,4 @@
 <?
-print "Including functions.php?";
 #Register players via staff app
 // include('functions.php');
 $destination_folder = "/photos/";
