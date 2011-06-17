@@ -1,7 +1,7 @@
 #!/bin/bash
 
 n=1
-RECORDNUMBER=`cat runneridtable | wc -l`
+RECORDNUMBER=$(cat runneridtable | wc -l)
 
 echo "Number of Runner IDs:" $RECORDNUMBER
 

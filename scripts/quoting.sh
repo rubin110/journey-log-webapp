@@ -1,6 +1,6 @@
 #!/bin/bash
-cat longquotes.txt | while read line ; do
-		cc=`echo $line | wc -m` 
+cat journeyquotes.txt | while read line ; do
+		cc=$(echo $line | wc -m)
 		if [ "$cc" -lt "140" ]
 			then
 			echo $line
