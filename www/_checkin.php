@@ -9,7 +9,7 @@ $runner_id = clean_runner_id($_GET['rid']);
 
 if (!isset($_COOKIE["jlog-cid"])) {
 	//Oops, you don't have a cookie, return to checkpoint registration
-	header("Location: /_cid");
+	header("Location: /agent/set/");
 }
 $jlogCID = intval($_COOKIE["jlog-cid"]);
 

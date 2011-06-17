@@ -6,7 +6,7 @@ RewriteBase /
 RewriteRule ^cpm/ - [L]
 RewriteRule ^photos/ - [L]
 
-RewriteRule ^agent/set(/)?$  _setcid.php [L]
+RewriteRule ^agent/set(/)?$  _cidindex.php [L]
 RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [L]
 RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [L]
 RewriteRule ^register(/)?$  _reg.php [L]

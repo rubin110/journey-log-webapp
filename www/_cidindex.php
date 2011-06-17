@@ -25,10 +25,10 @@ if (isset($_COOKIE["jlog-cid"])) {
 <?
 	$all_checkpoints = get_all_checkpoint_ids();
 	foreach ($all_checkpoints as $checkpoint_id) {
-		print '<h3><a href="_setcid.php?cid='.$checkpoint_id.'">'.get_checkpoint_name($checkpoint_id).'</a></h3>';
+		print '<h3><a href="/agent/set/'.$checkpoint_id.'">'.get_checkpoint_name($checkpoint_id).'</a></h3>';
 	}
 ?>
 </p>
-<a href="setcid.php?cid=9999">Clear your checkpoint cookies</a>
+<a href="/agent/set/9999">Clear your checkpoint cookies</a>
 </body>
 </html>
