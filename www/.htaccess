@@ -16,6 +16,7 @@ RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [L]
 RewriteRule ^agent/checkin(/)?$ _checkin.php [L]
 RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [L]
 RewriteRule ^agent/stats(/)?$ _stats.php [L]
+RewriteRule ^agent/android(/)?$ _resources/checkpoint_android_app.apk [R]
 
 # Player facing rules
 RewriteRule ^register(/)?$  _reg.php [L]
