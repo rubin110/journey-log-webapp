@@ -2,40 +2,33 @@
 RewriteEngine On
 RewriteBase /
 
+# Missing images in /photos
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^photos/.*\.jpg$ /_resources/404.jpg [L]
+
 # allow cpm and photos to stay
 RewriteRule ^cpm(/)?$ - [L]
 RewriteRule ^photos(/)?$ - [L]
 
+# Agent/Volunteer rules
 RewriteRule ^agent/set(/)?$  _cidindex.php [L]
 RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [L]
 RewriteRule ^agent/checkin(/)?$ _checkin.php [L]
 RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [L]
 RewriteRule ^agent/stats(/)?$ _stats.php [L]
 
+# Player facing rules
 RewriteRule ^register(/)?$  _reg.php [L]
 RewriteRule ^register/([a-zA-Z0-9]+)?$  _reg.php?rid=$1 [L]
 RewriteRule ^tag(/)?$  _tag.php [L]
 RewriteRule ^tag/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)?$  _tag.php?rid=$1&tid=$2 [L]
 RewriteRule ^clear(/)?$  _clearallcookies.php [L]
-# RewriteRule ^agent/autoregistration/([a-zA-Z0-9]+)?$ _autoregistration.php [R]
-# RewriteRule ^agent/autoregistration(/)?$ _autoregistration.php [R]
 
 # Does this user have a jlog-cid cookie? If so forward them to the checkin page
 RewriteCond %{HTTP_COOKIE} jlog-cid [NC] 
 RewriteRule ^([a-zA-Z0-9]+)?$ agent/checkin/$1 [L]
-# RewriteRule ^([a-zA-Z0-9]+)?$ _checkin.php?rid=$1 [L]
 
 # Catch all
 RewriteRule ^([a-zA-Z0-9]+)?$ index.php?rid=$1 [L]
 
-# Missing images
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^images/.*\.jpg$ /_resources/404.jpg [L]
 </IfModule>
-
-# RewriteCond %{QUERY_STRING} blech=([a-zA-Z0-9]+)
-# RewriteRule ^/.* [E=RID:%1]
-# RewriteRule ?param=([a-z0-9]+) $0 [E=RID:$1,NC]
-# RewriteCond %{HTTP_COOKIE} jlog-rid=%1
-# RewriteRule  register/%1
-# RewriteRule ^agent/app/autocheckin/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)?$ _autocheckin.php?cid=$1&rid=$2 [R]
