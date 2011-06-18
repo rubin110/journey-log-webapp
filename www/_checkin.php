@@ -7,7 +7,7 @@ $cid = clean_checkpoint_id($_GET['cid']); // Get the cid
 $runner_id = clean_runner_id($_GET['rid']);
 $device_id = $_GET['did'];
 $lat = $_GET['lat'];
-$long = $_GET['long'];
+$long = $_GET['lon'];
 $timestamp = $_GET['ts'];
 
 
@@ -17,7 +17,7 @@ if (empty($_GET)) {
 	#TODO: Clean this shit against injections
 	$device_id = $_POST['did'];
 	$lat = $_POST['lat'];
-	$long = $_POST['long'];
+	$long = $_POST['lon'];
 	$timestamp = $_POST['ts'];
 }
 
