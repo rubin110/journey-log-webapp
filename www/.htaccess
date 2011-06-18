@@ -40,7 +40,7 @@ RewriteRule ^clear(/)?$  _clearallcookies.php [L]
 
 # Does this user have a jlog-cid cookie? If so forward them to the checkin page
 RewriteCond %{HTTP_COOKIE} jlog-cid [NC] 
-RewriteRule ^([a-zA-Z0-9]+)?$ agent/checkin/$1 [R]
+RewriteRule ^([a-zA-Z0-9]+)?$ agent/checkin/$1 [L]
 
 # Catch all
 RewriteRule ^([a-zA-Z0-9]+)?$ index.php?rid=$1 [L]
