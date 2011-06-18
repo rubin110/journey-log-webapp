@@ -36,26 +36,11 @@ $jlogCID = intval($_COOKIE["jlog-cid"]);
 //	header("Location: /agent/set/");
 //}
 
-$photo_name = $runner_id.".jpg";
-
-if ($_FILES["player_photo"]["error"] > 0)
-{
-	echo "Error Code: " . $_FILES["player_photo"]["error"] . "<br />";
-} else {
-	if (move_uploaded_file($_FILES["player_photo"]["tmp_name"],"photos/" . $photo_name)) {
-		print "Successfully processed image<br />";
-	} else {
-		// print "Error processing image<br />";
-		// die();
-	}
-}
-
-
-//if ($cid == "0" || $jlogCID == "0" || clean_runner_id($_POST['rid']) == "0") {
+if ($cid == "0" || $jlogCID == "0" || clean_runner_id($_POST['rid']) == "0") {
 	//print 'HEY LOOK YOU ARE CHECKPOINT 0';
 	//header("Location: /agent/autoregistration/?rid=".$runner_id);
-//	include('_autoregistration.php');
-//	exit;
+	include('_autoregistration.php');
+	exit;
 //}
 
 if ($runner_id) {
