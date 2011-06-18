@@ -29,19 +29,34 @@ if (empty($timestamp)) {
 $jlogCID = intval($_COOKIE["jlog-cid"]);
 
 
-if (!isset($_COOKIE["jlog-cid"])) {
+// Disabled because the Android app might not be passing a cookie :(
+//if (!isset($_COOKIE["jlog-cid"])) {
 	//Oops, you don't have a cookie, return to checkpoint registration
 	#TODO: Disable this? We don't want someone guessing the url and registering with a checkpoint by accident
-	header("Location: /agent/set/");
+//	header("Location: /agent/set/");
+//}
+
+$photo_name = $runner_id.".jpg";
+
+if ($_FILES["player_photo"]["error"] > 0)
+{
+	echo "Error Code: " . $_FILES["player_photo"]["error"] . "<br />";
+} else {
+	if (move_uploaded_file($_FILES["player_photo"]["tmp_name"],"photos/" . $photo_name)) {
+		print "Successfully processed image<br />";
+	} else {
+		// print "Error processing image<br />";
+		die();
+	}
 }
 
 
-if ($cid == "0" || $jlogCID == "0" || clean_runner_id($_POST['rid']) == "0") {
+//if ($cid == "0" || $jlogCID == "0" || clean_runner_id($_POST['rid']) == "0") {
 	//print 'HEY LOOK YOU ARE CHECKPOINT 0';
 	//header("Location: /agent/autoregistration/?rid=".$runner_id);
-	include('_autoregistration.php');
-	exit;
-}
+//	include('_autoregistration.php');
+//	exit;
+//}
 
 if ($runner_id) {
 	//print "Look here motherfuckers, we're checking you into a checkpoint. Good job<br /><br />";
