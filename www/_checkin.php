@@ -29,7 +29,7 @@ if (empty($timestamp)) {
 $jlogCID = intval($_COOKIE["jlog-cid"]);
 
 
-// Disabled because the Android app might not be passing a cookie :(
+// Disabled because the Android app might not be passing a cookie and hitting this page directly :(
 //if (!isset($_COOKIE["jlog-cid"])) {
 	//Oops, you don't have a cookie, return to checkpoint registration
 	#TODO: Disable this? We don't want someone guessing the url and registering with a checkpoint by accident
