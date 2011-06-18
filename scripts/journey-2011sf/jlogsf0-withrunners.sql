@@ -1465,3 +1465,6 @@ CREATE TABLE `tags` (
 -- Dumping data for table `tags`
 --
 
+-- NULL as default sucks
+UPDATE `runners` SET is_registered=0 and is_tagged=0 WHERE 1;
+UPDATE `runners` SET is_tagged=0 WHERE 1;

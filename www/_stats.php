@@ -24,11 +24,12 @@ print "Active Taggers in last 30min: ".active_chasers(30)."<br />";
 print "<br />";
 print "<b>Checkpoint Stats:</b><br />";
 foreach ($checkpoints as $checkpoint_id) {
-	print get_checkpoint_name($checkpoint_id).":<br />";
+	print "<h2>".get_checkpoint_name($checkpoint_id).":</h2>";
 	print "&nbsp;&nbsp&nbsp;Checkins: ".total_checkpoint_checkins($checkpoint_id)."<br />";
 	$most_recent = most_recent_checkin($checkpoint_id);
 	if (!empty($most_recent)) {
 		print "&nbsp;&nbsp&nbsp;Most recent checkin: ".get_runner_name($most_recent['runner_id'])." (".$most_recent['runner_id'].") at ".$most_recent['checkin_time']."<br />";
+		print "<img src=\"/photos/".$most_recent['runner_id'].".jpg\" style=\"margin-left: 25px;\"><br />";
 	}
 	print "<br />";
 }
