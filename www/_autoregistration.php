@@ -57,7 +57,5 @@ if (is_runner_registered($runner_id)) {
     $_FILES["file"]["error"] - the error code resulting from the file upload
 */
 
-//TODO: NEED TO SET is_mugshot in the database!!
-
 ?>
 </body></html>
