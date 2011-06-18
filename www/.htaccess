@@ -25,6 +25,10 @@ RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [L]
 RewriteRule ^agent/stats(/)?$ _stats.php [L]
 RewriteRule ^agent/android(/)?$ _resources/checkpoint_android_app.apk [R]
 
+## Auto reg for Android
+RewriteRule ^agent/acheckin(/)?$ _androidreg.php [L]
+RewriteRule ^agent/acheckin/([a-zA-Z0-9]+)?$  _androidreg.php?rid=$1 [L]
+
 # Player facing rules
 
 ## Self-registration by user

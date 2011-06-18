@@ -33,7 +33,7 @@ if (!isset($_COOKIE["jlog-cid"])) {
 }
 
 
-if ($cid == "0" || $jlogCID == "0") {
+if ($cid == "0" || $jlogCID == "0" || clean_runner_id($_POST['rid']) == "0") {
 	//print 'HEY LOOK YOU ARE CHECKPOINT 0';
 	//header("Location: /agent/autoregistration/?rid=".$runner_id);
 	include('_autoregistration.php');
