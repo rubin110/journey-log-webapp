@@ -18,7 +18,7 @@ $photo_name = $runner_id.".jpg";
 
 print "<h2>Journey Log<br>Autoregistering runner ".$runner_id."</h2>";
 if (empty($_POST['runner_id'])) {
-	_logger(LOG_DEBUG,'',"Missing runner_id when registering through app");
+	_logger(LOG_DEBUGGING,'',"Missing runner_id when registering through app");
 	print "Missing data<br />";
 	print "</body></html>";
 	die();
