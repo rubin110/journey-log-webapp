@@ -110,6 +110,11 @@ function clean_chaser_id($chaser_id) {
 	return strtoupper(preg_replace("/[^a-zA-Z0-9\s]/", "", $chaser_id));
 }
 
+function clean_checkpoint_id($cid) {
+	return preg_replace("/[^a-zA-Z0-9\s]/", "", $cid);
+}
+
+
 #Return an array of all checkpoint ids
 function get_all_checkpoint_ids() {
 	$mysqli = connectdb();
@@ -121,6 +126,7 @@ function get_all_checkpoint_ids() {
 }
 
 function get_checkpoint_name($cid) {
+	$cid = clean_checkpoint_id($cid);
 	$mysql = connectdb(true);
 	$query = "SELECT checkpoint_name FROM ".CHECKPOINTS_TBL." WHERE checkpoint_id = ".$cid;
 	$result = mysql_query($query);
@@ -369,6 +375,7 @@ function total_runners_registered_untagged($registered_status) {
 }
 
 function total_checkpoint_checkins($checkpoint_id) {
+	$checkpoint_id = clean_checkpoint_id($checkpoint_id);
 	$mysql = connectdb(true);
 	$query = "SELECT COUNT(*) from ".CHECKINS_TBL." WHERE checkpoint_id=".$checkpoint_id;
 	$result = mysql_query($query, $mysql);
@@ -377,6 +384,7 @@ function total_checkpoint_checkins($checkpoint_id) {
 }
 
 function most_recent_checkin($checkpoint_id) {
+	$checkpoint_id = clean_checkpoint_id($checkpoint_id);
 	$mysql = connectdb(true);
 	$query = "SELECT * from ".CHECKINS_TBL." WHERE checkpoint_id=".$checkpoint_id." ORDER BY checkin_time DESC LIMIT 1";
 	$result = mysql_query($query, $mysql);

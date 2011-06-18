@@ -3,8 +3,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 include('mobile-friendly.html');
 include('functions.php');
 
-#TODO: Clean this shit against injections
-$cid = $_GET['cid']; // Get the cid
+$cid = clean_checkpoint_id($_GET['cid']); // Get the cid
 $runner_id = clean_runner_id($_GET['rid']);
 $device_id = $_GET['did'];
 $lat = $_GET['lat'];
@@ -13,7 +12,7 @@ $timestamp = $_GET['ts'];
 
 
 if (empty($_GET)) {
-	$cid = $_POST['cid'];
+	$cid = clean_checkpoint_id($_POST['cid']);
 	$runner_id = clean_runner_id($_POST['rid']);
 	#TODO: Clean this shit against injections
 	$device_id = $_POST['did'];
