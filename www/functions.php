@@ -166,7 +166,7 @@ function check_runner_in($cid, $rid, $device_id="", $lat="", $long="", $timestam
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
-		_logger(LOG_CHECKIN, LOG_SUCCESS, $rid." checked in to ".get_checkpoint_name($cid)." ".$lat.",".$long);
+		_logger(LOG_CHECKIN, LOG_SUCCESS, $rid." checked in to ".get_checkpoint_name($cid)." ".$lat.",".$long."  ts=".$timestamp);
 		return true;
 	} else {
 		$stmt->close();
@@ -405,3 +405,10 @@ function active_chasers($time = "") {
 	$row = mysql_fetch_array($result);
 	return $row[0];
 }
+
+
+// Converts PHP time format to SQL Time Format
+function time_php2sql($unixtime){
+    return gmstrftime("%G-%m-%d %H:%M:%S", $unixtime);
+}
+

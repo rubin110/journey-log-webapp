@@ -16,9 +16,16 @@ if (empty($long)) {
 }
 $timestamp = $_GET['ts'];
 
-if (empty($_GET)) {
-	$cid = clean_checkpoint_id($_POST['cid']);
-	$runner_id = clean_runner_id($_POST['rid']);
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+//Hello iPhone app!!
+if (strpos($user_agent, "JourneyLog") === 0) {
+	_logger(LOG_DEBUGGING,"","Hello iPhone app! Fetching POST: runner_id=".$_POST['rid']);
+	if (empty($cid)) {
+		$cid = clean_checkpoint_id($_POST['cid']);
+	}
+	if (empty($runner_id)) {
+		$runner_id = clean_runner_id($_POST['rid']);
+	}
 	#TODO: Clean this shit against injections
 	$device_id = $_POST['did'];
 	$lat = $_POST['lat'];
@@ -30,9 +37,13 @@ if (empty($_GET)) {
 		$long = $_POST['lng'];
 	}
 	$timestamp = $_POST['ts'];
+	$timestamp = $timestamp - 25200;	//fix for Pacific time zone, i.e. GMT -7
+	//convert timestamp to datetime
+	$timestamp = time_php2sql($timestamp);
 }
 
 if (empty($timestamp)) {
+	_logger(LOG_DEBUGGING, "", "Timestamp not passed, generate one");
 	$timestamp = date('Y-m-d H:i:s');
 }
 
