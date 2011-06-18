@@ -63,7 +63,11 @@ function get_runner_name($rid) {
 	$query = "SELECT player_name FROM ".RUNNERS_TBL." WHERE runner_id = '".$rid."'";
 	$result = mysql_query($query);
 	$row = mysql_fetch_array($result);
-	return $row[0];
+	if (!empty($row[0])) {
+		return $row[0];
+	} else {
+		return $rid;
+	}
 }
 
 function get_runner_email($rid) {
@@ -138,18 +142,43 @@ function check_runner_in($cid, $rid, $device_id="", $lat="", $long="", $timestam
 		return true;
 	} else {
 		$stmt->close();
-		_logger(LOG_CHECKIN, LOG_FAILED, $rid." failed to check in to ".get_checkpoint_name($cid));
+		if (is_already_checked_in($cid, $rid)) {
+			_logger(LOG_CHECKIN, "", $rid." is already checked in to ".get_checkpoint_name($cid));
+		} else {
+			_logger(LOG_CHECKIN, LOG_FAILED, $rid." failed to check in to ".get_checkpoint_name($cid));
+		}
 		return false;
 	}
 	
 }
-
+/*
 function is_already_checked_in($cid, $rid) {
 	$rid = clean_runner_id($rid);
 	$mysql = connectdb(true);
 	$query = "SELECT * FROM ".CHECKINS_TBL." WHERE checkpoint_id = ".$cid." and runner_id = ".$rid;
+	print $query;
 	$result = mysql_query($query, $mysql);
-	if (mysql_num_rows($result) > 0) {
+	if ($result) {
+		if (mysql_num_rows($result) > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return false;
+	}
+}
+*/
+function is_already_checked_in($cid, $rid) {
+	$rid = clean_runner_id($rid);
+	$mysqli = connectdb();
+	$query = "SELECT COUNT(*) FROM ".CHECKINS_TBL." WHERE checkpoint_id = ? and runner_id = ?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('ss', $cid, $rid);
+	$stmt->execute();
+	$stmt->bind_result($is_checkedin_already);
+	$stmt->fetch();
+	if ($is_checkedin_already) {
 		return true;
 	} else {
 		return false;
@@ -191,7 +220,6 @@ function set_user_tagged($runner_id) {
 		$stmt->close();
 		return false;
 	}
-	
 }
 
 

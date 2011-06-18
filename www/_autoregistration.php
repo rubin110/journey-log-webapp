@@ -45,10 +45,8 @@ if (is_runner_registered($runner_id)) {
 	#Register runner	
 	if (register_runner_app($runner_id)) {
 		print "Runner successfully registered<br />";
-		_logger(LOG_REGISTER, LOG_SUCCESS, $runner_id." was registered.");
 	} else {
 		print "Failed to register runner<br />";
-		_logger(LOG_REGISTER, LOG_SUCCESS, $runner_id." failed to register.");
 	}
 }
 /*

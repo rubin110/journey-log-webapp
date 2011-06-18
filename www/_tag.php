@@ -1,3 +1,6 @@
+
+<html>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
 <?
 //user has a jlog-rid cookie set, so this means they scanned the qr code of someone they tagged
 include('mobile-friendly.html');
@@ -18,11 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	if (empty($loc_long)) {
 		$loc_long = 0;
 	}
-	print '<h3>Checkin Tag</h3>
-	<p><span style="color:red;">Chaser '.$tagger_id.'</span> tagged <span style="color:blue;">Runner '.$runner_id.'</span> at '.$loc_lat.','.$loc_long.'.<br />';
+	print '<p><span style="color:red;">Chaser '.get_runner_name($tagger_id).'</span> tagged <span style="color:blue;">Runner '.get_runner_name($runner_id).'</span> at '.$loc_lat.','.$loc_long.'.<br />';
 	if (is_valid_runner($tagger_id) && is_valid_runner($runner_id)) {
 		if (register_tag($tagger_id, $runner_id, $loc_lat, $loc_long, $loc_addr)) {
-			print '<h3>Your tag is checked in!</h3><div style="font-size:14em;color:green;text-align: center;">&#10003;</div>';
+			print '<div style="font-size:14em;color:green;text-align: center;">&#10003;</div><h3>Your tag is checked in!</h3>';
 		} else {
 			if (tag_exists($tagger_id, $runner_id)) {
 				print '<h3>You\'ve already tagged this runner!</h3><div style="font-size:14em;color:red;text-align: center;">X</div>';
@@ -53,8 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 </script>
 <h3>Checkin Tag</h3>
-<p><a href="/register">Go to registered profile</a><br>
+<p>Please confirm your tag!</p>
 <p>Note: Be sure the <span style="color:red;">Chaser</span> is scanning the <span style="color:blue;">Runner's</span> Runner ID on the <span style="color:red;">Chaser's</span> phone!
+<div style="margin-left: 15px;">
 <form name="tag_runner" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
 <?php if (is_valid_runner($tagger_id)){
 	print '<p><div style="color:red;">Pursuing Chaser: </div><input id="tagger_id" name="tagger_id" value="'.$tagger_id.'" readonly>';
@@ -72,9 +75,14 @@ else {
 <p>Lat:<br><input id="latitude" type="text" name="latitude" value="" readonly>
 <p>Log:<br><input id="longitude" type="text" name="longitude" value="" readonly>
 <p>Address or Intersection:<br><input id="longitude" type="text" name="address" value="">
-<p><input type="submit" value="Tag!"></p>
+</div>
+<p align="center"><input type="submit" value="Tag!" style="width:90%; height: 60px; font-size: 20pt;"></p>
+
+<p><a href="/register">Go to registered profile</a><br>
 
 
 <?
 }
 ?>
+</body>
+</html>

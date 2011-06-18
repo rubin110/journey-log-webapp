@@ -49,8 +49,8 @@ if ($runner_id) {
 	print '<h2>Journey Log - Checkin<br>'.get_checkpoint_name($jlogCID).'</h2>
 	';
 
-	print 'Going to try to check in runner '.$runner_id.'<br />';
-	print $jlogCID.", ".$runner_id.",".$device_id.",".$lat.",".$long.",".$timestamp."<br />";
+	//print 'Going to try to check in runner '.$runner_id.'<br />';
+	//print $jlogCID.", ".$runner_id.",".$device_id.",".$lat.",".$long.",".$timestamp."<br />";
 	if (check_runner_in($jlogCID, $runner_id, $device_id, $lat, $long, $timestamp)) {
 		print '
 		<p><strong><big>Runner '.$runner_id.' is checked in.</big></strong>
@@ -75,3 +75,5 @@ if ($runner_id) {
 }
 
 ?>
+</body>
+</html>
