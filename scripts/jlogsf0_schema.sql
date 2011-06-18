@@ -1,19 +1,13 @@
-i-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 3.3.10
 -- http://www.phpmyadmin.net
 --
 -- Host: mysql.onebit.me
--- Generation Time: Jun 17, 2011 at 09:14 PM
+-- Generation Time: Jun 17, 2011 at 11:58 PM
 -- Server version: 5.1.39
 -- PHP Version: 5.2.17
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `jlogsf0`
@@ -26,7 +20,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 
 DROP TABLE IF EXISTS `checkins`;
-CREATE TABLE IF NOT EXISTS `checkins` (
+CREATE TABLE `checkins` (
   `checkin_id` int(11) NOT NULL AUTO_INCREMENT,
   `runner_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `checkpoint_id` int(11) DEFAULT NULL,
@@ -44,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `checkins` (
   KEY `index_checkins_on_checkin_time_and_checkpoint_id_and_is_valid` (`checkin_time`,`checkpoint_id`,`is_valid`),
   KEY `index_checkins_on_lat` (`lat`),
   KEY `index_checkins_on_lng` (`lng`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `checkins`
@@ -58,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `checkins` (
 --
 
 DROP TABLE IF EXISTS `checkpoints`;
-CREATE TABLE IF NOT EXISTS `checkpoints` (
+CREATE TABLE `checkpoints` (
   `checkpoint_id` int(11) DEFAULT NULL,
   `checkpoint_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `checkpoint_loc_lat` double DEFAULT NULL,
@@ -101,7 +95,7 @@ INSERT INTO `checkpoints` (`checkpoint_id`, `checkpoint_name`, `checkpoint_loc_l
 --
 
 DROP TABLE IF EXISTS `runners`;
-CREATE TABLE IF NOT EXISTS `runners` (
+CREATE TABLE `runners` (
   `runner_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `player_email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `player_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -126,13 +120,13 @@ CREATE TABLE IF NOT EXISTS `runners` (
 --
 
 DROP TABLE IF EXISTS `tags`;
-CREATE TABLE IF NOT EXISTS `tags` (
+CREATE TABLE `tags` (
   `tag_id` int(11) NOT NULL AUTO_INCREMENT,
   `runner_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tagger_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tag_time` datetime DEFAULT NULL,
-  `loc_lat` double DEFAULT NULL,
-  `loc_long` double DEFAULT NULL,
+  `loc_lat` double(11,8) DEFAULT NULL,
+  `loc_long` double(11,8) DEFAULT NULL,
   `loc_addr` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `device_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_agent` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -143,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
   KEY `index_tags_on_tagger_id_and_runner_id` (`tagger_id`,`runner_id`),
   KEY `index_tags_on_loc_lat` (`loc_lat`),
   KEY `index_tags_on_loc_long` (`loc_long`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `tags`

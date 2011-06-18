@@ -1,5 +1,7 @@
 <?
-
+include('functions.php');
+_logger("TEST","SUCCESS","This is a test message");
+/*
 var_dump($_POST);
 var_dump($_GET);
 
@@ -19,4 +21,5 @@ if (function_exists('mysqli_connect')) {
 }
 
 phpinfo();
+*/
 ?>

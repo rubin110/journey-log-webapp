@@ -20,6 +20,18 @@ function connectdb($reg_mysql=false) {
 	}
 }
 
+function _logger($type,$result,$message) {
+	/* $type should be TAG, CHECKIN, REGISTER, anything else?
+		We should also never log line breaks in $message
+		$result is FAIL or SUCCESS
+	*/
+	$timestamp = date('d/M/Y:H:i:s O');
+	$logfile = "journeylog.log";
+	$fh = fopen($logfile, 'a');
+	fwrite($fh, "[".$timestamp."] ".$type." -- ".$result." -- ".$message."\n");
+	fclose($fh);
+}
+
 #Return true if this checkpoint exists in the database
 function is_valid_checkpoint($id) {
 	$mysqli = connectdb();
@@ -100,12 +112,15 @@ function register_runner_app($rid) {
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
+		_logger(LOG_REGISTER, LOG_SUCCESS, $rid." registered.");
 		return true;
 	} else {
 		$stmt->close();
+		_logger(LOG_REGISTER, LOG_FAIL, $rid." failed to register.");
 		return false;
 	}
 }
+
 
 #Check a runner ($rid) into a checkpoint ($cid)
 function check_runner_in($cid, $rid, $device_id="", $lat="", $long="", $timestamp="") {
@@ -119,9 +134,11 @@ function check_runner_in($cid, $rid, $device_id="", $lat="", $long="", $timestam
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
+		_logger(LOG_CHECKIN, LOG_SUCCESS, $rid." checked in to ".get_checkpoint_name($cid));
 		return true;
 	} else {
 		$stmt->close();
+		_logger(LOG_CHECKIN, LOG_FAILED, $rid." failed to check in to ".get_checkpoint_name($cid));
 		return false;
 	}
 	
@@ -139,13 +156,33 @@ function is_already_checked_in($cid, $rid) {
 	}
 }
 
-function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
+function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long, $loc_addr) {
 	$user_agent = $_SERVER['HTTP_USER_AGENT'];
 	$ip_address = $_SERVER['REMOTE_ADDR'];
+	$tag_time = date('Y-m-d H:i:s');
 	$mysqli = connectdb();
-	$query = "INSERT INTO ".TAGS_TBL." (runner_id, tagger_id, loc_lat, loc_long, loc_addr, user_agent, ip_address) VALUES (?,?,?,?,?,?,?)";
+	$query = "INSERT INTO ".TAGS_TBL." (runner_id, tagger_id, tag_time, loc_lat, loc_long, loc_addr, user_agent, ip_address) VALUES (?,?,?,?,?,?,?,?)";
 	$stmt = $mysqli->prepare($query);
-	$stmt->bind_param('ssiisss', $runner_id, $tagger_id, $loc_lat, $loc_long, $loc_addr, $user_agent, $ip_address);
+	$stmt->bind_param('sssddsss', $runner_id, $tagger_id, $tag_time, $loc_lat, $loc_long, $loc_addr, $user_agent, $ip_address);
+	$stmt->execute();
+	if ($stmt->affected_rows > 0) {
+		$stmt->close();
+		//don't forget to set the "is_tagged" field in the runner table for $runner_id
+		set_user_tagged($runner_id);
+		_logger(LOG_TAG, LOG_SUCCESS, $tagger_id." tagged ".$runner_id." at ".$loc_lat.",".$loc_long." (".$loc_addr.") UserAgent='".$user_agent."' IpAddress=".$ip_address);
+		return true;
+	} else {
+		$stmt->close();
+		_logger(LOG_TAG, LOG_FAIL, $tagger_id." failed to tag ".$runner_id." at ".$loc_lat.",".$loc_long." (".$loc_addr.") UserAgent='".$user_agent."' IpAddress=".$ip_address);
+		return false;
+	}
+}
+
+function set_user_tagged($runner_id) {
+	$mysqli = connectdb();
+	$query = "UPDATE ".RUNNERS_TBL." SET is_tagged=1 WHERE runner_id=?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('s', $runner_id);
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
@@ -154,7 +191,6 @@ function register_tag($tagger_id, $runner_id, $loc_lat, $loc_long) {
 		$stmt->close();
 		return false;
 	}
-	//TODO: don't forget to set the "is_tagged" field in the runner table for $runner_id
 	
 }
 
@@ -171,9 +207,11 @@ function register_runner($runner_id, $runner_name, $email_address) {
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
+		_logger(LOG_USERREGISTER, LOG_SUCCESS, $runner_id." registered themselves. player_name='".$runner_name."' player_email=".$email_address);
 		return true;
 	} else {
 		$stmt->close();
+		_logger(LOG_USERREGISTER, LOG_FAIL, $rid." failed to register themselves. player_name='".$runner_name."' player_email=".$email_address);
 		return false;
 	}
 }
@@ -188,9 +226,16 @@ function update_runner($runner_id, $runner_name, $email_address) {
 	$stmt = $mysqli->prepare($query);
 	$stmt->bind_param('sss',$runner_name, $email_address, $runner_id);
 	$stmt->execute();
-	$stmt->close();
-	return true;
+	if ($stmt->affected_rows > 0) {
+		$stmt->close();
+		_logger(LOG_USERREGISTER, LOG_SUCCESS, $runner_id." updated their info. player_name='".$runner_name."' player_email=".$email_address);
+		return true;
+	} else {
+		$stmt->close();
+		_logger(LOG_USERREGISTER, LOG_SUCCESS, $runner_id." failed to update their info. player_name='".$runner_name."' player_email=".$email_address);
+		return false;
 	}
+}
 
 function is_runner_registered($runner_id) {
 	$mysqli = connectdb();
