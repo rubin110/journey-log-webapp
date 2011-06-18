@@ -2,22 +2,18 @@ package com.thomaslotze.survivedc;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.HttpVersion;
 import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.FileEntity;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.FileBody;
@@ -27,7 +23,6 @@ import org.apache.http.impl.cookie.BasicClientCookie;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.params.HttpParams;
-import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -59,7 +54,8 @@ public class CheckpointScannerActivity extends Activity {
 	LocationListener locationListener;
 	Location location = null;
 	SQLiteDatabase db = null;
-	Pattern cpFinder = Pattern.compile(".*\\bcid=([^&]*)");
+	Pattern cpFinder = Pattern.compile(".*\\bcid=([^&]+)");
+	Pattern otherCpFinder = Pattern.compile(".*agent/set/(.+)");
 	DefaultHttpClient httpClient;
 	File runnerPhotoDirectory = null;
 	
@@ -174,7 +170,7 @@ public class CheckpointScannerActivity extends Activity {
 
 //        checkpointId = "0";
 //        updateCookie();
-//		processRegistration("123AB", ((Long)(new Date().getTime())).intValue(), "http://spidere.com/survivedc/log.cgi");
+//		processRegistration("123AB", ((Long)(System.currentTimeMillis()/1000)).intValue(), "http://jl.vc/cpm/checkin");
 
 //        selectCheckpoint("1");      
 //        processRunner("runid","1",12345,"http://spidere.com/survivedc/log.cgi");
@@ -352,11 +348,17 @@ public class CheckpointScannerActivity extends Activity {
 				if (contents != null) {
 					// check to see if this is a checkpoint id; if so, set the checkpoint id
 					Matcher m = cpFinder.matcher(contents);
+					Matcher m2 = otherCpFinder.matcher(contents);
 					if (m.find()) {					
 						// in the background, try to make an http request to the server (to get cookies)
 						makeBackgroundRequest(contents);
 						String cpId = m.group(1);
 						selectCheckpoint(cpId);
+					} else if (m2.find()) {					
+						// in the background, try to make an http request to the server (to get cookies)
+						makeBackgroundRequest(contents);
+						String cpId = m2.group(1);
+						selectCheckpoint(cpId);	
 					} else {				
 						// otherwise, we assume it's a runner id				
 						String splitContents[] = contents.split("/");
@@ -364,10 +366,10 @@ public class CheckpointScannerActivity extends Activity {
 						
 						// if we're checkpoint 0, get a photo and upload it in the background
 						if (isStartingCheckpoint()) {
-							processRegistration(runnerId, ((Long)(new Date().getTime())).intValue(), contents);
+							processRegistration(runnerId, ((Long)(System.currentTimeMillis()/1000)).intValue(), contents);
 						} else {					
 							// otherwise, we're a regular checkpoint: process it as a checkin		
-							processRunner(runnerId, checkpointId, ((Long)(new Date().getTime())).intValue(), contents);
+							processRunner(runnerId, checkpointId, ((Long)(System.currentTimeMillis()/1000)).intValue(), contents);
 							
 							new Thread(new Runnable() {
 								@Override
@@ -406,6 +408,7 @@ public class CheckpointScannerActivity extends Activity {
 	}
 
 	private void processRegistration(String runnerId, int timestamp, String url) {
+//		System.out.println("Processing registration at " + new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date (timestamp*1000)));
     	// Store in local DB
     	ContentValues runnerValues = new ContentValues(4);
     	runnerValues.put("runner_id", runnerId);
@@ -477,6 +480,8 @@ public class CheckpointScannerActivity extends Activity {
 	 * @param timestamp
 	 */
 	public HttpResponse uploadCheckin(String runnerId, String checkpointId, int timestamp, String url) {
+//		System.out.println("Uploading at " + new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date (timestamp*1000)));
+
 		String latString="";
 		String lonString="";
 		if (location != null) {
@@ -524,9 +529,6 @@ public class CheckpointScannerActivity extends Activity {
 	 * @param runnerId
 	 */
 	public HttpResponse uploadPhoto(String runnerId, String url) {
-    	//url = "http://thomaslotze.com/survivedc.php";
-    	//url = "http://mime.starset.net/journeylog/log.php";
-
 		File image = null;
 		try {
 			image = new File(runnerPhotoDirectory.getCanonicalPath() + File.separator + runnerId + ".jpg");
@@ -538,6 +540,7 @@ public class CheckpointScannerActivity extends Activity {
 	    	// take out things from the url after the question mark
 			String splitContents[] = url.split("\\?");
 			url = splitContents[0];
+			// url = "http://jl.vc/cpm/checkins/checkin";
 	
 	        try {
 	            HttpPost httppost = new HttpPost(url);
@@ -549,6 +552,7 @@ public class CheckpointScannerActivity extends Activity {
 	            multipartEntity.addPart("photo", new FileBody(image));
 	            httppost.setEntity(multipartEntity);
 	
+				updateCookie();
 	            HttpResponse response = httpClient.execute(httppost);	
 	            
 			    StatusLine statusLine = response.getStatusLine();
