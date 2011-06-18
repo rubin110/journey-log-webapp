@@ -26,9 +26,10 @@ function _logger($type,$result,$message) {
 		$result is FAIL or SUCCESS
 	*/
 	$timestamp = date('d/M/Y:H:i:s O');
+	$ip_address = $_SERVER['REMOTE_ADDR'];
 	$logfile = "journeylog.log";
 	$fh = fopen($logfile, 'a');
-	fwrite($fh, "[".$timestamp."] ".$type." -- ".$result." -- ".$message."\n");
+	fwrite($fh, "[".$timestamp."] ".$ip_address." -- ".$type." -- ".$result." -- ".$message."\n");
 	fclose($fh);
 }
 
