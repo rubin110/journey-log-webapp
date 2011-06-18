@@ -541,6 +541,7 @@ public class CheckpointScannerActivity extends Activity {
 			String splitContents[] = url.split("\\?");
 			url = splitContents[0];
 			// url = "http://jl.vc/cpm/checkins/checkin";
+			url = "http://jl.vc/agent/checkin";
 	
 	        try {
 	            HttpPost httppost = new HttpPost(url);
