@@ -166,14 +166,14 @@ function check_runner_in($cid, $rid, $device_id="", $lat="", $long="", $timestam
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
-		_logger(LOG_CHECKIN, LOG_SUCCESS, $rid." checked in to ".get_checkpoint_name($cid));
+		_logger(LOG_CHECKIN, LOG_SUCCESS, $rid." checked in to ".get_checkpoint_name($cid)." ".$lat.",".$long);
 		return true;
 	} else {
 		$stmt->close();
 		if (is_already_checked_in($cid, $rid)) {
 			_logger(LOG_CHECKIN, "", $rid." is already checked in to ".get_checkpoint_name($cid));
 		} else {
-			_logger(LOG_CHECKIN, LOG_FAILED, $rid." failed to check in to ".get_checkpoint_name($cid));
+			_logger(LOG_CHECKIN, LOG_FAILED, $rid." failed to check in to ".get_checkpoint_name($cid)." ".$lat.",".$long);
 		}
 		return false;
 	}
