@@ -6,7 +6,7 @@ We should also put an entry in the runners table and check them in to checkpoint
 */
 include('mobile-friendly.html');
 include('functions.php');
-$jlogRID = $_COOKIE["jlog-rid"];
+$jlogRID = clean_runner_id($_COOKIE["jlog-rid"]);
 $runner_id = clean_runner_id($_GET['rid']);
 if (empty($runner_id)) {
 	$runner_id = $jlogRID;
@@ -15,7 +15,7 @@ $act = $_GET['act'];
 print '<h2>Journey Log</h2>';
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	//form was posted, register the runner
-	$runner_id = $_POST['runner_id'];
+	$runner_id = clean_runner_id($_POST['runner_id']);
 	$runner_name = $_POST['runner_name'];
 	$email_address = $_POST['email_address'];
 	
