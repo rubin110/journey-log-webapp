@@ -7,7 +7,13 @@ $cid = clean_checkpoint_id($_GET['cid']); // Get the cid
 $runner_id = clean_runner_id($_GET['rid']);
 $device_id = $_GET['did'];
 $lat = $_GET['lat'];
-$long = $_GET['lon'];
+$long = $_GET['long'];
+if (empty($long)) {
+	$long = $_GET['lon'];
+}
+if (empty($long)) {
+	$long = $_GET['lng'];
+}
 $timestamp = $_GET['ts'];
 
 
@@ -17,7 +23,13 @@ if (empty($_GET)) {
 	#TODO: Clean this shit against injections
 	$device_id = $_POST['did'];
 	$lat = $_POST['lat'];
-	$long = $_POST['lon'];
+	$long = $_POST['long'];
+	if (empty($long)) {
+		$long = $_POST['lon'];
+	}
+	if (empty ($long)) {
+		$long = $_POST['lng'];
+	}
 	$timestamp = $_POST['ts'];
 }
 
@@ -29,19 +41,19 @@ if (empty($timestamp)) {
 $jlogCID = intval($_COOKIE["jlog-cid"]);
 
 
-// Disabled because the Android app might not be passing a cookie and hitting this page directly :(
-//if (!isset($_COOKIE["jlog-cid"])) {
+if (!isset($_COOKIE["jlog-cid"])) {
 	//Oops, you don't have a cookie, return to checkpoint registration
 	#TODO: Disable this? We don't want someone guessing the url and registering with a checkpoint by accident
-//	header("Location: /agent/set/");
-//}
+	header("Location: /agent/set/");
+}
 
-if ($cid == "0" || $jlogCID == "0" || clean_runner_id($_POST['rid']) == "0") {
+
+if ($cid == "0" || $jlogCID == "0") {
 	//print 'HEY LOOK YOU ARE CHECKPOINT 0';
 	//header("Location: /agent/autoregistration/?rid=".$runner_id);
 	include('_autoregistration.php');
 	exit;
-//}
+}
 
 if ($runner_id) {
 	//print "Look here motherfuckers, we're checking you into a checkpoint. Good job<br /><br />";
