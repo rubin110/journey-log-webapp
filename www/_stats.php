@@ -9,66 +9,6 @@ include('functions.php');
 
 $checkpoints = get_all_checkpoint_ids();
 
-function total_runners() {
-	$mysql = connectdb(true);
-	$query = "SELECT COUNT(*) from ".RUNNERS_TBL;
-	$result = mysql_query($query, $mysql);
-	$row = mysql_fetch_array($result);
-	return $row[0];	
-}
-
-function total_runners_registered($registered_status) {
-	$mysql = connectdb(true);
-	$query = "SELECT COUNT(*) from ".RUNNERS_TBL." WHERE is_registered = ".$registered_status;
-	$result = mysql_query($query, $mysql);
-	$row = mysql_fetch_array($result);
-	return $row[0];
-}
-
-function total_runners_tagged() {
-	$mysql = connectdb(true);
-	$query = "SELECT COUNT(*) from ".RUNNERS_TBL." WHERE is_tagged = 1";
-	$result = mysql_query($query, $mysql);
-	$row = mysql_fetch_array($result);
-	return $row[0];
-}
-
-function total_runners_registered_untagged($registered_status) {
-	$mysql = connectdb(true);
-	$query = "SELECT COUNT(*) from ".RUNNERS_TBL." WHERE is_registered=".$registered_status." AND is_tagged = 0";
-	$result = mysql_query($query, $mysql);
-	$row = mysql_fetch_array($result);
-	return $row[0];
-}
-
-function total_checkpoint_checkins($checkpoint_id) {
-	$mysql = connectdb(true);
-	$query = "SELECT COUNT(*) from ".CHECKINS_TBL." WHERE checkpoint_id=".$checkpoint_id;
-	$result = mysql_query($query, $mysql);
-	$row = mysql_fetch_array($result);
-	return $row[0];
-}
-
-function most_recent_checkin($checkpoint_id) {
-	$mysql = connectdb(true);
-	$query = "SELECT * from ".CHECKINS_TBL." WHERE checkpoint_id=".$checkpoint_id." ORDER BY checkin_time DESC LIMIT 1";
-	$result = mysql_query($query, $mysql);
-	$row = mysql_fetch_array($result, MYSQL_BOTH);
-	return $row;
-}
-
-function active_chasers($time = "") {
-	$mysql = connectdb(true);
-	//Query that pulls all the unique chasers that have reistered at least one tag
-	if ($time!="") {
-		$query = "SELECT COUNT(DISTINCT tagger_id) from ".TAGS_TBL." WHERE tag_time > (now() - interval ".$time." minute)";
-	} else {
-		$query = "SELECT COUNT(DISTINCT tagger_id) from ".TAGS_TBL;
-	}
-	$result = mysql_query($query, $mysql);
-	$row = mysql_fetch_array($result);
-	return $row[0];
-}
 
 print "Total Runners in Database: ".total_runners()."<br />";
 print "Registered Runners: ".total_runners_registered(1)."<br />";

@@ -32,6 +32,27 @@ function _logger($type,$result,$message) {
 	fclose($fh);
 }
 
+function get_start_time() {
+	$mysqli = connectdb();
+	$query = "SELECT time FROM ".OTHER_TBL." WHERE event='start'";
+	$stmt = $mysqli->prepare($query);
+	$stmt->execute();
+	$stmt->bind_result($starttime);
+	$stmt->fetch();
+	return $starttime;
+}
+
+function get_end_time() {
+	$mysqli = connectdb();
+	$query = "SELECT time FROM ".OTHER_TBL." WHERE event='end'";
+	$stmt = $mysqli->prepare($query);
+	$stmt->execute();
+	$stmt->bind_result($endtime);
+	$stmt->fetch();
+	return $endtime;
+
+}
+
 #Return true if this checkpoint exists in the database
 function is_valid_checkpoint($id) {
 	$mysqli = connectdb();
@@ -151,24 +172,7 @@ function check_runner_in($cid, $rid, $device_id="", $lat="", $long="", $timestam
 	}
 	
 }
-/*
-function is_already_checked_in($cid, $rid) {
-	$rid = clean_runner_id($rid);
-	$mysql = connectdb(true);
-	$query = "SELECT * FROM ".CHECKINS_TBL." WHERE checkpoint_id = ".$cid." and runner_id = ".$rid;
-	print $query;
-	$result = mysql_query($query, $mysql);
-	if ($result) {
-		if (mysql_num_rows($result) > 0) {
-			return true;
-		} else {
-			return false;
-		}
-	} else {
-		return false;
-	}
-}
-*/
+
 function is_already_checked_in($cid, $rid) {
 	$rid = clean_runner_id($rid);
 	$mysqli = connectdb();
@@ -296,6 +300,99 @@ function tag_exists($tagger_id, $runner_id) {
 	} else {
 		return false;
 	}
-	
-	
+}
+
+
+/* STATS STUFF */
+function time_between($from,$to) {
+  $to = (($to === null) ? (time()) : ($to));
+  $to = ((is_int($to)) ? ($to) : (strtotime($to)));
+  $from = ((is_int($from)) ? ($from) : (strtotime($from)));
+
+  $units = array
+  (
+   "year"   => 29030400, // seconds in a year   (12 months)
+   "month"  => 2419200,  // seconds in a month  (4 weeks)
+   "week"   => 604800,   // seconds in a week   (7 days)
+   "day"    => 86400,    // seconds in a day    (24 hours)
+   "hour"   => 3600,     // seconds in an hour  (60 minutes)
+   "minute" => 60,       // seconds in a minute (60 seconds)
+   "second" => 1         // 1 second
+  );
+
+  $diff = abs($from - $to);
+//  $suffix = (($from > $to) ? ("from now") : ("ago"));
+
+  foreach($units as $unit => $mult)
+   if($diff >= $mult)
+   {
+    $and = (($mult != 1) ? ("") : ("and "));
+    $output .= ", ".$and.intval($diff / $mult)." ".$unit.((intval($diff / $mult) == 1) ? ("") : ("s"));
+    $diff -= intval($diff / $mult) * $mult;
+   }
+  $output .= " ".$suffix;
+  $output = substr($output, strlen(", "));
+
+  return $output;
+}
+
+function total_runners() {
+	$mysql = connectdb(true);
+	$query = "SELECT COUNT(*) from ".RUNNERS_TBL;
+	$result = mysql_query($query, $mysql);
+	$row = mysql_fetch_array($result);
+	return $row[0];	
+}
+
+function total_runners_registered($registered_status) {
+	$mysql = connectdb(true);
+	$query = "SELECT COUNT(*) from ".RUNNERS_TBL." WHERE is_registered = ".$registered_status;
+	$result = mysql_query($query, $mysql);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
+function total_runners_tagged() {
+	$mysql = connectdb(true);
+	$query = "SELECT COUNT(*) from ".RUNNERS_TBL." WHERE is_tagged = 1";
+	$result = mysql_query($query, $mysql);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
+function total_runners_registered_untagged($registered_status) {
+	$mysql = connectdb(true);
+	$query = "SELECT COUNT(*) from ".RUNNERS_TBL." WHERE is_registered=".$registered_status." AND is_tagged = 0";
+	$result = mysql_query($query, $mysql);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
+function total_checkpoint_checkins($checkpoint_id) {
+	$mysql = connectdb(true);
+	$query = "SELECT COUNT(*) from ".CHECKINS_TBL." WHERE checkpoint_id=".$checkpoint_id;
+	$result = mysql_query($query, $mysql);
+	$row = mysql_fetch_array($result);
+	return $row[0];
+}
+
+function most_recent_checkin($checkpoint_id) {
+	$mysql = connectdb(true);
+	$query = "SELECT * from ".CHECKINS_TBL." WHERE checkpoint_id=".$checkpoint_id." ORDER BY checkin_time DESC LIMIT 1";
+	$result = mysql_query($query, $mysql);
+	$row = mysql_fetch_array($result, MYSQL_BOTH);
+	return $row;
+}
+
+function active_chasers($time = "") {
+	$mysql = connectdb(true);
+	//Query that pulls all the unique chasers that have reistered at least one tag
+	if ($time!="") {
+		$query = "SELECT COUNT(DISTINCT tagger_id) from ".TAGS_TBL." WHERE tag_time > (now() - interval ".$time." minute)";
+	} else {
+		$query = "SELECT COUNT(DISTINCT tagger_id) from ".TAGS_TBL;
+	}
+	$result = mysql_query($query, $mysql);
+	$row = mysql_fetch_array($result);
+	return $row[0];
 }

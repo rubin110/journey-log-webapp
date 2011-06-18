@@ -16,6 +16,19 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `other`
+--
+
+DROP TABLE IF EXISTS `other`;
+CREATE TABLE `other` (
+  `event` varchar(255) NOT NULL DEFAULT '',
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`event`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `checkins`
 --
 
