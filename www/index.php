@@ -12,6 +12,11 @@ $cid = $_GET['cid']; // Get the cid
 $jlogCID = $_COOKIE["jlog-cid"];
 $jlogRID = $_COOKIE["jlog-rid"];
 
+$device_id = $_GET['did'];
+$lat = $_GET['lat'];
+$lon = $_GET['lon'];
+$timestamp = $_GET['ts'];
+
 if (empty($jlogRID)) {
 	if (DEBUG) print "RID cookie is empty<br />";
 }
@@ -43,7 +48,7 @@ if (empty($jlogCID)) {
 } else if (is_valid_checkpoint($jlogCID) || is_valid_checkpoint($cid)) {
 	//Checkpoint is registered on device and is a valid checkpoint
 	if (DEBUG) print "Hello checkpoint ".$jlogCID;
-	header("Location: /_checkin.php?rid=".$runner_id);
+	header("Location: /agent/checkin/?rid=".$runner_id."&did=".$did."&lat=".$lat."&lon=".$lon."&ts=".$timestamp);
 }
 
 ?>
