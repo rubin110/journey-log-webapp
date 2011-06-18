@@ -46,7 +46,7 @@ if ($_FILES["player_photo"]["error"] > 0)
 		print "Successfully processed image<br />";
 	} else {
 		// print "Error processing image<br />";
-		die();
+		// die();
 	}
 }
 
