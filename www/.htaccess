@@ -2,32 +2,45 @@
 RewriteEngine On
 RewriteBase /
 
+# allow cpm to stay
+RewriteRule ^cpm(/)?$ - [L]
+
 # Missing images in /photos
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^photos/.*\.jpg$ /_resources/404.jpg [L]
 
-# allow cpm and photos to stay
-RewriteRule ^cpm(/)?$ - [L]
+# allow photos to stay
 RewriteRule ^photos(/)?$ - [L]
 
 # Agent/Volunteer rules
+## Set Checkpoint cookies
 RewriteRule ^agent/set(/)?$  _cidindex.php [L]
 RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [L]
+
+## Check in runners
 RewriteRule ^agent/checkin(/)?$ _checkin.php [L]
 RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [L]
+
+## General Stats
 RewriteRule ^agent/stats(/)?$ _stats.php [L]
 RewriteRule ^agent/android(/)?$ _resources/checkpoint_android_app.apk [R]
 
 # Player facing rules
+
+## Self-registration by user
 RewriteRule ^register(/)?$  _reg.php [L]
 RewriteRule ^register/([a-zA-Z0-9]+)?$  _reg.php?rid=$1 [L]
+
+## Chaser tags a user
 RewriteRule ^tag(/)?$  _tag.php [L]
 RewriteRule ^tag/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)?$  _tag.php?rid=$1&tid=$2 [L]
+
+## Clear out all cookies
 RewriteRule ^clear(/)?$  _clearallcookies.php [L]
 
 # Does this user have a jlog-cid cookie? If so forward them to the checkin page
 RewriteCond %{HTTP_COOKIE} jlog-cid [NC] 
-RewriteRule ^([a-zA-Z0-9]+)?$ agent/checkin/$1 [L]
+RewriteRule ^([a-zA-Z0-9]+)?$ agent/checkin/$1 [R]
 
 # Catch all
 RewriteRule ^([a-zA-Z0-9]+)?$ index.php?rid=$1 [L]

@@ -3,15 +3,35 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 include('mobile-friendly.html');
 include('functions.php');
 
+#TODO: Clean this shit against injections
 $cid = $_GET['cid']; // Get the cid
 $runner_id = clean_runner_id($_GET['rid']);
+$device_id = $_GET['did'];
+$lat = $_GET['lat'];
+$long = $_GET['long'];
+$timestamp = $_GET['ts'];
+
+
+if (empty($_GET)) {
+	$cid = $_POST['cid'];
+	$runner_id = clean_runner_id($_POST['rid']);
+	#TODO: Clean this shit against injections
+	$device_id = $_POST['did'];
+	$lat = $_POST['lat'];
+	$long = $_POST['long'];
+	$timestamp = $_POST['ts'];
+}
+
+//Get checkpoint id cookie value
+$jlogCID = intval($_COOKIE["jlog-cid"]);
 
 
 if (!isset($_COOKIE["jlog-cid"])) {
 	//Oops, you don't have a cookie, return to checkpoint registration
+	#TODO: Disable this? We don't want someone guessing the url and registering with a checkpoint by accident
 	header("Location: /agent/set/");
 }
-$jlogCID = intval($_COOKIE["jlog-cid"]);
+
 
 if ($cid == "0" || $jlogCID == "0") {
 	//print 'HEY LOOK YOU ARE CHECKPOINT 0';

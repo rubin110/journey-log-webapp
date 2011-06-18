@@ -1,4 +1,8 @@
 <?
+
+var_dump($_POST);
+var_dump($_GET);
+
 include('functions.php');
 print is_valid_runner('RUBIN');
 

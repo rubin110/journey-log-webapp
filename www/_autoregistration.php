@@ -17,7 +17,11 @@ $runner_id = clean_runner_id($_POST['runner_id']);
 $photo_name = $runner_id.".jpg";
 
 print "<h2>Journey Log<br>Autoregistering runner ".$runner_id."</h2>";
-
+if (empty($_POST['runner_id'])) {
+	print "Missing data<br />";
+	print "</body></html>";
+	die();
+}
 
 if ($_FILES["player_photo"]["error"] > 0)
 {
@@ -50,3 +54,4 @@ if (is_runner_registered($runner_id)) {
 */
 
 ?>
+</body></html>
