@@ -22,6 +22,10 @@ if (empty($_GET)) {
 	$timestamp = $_POST['ts'];
 }
 
+if (empty($timestamp)) {
+	$timestamp = date('Y-m-d H:i:s');
+}
+
 //Get checkpoint id cookie value
 $jlogCID = intval($_COOKIE["jlog-cid"]);
 
@@ -45,8 +49,9 @@ if ($runner_id) {
 	print '<h2>Journey Log - Checkin<br>'.get_checkpoint_name($jlogCID).'</h2>
 	';
 
-	print 'Going to try to check in runner '.$runner_id.'<br />';	
-	if (check_runner_in($jlogCID, $runner_id)) {
+	print 'Going to try to check in runner '.$runner_id.'<br />';
+	print $jlogCID.", ".$runner_id.",".$device_id.",".$lat.",".$long.",".$timestamp."<br />";
+	if (check_runner_in($jlogCID, $runner_id, $device_id, $lat, $long, $timestamp)) {
 		print '
 		<p><strong><big>Runner '.$runner_id.' is checked in.</big></strong>
 		<div style="font-size:14em;color:green;text-align: center;">&#10003;</div>

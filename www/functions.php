@@ -46,6 +46,7 @@ function is_valid_runner($id) {
 }
 
 function get_runner_name($rid) {
+	$rid = clean_runner_id($rid);
 	$mysql = connectdb(true);
 	$query = "SELECT player_name FROM ".RUNNERS_TBL." WHERE runner_id = '".$rid."'";
 	$result = mysql_query($query);
@@ -54,6 +55,7 @@ function get_runner_name($rid) {
 }
 
 function get_runner_email($rid) {
+	$rid = clean_runner_id($rid);
 	$mysql = connectdb(true);
 	$query = "SELECT player_email FROM ".RUNNERS_TBL." WHERE runner_id = '".$rid."'";
 	$result = mysql_query($query);
@@ -106,13 +108,14 @@ function register_runner_app($rid) {
 }
 
 #Check a runner ($rid) into a checkpoint ($cid)
-function check_runner_in($cid, $rid) {
+function check_runner_in($cid, $rid, $device_id="", $lat="", $long="", $timestamp="") {
 	$device_id = "some device";
 	$user_agent = $_SERVER['HTTP_USER_AGENT'];
 	$ip_address = $_SERVER['REMOTE_ADDR'];
 	$mysqli = connectdb();
-	$stmt = $mysqli->prepare("INSERT INTO ".CHECKINS_TBL." (runner_id, checkpoint_id, device_id, user_agent, ip_address) VALUES (?,?,?,?,?)");
-	$stmt->bind_param('sisss', $rid, $cid, $device_id, $user_agent, $ip_address);
+	$stmt = $mysqli->prepare("INSERT INTO ".CHECKINS_TBL." (runner_id, checkpoint_id, device_id, user_agent, ip_address, lat, lng, checkin_time) VALUES (?,?,?,?,?,?,?,?)");	
+	//print "INSERT INTO ".CHECKINS_TBL." (runner_id, checkpoint_id, device_id, user_agent, ip_address, lat, lng, checkin_time) VALUES ($rid,$cid,$device_id,$user_agent,$ip_address,$lat,$long,$timestamp)";
+	$stmt->bind_param('sissssss', $rid, $cid, $device_id, $user_agent, $ip_address, $lat, $long, $timestamp);
 	$stmt->execute();
 	if ($stmt->affected_rows > 0) {
 		$stmt->close();
@@ -125,6 +128,7 @@ function check_runner_in($cid, $rid) {
 }
 
 function is_already_checked_in($cid, $rid) {
+	$rid = clean_runner_id($rid);
 	$mysql = connectdb(true);
 	$query = "SELECT * FROM ".CHECKINS_TBL." WHERE checkpoint_id = ".$cid." and runner_id = ".$rid;
 	$result = mysql_query($query, $mysql);
@@ -204,6 +208,8 @@ function is_runner_registered($runner_id) {
 }
 
 function tag_exists($tagger_id, $runner_id) {
+	$runner_id = clean_runner_id($runner_id);
+	$tagger_id = clean_chaser_id($tagger_id);
 	if (!is_valid_runner($tagger_id) || !is_valid_runner($runner_id)) {
 		print "Invalid runner or tagger id<br/ >";
 		return false;
