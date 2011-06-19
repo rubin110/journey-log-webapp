@@ -14,7 +14,7 @@ class RunnersController < ApplicationController
       @num_chasers = ActiveRecord::Base.connection.execute("SELECT COUNT(DISTINCT tagger_id) from tags;").first[0]
       @chaser_tree = RunnersController.chaser_descendants(@runner)
     end
-    
+
     current_checkin = @runner.current_checkin
     
     @your_place_by_checkin = ActiveRecord::Base.connection.execute("select

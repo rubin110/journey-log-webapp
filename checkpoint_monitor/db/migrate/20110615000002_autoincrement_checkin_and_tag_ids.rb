@@ -5,5 +5,7 @@ class AutoincrementCheckinAndTagIds < ActiveRecord::Migration
   end
 
   def self.down
+    change_column :checkins, :checkin_id, :integer
+    change_column :tags, :tag_id, :integer
   end
 end

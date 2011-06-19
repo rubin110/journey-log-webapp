@@ -18,17 +18,19 @@ ActiveRecord::Schema.define(:version => 20110615000002) do
     t.datetime "checkin_time"
     t.string   "device_id"
     t.string   "user_agent"
+    t.string   "ip_address"
     t.float    "lng"
     t.float    "lat"
     t.boolean  "is_valid",      :default => true
   end
 
+  add_index "checkins", ["checkin_id"], :name => "checkin_id"
   add_index "checkins", ["checkin_time", "checkpoint_id", "is_valid"], :name => "index_checkins_on_checkin_time_and_checkpoint_id_and_is_valid"
   add_index "checkins", ["checkpoint_id", "checkin_time", "is_valid"], :name => "index_checkins_on_checkpoint_id_and_checkin_time_and_is_valid"
   add_index "checkins", ["checkpoint_id"], :name => "index_checkins_on_checkpoint_id"
   add_index "checkins", ["lat"], :name => "index_checkins_on_lat"
   add_index "checkins", ["lng"], :name => "index_checkins_on_lng"
-  add_index "checkins", ["runner_id", "checkpoint_id"], :name => "index_checkins_on_runner_id_and_checkpoint_id", :unique => true
+  add_index "checkins", ["runner_id", "checkpoint_id"], :name => "runner_id", :unique => true
 
   create_table "checkpoints", :id => false, :force => true do |t|
     t.integer "checkpoint_id"
@@ -40,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20110615000002) do
     t.integer "checkpoint_position"
   end
 
-  add_index "checkpoints", ["checkpoint_id"], :name => "index_checkpoints_on_checkpoint_id"
+  add_index "checkpoints", ["checkpoint_id"], :name => "checkpoint_id"
   add_index "checkpoints", ["checkpoint_loc_lat"], :name => "index_checkpoints_on_checkpoint_loc_lat"
   add_index "checkpoints", ["checkpoint_loc_long"], :name => "index_checkpoints_on_checkpoint_loc_long"
   add_index "checkpoints", ["checkpoint_position"], :name => "index_checkpoints_on_checkpoint_position"
@@ -58,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20110615000002) do
   end
 
   add_index "runners", ["is_tagged"], :name => "index_runners_on_is_tagged"
-  add_index "runners", ["runner_id"], :name => "index_runners_on_runner_id"
+  add_index "runners", ["runner_id"], :name => "runner_id"
 
   create_table "tags", :primary_key => "tag_id", :force => true do |t|
     t.string   "runner_id"
@@ -74,8 +76,8 @@ ActiveRecord::Schema.define(:version => 20110615000002) do
 
   add_index "tags", ["loc_lat"], :name => "index_tags_on_loc_lat"
   add_index "tags", ["loc_long"], :name => "index_tags_on_loc_long"
-  add_index "tags", ["runner_id", "tagger_id"], :name => "index_tags_on_runner_id_and_tagger_id", :unique => true
-  add_index "tags", ["tag_id"], :name => "index_tags_on_tag_id"
+  add_index "tags", ["runner_id", "tagger_id"], :name => "runner_id", :unique => true
+  add_index "tags", ["tag_id"], :name => "tag_id"
   add_index "tags", ["tagger_id", "runner_id"], :name => "index_tags_on_tagger_id_and_runner_id"
 
 end

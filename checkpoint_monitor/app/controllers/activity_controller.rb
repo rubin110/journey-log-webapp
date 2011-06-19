@@ -14,8 +14,8 @@ class ActivityController < ApplicationController
     # TODO: also report on how many players are known to have become chasers, and what the highest number of reported catches is so far
       
     # in the view, show the by-minute-interval plot of activity at each checkpoint
-    start_time = @summarized_checkpoints.map {|sc| sc.first_checkin_time}.compact.min
     end_time = @summarized_checkpoints.map {|sc| sc.last_checkin_time}.compact.max
+    start_time = [@summarized_checkpoints.map {|sc| sc.first_checkin_time}.compact.min, end_time - 86400].max
     minute_interval=5
     num_intervals = ((end_time - start_time)/(minute_interval * 60.0)).ceil    
     end_times = (1..num_intervals).map {|interval_index| start_time + minute_interval*interval_index*60}

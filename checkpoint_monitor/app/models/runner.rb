@@ -4,6 +4,16 @@ class Runner < ActiveRecord::Base
   has_many :tags, :foreign_key => :tagger_id, :primary_key => :runner_id
   has_many :tagged, :class_name => "Tag", :foreign_key => :runner_id, :primary_key => :runner_id
 
+  PHOTO_PATH = '/journey-log/photos/'
+  def save_photo(photo_param)
+    photo_file = File.join(PHOTO_PATH,"#{runner_id}.jpg")
+    File.open(photo_file, "wb") { |f| f.write(photo_param.read) }
+  end
+
+  def icon
+    is_mugshot ? "/photos/#{runner_id}.jpg" : (is_tagged ? "/photos/smallchaser.png" : "/photos/smallrunner.png")
+  end
+
   def name
     player_name || runner_id
   end

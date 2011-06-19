@@ -1,5 +1,11 @@
 SurvivedcOrg::Application.routes.draw do
+  get "checkins/checkin"
+  post "checkins/checkin"
+  get "checkins/completed"
+
   root :to => "activity#status"
+
+  match 'status' => 'activity#status'
 
   match 'runners/chaser_tree' => 'runners#chaser_tree'
   match 'runners/:runner_id' => 'runners#show'

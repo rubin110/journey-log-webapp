@@ -1,23 +1,24 @@
 class AddIndices < ActiveRecord::Migration
   def self.up
+    add_index :checkins, :checkin_id, :name => :checkin_id
     add_index :checkins, :checkpoint_id
-    add_index :checkins, [:runner_id, :checkpoint_id], :unique =>true
+    add_index :checkins, [:runner_id, :checkpoint_id], :unique =>true, :name => :runner_id
     add_index :checkins, [:checkpoint_id, :checkin_time, :is_valid]
     add_index :checkins, [:checkin_time, :checkpoint_id, :is_valid]
     add_index :checkins, :lat
     add_index :checkins, :lng
       
-    add_index :checkpoints, :checkpoint_id
+    add_index :checkpoints, :checkpoint_id, :name => :checkpoint_id
     add_index :checkpoints, :checkpoint_position
     add_index :checkpoints, :checkpoint_loc_lat
     add_index :checkpoints, :checkpoint_loc_long
     add_index :checkpoints, [:is_mobile, :is_bonus]
 
-    add_index :runners, :runner_id
+    add_index :runners, :runner_id, :name => :runner_id
     add_index :runners, :is_tagged
 
-    add_index :tags, :tag_id
-    add_index :tags, [:runner_id, :tagger_id], :unique => true
+    add_index :tags, :tag_id, :name => :tag_id
+    add_index :tags, [:runner_id, :tagger_id], :unique => true, :name => :runner_id
     add_index :tags, [:tagger_id, :runner_id]
     add_index :tags, :loc_lat
     add_index :tags, :loc_long
