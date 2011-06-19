@@ -1,0 +1,12 @@
+<h1><%= @checkpoint.checkpoint_name %></h1>
+
+<%= @activity_string.html_safe %>
+
+<ul><%= @checkpoint.num_checked_in %> have checked in, most recently:
+<% @checkpoint.recent_checkins.each do |checkin| %>
+<li><img src="<%= checkin.runner.icon %>" /> <a href="/cpm/runners/<%= checkin.runner.runner_id %>"><%= 
+checkin.runner.runner_id %></a> (<%= checkin.runner.player_name %>): 
+<%= 
+checkin.checkin_time %></li>
+<% end %>
+</ul>
