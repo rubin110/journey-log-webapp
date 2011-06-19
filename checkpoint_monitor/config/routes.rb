@@ -1,15 +1,18 @@
 SurvivedcOrg::Application.routes.draw do
-  get "checkins/checkin"
-  post "checkins/checkin"
-  get "checkins/completed"
+  match "cpm/checkpoints" => 'checkpoints#index'
+  match "cpm/checkpoints/:checkpoint_id" => 'checkpoints#show'
+
+#  get "cpm/checkins/checkin"
+#  post "cpm/checkins/checkin"
+#  get "cpm/checkins/completed"
 
   root :to => "activity#status"
 
-  match 'status' => 'activity#status'
+  match 'cpm/status' => 'activity#status'
 
-  match 'runners/chaser_tree' => 'runners#chaser_tree'
-  match 'runners/:runner_id' => 'runners#show'
-  match 'runners' => 'runners#index'
+  match 'cpm/runners/chaser_tree' => 'runners#chaser_tree'
+  match 'cpm/runners/:runner_id' => 'runners#show'
+  match 'cpm/runners' => 'runners#index'
 
   #resources :users
   #resources :checkpoints

@@ -7,6 +7,8 @@ class SummarizedCheckpointInfo
     
     # precompute some statistics
     @num_checked_in = @checkin_list.length
+    @first_checkin_time = Time.new
+    @last_checkin_time = Time.new
     if (@num_checked_in > 0)
       @first_checkin_time = @checkin_list.first.checkin_time
       @last_checkin_time = @checkin_list.last.checkin_time

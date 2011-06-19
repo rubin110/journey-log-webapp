@@ -24,6 +24,6 @@ production:
   encoding: utf8
   database: jlogsf0
   pool: 5
-  host: localhost
+  host: mysql.onebit.me
   username: jlogsf0
-  password: 7JZNobb7DmFm
+  password: 7JZNobb7DmFn

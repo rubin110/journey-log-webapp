@@ -5,7 +5,7 @@ class ActivityController < ApplicationController
   end
   
   def status
-    @all_checkpoints = Checkpoint.find(:all).sort {|a, b| (a.checkpoint_position <=> b.checkpoint_position) || (a.checkpoint_name <=> b.checkpoint_name)}
+    @all_checkpoints = Checkpoint.find(:all).find_all{|cp| !cp.checkpoint_position.nil?}.sort {|a, b| (a.checkpoint_position <=> b.checkpoint_position) || (a.checkpoint_name <=> b.checkpoint_name)}
     
     @summarized_checkpoints = @all_checkpoints.map {|c| SummarizedCheckpointInfo.new(c)}
       
