@@ -9,7 +9,9 @@ class ActivityController < ApplicationController
     
     @summarized_checkpoints = @all_checkpoints.map {|c| SummarizedCheckpointInfo.new(c)}
       
-    @total_players = @summarized_checkpoints.map {|sc| sc.num_checked_in}.max
+    @total_players = ActiveRecord::Base.connection.execute("select count(distinct runner_id) from (select runner_id 
+from runners where is_mugshot=1 or is_registered=1 union all select runner_id from tags union all select tagger_id 
+from tags union all select runner_id from checkins) as all_runners;").first[0]
       
     # TODO: also report on how many players are known to have become chasers, and what the highest number of reported catches is so far
       
@@ -27,35 +29,36 @@ class ActivityController < ApplicationController
     @line_plot = ActivityController.line_plot(end_times, merged_map)
 
     # get the highest checkpoint position reached by each player; do a stream graph of the highest checkpoint each person has reached, by time
-    checkpoint_positions = @summarized_checkpoints.map{|sm| sm.checkpoint.checkpoint_position}.compact.uniq
-    merged_map = checkpoint_positions.inject({}) do |merged, pos|
-      all_sm_for_position = @summarized_checkpoints.find_all{|sm| sm.checkpoint.checkpoint_position == pos}
-      if (all_sm_for_position.size > 0)
-        combined_position = all_sm_for_position.first.checkin_hist(start_time,end_time,minute_interval)
-        if (all_sm_for_position.size > 1)
-          all_sm_for_position.each_with_index do |sm, index|
-            if (index > 0)
-              combined_position = combined_position.zip(sm.checkin_hist(start_time,end_time,minute_interval)).map {|pair| pair[0] + pair[1]}
-            end
+    @status_plot = ""
+    begin
+      checkpoint_positions = @summarized_checkpoints.map{|sm| sm.checkpoint.checkpoint_position}.compact.uniq
+      current_counts = checkpoint_positions.inject({}) {|new_counts, pos| new_counts = new_counts.merge(pos => 0)}
+      current_positions = Hash.new()
+      time_map = Hash.new()
+      end_time_index = 0
+      Checkin.find(:all, :order => 'checkin_time').each do |checkin|
+        if (current_positions.has_key?(checkin.runner_id))
+          current_counts[current_positions[checkin.runner_id]] = current_counts[current_positions[checkin.runner_id]] - 1
+        end
+        if (checkin.checkpoint.checkpoint_position.present?)
+          current_positions[checkin.runner_id] = checkin.checkpoint.checkpoint_position
+#          logger.info("Checking in at cp #{checkin.checkpoint.checkpoint_position}, currently #{current_counts.inspect}")
+          current_counts[checkin.checkpoint.checkpoint_position] = current_counts[checkin.checkpoint.checkpoint_position] + 1
+          if ((end_time_index < end_times.size) && (checkin.checkin_time >= end_times[end_time_index]))
+            time_map[end_times[end_time_index]] = checkpoint_positions.map {|cpp| current_counts[cpp]}
+            end_time_index = end_time_index + 1
           end
         end
-        merged.merge(pos => combined_position)
-      else
-        merged
       end
-    end 
-    cumulative_map = merged_map.inject({}) {|new_hash, (key, val)| new_hash.merge(key => val.inject([]) {|cum_array, v| cum_array.size == 0 ? cum_array.push(v) : cum_array.push(v+cum_array.last)})}
-    
-    time_map_by_highest_checkpoint = Hash.new    
-    cumulative_map.keys.each_with_index do |key, index|
-      if index==cumulative_map.size - 1
-        time_map_by_highest_checkpoint[key] = cumulative_map[key]
-      else
-        time_map_by_highest_checkpoint[key] = cumulative_map[key].zip(cumulative_map[cumulative_map.keys[index+1]]).map {|pair| pair[0] - pair[1]}
-      end
+#      logger.info("Plotting times #{end_times.inspect} with data #{time_map.inspect}")
+
+      time_map_by_highest_checkpoint = {"label" => checkpoint_positions, "values" => end_times.map {|time| {"label" => time.strftime("%H:%M"), "values" => time_map[time]}}}
+      logger.info("Plotting with data #{time_map_by_highest_checkpoint.inspect}")
+      @status_plot = ActivityController.stream_plot(time_map_by_highest_checkpoint)
+    rescue Exception => e
+      logger.info("#{e.to_s}: #{e.backtrace}")
     end
-      
-    @status_plot = ActivityController.stream_plot(end_times, time_map_by_highest_checkpoint)
+    
   end 
   
   def self.line_plot(x_axis, data_hash)
@@ -83,7 +86,6 @@ class ActivityController < ApplicationController
     </td></tr>
     </table>
     
-    <link href="/cpm/stylesheets/flot/layout.css" rel="stylesheet" type="text/css">
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/flot/excanvas.min.js"></script><![endif]-->
     <script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/flot/jquery.js"></script>
     <script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/flot/jquery.flot.js"></script>
@@ -186,16 +188,16 @@ class ActivityController < ApplicationController
 JS
   end
   
-  def self.stream_plot(times, data_hash)
-    series_names = data_hash.keys.sort
+  def self.stream_plot(stream_data)
+#    series_names = data_hash.keys.sort
 
-    stream_data = Hash.new
-    stream_data["label"] = series_names
-    stream_data["values"] = times.map {|time|
-      index = times.index(time)
-      {'label' => time.strftime("%H:%M"),
-      'values' => data_hash.values.map{|array| array[index]}}
-    }
+#    stream_data = Hash.new
+#    stream_data["label"] = series_names
+#    stream_data["values"] = times.map {|time|
+#      index = times.index(time)
+#      {'label' => time.strftime("%H:%M"),
+#      'values' => data_hash.values.map{|array| array[index]}}
+#    }
 
     return <<JS
   <div id="infovis" class="infovis"> </div>

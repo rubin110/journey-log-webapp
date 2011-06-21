@@ -5220,3 +5220,9 @@
 [19/Jun/2011:12:54:18 -0700] 97.159.32.230 -- USERREGISTER -- SUCCESS -- SI71H registered themselves. player_name='Oliver T' player_email=othreshie@sbcglobal.net
 [19/Jun/2011:13:54:01 -0700] 174.254.230.33 -- USERREGISTER -- SUCCESS -- XM31R failed to update their info. player_name='eric steinberg' player_email=ergomatic@gmail.com
 [19/Jun/2011:15:39:37 -0700] 208.54.5.138 -- USERREGISTER -- FAIL --  failed to register themselves. player_name='iwsfutcmd' player_email=benayang@gmail.com
+[19/Jun/2011:18:15:57 -0700] 166.205.139.209 -- USERREGISTER -- FAIL --  failed to register themselves. player_name='Cornelius' player_email=Cornelius.Corkery@gmail.com
+[19/Jun/2011:19:17:31 -0700] 67.164.55.126 -- USERREGISTER -- SUCCESS -- F5BJ4 registered themselves. player_name='Jaya Lasiraj' player_email=Jayakasiraj@hotmail.com
+[19/Jun/2011:19:38:20 -0700] 184.232.214.254 -- USERREGISTER -- SUCCESS -- 4JICI registered themselves. player_name='Ryan Tacderas' player_email=jinfreaks@hotmail.com
+[19/Jun/2011:19:38:56 -0700] 184.232.214.254 -- USERREGISTER -- FAIL --  failed to register themselves. player_name='Ryan Tacderas' player_email=jinfreaks@hotmail.com
+[19/Jun/2011:21:50:15 -0700] 174.253.236.222 -- USERREGISTER -- SUCCESS -- XLX8Q failed to update their info. player_name='Mournhart' player_email=wcshek@gmail.com
+[20/Jun/2011:16:13:52 -0700] 69.111.165.37 -- USERREGISTER -- SUCCESS -- PUJPS failed to update their info. player_name='Mander Zander' player_email=Mander.zander@gmail.com

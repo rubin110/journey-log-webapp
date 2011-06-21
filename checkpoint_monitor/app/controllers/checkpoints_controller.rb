@@ -11,12 +11,14 @@ class CheckpointsController < ApplicationController
       sc = SummarizedCheckpointInfo.new(@checkpoint)
       start_time = sc.first_checkin_time
       end_time = sc.last_checkin_time
-      minute_interval = 1
+      if (start_time.present?)
+        minute_interval = 1
 
-      num_intervals = ((end_time - start_time)/(minute_interval * 60.0)).ceil    
-      end_times = (1..num_intervals).map {|interval_index| start_time + minute_interval*interval_index*60}
+        num_intervals = ((end_time - start_time)/(minute_interval * 60.0)).ceil    
+        end_times = (1..num_intervals).map {|interval_index| start_time + minute_interval*interval_index*60}
 
-      @activity_string = ActivityController.line_plot(end_times, {"activity" => sc.checkin_hist(start_time,end_time,minute_interval)})
+        @activity_string = ActivityController.line_plot(end_times, {"activity" => sc.checkin_hist(start_time,end_time,minute_interval)})
+      end
     rescue Exception => e
       logger.info(e.to_s)
     end
