@@ -143,3 +143,200 @@
 [06/20/11 23:38:46 -0700 jackson (18788)] INFO : Resolved collector.newrelic.com to 204.93.223.153
 [06/20/11 23:38:46 -0700 jackson (18788)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
 [06/20/11 23:38:46 -0700 jackson (18788)] INFO : Reporting performance data every 60 seconds.
+[06/20/11 23:44:53 -0700 jackson (20740)] INFO : Dispatcher: fastcgi
+[06/20/11 23:44:53 -0700 jackson (20740)] INFO : Application: My Application
+[06/20/11 23:44:53 -0700 jackson (20740)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 20740
+[06/20/11 23:44:53 -0700 jackson (20740)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/20/11 23:45:03 -0700 jackson (20740)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/20/11 23:45:03 -0700 jackson (20740)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/20/11 23:45:03 -0700 jackson (20740)] INFO : Reporting performance data every 60 seconds.
+[06/20/11 23:55:26 -0700 jackson (25337)] INFO : Dispatcher: fastcgi
+[06/20/11 23:55:26 -0700 jackson (25337)] INFO : Application: My Application
+[06/20/11 23:55:26 -0700 jackson (25337)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 25337
+[06/20/11 23:55:26 -0700 jackson (25337)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/20/11 23:58:18 -0700 jackson (26802)] INFO : Dispatcher: fastcgi
+[06/20/11 23:58:18 -0700 jackson (26802)] INFO : Application: My Application
+[06/20/11 23:58:18 -0700 jackson (26802)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 26802
+[06/20/11 23:58:18 -0700 jackson (26802)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/20/11 23:58:28 -0700 jackson (26802)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/20/11 23:58:28 -0700 jackson (26802)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/20/11 23:58:28 -0700 jackson (26802)] INFO : Reporting performance data every 60 seconds.
+[06/20/11 23:59:40 -0700 jackson (27418)] INFO : Dispatcher: fastcgi
+[06/20/11 23:59:40 -0700 jackson (27418)] INFO : Application: My Application
+[06/20/11 23:59:40 -0700 jackson (27418)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 27418
+[06/20/11 23:59:40 -0700 jackson (27418)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/20/11 23:59:50 -0700 jackson (27418)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/20/11 23:59:50 -0700 jackson (27418)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/20/11 23:59:51 -0700 jackson (27418)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 00:00:07 -0700 jackson (27863)] INFO : Dispatcher: fastcgi
+[06/21/11 00:00:07 -0700 jackson (27863)] INFO : Application: My Application
+[06/21/11 00:00:07 -0700 jackson (27863)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 27863
+[06/21/11 00:00:07 -0700 jackson (27863)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:00:17 -0700 jackson (27863)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 00:00:18 -0700 jackson (27863)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 00:00:18 -0700 jackson (27863)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 00:03:34 -0700 jackson (29711)] INFO : Dispatcher: fastcgi
+[06/21/11 00:03:34 -0700 jackson (29711)] INFO : Application: My Application
+[06/21/11 00:03:35 -0700 jackson (29711)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 29711
+[06/21/11 00:03:35 -0700 jackson (29711)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:04:57 -0700 jackson (30426)] INFO : Dispatcher: fastcgi
+[06/21/11 00:04:57 -0700 jackson (30426)] INFO : Application: My Application
+[06/21/11 00:04:57 -0700 jackson (30426)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 30426
+[06/21/11 00:04:57 -0700 jackson (30426)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:05:07 -0700 jackson (30426)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 00:05:07 -0700 jackson (30426)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 00:05:07 -0700 jackson (30426)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 00:09:00 -0700 jackson (32542)] INFO : Dispatcher: fastcgi
+[06/21/11 00:09:00 -0700 jackson (32542)] INFO : Application: My Application
+[06/21/11 00:09:00 -0700 jackson (32542)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 32542
+[06/21/11 00:09:00 -0700 jackson (32542)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:09:10 -0700 jackson (32542)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 00:09:10 -0700 jackson (32542)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 00:09:11 -0700 jackson (32542)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 00:12:39 -0700 jackson (1958)] INFO : Dispatcher: fastcgi
+[06/21/11 00:12:39 -0700 jackson (1958)] INFO : Application: My Application
+[06/21/11 00:12:39 -0700 jackson (1958)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 1958
+[06/21/11 00:12:39 -0700 jackson (1958)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:12:49 -0700 jackson (1958)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 00:12:49 -0700 jackson (1958)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 00:12:49 -0700 jackson (1958)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 00:15:34 -0700 jackson (3240)] INFO : Dispatcher: fastcgi
+[06/21/11 00:15:34 -0700 jackson (3240)] INFO : Application: My Application
+[06/21/11 00:15:34 -0700 jackson (3240)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 3240
+[06/21/11 00:15:34 -0700 jackson (3240)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:15:44 -0700 jackson (3240)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 00:15:44 -0700 jackson (3240)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 00:15:45 -0700 jackson (3240)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 00:45:59 -0700 jackson (17072)] INFO : Dispatcher: fastcgi
+[06/21/11 00:45:59 -0700 jackson (17072)] INFO : Application: My Application
+[06/21/11 00:45:59 -0700 jackson (17072)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 17072
+[06/21/11 00:45:59 -0700 jackson (17072)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:46:09 -0700 jackson (17072)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 00:46:09 -0700 jackson (17072)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 00:46:10 -0700 jackson (17072)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 00:59:05 -0700 jackson (4346)] INFO : Dispatcher: fastcgi
+[06/21/11 00:59:05 -0700 jackson (4346)] INFO : Application: My Application
+[06/21/11 00:59:05 -0700 jackson (4346)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 4346
+[06/21/11 00:59:05 -0700 jackson (4346)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 00:59:15 -0700 jackson (4346)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 00:59:15 -0700 jackson (4346)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 00:59:16 -0700 jackson (4346)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 11:25:56 -0700 jackson (8628)] INFO : Dispatcher: fastcgi
+[06/21/11 11:25:56 -0700 jackson (8628)] INFO : Application: My Application
+[06/21/11 11:25:56 -0700 jackson (8628)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 8628
+[06/21/11 11:25:56 -0700 jackson (8628)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 11:26:06 -0700 jackson (8628)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 11:26:06 -0700 jackson (8628)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 11:26:06 -0700 jackson (8628)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 12:14:33 -0700 jackson (32283)] INFO : Dispatcher: fastcgi
+[06/21/11 12:14:33 -0700 jackson (32283)] INFO : Application: My Application
+[06/21/11 12:14:33 -0700 jackson (32283)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 32283
+[06/21/11 12:14:33 -0700 jackson (32283)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 12:14:43 -0700 jackson (32283)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 12:14:43 -0700 jackson (32283)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 12:14:43 -0700 jackson (32283)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 19:01:59 -0700 jackson (21737)] INFO : Dispatcher: fastcgi
+[06/21/11 19:01:59 -0700 jackson (21737)] INFO : Application: My Application
+[06/21/11 19:01:59 -0700 jackson (21737)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 21737
+[06/21/11 19:01:59 -0700 jackson (21737)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 19:02:09 -0700 jackson (21737)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 19:02:09 -0700 jackson (21737)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 19:02:09 -0700 jackson (21737)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 19:17:23 -0700 jackson (28204)] INFO : Dispatcher: fastcgi
+[06/21/11 19:17:23 -0700 jackson (28204)] INFO : Application: My Application
+[06/21/11 19:17:23 -0700 jackson (28204)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 28204
+[06/21/11 19:17:23 -0700 jackson (28204)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 19:17:24 -0700 jackson (28209)] INFO : Dispatcher: fastcgi
+[06/21/11 19:17:24 -0700 jackson (28209)] INFO : Application: My Application
+[06/21/11 19:17:24 -0700 jackson (28209)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 28209
+[06/21/11 19:17:24 -0700 jackson (28209)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 19:17:33 -0700 jackson (28204)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 19:17:33 -0700 jackson (28204)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 19:17:33 -0700 jackson (28204)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 19:17:34 -0700 jackson (28209)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 19:17:34 -0700 jackson (28209)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 19:17:34 -0700 jackson (28209)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 19:30:21 -0700 jackson (17473)] INFO : Dispatcher: fastcgi
+[06/21/11 19:30:21 -0700 jackson (17473)] INFO : Application: My Application
+[06/21/11 19:30:21 -0700 jackson (17473)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 17473
+[06/21/11 19:30:21 -0700 jackson (17473)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 19:30:31 -0700 jackson (17473)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 19:30:31 -0700 jackson (17473)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 19:30:31 -0700 jackson (17473)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 19:48:27 -0700 jackson (23381)] INFO : Dispatcher: fastcgi
+[06/21/11 19:48:27 -0700 jackson (23381)] INFO : Application: My Application
+[06/21/11 19:48:27 -0700 jackson (23381)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 23381
+[06/21/11 19:48:27 -0700 jackson (23381)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 19:48:37 -0700 jackson (23381)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 19:48:38 -0700 jackson (23381)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 19:48:38 -0700 jackson (23381)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 19:51:17 -0700 jackson (24378)] INFO : Dispatcher: fastcgi
+[06/21/11 19:51:17 -0700 jackson (24378)] INFO : Application: My Application
+[06/21/11 19:51:17 -0700 jackson (24378)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 24378
+[06/21/11 19:51:17 -0700 jackson (24378)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 19:51:28 -0700 jackson (24378)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 19:51:28 -0700 jackson (24378)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 19:51:28 -0700 jackson (24378)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:16:47 -0700 jackson (3120)] INFO : Dispatcher: fastcgi
+[06/21/11 20:16:47 -0700 jackson (3120)] INFO : Application: My Application
+[06/21/11 20:16:47 -0700 jackson (3120)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 3120
+[06/21/11 20:16:47 -0700 jackson (3120)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:16:57 -0700 jackson (3120)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:16:57 -0700 jackson (3120)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:16:57 -0700 jackson (3120)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:40:50 -0700 jackson (13269)] INFO : Dispatcher: fastcgi
+[06/21/11 20:40:50 -0700 jackson (13269)] INFO : Application: My Application
+[06/21/11 20:40:50 -0700 jackson (13269)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 13269
+[06/21/11 20:40:50 -0700 jackson (13269)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:41:00 -0700 jackson (13269)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:41:00 -0700 jackson (13269)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:41:00 -0700 jackson (13269)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:41:39 -0700 jackson (13663)] INFO : Dispatcher: fastcgi
+[06/21/11 20:41:39 -0700 jackson (13663)] INFO : Application: My Application
+[06/21/11 20:41:39 -0700 jackson (13663)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 13663
+[06/21/11 20:41:39 -0700 jackson (13663)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:41:49 -0700 jackson (13663)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:41:49 -0700 jackson (13663)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:41:49 -0700 jackson (13663)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:50:37 -0700 jackson (17517)] INFO : Dispatcher: fastcgi
+[06/21/11 20:50:37 -0700 jackson (17517)] INFO : Application: My Application
+[06/21/11 20:50:37 -0700 jackson (17517)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 17517
+[06/21/11 20:50:37 -0700 jackson (17517)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:50:47 -0700 jackson (17517)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:50:47 -0700 jackson (17517)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:50:47 -0700 jackson (17517)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:52:05 -0700 jackson (18035)] INFO : Dispatcher: fastcgi
+[06/21/11 20:52:05 -0700 jackson (18035)] INFO : Application: My Application
+[06/21/11 20:52:05 -0700 jackson (18035)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 18035
+[06/21/11 20:52:05 -0700 jackson (18035)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:52:15 -0700 jackson (18035)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:52:15 -0700 jackson (18035)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:52:16 -0700 jackson (18035)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:53:04 -0700 jackson (18432)] INFO : Dispatcher: fastcgi
+[06/21/11 20:53:04 -0700 jackson (18432)] INFO : Application: My Application
+[06/21/11 20:53:04 -0700 jackson (18432)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 18432
+[06/21/11 20:53:04 -0700 jackson (18432)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:53:14 -0700 jackson (18432)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:53:14 -0700 jackson (18432)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:53:14 -0700 jackson (18432)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:54:14 -0700 jackson (18859)] INFO : Dispatcher: fastcgi
+[06/21/11 20:54:14 -0700 jackson (18859)] INFO : Application: My Application
+[06/21/11 20:54:14 -0700 jackson (18859)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 18859
+[06/21/11 20:54:14 -0700 jackson (18859)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:54:24 -0700 jackson (18859)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:54:25 -0700 jackson (18859)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:54:25 -0700 jackson (18859)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 20:58:02 -0700 jackson (20237)] INFO : Dispatcher: fastcgi
+[06/21/11 20:58:02 -0700 jackson (20237)] INFO : Application: My Application
+[06/21/11 20:58:02 -0700 jackson (20237)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 20237
+[06/21/11 20:58:02 -0700 jackson (20237)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 20:58:12 -0700 jackson (20237)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 20:58:12 -0700 jackson (20237)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 20:58:12 -0700 jackson (20237)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 21:13:23 -0700 jackson (26004)] INFO : Dispatcher: fastcgi
+[06/21/11 21:13:23 -0700 jackson (26004)] INFO : Application: My Application
+[06/21/11 21:13:23 -0700 jackson (26004)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 26004
+[06/21/11 21:13:23 -0700 jackson (26004)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 21:13:33 -0700 jackson (26004)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 21:13:33 -0700 jackson (26004)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 21:13:34 -0700 jackson (26004)] INFO : Reporting performance data every 60 seconds.

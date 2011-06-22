@@ -2,16 +2,16 @@ class RunnersController < ApplicationController
   def show
     @runner = Runner.find(:first, :conditions => {:runner_id => params[:runner_id]})
       
-    @is_chaser = @runner.caught_by.present? || @runner.is_tagged
     @num_caught = @runner.tags.size
+    @is_chaser = @runner.caught_by.present? || @runner.is_tagged || @num_caught > 0
     
-    @num_runners = Runner.find(:all).size
+    @num_runners = 963
     
     @num_with_more_catches = nil
     @num_chasers = nil
     if (@is_chaser)
-      @num_with_more_catches = ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM (SELECT tagger_id, COUNT(*) as num_tags from tags group by tagger_id having num_tags > #{@num_caught}) AS tags_by_player;").first[0]
-      @num_chasers = ActiveRecord::Base.connection.execute("SELECT COUNT(DISTINCT tagger_id) from tags;").first[0]
+      @num_with_more_catches = ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM summarized_tags where num_tags > #{@num_caught};").first[0]
+      @num_chasers = ActiveRecord::Base.connection.execute("SELECT COUNT(*) from summarized_tags;").first[0]
       @chaser_tree = RunnersController.chaser_descendants(@runner)
     end
 
@@ -19,43 +19,50 @@ class RunnersController < ApplicationController
     
     @your_place_by_checkin = ActiveRecord::Base.connection.execute("select
       runner_checkins.checkin_id,
-      sum(other_runner_checkins.runner_id is not null) as num_reaching_before
+      checkins_so_far.num_so_far as place_at_this_checkpoint,
+      sum(all_checkins_so_far.num_so_far) as place_in_game
     from
       checkins as runner_checkins
     join
-      checkpoints as runner_checkpoints
+      checkins_so_far
     on
-      runner_checkins.checkpoint_id = runner_checkpoints.checkpoint_id
-    left outer join
-      checkpoints as equivalent_checkpoints
+      checkins_so_far.checkin_time = runner_checkins.checkin_time
+      and checkins_so_far.checkpoint_id = runner_checkins.checkpoint_id
+    join
+      checkpoints
     on
-      equivalent_checkpoints.checkpoint_position = runner_checkpoints.checkpoint_position
-      or equivalent_checkpoints.checkpoint_id = runner_checkpoints.checkpoint_id
-    left outer join
-      checkins as other_runner_checkins
+      checkpoints.checkpoint_id = runner_checkins.checkpoint_id
+    join
+       checkins_so_far as all_checkins_so_far
     on
-      other_runner_checkins.checkpoint_id = equivalent_checkpoints.checkpoint_id
-      and other_runner_checkins.checkin_time < runner_checkins.checkin_time
+      all_checkins_so_far.checkin_time = runner_checkins.checkin_time
+      and all_checkins_so_far.checkpoint_position >= checkpoints.checkpoint_position
     where
       runner_checkins.runner_id = '#{@runner.runner_id}'
     group by
-      runner_checkins.checkpoint_id
+      runner_checkins.checkin_id
     order by
       runner_checkins.checkin_time DESC
       ").map do |row|
-        [Checkin.find(:first, :conditions => {:checkin_id => row[0]}), row[1].to_i]
+        [Checkin.find(:first, :conditions => {:checkin_id => row[0]}), row[1].to_i, row[2].to_i]
       end
       
-    @ordered_runners = Runner.find(:all).sort_by {|runner| [-runner.current_position, runner.current_time.to_i]}
-    @num_ahead_right_now = @ordered_runners.map{|runner| runner.runner_id}.index(@runner.runner_id)
+    @place = nil
+    begin
+      @place = ActiveRecord::Base.connection.execute("select place from summarized_runners where runner_id = '#{@runner.runner_id}'").first[0]
+    rescue Exception => e
+    end
   end
   
   def index
     #@ordered_runners = Runner.find(:all).sort {|a, b| (b.current_checkin.checkpoint_id <=> a.current_checkin.checkpoint_id) || (a.current_checkin.checkin_time.to_i <=> b.current_checkin.checkin_time.to_i)}[0..29]
     #@ordered_runners = Runner.find(:all).sort {|a, b| (b.current_position <=> a.current_position) || (a.current_time.to_i <=> b.current_time.to_i)}[0..29]
     #@ordered_runners = Runner.find(:all).sort {|a, b| (a.current_checkin.checkin_time.to_i <=> b.current_checkin.checkin_time.to_i)}[0..29]
-    @ordered_runners = Runner.find(:all).sort_by {|runner| [-runner.current_position, runner.current_time.to_i]}[0..29]
-    @ordered_chasers = Runner.find(:all).sort_by {|runner| -runner.tags.size}[0..10].find_all{|runner| runner.tags.size > 0}
+    # @ordered_runners = Runner.find(:all).sort_by {|runner| [-runner.current_position, runner.current_time.to_i]}[0..29]
+    #@ordered_chasers = Runner.find(:all).sort_by {|runner| -runner.tags.size}[0..10].find_all{|runner| runner.tags.size > 0}
+    @ordered_runners = ActiveRecord::Base.connection.execute("select runner_id from summarized_runners order by place").map {|row| Runner.find(:first, :conditions => {:runner_id => row[0]})}
+    @ordered_chasers = ActiveRecord::Base.connection.execute("select tagger_id from summarized_tags order by num_tags desc").map {|row| Runner.find(:first, :conditions => {:runner_id => row[0]})}
+#    logger.info("runners: #{@ordered_runners.inspect}, chasers: #{@ordered_chasers.inspect}")
   end
   
   def chaser_tree

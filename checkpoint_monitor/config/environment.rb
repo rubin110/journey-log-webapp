@@ -3,3 +3,5 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 SurvivedcOrg::Application.initialize!
+
+# ActionController::AbstractRequest.relative_url_root = "/cpm"

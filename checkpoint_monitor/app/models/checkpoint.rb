@@ -10,4 +10,8 @@ class Checkpoint < ActiveRecord::Base
   def recent_checkins
     checkins.sort_by {|c| c.checkin_time}.reverse[0..19]
   end
+
+  def first_checkins
+    checkins.sort_by {|c| c.checkin_time}[0..19]
+  end
 end

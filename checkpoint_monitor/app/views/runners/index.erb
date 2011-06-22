@@ -1,10 +1,9 @@
-<ol>Leading runners:
+<ol>Runners:
 
 <% @ordered_runners.each do |runner| %>
   <li>
-  <%= runner.is_mugshot == 1 ? "<img src='/runner_photos/#{runner.runner_id}.jpg' />".html_safe : "" %>
-  <%= "<a href='/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}: #{runner.player_name}</a>: ".html_safe %>
-  <%= "hit #{runner.current_checkin.checkpoint.checkpoint_name} at #{runner.current_checkin.checkin_time}" %>
+  <%= runner.img_link.html_safe %>
+  <%= "<a href='/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a> #{runner.player_name}".html_safe %>
   </li>
 <% end %>
 
@@ -12,12 +11,12 @@
 
 <br />
 
-<ol>Leading chasers:
+<ol>Chasers:
 
 <% @ordered_chasers.each do |runner| %>
   <li>
-  <%= runner.is_mugshot == 1 ? "<img src='/runner_photos/#{runner.runner_id}.jpg' />".html_safe : "" %>
-  <%= "<a href='/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}: #{runner.player_name}</a>: ".html_safe %>
+  <%= runner.img_link.html_safe %>
+  <%= "<a href='/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a> #{runner.player_name}: ".html_safe %>
   <%= "tagged #{runner.tags.size} runners" %>
   </li>
 <% end %>

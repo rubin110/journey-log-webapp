@@ -6,17 +6,22 @@
 </table>
 
 <% if (@is_chaser) %>
-  <br /><img src='/photos/smallchaser.png' />As a chaser, has logged <%= @num_caught %> tags -- ranked <%= @num_with_more_catches + 1 %> out of <%= @num_chasers %> chasers with tags!
+  <br /><img src='/photos/smallchaser.png' />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.
   <% if (@num_caught > 0) %>
-    <br />Your descendants:
+    <br />Chaser descendants:
     <%= @chaser_tree.html_safe %>
   <% end %>
 <% else %>
-  <br />Not caught yet!
+  <!-- <br />Not caught yet! -->
 <% end %>
 
-<br /><img src='/photos/smallrunner.png' />As a runner, there are <%= @num_ahead_right_now %> ahead of you right now, out of <%= @num_runners %> runners.
+<br /><img src='/photos/smallrunner.png' />
+<% if (@place.present?) %>
+Placed <%= @place.ordinalize %>, out of <%= @num_runners %> runners.
+<% end %>
 
 <% @your_place_by_checkin.each do |row| %>
-<br />As a runner, made it to checkpoint <%= row[0].checkpoint.checkpoint_name %> at <%= row[0].checkin_time %> (behind <%= row[1] %> other runners).
+<br />As a runner, made it to <%= row[0].checkpoint.checkpoint_name %> at <%= row[0].checkin_time %> (<%= 
+row[1].ordinalize %> to reach that checkpoint, <%= 
+row[2].ordinalize %> in the game at that point).
 <% end %>

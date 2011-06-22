@@ -11,8 +11,12 @@ class Runner < ActiveRecord::Base
   end
 
   def icon
-    is_mugshot ? "/photos/#{runner_id}.jpg" : (is_tagged ? "/photos/smallchaser.png" : "/photos/smallrunner.png")
+    is_mugshot ? "/photos/#{runner_id}.jpg" : "/photos/smallrunner.png"
   end
+
+  def img_link
+    "<img src='#{icon}' #{is_tagged ? "class='chaser'" : ""} />"
+  end    
 
   def name
     player_name || runner_id
