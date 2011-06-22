@@ -18,7 +18,81 @@ class Runner < ActiveRecord::Base
     "<img src='#{icon}' #{is_tagged ? "class='chaser'" : ""} />"
   end    
 
-  def map_html        
+  def map_html
+    lat_array = []
+    lng_array = []
+    color_array = []
+    checkin_markers = checkins.sort_by{|c| c.checkin_time}.map do |checkin|
+      lat = checkin.lat || checkin.checkpoint.checkpoint_loc_lat
+      lng = checkin.lng || checkin.checkpoint.checkpoint_loc_long
+      if !lat.nil?
+        lat_array << lat
+        lng_array << lng
+        color_array << "0000FF"
+      end
+      lat.nil? ? nil : "var checkin_marker_#{checkin.checkpoint.checkpoint_id} = new google.maps.Marker({
+      position: new google.maps.LatLng(#{lat},#{lng}),
+      icon: \"/cpm/icons/jogging.png\",
+      title:\"#{checkin.checkpoint.checkpoint_name} (#{checkin.checkin_time.strftime("%H:%M")})\",      
+      });
+      checkin_marker_#{checkin.checkpoint.checkpoint_id}.setMap(map);
+      google.maps.event.addListener(checkin_marker_#{checkin.checkpoint.checkpoint_id}, 'click', function() {
+        infowindow.setContent(\"#{checkin.checkpoint.checkpoint_name} (#{checkin.checkin_time.strftime("%H:%M")})\");
+        infowindow.open(map,checkin_marker_#{checkin.checkpoint.checkpoint_id});
+      });"
+    end.compact
+    tagged_markers = tagged.map do |tagged|
+      lat = tagged.loc_lat
+      lng = tagged.loc_long
+      if !lat.nil?
+        lat_array << lat
+        lng_array << lng
+        color_array << "FF0000"
+      end
+      lat.nil? ? nil : "var tagged_#{tagged.tag_id} = new google.maps.Marker({
+      position: new google.maps.LatLng(#{lat},#{lng}),
+      icon: \"/cpm/icons/phantom.png\",
+      title:\"Tagged by #{tagged.chaser.name}! (#{tagged.tag_time.strftime("%H:%M")})\"
+      });
+      tagged_#{tagged.tag_id}.setMap(map);
+      google.maps.event.addListener(tagged_#{tagged.tag_id}, 'click', function() {
+        infowindow.setContent(\"Tagged by #{tagged.chaser.name}! (#{tagged.tag_time.strftime("%H:%M")})\");
+        infowindow.open(map,tagged_#{tagged.tag_id});
+      });"
+    end.compact
+    tag_markers = tags.sort_by{|t| t.tag_time}.map do |tag|
+      lat = tag.loc_lat
+      lng = tag.loc_long
+      if !lat.nil?
+        lat_array << lat
+        lng_array << lng
+        color_array << "FF0000"
+      end
+      lat.nil? ? nil : "var tag_#{tag.tag_id} = new google.maps.Marker({
+      position: new google.maps.LatLng(#{lat},#{lng}),
+      icon: \"/cpm/icons/judo.png\",
+      title:\"Tagged #{tag.runner.name}!  (#{tag.tag_time.strftime("%H:%M")})\"
+      });
+      tag_#{tag.tag_id}.setMap(map);
+      google.maps.event.addListener(tag_#{tag.tag_id}, 'click', function() {
+        infowindow.setContent(\"Tagged #{tag.runner.name}!  (#{tag.tag_time.strftime("%H:%M")})\");
+        infowindow.open(map,tag_#{tag.tag_id});
+      });"
+    end.compact
+    marker_array = (checkin_markers << tagged_markers << tag_markers).flatten
+    overlay_array = []
+    if (marker_array.size > 1)
+      overlay_array = [marker_array[0]]
+      Range.new(1, marker_array.size-1).each do |index|
+        overlay_array << "new google.maps.Polyline({
+          path: [new google.maps.LatLng(#{lat_array[index-1]},#{lng_array[index-1]}), new google.maps.LatLng(#{lat_array[index]},#{lng_array[index]})],
+          strokeColor: \"##{color_array[index-1]}\",
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        }).setMap(map);"
+        overlay_array << marker_array[index]
+      end
+    end
     return <<HTML
     <style type="text/css">
   html { height: 100% }
@@ -40,33 +114,9 @@ src="http://maps.google.com/maps/api/js?sensor=false">
     };  
     var map = new google.maps.Map(document.getElementById("map_canvas"),
         myOptions);
-    #{checkins.map do |checkin|
-      lat = checkin.lat || checkin.checkpoint.checkpoint_loc_lat
-      lng = checkin.lng || checkin.checkpoint.checkpoint_loc_long
-      lat.nil? ? "" : "new google.maps.Marker({
-      position: new google.maps.LatLng(#{lat},#{lng}),
-      icon: \"/cpm/icons/jogging.png\",
-      title:\"#{checkin.checkpoint.checkpoint_name} (#{checkin.checkin_time.strftime("%H:%M")})\"
-      }).setMap(map);"                                  
-      end.join("\n")}
-    #{tagged.map do |tagged|
-      lat = tagged.loc_lat
-      lng = tagged.loc_long
-      lat.nil? ? "" : "new google.maps.Marker({
-      position: new google.maps.LatLng(#{lat},#{lng}),
-      icon: \"/cpm/icons/phantom.png\",
-      title:\"Tagged by #{tagged.chaser.name}! (#{tagged.tag_time.strftime("%H:%M")})\"
-      }).setMap(map);"                                  
-      end.join("\n")}
-    #{tags.map do |tag|
-      lat = tag.loc_lat
-      lng = tag.loc_long
-      lat.nil? ? "" : "new google.maps.Marker({
-      position: new google.maps.LatLng(#{lat},#{lng}),
-      icon: \"/cpm/icons/judo.png\",
-      title:\"You tagged #{tag.runner.name}!  (#{tag.tag_time.strftime("%H:%M")})\"
-      }).setMap(map);"                                  
-      end.join("\n")}
+    var infowindow = new google.maps.InfoWindow({content: ""});
+
+    #{overlay_array.join("\n")}
   }
   initialize();
 </script>

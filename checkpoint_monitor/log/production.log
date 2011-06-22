@@ -16300,3 +16300,69 @@ Started GET "/cpm/runners/5MDRN" for 173.228.85.205 at Tue Jun 21 22:19:57 -0700
   Parameters: {"runner_id"=>"5MDRN"}
 Rendered runners/show.erb within layouts/application (5.4ms)
 Completed 200 OK in 105ms (Views: 6.4ms | ActiveRecord: 72.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/cpm/runners/IJ1ME" for 173.228.85.205 at Tue Jun 21 22:36:39 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (92.4ms)
+Completed 200 OK in 193ms (Views: 97.3ms | ActiveRecord: 107.3ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/cpm/runners/IJ1ME" for 173.228.85.205 at Tue Jun 21 22:41:13 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (96.4ms)
+Completed 200 OK in 221ms (Views: 101.3ms | ActiveRecord: 34.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/cpm/runners/IJ1ME" for 173.228.85.205 at Tue Jun 21 22:43:09 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (101.8ms)
+Completed 200 OK in 217ms (Views: 106.7ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/cpm/runners/2M1G8" for 173.228.85.205 at Tue Jun 21 22:43:30 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2M1G8"}
+Rendered runners/show.erb within layouts/application (2.4ms)
+Completed 200 OK in 80ms (Views: 3.4ms | ActiveRecord: 23.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/cpm/runners/IJ1ME" for 173.228.85.205 at Tue Jun 21 22:51:22 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (93.6ms)
+Completed 200 OK in 198ms (Views: 98.6ms | ActiveRecord: 67.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/cpm/runners/2M1G8" for 173.228.85.205 at Tue Jun 21 22:56:50 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2M1G8"}
+Rendered runners/show.erb within layouts/application (4.0ms)
+Completed 200 OK in 193ms (Views: 9.7ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/cpm/runners/IJ1ME" for 173.228.85.205 at Tue Jun 21 22:56:52 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (7.8ms)
+Completed 200 OK in 82ms (Views: 8.9ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/cpm/runners/5MDRN" for 173.228.85.205 at Tue Jun 21 22:56:57 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"5MDRN"}
+Rendered runners/show.erb within layouts/application (5.3ms)
+Completed 200 OK in 44ms (Views: 6.3ms | ActiveRecord: 11.6ms)

@@ -408,3 +408,42 @@
 [06/21/11 22:12:42 -0700 jackson (14783)] INFO : Resolved collector.newrelic.com to 204.93.223.153
 [06/21/11 22:12:42 -0700 jackson (14783)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
 [06/21/11 22:12:43 -0700 jackson (14783)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 22:36:38 -0700 jackson (23225)] INFO : Dispatcher: fastcgi
+[06/21/11 22:36:38 -0700 jackson (23225)] INFO : Application: My Application
+[06/21/11 22:36:38 -0700 jackson (23225)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 23225
+[06/21/11 22:36:38 -0700 jackson (23225)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 22:36:48 -0700 jackson (23225)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 22:36:48 -0700 jackson (23225)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 22:36:49 -0700 jackson (23225)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 22:40:27 -0700 jackson (24658)] INFO : Dispatcher: fastcgi
+[06/21/11 22:40:27 -0700 jackson (24658)] INFO : Application: My Application
+[06/21/11 22:40:27 -0700 jackson (24658)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 24658
+[06/21/11 22:40:27 -0700 jackson (24658)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 22:41:13 -0700 jackson (24946)] INFO : Dispatcher: fastcgi
+[06/21/11 22:41:13 -0700 jackson (24946)] INFO : Application: My Application
+[06/21/11 22:41:13 -0700 jackson (24946)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 24946
+[06/21/11 22:41:13 -0700 jackson (24946)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 22:41:23 -0700 jackson (24946)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 22:41:23 -0700 jackson (24946)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 22:41:23 -0700 jackson (24946)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 22:43:08 -0700 jackson (25577)] INFO : Dispatcher: fastcgi
+[06/21/11 22:43:08 -0700 jackson (25577)] INFO : Application: My Application
+[06/21/11 22:43:08 -0700 jackson (25577)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 25577
+[06/21/11 22:43:08 -0700 jackson (25577)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 22:43:18 -0700 jackson (25577)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 22:43:19 -0700 jackson (25577)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 22:43:19 -0700 jackson (25577)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 22:51:22 -0700 jackson (28351)] INFO : Dispatcher: fastcgi
+[06/21/11 22:51:22 -0700 jackson (28351)] INFO : Application: My Application
+[06/21/11 22:51:22 -0700 jackson (28351)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 28351
+[06/21/11 22:51:22 -0700 jackson (28351)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 22:51:32 -0700 jackson (28351)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 22:51:32 -0700 jackson (28351)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 22:51:32 -0700 jackson (28351)] INFO : Reporting performance data every 60 seconds.
+[06/21/11 22:56:49 -0700 jackson (31370)] INFO : Dispatcher: fastcgi
+[06/21/11 22:56:49 -0700 jackson (31370)] INFO : Application: My Application
+[06/21/11 22:56:49 -0700 jackson (31370)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 31370
+[06/21/11 22:56:49 -0700 jackson (31370)] INFO : Agent Log found in /home/jlogsf0/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/21/11 22:56:59 -0700 jackson (31370)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/21/11 22:57:00 -0700 jackson (31370)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/21/11 22:57:00 -0700 jackson (31370)] INFO : Reporting performance data every 60 seconds.
