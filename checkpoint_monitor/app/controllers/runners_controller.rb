@@ -46,6 +46,8 @@ class RunnersController < ApplicationController
       ").map do |row|
         [Checkin.find(:first, :conditions => {:checkin_id => row[0]}), row[1].to_i, row[2].to_i]
       end
+
+    @map_html = @runner.map_html
       
     @place = nil
     begin
@@ -64,7 +66,7 @@ class RunnersController < ApplicationController
     @ordered_chasers = ActiveRecord::Base.connection.execute("select tagger_id from summarized_tags order by num_tags desc").map {|row| Runner.find(:first, :conditions => {:runner_id => row[0]})}
 #    logger.info("runners: #{@ordered_runners.inspect}, chasers: #{@ordered_chasers.inspect}")
   end
-  
+
   def chaser_tree
     @chaser_tree = RunnersController.chaser_descendants(nil)
   end

@@ -25,3 +25,6 @@ Placed <%= @place.ordinalize %>, out of <%= @num_runners %> runners.
 row[1].ordinalize %> to reach that checkpoint, <%= 
 row[2].ordinalize %> in the game at that point).
 <% end %>
+
+<p />
+<%= @map_html.html_safe %>
