@@ -22,6 +22,9 @@ class Runner < ActiveRecord::Base
     lat_array = []
     lng_array = []
     color_array = []
+    marker_id_array = []
+    marker_timer_array = []
+    min_time = nil
     checkin_markers = checkins.sort_by{|c| c.checkin_time}.map do |checkin|
       lat = checkin.lat || checkin.checkpoint.checkpoint_loc_lat
       lng = checkin.lng || checkin.checkpoint.checkpoint_loc_long
@@ -29,6 +32,8 @@ class Runner < ActiveRecord::Base
         lat_array << lat
         lng_array << lng
         color_array << "0000FF"
+        marker_id_array << "checkin_marker_#{checkin.checkpoint.checkpoint_id}"
+        marker_timer_array << checkin.checkin_time
       end
       lat.nil? ? nil : "var checkin_marker_#{checkin.checkpoint.checkpoint_id} = new google.maps.Marker({
       position: new google.maps.LatLng(#{lat},#{lng}),
@@ -48,6 +53,8 @@ class Runner < ActiveRecord::Base
         lat_array << lat
         lng_array << lng
         color_array << "FF0000"
+        marker_id_array << "tagged_#{tagged.tag_id}"
+        marker_timer_array << tagged.tag_time
       end
       lat.nil? ? nil : "var tagged_#{tagged.tag_id} = new google.maps.Marker({
       position: new google.maps.LatLng(#{lat},#{lng}),
@@ -67,6 +74,8 @@ class Runner < ActiveRecord::Base
         lat_array << lat
         lng_array << lng
         color_array << "FF0000"
+        marker_id_array << "tag_#{tag.tag_id}"
+        marker_timer_array << tag.tag_time
       end
       lat.nil? ? nil : "var tag_#{tag.tag_id} = new google.maps.Marker({
       position: new google.maps.LatLng(#{lat},#{lng}),
@@ -93,19 +102,23 @@ class Runner < ActiveRecord::Base
         overlay_array << marker_array[index]
       end
     end
+    if (marker_timer_array.size > 0)
+      time_range = marker_timer_array.max.to_i - marker_timer_array.min.to_i
+      marker_timer_array = marker_timer_array.map {|t| ((t.to_i - marker_timer_array.min.to_i)*5000.0/time_range).round}
+    end
     return <<HTML
     <style type="text/css">
   html { height: 100% }
   body { height: 100%; margin: 0px; padding: 0px }
   #map_canvas { height: 100% }
 </style>
+<input type="button" value="Replay" onClick="play();" />
 <div id="map_canvas" style="width:100%; height:100%"></div>
 <p>Icons used come from <a href="http://mapicons.nicolasmollet.com/">Nicolas Mollet</a>.</p>
 <script type="text/javascript"
 src="http://maps.google.com/maps/api/js?sensor=false">
 </script>
 <script type="text/javascript">
-  function initialize() {
     var myOptions = {
       zoom: 13,
       minZoom: 13,
@@ -117,8 +130,17 @@ src="http://maps.google.com/maps/api/js?sensor=false">
     var infowindow = new google.maps.InfoWindow({content: ""});
 
     #{overlay_array.join("\n")}
+  function play() {
+    #{Range.new(0,marker_id_array.size-1).map do |index|
+      marker_id = marker_id_array[index]
+      "setTimeout(function() {
+        #{marker_id}.setAnimation(google.maps.Animation.BOUNCE);
+      }, #{marker_timer_array[index]});
+      setTimeout(function() {
+        #{marker_id}.setAnimation(null);
+      }, #{(index == marker_timer_array.size-1) ? marker_timer_array[index] + 1000 : marker_timer_array[index+1]});"
+      end.join("\n")}
   }
-  initialize();
 </script>
 
 HTML
