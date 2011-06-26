@@ -6,3 +6,5 @@ photos/
 AndroidCheckpontScanner/.git
 iPhoneCheckpontScanner/JourneyLog/.git
 AndroidCheckpontScanner/bin
+*.DS_Store
+*database.yml
