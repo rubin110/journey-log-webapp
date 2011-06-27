@@ -41,6 +41,10 @@ h1, h2 {
 	text-align: center;
 }
 
+img {
+	border: 0px;
+}
+
 .menu {
 	position: absolute;
 	top: 0px;

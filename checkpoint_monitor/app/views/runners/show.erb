@@ -1,9 +1,5 @@
-<table>
-<tr>
-<td> <img src="<%= @runner.icon %>" /> </td>
-<td><h1><%= @runner.runner_id %></h1> <%= @runner.player_name ? @runner.player_name : "" %></td>
-</tr>
-</table>
+<div style="width:100%; height:100px;"><img style="float: left;" src="<%= @runner.icon %>" />
+<%= @runner.runner_id %><br><big><big><big><%= @runner.player_name ? @runner.player_name : "" %></big></big></big></div>
 
 <% if (@is_chaser) %>
   <br /><img src='/20110618-sf/photos/smallchaser.png' />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.
