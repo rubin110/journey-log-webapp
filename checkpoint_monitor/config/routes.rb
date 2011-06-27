@@ -1,6 +1,6 @@
 SurvivedcOrg::Application.routes.draw do
-  match "cpm/checkpoints" => 'checkpoints#index'
-  match "cpm/checkpoints/:checkpoint_id" => 'checkpoints#show'
+  match "/20110618-sf/cpm/checkpoints" => 'checkpoints#index'
+  match "/20110618-sf/cpm/checkpoints/:checkpoint_id" => 'checkpoints#show'
 
 #  get "cpm/checkins/checkin"
 #  post "cpm/checkins/checkin"
@@ -8,11 +8,11 @@ SurvivedcOrg::Application.routes.draw do
 
   root :to => "activity#status"
 
-  match 'cpm/status' => 'activity#status'
+  match '/20110618-sf/cpm/status' => 'activity#status'
 
-  match 'cpm/runners/chaser_tree' => 'runners#chaser_tree'
-  match 'cpm/runners/:runner_id' => 'runners#show'
-  match 'cpm/runners' => 'runners#index'
+  match '/20110618-sf/cpm/runners/chaser_tree' => 'runners#chaser_tree'
+  match '/20110618-sf/cpm/runners/:runner_id' => 'runners#show'
+  match '/20110618-sf/cpm/runners' => 'runners#index'
 
   #resources :users
   #resources :checkpoints

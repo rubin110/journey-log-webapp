@@ -4,7 +4,7 @@
 
 <ul><%= @checkpoint.num_checked_in %> checked in; the first to check in were:
 <% @checkpoint.first_checkins.each do |checkin| %>
-<li><%= checkin.runner.img_link.html_safe %><a href="/cpm/runners/<%= checkin.runner.runner_id %>"><%= 
+<li><%= checkin.runner.img_link.html_safe %><a href="/20110618-sf/cpm/runners/<%= checkin.runner.runner_id %>"><%= 
 checkin.runner.runner_id %></a> (<%= checkin.runner.player_name %>): 
 <%= 
 checkin.checkin_time %></li>

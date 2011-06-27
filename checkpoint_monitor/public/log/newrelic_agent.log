@@ -496,3 +496,165 @@
 [06/21/11 23:34:42 -0700 jackson (14743)] INFO : Resolved collector.newrelic.com to 204.93.223.153
 [06/21/11 23:34:43 -0700 jackson (14743)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
 [06/21/11 23:34:43 -0700 jackson (14743)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 02:38:39 -0700 dodgers (2816)] INFO : Dispatcher: fastcgi
+[06/26/11 02:38:39 -0700 dodgers (2816)] INFO : Application: My Application
+[06/26/11 02:38:39 -0700 dodgers (2816)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 2816
+[06/26/11 02:38:39 -0700 dodgers (2816)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 02:38:49 -0700 dodgers (2816)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 02:38:50 -0700 dodgers (2816)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 02:38:50 -0700 dodgers (2816)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 02:43:07 -0700 dodgers (6819)] INFO : Dispatcher: fastcgi
+[06/26/11 02:43:07 -0700 dodgers (6819)] INFO : Application: My Application
+[06/26/11 02:43:07 -0700 dodgers (6819)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 6819
+[06/26/11 02:43:07 -0700 dodgers (6819)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 02:47:54 -0700 dodgers (17781)] INFO : Dispatcher: fastcgi
+[06/26/11 02:47:54 -0700 dodgers (17781)] INFO : Application: My Application
+[06/26/11 02:47:54 -0700 dodgers (17781)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 17781
+[06/26/11 02:47:54 -0700 dodgers (17781)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 02:48:04 -0700 dodgers (17781)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 02:48:05 -0700 dodgers (17781)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 02:48:05 -0700 dodgers (17781)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 02:48:43 -0700 dodgers (18744)] INFO : Dispatcher: fastcgi
+[06/26/11 02:48:43 -0700 dodgers (18744)] INFO : Application: My Application
+[06/26/11 02:48:43 -0700 dodgers (18744)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 18744
+[06/26/11 02:48:43 -0700 dodgers (18744)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 02:49:03 -0700 dodgers (20067)] INFO : Dispatcher: fastcgi
+[06/26/11 02:49:03 -0700 dodgers (20067)] INFO : Application: My Application
+[06/26/11 02:49:03 -0700 dodgers (20067)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 20067
+[06/26/11 02:49:03 -0700 dodgers (20067)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 02:49:13 -0700 dodgers (20067)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 02:49:13 -0700 dodgers (20067)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 02:49:13 -0700 dodgers (20067)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 02:52:31 -0700 dodgers (27582)] INFO : Dispatcher: fastcgi
+[06/26/11 02:52:31 -0700 dodgers (27582)] INFO : Application: My Application
+[06/26/11 02:52:31 -0700 dodgers (27582)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 27582
+[06/26/11 02:52:31 -0700 dodgers (27582)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 02:52:41 -0700 dodgers (27582)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 02:52:41 -0700 dodgers (27582)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 02:52:41 -0700 dodgers (27582)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 03:00:46 -0700 dodgers (9553)] INFO : Dispatcher: fastcgi
+[06/26/11 03:00:50 -0700 dodgers (9553)] INFO : Application: My Application
+[06/26/11 03:00:50 -0700 dodgers (9728)] INFO : Dispatcher: fastcgi
+[06/26/11 03:00:50 -0700 dodgers (9728)] INFO : Application: My Application
+[06/26/11 03:00:50 -0700 dodgers (9728)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 9728
+[06/26/11 03:00:50 -0700 dodgers (9728)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 03:00:50 -0700 dodgers (9553)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 9553
+[06/26/11 03:00:50 -0700 dodgers (9553)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 03:01:00 -0700 dodgers (9553)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 03:01:00 -0700 dodgers (9553)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 03:01:00 -0700 dodgers (9553)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 03:01:00 -0700 dodgers (9728)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 03:01:00 -0700 dodgers (9728)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 03:01:01 -0700 dodgers (9728)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 03:01:49 -0700 dodgers (11885)] INFO : Dispatcher: fastcgi
+[06/26/11 03:01:49 -0700 dodgers (11885)] INFO : Application: My Application
+[06/26/11 03:01:49 -0700 dodgers (11885)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 11885
+[06/26/11 03:01:49 -0700 dodgers (11885)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 03:01:59 -0700 dodgers (11885)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 03:01:59 -0700 dodgers (11885)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 03:02:00 -0700 dodgers (11885)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 03:06:11 -0700 dodgers (21748)] INFO : Dispatcher: fastcgi
+[06/26/11 03:06:11 -0700 dodgers (21748)] INFO : Application: My Application
+[06/26/11 03:06:11 -0700 dodgers (21748)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 21748
+[06/26/11 03:06:11 -0700 dodgers (21748)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 03:06:21 -0700 dodgers (21748)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 03:06:21 -0700 dodgers (21748)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 03:06:21 -0700 dodgers (21748)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 03:09:01 -0700 dodgers (27431)] INFO : Dispatcher: fastcgi
+[06/26/11 03:09:01 -0700 dodgers (27431)] INFO : Application: My Application
+[06/26/11 03:09:01 -0700 dodgers (27431)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 27431
+[06/26/11 03:09:01 -0700 dodgers (27431)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 03:09:11 -0700 dodgers (27431)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 03:09:12 -0700 dodgers (27431)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 03:09:12 -0700 dodgers (27431)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 18:00:10 -0700 dodgers (9643)] INFO : Dispatcher: fastcgi
+[06/26/11 18:00:10 -0700 dodgers (9643)] INFO : Application: My Application
+[06/26/11 18:00:10 -0700 dodgers (9643)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 9643
+[06/26/11 18:00:10 -0700 dodgers (9643)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 18:00:20 -0700 dodgers (9643)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 18:00:20 -0700 dodgers (9643)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 18:00:20 -0700 dodgers (9643)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 18:17:46 -0700 dodgers (22065)] INFO : Dispatcher: fastcgi
+[06/26/11 18:17:46 -0700 dodgers (22065)] INFO : Application: My Application
+[06/26/11 18:17:46 -0700 dodgers (22065)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 22065
+[06/26/11 18:17:46 -0700 dodgers (22065)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 18:17:56 -0700 dodgers (22065)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 18:17:57 -0700 dodgers (22065)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 18:17:57 -0700 dodgers (22065)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 18:29:19 -0700 dodgers (28756)] INFO : Dispatcher: fastcgi
+[06/26/11 18:29:19 -0700 dodgers (28756)] INFO : Application: My Application
+[06/26/11 18:29:20 -0700 dodgers (28756)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 28756
+[06/26/11 18:29:20 -0700 dodgers (28756)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 18:29:30 -0700 dodgers (28756)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 18:29:30 -0700 dodgers (28756)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 18:29:30 -0700 dodgers (28756)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:02:38 -0700 dodgers (14703)] INFO : Dispatcher: fastcgi
+[06/26/11 19:02:38 -0700 dodgers (14703)] INFO : Application: My Application
+[06/26/11 19:02:38 -0700 dodgers (14703)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 14703
+[06/26/11 19:02:38 -0700 dodgers (14703)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:02:48 -0700 dodgers (14703)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:02:48 -0700 dodgers (14703)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:02:49 -0700 dodgers (14703)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:17:44 -0700 dodgers (22968)] INFO : Dispatcher: fastcgi
+[06/26/11 19:17:44 -0700 dodgers (22968)] INFO : Application: My Application
+[06/26/11 19:17:44 -0700 dodgers (22968)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 22968
+[06/26/11 19:17:44 -0700 dodgers (22968)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:17:54 -0700 dodgers (22968)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:17:54 -0700 dodgers (22968)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:17:55 -0700 dodgers (22968)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:20:28 -0700 dodgers (24902)] INFO : Dispatcher: fastcgi
+[06/26/11 19:20:28 -0700 dodgers (24902)] INFO : Application: My Application
+[06/26/11 19:20:28 -0700 dodgers (25057)] INFO : Dispatcher: fastcgi
+[06/26/11 19:20:28 -0700 dodgers (25057)] INFO : Application: My Application
+[06/26/11 19:20:28 -0700 dodgers (25057)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 25057
+[06/26/11 19:20:28 -0700 dodgers (25057)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:20:28 -0700 dodgers (24902)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 24902
+[06/26/11 19:20:28 -0700 dodgers (24902)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:20:38 -0700 dodgers (25057)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:20:38 -0700 dodgers (24902)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:20:38 -0700 dodgers (24902)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:20:38 -0700 dodgers (25057)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:20:38 -0700 dodgers (24902)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:20:38 -0700 dodgers (25057)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:32:27 -0700 dodgers (7771)] INFO : Dispatcher: fastcgi
+[06/26/11 19:32:27 -0700 dodgers (7771)] INFO : Application: My Application
+[06/26/11 19:32:27 -0700 dodgers (7771)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 7771
+[06/26/11 19:32:27 -0700 dodgers (7771)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:32:37 -0700 dodgers (7771)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:32:37 -0700 dodgers (7771)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:32:37 -0700 dodgers (7771)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:42:44 -0700 dodgers (21501)] INFO : Dispatcher: fastcgi
+[06/26/11 19:42:44 -0700 dodgers (21501)] INFO : Application: My Application
+[06/26/11 19:42:44 -0700 dodgers (21501)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 21501
+[06/26/11 19:42:44 -0700 dodgers (21501)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:42:54 -0700 dodgers (21501)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:42:54 -0700 dodgers (21501)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:42:55 -0700 dodgers (21501)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:48:21 -0700 dodgers (24826)] INFO : Dispatcher: fastcgi
+[06/26/11 19:48:21 -0700 dodgers (24775)] INFO : Dispatcher: fastcgi
+[06/26/11 19:48:21 -0700 dodgers (24826)] INFO : Application: My Application
+[06/26/11 19:48:21 -0700 dodgers (24775)] INFO : Application: My Application
+[06/26/11 19:48:21 -0700 dodgers (24826)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 24826
+[06/26/11 19:48:21 -0700 dodgers (24826)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:48:21 -0700 dodgers (24775)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 24775
+[06/26/11 19:48:21 -0700 dodgers (24775)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:48:31 -0700 dodgers (24826)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:48:31 -0700 dodgers (24775)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:48:31 -0700 dodgers (24826)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:48:31 -0700 dodgers (24775)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:48:31 -0700 dodgers (24826)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:48:32 -0700 dodgers (24775)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:53:12 -0700 dodgers (27383)] INFO : Dispatcher: fastcgi
+[06/26/11 19:53:12 -0700 dodgers (27383)] INFO : Application: My Application
+[06/26/11 19:53:12 -0700 dodgers (27383)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 27383
+[06/26/11 19:53:12 -0700 dodgers (27383)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:53:22 -0700 dodgers (27383)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:53:22 -0700 dodgers (27383)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:53:22 -0700 dodgers (27383)] INFO : Reporting performance data every 60 seconds.
+[06/26/11 19:58:27 -0700 dodgers (29864)] INFO : Dispatcher: fastcgi
+[06/26/11 19:58:27 -0700 dodgers (29864)] INFO : Application: My Application
+[06/26/11 19:58:27 -0700 dodgers (29864)] INFO : New Relic Ruby Agent 3.1.0 Initialized: pid = 29864
+[06/26/11 19:58:27 -0700 dodgers (29864)] INFO : Agent Log found in /home/jlog/journey-log/checkpoint_monitor/public/log/newrelic_agent.log
+[06/26/11 19:58:38 -0700 dodgers (29864)] INFO : Resolved collector.newrelic.com to 204.93.223.153
+[06/26/11 19:58:38 -0700 dodgers (29864)] INFO : Resolved collector-1.newrelic.com to 204.93.223.135
+[06/26/11 19:58:38 -0700 dodgers (29864)] INFO : Reporting performance data every 60 seconds.

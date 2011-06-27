@@ -2,7 +2,7 @@
 
 <ul>
 <% @summarized_checkpoints.each do |summarized_checkpoint| %>
-<li><a href="/cpm/checkpoints/<%= summarized_checkpoint.checkpoint.checkpoint_id %>"><%= 
+<li><a href="/20110618-sf/cpm/checkpoints/<%= summarized_checkpoint.checkpoint.checkpoint_id %>"><%= 
 summarized_checkpoint.checkpoint.checkpoint_name %></a>: <%= summarized_checkpoint.num_checked_in %> checked in, last 
 at <%= summarized_checkpoint.last_checkin_time %></li>
 <% end %>

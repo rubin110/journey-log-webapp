@@ -16497,3 +16497,606 @@ Started GET "/cpm/runners/IJ1ME" for 173.228.85.205 at Tue Jun 21 23:35:05 -0700
   Parameters: {"runner_id"=>"IJ1ME"}
 Rendered runners/show.erb within layouts/application (7.4ms)
 Completed 200 OK in 53ms (Views: 8.3ms | ActiveRecord: 14.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/" for 173.228.85.205 at Sun Jun 26 02:38:41 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/" for 173.228.85.205 at Sun Jun 26 02:42:38 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm"):
+  
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/" for 173.228.85.205 at Sun Jun 26 02:47:55 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm"):
+  
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/" for 173.228.85.205 at Sun Jun 26 02:49:04 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Sun Jun 26 02:49:29 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/runners"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Sun Jun 26 02:52:20 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/runners"):
+  
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Sun Jun 26 02:52:32 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/runners"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/" for 173.228.85.205 at Sun Jun 26 02:52:41 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Sun Jun 26 02:52:45 -0700 2011
+  Processing by ActivityController#status as HTML
+Plotting with data {"label"=>[0, 1, 2, 3, 4, 5, 6, 7], "values"=>[{"label"=>"19:52", "values"=>[0, 4, 0, 0, 0, 0, 0, 0]}, {"label"=>"19:57", "values"=>[0, 5, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:02", "values"=>[0, 6, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:07", "values"=>[0, 9, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:12", "values"=>[0, 111, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:17", "values"=>[0, 258, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:22", "values"=>[0, 355, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:27", "values"=>[0, 384, 10, 0, 0, 0, 0, 0]}, {"label"=>"20:32", "values"=>[0, 384, 25, 0, 0, 0, 0, 0]}, {"label"=>"20:37", "values"=>[0, 392, 45, 0, 0, 0, 0, 0]}, {"label"=>"20:42", "values"=>[0, 374, 89, 0, 0, 0, 0, 0]}, {"label"=>"20:47", "values"=>[0, 364, 116, 0, 0, 0, 0, 0]}, {"label"=>"20:52", "values"=>[0, 348, 154, 0, 0, 0, 0, 0]}, {"label"=>"20:57", "values"=>[0, 327, 187, 0, 0, 0, 0, 0]}, {"label"=>"21:02", "values"=>[0, 315, 214, 0, 0, 0, 0, 0]}, {"label"=>"21:07", "values"=>[0, 303, 227, 7, 0, 0, 0, 0]}, {"label"=>"21:12", "values"=>[0, 298, 228, 23, 0, 0, 0, 0]}, {"label"=>"21:17", "values"=>[0, 288, 227, 43, 0, 0, 0, 0]}, {"label"=>"21:22", "values"=>[0, 281, 229, 69, 0, 0, 0, 0]}, {"label"=>"21:27", "values"=>[0, 271, 231, 85, 1, 0, 0, 0]}, {"label"=>"21:32", "values"=>[0, 260, 227, 101, 4, 0, 0, 0]}, {"label"=>"21:37", "values"=>[0, 256, 223, 117, 5, 0, 0, 0]}, {"label"=>"21:42", "values"=>[0, 253, 221, 132, 7, 0, 0, 0]}, {"label"=>"21:47", "values"=>[0, 250, 215, 143, 8, 0, 0, 0]}, {"label"=>"21:52", "values"=>[0, 245, 209, 159, 8, 0, 0, 0]}, {"label"=>"21:57", "values"=>[0, 245, 204, 174, 8, 1, 0, 0]}, {"label"=>"22:02", "values"=>[0, 237, 198, 188, 10, 1, 0, 0]}, {"label"=>"22:07", "values"=>[0, 232, 189, 203, 10, 1, 0, 0]}, {"label"=>"22:12", "values"=>[0, 228, 186, 220, 11, 1, 0, 0]}, {"label"=>"22:17", "values"=>[0, 225, 184, 228, 11, 1, 0, 0]}, {"label"=>"22:22", "values"=>[0, 223, 183, 233, 12, 1, 0, 0]}, {"label"=>"22:27", "values"=>[0, 223, 182, 237, 13, 1, 0, 0]}, {"label"=>"22:32", "values"=>[0, 223, 181, 231, 20, 1, 0, 0]}, {"label"=>"22:37", "values"=>[0, 222, 181, 232, 24, 1, 0, 0]}, {"label"=>"22:42", "values"=>[0, 222, 181, 226, 34, 1, 0, 0]}, {"label"=>"22:47", "values"=>[0, 222, 181, 222, 37, 2, 0, 0]}, {"label"=>"22:52", "values"=>[0, 222, 181, 217, 41, 2, 1, 0]}, {"label"=>"22:57", "values"=>[0, 222, 181, 215, 43, 2, 1, 0]}, {"label"=>"23:02", "values"=>[0, 221, 181, 212, 46, 2, 1, 1]}, {"label"=>"23:07", "values"=>[0, 221, 181, 205, 52, 3, 1, 1]}, {"label"=>"23:12", "values"=>[0, 219, 181, 198, 59, 5, 2, 1]}, {"label"=>"23:17", "values"=>[0, 218, 181, 195, 61, 9, 2, 2]}, {"label"=>"23:22", "values"=>[0, 218, 181, 191, 63, 8, 5, 3]}, {"label"=>"23:27", "values"=>[0, 217, 181, 188, 65, 11, 5, 3]}, {"label"=>"23:32", "values"=>[0, 216, 180, 182, 71, 14, 4, 4]}, {"label"=>"23:37", "values"=>[0, 211, 177, 174, 88, 17, 4, 4]}, {"label"=>"23:42", "values"=>[0, 207, 172, 161, 113, 20, 4, 4]}, {"label"=>"23:47", "values"=>[0, 205, 171, 159, 115, 24, 4, 4]}, {"label"=>"23:52", "values"=>[0, 203, 171, 150, 122, 29, 4, 4]}, {"label"=>"23:57", "values"=>[0, 203, 169, 145, 123, 35, 6, 5]}, {"label"=>"00:02", "values"=>[0, 203, 168, 143, 115, 44, 5, 8]}, {"label"=>"00:07", "values"=>[0, 203, 167, 143, 108, 46, 11, 8]}, {"label"=>"00:12", "values"=>[0, 202, 167, 142, 97, 57, 13, 8]}, {"label"=>"00:17", "values"=>[0, 202, 167, 142, 92, 57, 17, 9]}, {"label"=>"00:22", "values"=>[0, 202, 167, 142, 89, 57, 20, 9]}, {"label"=>"00:27", "values"=>[0, 202, 167, 142, 80, 54, 32, 9]}, {"label"=>"00:32", "values"=>[0, 202, 167, 142, 76, 53, 37, 9]}, {"label"=>"00:37", "values"=>[0, 202, 167, 142, 69, 56, 36, 14]}, {"label"=>"00:42", "values"=>[0, 202, 167, 142, 69, 51, 39, 16]}, {"label"=>"00:47", "values"=>[0, 202, 167, 142, 69, 41, 44, 19]}, {"label"=>"00:52", "values"=>[0, 202, 167, 142, 66, 36, 46, 25]}, {"label"=>"00:57", "values"=>[0, 202, 167, 142, 60, 34, 50, 29]}, {"label"=>"01:02", "values"=>[0, 202, 166, 142, 55, 31, 58, 30]}, {"label"=>"01:07", "values"=>[0, 202, 166, 142, 52, 22, 63, 37]}, {"label"=>"01:12", "values"=>[0, 202, 166, 142, 49, 18, 67, 40]}, {"label"=>"01:17", "values"=>[0, 202, 166, 142, 47, 16, 71, 40]}, {"label"=>"01:22", "values"=>[0, 202, 166, 142, 46, 16, 66, 46]}, {"label"=>"01:27", "values"=>[0, 202, 166, 142, 46, 16, 64, 48]}, {"label"=>"01:32", "values"=>[0, 202, 166, 142, 46, 15, 63, 50]}, {"label"=>"01:37", "values"=>[0, 202, 166, 142, 46, 15, 54, 59]}, {"label"=>"01:42", "values"=>[0, 202, 166, 142, 46, 15, 52, 61]}, {"label"=>"01:47", "values"=>[0, 202, 166, 142, 46, 15, 34, 79]}, {"label"=>"01:52", "values"=>[0, 202, 166, 142, 46, 15, 33, 80]}, {"label"=>"01:57", "values"=>[0, 202, 166, 142, 46, 15, 32, 81]}, {"label"=>"02:02", "values"=>[0, 202, 166, 142, 46, 15, 16, 97]}, {"label"=>"02:07", "values"=>[0, 202, 166, 142, 46, 15, 15, 98]}, {"label"=>"02:12", "values"=>nil}]}
+Rendered activity/status.erb within layouts/application (41.9ms)
+Completed 200 OK in 8831ms (Views: 176.1ms | ActiveRecord: 6506.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Sun Jun 26 02:57:39 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/runners"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/checkpoints" for 173.228.85.205 at Sun Jun 26 02:58:04 -0700 2011
+  Processing by CheckpointsController#index as HTML
+Rendered checkpoints/index.html.erb within layouts/application (420.3ms)
+Completed 200 OK in 443ms (Views: 50.2ms | ActiveRecord: 389.7ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints/10" for 173.228.85.205 at Sun Jun 26 02:58:09 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"10"}
+Rendered checkpoints/show.html.erb within layouts/application (511.7ms)
+Completed 200 OK in 539ms (Views: 142.1ms | ActiveRecord: 374.2ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints/10" for 173.228.85.205 at Sun Jun 26 02:58:25 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"10"}
+Rendered checkpoints/show.html.erb within layouts/application (66.5ms)
+Completed 200 OK in 92ms (Views: 56.7ms | ActiveRecord: 13.1ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/checkpoints/10" for 173.228.85.205 at Sun Jun 26 03:00:57 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"10"}
+Rendered checkpoints/show.html.erb within layouts/application (322.3ms)
+Completed 200 OK in 904ms (Views: 308.1ms | ActiveRecord: 269.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Sun Jun 26 03:00:57 -0700 2011
+  Processing by ActivityController#status as HTML
+Plotting with data {"label"=>[0, 1, 2, 3, 4, 5, 6, 7], "values"=>[{"label"=>"19:52", "values"=>[0, 4, 0, 0, 0, 0, 0, 0]}, {"label"=>"19:57", "values"=>[0, 5, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:02", "values"=>[0, 6, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:07", "values"=>[0, 9, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:12", "values"=>[0, 111, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:17", "values"=>[0, 258, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:22", "values"=>[0, 355, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:27", "values"=>[0, 384, 10, 0, 0, 0, 0, 0]}, {"label"=>"20:32", "values"=>[0, 384, 25, 0, 0, 0, 0, 0]}, {"label"=>"20:37", "values"=>[0, 392, 45, 0, 0, 0, 0, 0]}, {"label"=>"20:42", "values"=>[0, 374, 89, 0, 0, 0, 0, 0]}, {"label"=>"20:47", "values"=>[0, 364, 116, 0, 0, 0, 0, 0]}, {"label"=>"20:52", "values"=>[0, 348, 154, 0, 0, 0, 0, 0]}, {"label"=>"20:57", "values"=>[0, 327, 187, 0, 0, 0, 0, 0]}, {"label"=>"21:02", "values"=>[0, 315, 214, 0, 0, 0, 0, 0]}, {"label"=>"21:07", "values"=>[0, 303, 227, 7, 0, 0, 0, 0]}, {"label"=>"21:12", "values"=>[0, 298, 228, 23, 0, 0, 0, 0]}, {"label"=>"21:17", "values"=>[0, 288, 227, 43, 0, 0, 0, 0]}, {"label"=>"21:22", "values"=>[0, 281, 229, 69, 0, 0, 0, 0]}, {"label"=>"21:27", "values"=>[0, 271, 231, 85, 1, 0, 0, 0]}, {"label"=>"21:32", "values"=>[0, 260, 227, 101, 4, 0, 0, 0]}, {"label"=>"21:37", "values"=>[0, 256, 223, 117, 5, 0, 0, 0]}, {"label"=>"21:42", "values"=>[0, 253, 221, 132, 7, 0, 0, 0]}, {"label"=>"21:47", "values"=>[0, 250, 215, 143, 8, 0, 0, 0]}, {"label"=>"21:52", "values"=>[0, 245, 209, 159, 8, 0, 0, 0]}, {"label"=>"21:57", "values"=>[0, 245, 204, 174, 8, 1, 0, 0]}, {"label"=>"22:02", "values"=>[0, 237, 198, 188, 10, 1, 0, 0]}, {"label"=>"22:07", "values"=>[0, 232, 189, 203, 10, 1, 0, 0]}, {"label"=>"22:12", "values"=>[0, 228, 186, 220, 11, 1, 0, 0]}, {"label"=>"22:17", "values"=>[0, 225, 184, 228, 11, 1, 0, 0]}, {"label"=>"22:22", "values"=>[0, 223, 183, 233, 12, 1, 0, 0]}, {"label"=>"22:27", "values"=>[0, 223, 182, 237, 13, 1, 0, 0]}, {"label"=>"22:32", "values"=>[0, 223, 181, 231, 20, 1, 0, 0]}, {"label"=>"22:37", "values"=>[0, 222, 181, 232, 24, 1, 0, 0]}, {"label"=>"22:42", "values"=>[0, 222, 181, 226, 34, 1, 0, 0]}, {"label"=>"22:47", "values"=>[0, 222, 181, 222, 37, 2, 0, 0]}, {"label"=>"22:52", "values"=>[0, 222, 181, 217, 41, 2, 1, 0]}, {"label"=>"22:57", "values"=>[0, 222, 181, 215, 43, 2, 1, 0]}, {"label"=>"23:02", "values"=>[0, 221, 181, 212, 46, 2, 1, 1]}, {"label"=>"23:07", "values"=>[0, 221, 181, 205, 52, 3, 1, 1]}, {"label"=>"23:12", "values"=>[0, 219, 181, 198, 59, 5, 2, 1]}, {"label"=>"23:17", "values"=>[0, 218, 181, 195, 61, 9, 2, 2]}, {"label"=>"23:22", "values"=>[0, 218, 181, 191, 63, 8, 5, 3]}, {"label"=>"23:27", "values"=>[0, 217, 181, 188, 65, 11, 5, 3]}, {"label"=>"23:32", "values"=>[0, 216, 180, 182, 71, 14, 4, 4]}, {"label"=>"23:37", "values"=>[0, 211, 177, 174, 88, 17, 4, 4]}, {"label"=>"23:42", "values"=>[0, 207, 172, 161, 113, 20, 4, 4]}, {"label"=>"23:47", "values"=>[0, 205, 171, 159, 115, 24, 4, 4]}, {"label"=>"23:52", "values"=>[0, 203, 171, 150, 122, 29, 4, 4]}, {"label"=>"23:57", "values"=>[0, 203, 169, 145, 123, 35, 6, 5]}, {"label"=>"00:02", "values"=>[0, 203, 168, 143, 115, 44, 5, 8]}, {"label"=>"00:07", "values"=>[0, 203, 167, 143, 108, 46, 11, 8]}, {"label"=>"00:12", "values"=>[0, 202, 167, 142, 97, 57, 13, 8]}, {"label"=>"00:17", "values"=>[0, 202, 167, 142, 92, 57, 17, 9]}, {"label"=>"00:22", "values"=>[0, 202, 167, 142, 89, 57, 20, 9]}, {"label"=>"00:27", "values"=>[0, 202, 167, 142, 80, 54, 32, 9]}, {"label"=>"00:32", "values"=>[0, 202, 167, 142, 76, 53, 37, 9]}, {"label"=>"00:37", "values"=>[0, 202, 167, 142, 69, 56, 36, 14]}, {"label"=>"00:42", "values"=>[0, 202, 167, 142, 69, 51, 39, 16]}, {"label"=>"00:47", "values"=>[0, 202, 167, 142, 69, 41, 44, 19]}, {"label"=>"00:52", "values"=>[0, 202, 167, 142, 66, 36, 46, 25]}, {"label"=>"00:57", "values"=>[0, 202, 167, 142, 60, 34, 50, 29]}, {"label"=>"01:02", "values"=>[0, 202, 166, 142, 55, 31, 58, 30]}, {"label"=>"01:07", "values"=>[0, 202, 166, 142, 52, 22, 63, 37]}, {"label"=>"01:12", "values"=>[0, 202, 166, 142, 49, 18, 67, 40]}, {"label"=>"01:17", "values"=>[0, 202, 166, 142, 47, 16, 71, 40]}, {"label"=>"01:22", "values"=>[0, 202, 166, 142, 46, 16, 66, 46]}, {"label"=>"01:27", "values"=>[0, 202, 166, 142, 46, 16, 64, 48]}, {"label"=>"01:32", "values"=>[0, 202, 166, 142, 46, 15, 63, 50]}, {"label"=>"01:37", "values"=>[0, 202, 166, 142, 46, 15, 54, 59]}, {"label"=>"01:42", "values"=>[0, 202, 166, 142, 46, 15, 52, 61]}, {"label"=>"01:47", "values"=>[0, 202, 166, 142, 46, 15, 34, 79]}, {"label"=>"01:52", "values"=>[0, 202, 166, 142, 46, 15, 33, 80]}, {"label"=>"01:57", "values"=>[0, 202, 166, 142, 46, 15, 32, 81]}, {"label"=>"02:02", "values"=>[0, 202, 166, 142, 46, 15, 16, 97]}, {"label"=>"02:07", "values"=>[0, 202, 166, 142, 46, 15, 15, 98]}, {"label"=>"02:12", "values"=>nil}]}
+Rendered activity/status.erb within layouts/application (4.7ms)
+Completed 200 OK in 2996ms (Views: 39.6ms | ActiveRecord: 595.5ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints/11" for 173.228.85.205 at Sun Jun 26 03:01:22 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"11"}
+Rendered checkpoints/show.html.erb within layouts/application (378.6ms)
+Completed 200 OK in 412ms (Views: 94.9ms | ActiveRecord: 291.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/3YX7L" for 173.228.85.205 at Sun Jun 26 03:01:29 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/runners/3YX7L"):
+  
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/3YX7L" for 173.228.85.205 at Sun Jun 26 03:01:50 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"3YX7L"}
+Completed   in 615ms
+
+FloatDomainError (NaN):
+  app/models/runner.rb:107:in `map_html'
+  app/models/runner.rb:107:in `map'
+  app/models/runner.rb:107:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Sun Jun 26 03:01:51 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (314.7ms)
+Completed 200 OK in 7250ms (Views: 123.0ms | ActiveRecord: 6653.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/3YX7L" for 173.228.85.205 at Sun Jun 26 03:02:14 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"3YX7L"}
+Completed   in 64ms
+
+FloatDomainError (NaN):
+  app/models/runner.rb:107:in `map_html'
+  app/models/runner.rb:107:in `map'
+  app/models/runner.rb:107:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/checkpoints/7" for 173.228.85.205 at Sun Jun 26 03:04:06 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"7"}
+Rendered checkpoints/show.html.erb within layouts/application (149.1ms)
+Completed 200 OK in 201ms (Views: 66.9ms | ActiveRecord: 144.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RDGJ9" for 173.228.85.205 at Sun Jun 26 03:04:10 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RDGJ9"}
+Rendered runners/show.erb within layouts/application (7.4ms)
+Completed 200 OK in 311ms (Views: 24.4ms | ActiveRecord: 146.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/YKTXR" for 173.228.85.205 at Sun Jun 26 03:06:12 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YKTXR"}
+time range is 17453
+  t is Sat, 18 Jun 2011 19:47:20 UTC +00:00
+  t is Sat, 18 Jun 2011 21:23:57 UTC +00:00
+  t is Sun, 19 Jun 2011 00:09:25 UTC +00:00
+  t is Sun, 19 Jun 2011 00:38:13 UTC +00:00
+Rendered runners/show.erb within layouts/application (7.0ms)
+Completed 200 OK in 804ms (Views: 11.7ms | ActiveRecord: 669.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/S8CRD" for 173.228.85.205 at Sun Jun 26 03:06:23 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"S8CRD"}
+time range is 3493
+  t is Sat, 18 Jun 2011 19:47:28 UTC +00:00
+  t is Sat, 18 Jun 2011 20:45:41 UTC +00:00
+Rendered runners/show.erb within layouts/application (3.7ms)
+Completed 200 OK in 984ms (Views: 4.9ms | ActiveRecord: 964.9ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints/10" for 173.228.85.205 at Sun Jun 26 03:06:34 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"10"}
+Rendered checkpoints/show.html.erb within layouts/application (111.6ms)
+Completed 200 OK in 155ms (Views: 65.9ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/UNPBH" for 173.228.85.205 at Sun Jun 26 03:06:39 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"UNPBH"}
+time range is 15681
+  t is Sat, 18 Jun 2011 19:47:41 UTC +00:00
+  t is Sun, 19 Jun 2011 00:09:02 UTC +00:00
+Rendered runners/show.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 4.9ms | ActiveRecord: 52.9ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints/11" for 173.228.85.205 at Sun Jun 26 03:06:45 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"11"}
+Rendered checkpoints/show.html.erb within layouts/application (138.1ms)
+Completed 200 OK in 175ms (Views: 67.6ms | ActiveRecord: 84.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/3YX7L" for 173.228.85.205 at Sun Jun 26 03:06:49 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"3YX7L"}
+time range is 0
+  t is Sat, 18 Jun 2011 20:01:42 UTC +00:00
+Completed   in 14ms
+
+FloatDomainError (NaN):
+  app/models/runner.rb:108:in `map_html'
+  app/models/runner.rb:108:in `map'
+  app/models/runner.rb:108:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/3YX7L" for 173.228.85.205 at Sun Jun 26 03:08:50 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"3YX7L"}
+time range is 0
+  t is Sat, 18 Jun 2011 20:01:42 UTC +00:00
+Completed   in 19ms
+
+FloatDomainError (NaN):
+  app/models/runner.rb:108:in `map_html'
+  app/models/runner.rb:108:in `map'
+  app/models/runner.rb:108:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/3YX7L" for 173.228.85.205 at Sun Jun 26 03:09:02 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"3YX7L"}
+Rendered runners/show.erb within layouts/application (4.9ms)
+Completed 200 OK in 244ms (Views: 9.8ms | ActiveRecord: 272.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/BVN69" for 173.228.85.205 at Sun Jun 26 03:09:33 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"BVN69"}
+Rendered runners/show.erb within layouts/application (7.2ms)
+Completed 200 OK in 757ms (Views: 8.3ms | ActiveRecord: 719.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/" for 173.228.123.71 at Sun Jun 26 18:00:15 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 18:00:15 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (950.0ms)
+Completed 200 OK in 11976ms (Views: 366.9ms | ActiveRecord: 10356.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Sun Jun 26 18:00:52 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (5.2ms)
+Completed 200 OK in 2028ms (Views: 39.3ms | ActiveRecord: 1853.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Sun Jun 26 18:17:49 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (145.8ms)
+Completed 200 OK in 2365ms (Views: 152.2ms | ActiveRecord: 1290.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/61EHB" for 173.228.123.71 at Sun Jun 26 18:17:55 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"61EHB"}
+Rendered runners/show.erb within layouts/application (106.9ms)
+Completed 200 OK in 480ms (Views: 123.2ms | ActiveRecord: 273.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.123.71 at Sun Jun 26 18:18:14 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (4.9ms)
+Completed 200 OK in 226ms (Views: 5.9ms | ActiveRecord: 199.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/6B6E6" for 173.228.123.71 at Sun Jun 26 18:18:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"6B6E6"}
+Rendered runners/show.erb within layouts/application (4.7ms)
+Completed 200 OK in 107ms (Views: 5.7ms | ActiveRecord: 82.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/47AU4" for 173.228.123.71 at Sun Jun 26 18:18:28 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"47AU4"}
+Rendered runners/show.erb within layouts/application (4.2ms)
+Completed 200 OK in 172ms (Views: 5.2ms | ActiveRecord: 148.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.123.71 at Sun Jun 26 18:18:32 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (5.8ms)
+Completed 200 OK in 253ms (Views: 6.7ms | ActiveRecord: 222.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 18:19:18 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (6.5ms)
+Completed 200 OK in 53ms (Views: 7.6ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/61EHB" for 173.228.85.205 at Sun Jun 26 18:21:05 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"61EHB"}
+Rendered runners/show.erb within layouts/application (3.4ms)
+Completed 200 OK in 65ms (Views: 4.5ms | ActiveRecord: 33.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/61EHB" for 173.228.123.71 at Sun Jun 26 18:22:14 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"61EHB"}
+Rendered runners/show.erb within layouts/application (3.3ms)
+Completed 200 OK in 47ms (Views: 4.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Sun Jun 26 18:22:53 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (133.7ms)
+Completed 200 OK in 8047ms (Views: 89.2ms | ActiveRecord: 6896.3ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/61EHB" for 173.228.123.71 at Sun Jun 26 18:29:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"61EHB"}
+Rendered runners/show.erb within layouts/application (5.1ms)
+Completed 200 OK in 194ms (Views: 10.0ms | ActiveRecord: 109.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/" for 24.118.25.53 at Sun Jun 26 18:30:52 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (338.6ms)
+Completed 200 OK in 3882ms (Views: 327.1ms | ActiveRecord: 2510.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.123.71 at Sun Jun 26 19:02:40 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (8.4ms)
+Completed 200 OK in 280ms (Views: 28.5ms | ActiveRecord: 120.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Sun Jun 26 19:05:55 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (7.7ms)
+Completed 200 OK in 1237ms (Views: 8.7ms | ActiveRecord: 1200.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 19:17:47 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (135.0ms)
+Completed 200 OK in 3850ms (Views: 113.2ms | ActiveRecord: 2751.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 19:20:33 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (122.5ms)
+Completed 200 OK in 2620ms (Views: 226.3ms | ActiveRecord: 1933.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 19:32:29 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (46.4ms)
+Completed   in 2249ms
+
+ActionView::Template::Error (undefined method `icon' for #<Runner:0x69ed4666eb60>):
+    2: 
+    3: <% @ordered_runners.each do |runner| %>
+    4:   <li>
+    5:   <%= runner.img_link.html_safe %>
+    6:   <%= "<a href='/20110618-sf/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a> #{runner.player_name}".html_safe %>
+    7:   </li>
+    8: <% end %>
+  app/models/runner.rb:18:in `img_link'
+  app/views/runners/index.erb:5:in `_app_views_runners_index_erb__1607327928_58233907789580_0'
+  app/views/runners/index.erb:3:in `each'
+  app/views/runners/index.erb:3:in `_app_views_runners_index_erb__1607327928_58233907789580_0'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/61EHB" for 173.228.123.71 at Sun Jun 26 19:42:48 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"61EHB"}
+Rendered runners/show.erb within layouts/application (27.6ms)
+Completed   in 349ms
+
+ActionView::Template::Error (undefined method `icon' for #<Runner:0x611cb3641140>):
+    1: <table>
+    2: <tr>
+    3: <td> <img src="<%= @runner.icon %>" width="113" /> </td>
+    4: <td><h1><%= @runner.runner_id %></h1> <%= @runner.player_name ? @runner.player_name : "" %></td>
+    5: </tr>
+    6: </table>
+  app/views/runners/show.erb:3:in `_app_views_runners_show_erb___1484479163_53387956772840_0'
+
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 19:42:49 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (1.4ms)
+Completed   in 1786ms
+
+ActionView::Template::Error (undefined local variable or method `icon' for #<Runner:0x611cb1781570>):
+    2: 
+    3: <% @ordered_runners.each do |runner| %>
+    4:   <li>
+    5:   <%= runner.img_link.html_safe %>
+    6:   <%= "<a href='/20110618-sf/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a> #{runner.player_name}".html_safe %>
+    7:   </li>
+    8: <% end %>
+  app/models/runner.rb:18:in `img_link'
+  app/views/runners/index.erb:5:in `_app_views_runners_index_erb__1607327928_53387957058620_0'
+  app/views/runners/index.erb:3:in `each'
+  app/views/runners/index.erb:3:in `_app_views_runners_index_erb__1607327928_53387957058620_0'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/61EHB" for 173.228.123.71 at Sun Jun 26 19:48:24 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"61EHB"}
+Rendered runners/show.erb within layouts/application (14.0ms)
+Completed 200 OK in 550ms (Views: 37.6ms | ActiveRecord: 185.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 19:48:24 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (113.8ms)
+Completed 200 OK in 2781ms (Views: 117.5ms | ActiveRecord: 1382.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 19:52:22 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (1080.1ms)
+Completed 200 OK in 3661ms (Views: 1125.6ms | ActiveRecord: 1546.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 19:53:13 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (212.0ms)
+Completed 200 OK in 2261ms (Views: 184.8ms | ActiveRecord: 1103.6ms)
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Sun Jun 26 19:54:46 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (8.3ms)
+Completed 200 OK in 449ms (Views: 10.3ms | ActiveRecord: 303.1ms)
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Sun Jun 26 19:55:30 -0700 2011
+  Processing by ActivityController#status as HTML
+Plotting with data {"label"=>[0, 1, 2, 3, 4, 5, 6, 7], "values"=>[{"label"=>"19:52", "values"=>[0, 4, 0, 0, 0, 0, 0, 0]}, {"label"=>"19:57", "values"=>[0, 5, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:02", "values"=>[0, 6, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:07", "values"=>[0, 9, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:12", "values"=>[0, 111, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:17", "values"=>[0, 258, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:22", "values"=>[0, 355, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:27", "values"=>[0, 384, 10, 0, 0, 0, 0, 0]}, {"label"=>"20:32", "values"=>[0, 384, 25, 0, 0, 0, 0, 0]}, {"label"=>"20:37", "values"=>[0, 392, 45, 0, 0, 0, 0, 0]}, {"label"=>"20:42", "values"=>[0, 374, 89, 0, 0, 0, 0, 0]}, {"label"=>"20:47", "values"=>[0, 364, 116, 0, 0, 0, 0, 0]}, {"label"=>"20:52", "values"=>[0, 348, 154, 0, 0, 0, 0, 0]}, {"label"=>"20:57", "values"=>[0, 327, 187, 0, 0, 0, 0, 0]}, {"label"=>"21:02", "values"=>[0, 315, 214, 0, 0, 0, 0, 0]}, {"label"=>"21:07", "values"=>[0, 303, 227, 7, 0, 0, 0, 0]}, {"label"=>"21:12", "values"=>[0, 298, 228, 23, 0, 0, 0, 0]}, {"label"=>"21:17", "values"=>[0, 288, 227, 43, 0, 0, 0, 0]}, {"label"=>"21:22", "values"=>[0, 281, 229, 69, 0, 0, 0, 0]}, {"label"=>"21:27", "values"=>[0, 271, 231, 85, 1, 0, 0, 0]}, {"label"=>"21:32", "values"=>[0, 260, 227, 101, 4, 0, 0, 0]}, {"label"=>"21:37", "values"=>[0, 256, 223, 117, 5, 0, 0, 0]}, {"label"=>"21:42", "values"=>[0, 253, 221, 132, 7, 0, 0, 0]}, {"label"=>"21:47", "values"=>[0, 250, 215, 143, 8, 0, 0, 0]}, {"label"=>"21:52", "values"=>[0, 245, 209, 159, 8, 0, 0, 0]}, {"label"=>"21:57", "values"=>[0, 245, 204, 174, 8, 1, 0, 0]}, {"label"=>"22:02", "values"=>[0, 237, 198, 188, 10, 1, 0, 0]}, {"label"=>"22:07", "values"=>[0, 232, 189, 203, 10, 1, 0, 0]}, {"label"=>"22:12", "values"=>[0, 228, 186, 220, 11, 1, 0, 0]}, {"label"=>"22:17", "values"=>[0, 225, 184, 228, 11, 1, 0, 0]}, {"label"=>"22:22", "values"=>[0, 223, 183, 233, 12, 1, 0, 0]}, {"label"=>"22:27", "values"=>[0, 223, 182, 237, 13, 1, 0, 0]}, {"label"=>"22:32", "values"=>[0, 223, 181, 231, 20, 1, 0, 0]}, {"label"=>"22:37", "values"=>[0, 222, 181, 232, 24, 1, 0, 0]}, {"label"=>"22:42", "values"=>[0, 222, 181, 226, 34, 1, 0, 0]}, {"label"=>"22:47", "values"=>[0, 222, 181, 222, 37, 2, 0, 0]}, {"label"=>"22:52", "values"=>[0, 222, 181, 217, 41, 2, 1, 0]}, {"label"=>"22:57", "values"=>[0, 222, 181, 215, 43, 2, 1, 0]}, {"label"=>"23:02", "values"=>[0, 221, 181, 212, 46, 2, 1, 1]}, {"label"=>"23:07", "values"=>[0, 221, 181, 205, 52, 3, 1, 1]}, {"label"=>"23:12", "values"=>[0, 219, 181, 198, 59, 5, 2, 1]}, {"label"=>"23:17", "values"=>[0, 218, 181, 195, 61, 9, 2, 2]}, {"label"=>"23:22", "values"=>[0, 218, 181, 191, 63, 8, 5, 3]}, {"label"=>"23:27", "values"=>[0, 217, 181, 188, 65, 11, 5, 3]}, {"label"=>"23:32", "values"=>[0, 216, 180, 182, 71, 14, 4, 4]}, {"label"=>"23:37", "values"=>[0, 211, 177, 174, 88, 17, 4, 4]}, {"label"=>"23:42", "values"=>[0, 207, 172, 161, 113, 20, 4, 4]}, {"label"=>"23:47", "values"=>[0, 205, 171, 159, 115, 24, 4, 4]}, {"label"=>"23:52", "values"=>[0, 203, 171, 150, 122, 29, 4, 4]}, {"label"=>"23:57", "values"=>[0, 203, 169, 145, 123, 35, 6, 5]}, {"label"=>"00:02", "values"=>[0, 203, 168, 143, 115, 44, 5, 8]}, {"label"=>"00:07", "values"=>[0, 203, 167, 143, 108, 46, 11, 8]}, {"label"=>"00:12", "values"=>[0, 202, 167, 142, 97, 57, 13, 8]}, {"label"=>"00:17", "values"=>[0, 202, 167, 142, 92, 57, 17, 9]}, {"label"=>"00:22", "values"=>[0, 202, 167, 142, 89, 57, 20, 9]}, {"label"=>"00:27", "values"=>[0, 202, 167, 142, 80, 54, 32, 9]}, {"label"=>"00:32", "values"=>[0, 202, 167, 142, 76, 53, 37, 9]}, {"label"=>"00:37", "values"=>[0, 202, 167, 142, 69, 56, 36, 14]}, {"label"=>"00:42", "values"=>[0, 202, 167, 142, 69, 51, 39, 16]}, {"label"=>"00:47", "values"=>[0, 202, 167, 142, 69, 41, 44, 19]}, {"label"=>"00:52", "values"=>[0, 202, 167, 142, 66, 36, 46, 25]}, {"label"=>"00:57", "values"=>[0, 202, 167, 142, 60, 34, 50, 29]}, {"label"=>"01:02", "values"=>[0, 202, 166, 142, 55, 31, 58, 30]}, {"label"=>"01:07", "values"=>[0, 202, 166, 142, 52, 22, 63, 37]}, {"label"=>"01:12", "values"=>[0, 202, 166, 142, 49, 18, 67, 40]}, {"label"=>"01:17", "values"=>[0, 202, 166, 142, 47, 16, 71, 40]}, {"label"=>"01:22", "values"=>[0, 202, 166, 142, 46, 16, 66, 46]}, {"label"=>"01:27", "values"=>[0, 202, 166, 142, 46, 16, 64, 48]}, {"label"=>"01:32", "values"=>[0, 202, 166, 142, 46, 15, 63, 50]}, {"label"=>"01:37", "values"=>[0, 202, 166, 142, 46, 15, 54, 59]}, {"label"=>"01:42", "values"=>[0, 202, 166, 142, 46, 15, 52, 61]}, {"label"=>"01:47", "values"=>[0, 202, 166, 142, 46, 15, 34, 79]}, {"label"=>"01:52", "values"=>[0, 202, 166, 142, 46, 15, 33, 80]}, {"label"=>"01:57", "values"=>[0, 202, 166, 142, 46, 15, 32, 81]}, {"label"=>"02:02", "values"=>[0, 202, 166, 142, 46, 15, 16, 97]}, {"label"=>"02:07", "values"=>[0, 202, 166, 142, 46, 15, 15, 98]}, {"label"=>"02:12", "values"=>nil}]}
+Rendered activity/status.erb within layouts/application (3.9ms)
+Completed 200 OK in 5644ms (Views: 22.3ms | ActiveRecord: 2076.8ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints/20" for 173.228.85.205 at Sun Jun 26 19:55:39 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"20"}
+Rendered checkpoints/show.html.erb within layouts/application (140.1ms)
+Completed 200 OK in 198ms (Views: 110.5ms | ActiveRecord: 74.7ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints/7" for 173.228.85.205 at Sun Jun 26 19:55:48 -0700 2011
+  Processing by CheckpointsController#show as HTML
+  Parameters: {"checkpoint_id"=>"7"}
+Rendered checkpoints/show.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 110ms (Views: 41.8ms | ActiveRecord: 41.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 19:55:52 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (4.6ms)
+Completed 200 OK in 78ms (Views: 5.6ms | ActiveRecord: 55.4ms)
+
+
+Started GET "/20110618-sf/cpm/icons/" for 173.228.85.205 at Sun Jun 26 19:56:30 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/icons"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/icons/" for 173.228.85.205 at Sun Jun 26 19:56:43 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/icons"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Sun Jun 26 19:58:09 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (8.0ms)
+Completed 200 OK in 57ms (Views: 9.0ms | ActiveRecord: 22.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Sun Jun 26 19:58:29 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (8.8ms)
+Completed 200 OK in 141ms (Views: 13.9ms | ActiveRecord: 65.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 19:58:48 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.3ms)
+Completed 200 OK in 377ms (Views: 4.1ms | ActiveRecord: 330.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 19:59:10 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.3ms)
+Completed 200 OK in 86ms (Views: 3.8ms | ActiveRecord: 49.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:03:48 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (20.8ms)
+Completed 200 OK in 78ms (Views: 21.9ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.85.205 at Sun Jun 26 20:04:07 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.6ms)
+Completed 200 OK in 268ms (Views: 3.8ms | ActiveRecord: 122.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.85.205 at Sun Jun 26 20:04:31 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.7ms)
+Completed 200 OK in 46ms (Views: 3.7ms | ActiveRecord: 12.3ms)

@@ -4,15 +4,33 @@ class Runner < ActiveRecord::Base
   has_many :tags, :foreign_key => :tagger_id, :primary_key => :runner_id
   has_many :tagged, :class_name => "Tag", :foreign_key => :runner_id, :primary_key => :runner_id
 
-  PHOTO_PATH = '/20110618-sf/photos'
+  PHOTO_PATH = '/20110618-sf/photos/'
   def save_photo(photo_param)
     photo_file = File.join(PHOTO_PATH,"#{runner_id}.jpg")
     File.open(photo_file, "wb") { |f| f.write(photo_param.read) }
   end
 
+<<<<<<< /home/jlog/journey-log/checkpoint_monitor/app/models/runner.rb
+<<<<<<< /home/jlog/journey-log/checkpoint_monitor/app/models/runner.rb
+<<<<<<< /home/jlog/journey-log/checkpoint_monitor/app/models/runner.rb
   def icon
-    is_mugshot ? "#{PHOTO_PATH}/#{runner_id}.jpg" : "#{PHOTO_PATH}/smallrunner.png"
+    is_mugshot ? "/20110618-sf/photos/#{runner_id}.jpg" : "/photos/smallrunner.png"
   end
+=======
+#  def icon
+#    is_mugshot ? "../../photos/#{runner_id}.jpg" : "../../photos/smallrunner.png"
+#  end
+>>>>>>> /tmp/runner.rb~other.uXbRrQ
+=======
+#  def icon
+#    is_mugshot ? "../../photos/#{runner_id}.jpg" : "../../photos/smallrunner.png"
+#  end
+>>>>>>> /tmp/runner.rb~other.1Tu1A6
+=======
+#  def icon
+#    is_mugshot ? "../../photos/#{runner_id}.jpg" : "../../photos/smallrunner.png"
+#  end
+>>>>>>> /tmp/runner.rb~other.Jnf1l-
 
   def img_link
     "<img src='#{icon}' #{is_tagged ? "class='chaser'" : ""} />"
@@ -25,11 +43,9 @@ class Runner < ActiveRecord::Base
     marker_id_array = []
     marker_timer_array = []
     min_time = nil
-    registration = Checkpoint.find(:first, :conditions => {:checkpoint_id => 0})
-    fake_initial_checkin = Checkin.new(
     checkin_markers = checkins.sort_by{|c| c.checkin_time}.map do |checkin|
-      lat = checkin.checkpoint.checkpoint_loc_lat || checkin.lat
-      lng = checkin.checkpoint.checkpoint_loc_long || checkin.lng
+      lat = checkin.lat || checkin.checkpoint.checkpoint_loc_lat
+      lng = checkin.lng || checkin.checkpoint.checkpoint_loc_long
       if !lat.nil?
         lat_array << lat
         lng_array << lng
@@ -39,7 +55,7 @@ class Runner < ActiveRecord::Base
       end
       lat.nil? ? nil : "var checkin_marker_#{checkin.checkpoint.checkpoint_id} = new google.maps.Marker({
       position: new google.maps.LatLng(#{lat},#{lng}),
-      icon: \"/20110618-sf/cpm/icons/spelunking.png\",
+      icon: \"/20110618-sf/cpm/icons/jogging.png\",
       title:\"#{checkin.checkpoint.checkpoint_name} (#{checkin.checkin_time.strftime("%H:%M")})\",      
       });
       checkin_marker_#{checkin.checkpoint.checkpoint_id}.setMap(map);
@@ -106,7 +122,8 @@ class Runner < ActiveRecord::Base
     end
     if (marker_timer_array.size > 0)
       time_range = marker_timer_array.max.to_i - marker_timer_array.min.to_i
-      marker_timer_array = marker_timer_array.map {|t| ((t.to_i - marker_timer_array.min.to_i)*5000.0/time_range).round}
+      #logger.info "time range is #{time_range}"
+      marker_timer_array = marker_timer_array.map {|t| ((t.to_i - marker_timer_array.min.to_i)*5000.0/(time_range > 0 ? time_range : 1.0)).round}
     end
     return <<HTML
     <style type="text/css">
