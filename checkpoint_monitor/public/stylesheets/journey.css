@@ -28,7 +28,7 @@ a:focus {
 .content {
 	padding: 5px; 
 	position: absolute;
-	top: 30px;
+	top: 20px;
 	left: 50%;
 	margin: 0 0 0 -450px;
 	border: 0 1px 0 1px solid #333;
@@ -45,24 +45,27 @@ h1, h2 {
 	position: absolute;
 	top: 0px;
 	left: 50%;
-	height: 30px;
+	height: 20px;
 	width: 900px;
 	margin: 0 0 0 -450px;
 	border: 0 1px 0 1px solid #333;
 	background-color: #000;
+	color: #FFF;
+	font-size: 0.8em;
 	text-align: middle;
+	padding: 5px;
 }
 
-a:link.menu {
+a.menu:link {
 	color: #FFF; text-decoration: underline; }
 
-a:active.menu {
+a.menu:active {
 	color: #FFF; text-decoration: none; }
 
-a:visited.menu {
+a.menu:visited {
 	color: #FFF; text-decoration: underline; }
 
-a:hover.menu {
+a.menu:hover {
 	color: #FFF; text-decoration: none; }
 
 .runnerlist {
