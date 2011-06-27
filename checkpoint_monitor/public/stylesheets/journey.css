@@ -1,4 +1,25 @@
-.chaser {
-   border:3px solid #dd0000;
+html { 
+	/* height: 100% */
+	background-color: #FFF;
 }
 
+body {
+	margin: 0px; 
+	padding: 0px; 
+	/* position: absolute; */
+	left: 50%;
+	margin-left: -450px;
+	border-left: 1px #333;
+	border-right: 1px #333;
+	background-color: #999;
+	width: 900px;
+	height: auto;
+}
+
+.chaser {
+   border:2px solid #dd0000;
+}
+
+map_canvas { 
+	height: 800px;
+}
