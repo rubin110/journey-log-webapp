@@ -99,10 +99,10 @@ class RunnersController < ApplicationController
     <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/base.css" rel="stylesheet" />
     <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/Hypertree.css" rel="stylesheet" />
     
-    <!--[if IE]><script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/jit/excanvas.js"></script><![endif]-->
+    <!--[if IE]><script language="javascript" type="text/javascript" src="/20110618-sf/cpm/javascripts/vendor/jit/excanvas.js"></script><![endif]-->
     
     <!-- JIT Library File -->
-    <script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/jit/jit-yc.js"></script>
+    <script language="javascript" type="text/javascript" src="/20110618-sf/cpm/javascripts/vendor/jit/jit-yc.js"></script>
     
     <div id="container">
     

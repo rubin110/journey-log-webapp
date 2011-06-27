@@ -17100,3 +17100,394 @@ Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.85.205 at Sun Jun 26 20
   Parameters: {"runner_id"=>"4QX2A"}
 Rendered runners/show.erb within layouts/application (2.7ms)
 Completed 200 OK in 46ms (Views: 3.7ms | ActiveRecord: 12.3ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.85.205 at Sun Jun 26 20:24:47 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (24.8ms)
+Completed 200 OK in 403ms (Views: 71.2ms | ActiveRecord: 190.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 20:24:49 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (131.5ms)
+Completed 200 OK in 3227ms (Views: 98.7ms | ActiveRecord: 2114.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 20:24:59 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.3ms)
+Completed 200 OK in 72ms (Views: 3.3ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.85.205 at Sun Jun 26 20:25:14 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.2ms)
+Completed 200 OK in 165ms (Views: 3.1ms | ActiveRecord: 131.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 20:28:21 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (105.5ms)
+Completed 200 OK in 1525ms (Views: 61.8ms | ActiveRecord: 738.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:28:54 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (6.2ms)
+Completed 200 OK in 267ms (Views: 7.3ms | ActiveRecord: 182.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:29:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 897ms
+
+NoMethodError (undefined method `checkpoint_loc_lat' for nil:NilClass):
+  app/models/runner.rb:31:in `map_html'
+  app/models/runner.rb:30:in `map'
+  app/models/runner.rb:30:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:30:47 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 870ms
+
+NoMethodError (undefined method `checkpoint_loc_lat' for nil:NilClass):
+  app/models/runner.rb:31:in `map_html'
+  app/models/runner.rb:30:in `map'
+  app/models/runner.rb:30:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:30:49 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 662ms
+
+NoMethodError (undefined method `checkpoint_loc_lat' for nil:NilClass):
+  app/models/runner.rb:31:in `map_html'
+  app/models/runner.rb:30:in `map'
+  app/models/runner.rb:30:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/" for 75.61.130.254 at Sun Jun 26 20:31:05 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (272.9ms)
+Completed 200 OK in 2048ms (Views: 266.0ms | ActiveRecord: 2455.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:31:42 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 376ms
+
+NoMethodError (undefined method `checkpoint_loc_lat' for nil:NilClass):
+  app/models/runner.rb:31:in `map_html'
+  app/models/runner.rb:30:in `map'
+  app/models/runner.rb:30:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 20:31:44 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (87.6ms)
+Completed 200 OK in 1923ms (Views: 66.8ms | ActiveRecord: 1177.2ms)
+
+
+Started GET "/20110618-sf/cpm/chasers" for 173.228.123.71 at Sun Jun 26 20:33:08 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/chasers"):
+  
+
+
+
+Started GET "/20110618-sf/cpm/chaser" for 173.228.123.71 at Sun Jun 26 20:33:12 -0700 2011
+
+ActionController::RoutingError (No route matches "/20110618-sf/cpm/chaser"):
+  
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:34:48 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 582ms
+
+ActiveRecord::RecordNotUnique (Mysql2::Error: Duplicate entry '2XVEN-0' for key 'runner_id': INSERT INTO `checkins` (`user_agent`, `runner_id`, `checkin_time`, `ip_address`, `is_valid`, `lng`, `checkpoint_id`, `device_id`, `lat`) VALUES (NULL, '2XVEN', '2011-06-18 20:00:00', NULL, 1, NULL, 0, NULL, NULL)):
+  app/models/runner.rb:37:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 20:36:25 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (199.2ms)
+Completed 200 OK in 1692ms (Views: 177.7ms | ActiveRecord: 1282.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:36:51 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 126ms
+
+ActiveRecord::AssociationTypeMismatch (Checkin(#57784356149560) expected, got Object(#57784396770600)):
+  app/models/runner.rb:37:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/6B6E6" for 173.228.123.71 at Sun Jun 26 20:36:58 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"6B6E6"}
+Completed   in 151ms
+
+ActiveRecord::AssociationTypeMismatch (Checkin(#57784356149560) expected, got Object(#57784396770600)):
+  app/models/runner.rb:37:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/6B6E6" for 173.228.123.71 at Sun Jun 26 20:37:00 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"6B6E6"}
+Completed   in 196ms
+
+ActiveRecord::AssociationTypeMismatch (Checkin(#57784356149560) expected, got Object(#57784396770600)):
+  app/models/runner.rb:37:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/6B6E6" for 173.228.123.71 at Sun Jun 26 20:39:40 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"6B6E6"}
+Completed   in 24ms
+
+ActiveRecord::AssociationTypeMismatch (Checkin(#57784356149560) expected, got Object(#57784396770600)):
+  app/models/runner.rb:37:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/6B6E6" for 75.61.130.254 at Sun Jun 26 20:40:24 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"6B6E6"}
+Completed   in 42ms
+
+ActiveRecord::AssociationTypeMismatch (Checkin(#57784356149560) expected, got Object(#57784396770600)):
+  app/models/runner.rb:37:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+
+
+Started GET "/20110618-sf/cpm/runners/RDGJ9" for 75.61.130.254 at Sun Jun 26 20:40:31 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RDGJ9"}
+Completed   in 397ms
+
+ActiveRecord::AssociationTypeMismatch (Checkin(#57784356149560) expected, got Object(#57784396770600)):
+  app/models/runner.rb:37:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:42:12 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 256ms
+
+NoMethodError (undefined method `lat' for #<Checkpoint:0x6b1c9a1572b0>):
+  app/models/runner.rb:30:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:42:48 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 142ms
+
+NoMethodError (undefined method `checkpoint_loc_lng' for #<Checkpoint:0x71b4ce61ab08>):
+  app/models/runner.rb:31:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:42:50 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 105ms
+
+NoMethodError (undefined method `checkpoint_loc_lng' for #<Checkpoint:0x6432922369b8>):
+  app/models/runner.rb:31:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:43:12 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 77ms
+
+NoMethodError (undefined method `lat' for #<Checkpoint:0x79115eb54ad0>):
+  app/models/runner.rb:36:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:43:57 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 207ms
+
+NoMethodError (undefined method `checkpoint_loc_lat' for nil:NilClass):
+  app/models/runner.rb:46:in `map_html'
+  app/models/runner.rb:45:in `map'
+  app/models/runner.rb:45:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:45:29 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (8.5ms)
+Completed 200 OK in 380ms (Views: 64.6ms | ActiveRecord: 132.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.85.205 at Sun Jun 26 20:45:52 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.3ms)
+Completed 200 OK in 378ms (Views: 5.2ms | ActiveRecord: 322.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:55:27 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 392ms
+
+NameError (undefined local variable or method `start_time' for #<Runner:0x78e12e32bb48>):
+  app/models/runner.rb:123:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:56:17 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Completed   in 153ms
+
+TypeError (can't convert Time into Array):
+  app/models/runner.rb:123:in `concat'
+  app/models/runner.rb:123:in `map_html'
+  app/controllers/runners_controller.rb:50:in `show'
+
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.85.205 at Sun Jun 26 20:57:00 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (8.3ms)
+Completed 200 OK in 152ms (Views: 69.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.85.205 at Sun Jun 26 20:57:39 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.4ms)
+Completed 200 OK in 89ms (Views: 3.7ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 20:57:53 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (4.7ms)
+Completed 200 OK in 390ms (Views: 5.6ms | ActiveRecord: 362.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 20:58:46 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (4.7ms)
+Completed 200 OK in 355ms (Views: 5.7ms | ActiveRecord: 325.8ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 20:58:55 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (6.8ms)
+Completed 200 OK in 172ms (Views: 15.5ms | ActiveRecord: 41.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 20:59:38 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (6.4ms)
+Completed 200 OK in 96ms (Views: 11.1ms | ActiveRecord: 22.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 21:00:09 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (24.3ms)
+Completed 200 OK in 199ms (Views: 33.4ms | ActiveRecord: 52.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 21:01:36 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (7.1ms)
+Completed 200 OK in 526ms (Views: 12.6ms | ActiveRecord: 311.2ms)

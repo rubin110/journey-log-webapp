@@ -26,10 +26,25 @@ class Runner < ActiveRecord::Base
     marker_timer_array = []
     min_time = nil
     registration = Checkpoint.find(:first, :conditions => {:checkpoint_id => 0})
-    fake_initial_checkin = Checkin.new(
-    checkin_markers = checkins.sort_by{|c| c.checkin_time}.map do |checkin|
-      lat = checkin.checkpoint.checkpoint_loc_lat || checkin.lat
-      lng = checkin.checkpoint.checkpoint_loc_long || checkin.lng
+    game_start_time = Time.parse('2011-06-18 20:00:00 UTC')
+    lat_array << registration.checkpoint_loc_lat
+    lng_array << registration.checkpoint_loc_long
+    color_array << "0000FF"
+    marker_id_array << "checkin_marker_#{registration.checkpoint_id}"
+    marker_timer_array << game_start_time
+    reg_marker = "var checkin_marker_#{registration.checkpoint_id} = new google.maps.Marker({
+      position: new google.maps.LatLng(#{registration.checkpoint_loc_lat},#{registration.checkpoint_loc_long}),
+      icon: \"/20110618-sf/cpm/icons/spelunking.png\",
+      title:\"#{registration.checkpoint_name} (#{game_start_time.strftime("%H:%M")})\",
+      });
+      checkin_marker_#{registration.checkpoint_id}.setMap(map);
+      google.maps.event.addListener(checkin_marker_#{registration.checkpoint_id}, 'click', function() {
+        infowindow.setContent(\"#{registration.checkpoint_name} (#{game_start_time.strftime("%H:%M")})\");
+        infowindow.open(map,checkin_marker_#{registration.checkpoint_id});
+      });"
+    checkin_markers = [reg_marker] << checkins.sort_by{|c| c.checkin_time}.map do |checkin|
+      lat = (checkin.checkpoint.nil? ? nil : checkin.checkpoint.checkpoint_loc_lat) || checkin.lat
+      lng = (checkin.checkpoint.nil? ? nil : checkin.checkpoint.checkpoint_loc_long) || checkin.lng
       if !lat.nil?
         lat_array << lat
         lng_array << lng
@@ -105,7 +120,7 @@ class Runner < ActiveRecord::Base
       end
     end
     if (marker_timer_array.size > 0)
-      time_range = marker_timer_array.max.to_i - marker_timer_array.min.to_i
+      time_range = marker_timer_array.max.to_i - marker_timer_array.push(game_start_time).min.to_i
       marker_timer_array = marker_timer_array.map {|t| ((t.to_i - marker_timer_array.min.to_i)*5000.0/time_range).round}
     end
     return <<HTML
@@ -143,6 +158,62 @@ src="http://maps.google.com/maps/api/js?sensor=false">
       }, #{(index == marker_timer_array.size-1) ? marker_timer_array[index] + 1000 : marker_timer_array[index+1]});"
       end.join("\n")}
   }
+  var runner_marker = new google.maps.Marker({
+      position: new google.maps.LatLng(#{registration.checkpoint_loc_lat},#{registration.checkpoint_loc_long}),
+      icon: "/20110618-sf/cpm/icons/runner.png",
+      title:"Runner",
+  });
+  runner_marker.setMap(map);
+  runner_marker.setVisible(false);
+  var marker_objects = [checkin_marker_0, #{marker_id_array.join(',')}];
+  var marker_times = [0, #{marker_timer_array.join(',')}];
+  function nextStep(now_time, step_time, max_time) {
+    // update position of runner icon
+    var prev_marker = null;
+    var prev_time = 0;
+    var next_marker = null;
+    for (var i=0; i<marker_objects.length; i++) {
+      var marker = marker_objects[i];
+      if (marker_times[i] <= now_time) {
+        marker.setVisible(true);
+      }
+      if ((prev_marker == null) || (marker_times[i] < now_time)) {
+        prev_marker = marker;
+        prev_time = marker_times[i];
+     }
+      if (marker_times[i] >= now_time) {
+        next_marker = marker;
+        proportion = (now_time - prev_time)*1.0/(marker_times[i] - prev_time);
+        break;
+      }
+    }
+    // Shouldn't happen, but just in case of arithmetic errors...
+    if (next_marker == null) {
+      next_marker = prev_marker;
+    }
+    var new_lng = (next_marker.getPosition().lng() * proportion) + (prev_marker.getPosition().lng() * (1.0 - proportion));
+    var new_lat = (next_marker.getPosition().lat() * proportion) + (prev_marker.getPosition().lat() * (1.0 - proportion));
+    runner_marker.setPosition(new google.maps.LatLng(new_lat, new_lng));
+    runner_marker.setVisible(true);
+
+    if (now_time + step_time <= max_time) {            
+      setTimeout(function() {
+        nextStep(now_time + step_time, step_time, max_time);
+      }, step_time);
+    } else {
+      runner_marker.setVisible(false);
+    }
+  }
+  function play() {
+    // make icons invisible
+    for (var i=0; i<marker_objects.length; i++) {
+      marker_objects[i].setVisible(false);
+    }
+
+    nextStep(0,100,5000);
+  }
+
+
 </script>
 
 HTML
