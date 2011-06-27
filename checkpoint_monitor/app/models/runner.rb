@@ -124,11 +124,11 @@ class Runner < ActiveRecord::Base
       marker_timer_array = marker_timer_array.map {|t| ((t.to_i - marker_timer_array.min.to_i)*5000.0/time_range).round}
     end
     return <<HTML
-    <style type="text/css">
-  html { height: 100% }
-  body { height: 100%; margin: 0px; padding: 0px }
+#    <style type="text/css">
+#  html { height: 100% }
+#  body { height: 100%; margin: 0px; padding: 0px }
   #map_canvas { height: 100% }
-</style>
+#</style>
 <input type="button" value="Replay" onClick="play();" />
 <div id="map_canvas" style="width:100%; height:100%"></div>
 <p>Icons used come from <a href="http://mapicons.nicolasmollet.com/">Nicolas Mollet</a>.</p>
