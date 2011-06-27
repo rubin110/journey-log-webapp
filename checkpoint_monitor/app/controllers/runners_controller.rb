@@ -96,8 +96,8 @@ class RunnersController < ApplicationController
     end
     
     return <<JS
-    <link type="text/css" href="/cpm/stylesheets/jit/base.css" rel="stylesheet" />
-    <link type="text/css" href="/cpm/stylesheets/jit/Hypertree.css" rel="stylesheet" />
+    <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/base.css" rel="stylesheet" />
+    <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/Hypertree.css" rel="stylesheet" />
     
     <!--[if IE]><script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/jit/excanvas.js"></script><![endif]-->
     

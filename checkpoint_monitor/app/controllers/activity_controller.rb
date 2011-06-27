@@ -201,8 +201,8 @@ JS
 
     return <<JS
   <div id="infovis" class="infovis"> </div>
-    <link type="text/css" href="/cpm/stylesheets/jit/base.css" rel="stylesheet" />
-    <link type="text/css" href="/cpm/stylesheets/jit/AreaChart.css" rel="stylesheet" />
+    <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/base.css" rel="stylesheet" />
+    <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/AreaChart.css" rel="stylesheet" />
         <!--[if IE]><script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/jit/excanvas.js"></script><![endif]-->
     
     <!-- JIT Library File -->
