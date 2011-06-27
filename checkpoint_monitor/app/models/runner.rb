@@ -37,7 +37,7 @@ class Runner < ActiveRecord::Base
       end
       lat.nil? ? nil : "var checkin_marker_#{checkin.checkpoint.checkpoint_id} = new google.maps.Marker({
       position: new google.maps.LatLng(#{lat},#{lng}),
-      icon: \"/cpm/icons/jogging.png\",
+      icon: \"/20110618-sf/cpm/icons/jogging.png\",
       title:\"#{checkin.checkpoint.checkpoint_name} (#{checkin.checkin_time.strftime("%H:%M")})\",      
       });
       checkin_marker_#{checkin.checkpoint.checkpoint_id}.setMap(map);
@@ -58,7 +58,7 @@ class Runner < ActiveRecord::Base
       end
       lat.nil? ? nil : "var tagged_#{tagged.tag_id} = new google.maps.Marker({
       position: new google.maps.LatLng(#{lat},#{lng}),
-      icon: \"/cpm/icons/phantom.png\",
+      icon: \"/20110618-sf/cpm/icons/phantom.png\",
       title:\"Tagged by #{tagged.chaser.name}! (#{tagged.tag_time.strftime("%H:%M")})\"
       });
       tagged_#{tagged.tag_id}.setMap(map);
@@ -79,7 +79,7 @@ class Runner < ActiveRecord::Base
       end
       lat.nil? ? nil : "var tag_#{tag.tag_id} = new google.maps.Marker({
       position: new google.maps.LatLng(#{lat},#{lng}),
-      icon: \"/cpm/icons/judo.png\",
+      icon: \"/20110618-sf/cpm/icons/judo.png\",
       title:\"Tagged #{tag.runner.name}!  (#{tag.tag_time.strftime("%H:%M")})\"
       });
       tag_#{tag.tag_id}.setMap(map);
