@@ -1,6 +1,7 @@
 html { 
 	/* height: 100% */
 	background-color: #666;
+	font-family: "Lucida Grande",Verdana;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 	border: 0 1px 0 1px solid #333;
 	background-color: #EEE;
 	width: 900px;
-	height: 100%;
+	height: auto;
 }
 
 .chaser {
@@ -21,7 +22,59 @@ body {
 }
 
 .map_canvas { 
-	height: 600px !important;
+	height: 600px;
 	width: 100%;
 	position: relative;
+}
+
+/* Runner starburst chart */
+
+#container {
+    width: 1000px;
+    height: 600px;
+    margin:0 auto;
+    position:relative;
+}
+
+#left-container, 
+#right-container, 
+#center-container {
+    height:600px;
+	width: 100%;
+    position: relative;
+    top:0;
+}
+
+#left-container, #right-container {
+    width:200px;
+    color:#686c70;
+    text-align: left;
+    overflow: auto;
+    background-color:#fff;
+    background-repeat:no-repeat;
+    border-bottom:1px solid #ddd;
+}
+
+#left-container {
+    left:0;
+    background-position:center right;
+    border-left:1px solid #ddd;
+    
+}
+
+#right-container {
+    right:0;
+    background-position:center left;
+    border-right:1px solid #ddd;
+}
+
+#right-container h4{
+    text-indent:8px;
+}
+
+#center-container {
+    width:600px;
+    left:200px;
+    background-color:#1a1a1a;
+    color:#ccc;
 }
