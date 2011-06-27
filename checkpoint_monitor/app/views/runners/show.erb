@@ -6,7 +6,7 @@
 </table>
 
 <% if (@is_chaser) %>
-  <br /><img src='/photos/smallchaser.png' />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.
+  <br /><img src='../../photos/smallchaser.png' />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.
   <% if (@num_caught > 0) %>
     <br />Chaser descendants:
     <%= @chaser_tree.html_safe %>
@@ -15,7 +15,7 @@
   <!-- <br />Not caught yet! -->
 <% end %>
 
-<br /><img src='/photos/smallrunner.png' />
+<br /><img src='../../photos/smallrunner.png' />
 <% if (@place.present?) %>
 Placed <%= @place.ordinalize %>, out of <%= @num_runners %> runners.
 <% end %>
