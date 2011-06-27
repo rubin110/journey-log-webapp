@@ -10,9 +10,9 @@ class Runner < ActiveRecord::Base
     File.open(photo_file, "wb") { |f| f.write(photo_param.read) }
   end
 
-#  def icon
-#    is_mugshot ? "../../photos/#{runner_id}.jpg" : "../../photos/smallrunner.png"
-#  end
+  def icon
+    is_mugshot ? "../../photos/#{runner_id}.jpg" : "../../photos/smallrunner.png"
+  end
 
   def img_link
     "<img src='#{icon}' #{is_tagged ? "class='chaser'" : ""} />"
