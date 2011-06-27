@@ -15,7 +15,7 @@ class Runner < ActiveRecord::Base
   end
 
   def img_link
-    "<img src='#{icon}' #{is_tagged ? "class='chaser'" : ""} />"
+    "<div class='runner'><img src='#{icon}' #{is_tagged ? "class='chaser'" : ""} /></div>"
   end    
 
   def map_html
@@ -142,7 +142,7 @@ src="http://maps.google.com/maps/api/js?sensor=false">
     var myOptions = {
       zoom: 13,
       minZoom: 13,
-      center: new google.maps.LatLng(37.771258,-122.40881),
+      center: new google.maps.LatLng(37.770579,-122.406921),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };  
     var map = new google.maps.Map(document.getElementById("map_canvas"),
