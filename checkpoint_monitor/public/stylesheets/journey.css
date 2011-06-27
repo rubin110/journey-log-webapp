@@ -1,7 +1,7 @@
 html { 
 	/* height: 100% */
 	background-color: #666;
-	font-family: "Lucida Grande",Verdana;
+	font-family: sans-serif;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 .map_canvas { 
-	height: 600px;
+	height: 500px;
 	width: 100%;
 	position: relative;
 }
@@ -31,7 +31,7 @@ body {
 
 #container {
     width: 900px;
-    height: 600px;
+    height: 500px;
     margin:0 auto;
     position:relative;
 }
@@ -39,32 +39,29 @@ body {
 #left-container, 
 #right-container, 
 #center-container {
-    height:600px;
+    height:500px;
     position:absolute;
     top:0;
 }
 
 #left-container, #right-container {
     width:150px;
-    color:#686c70;
+    /* color:#686c70; */
     text-align: left;
     overflow: auto;
-    background-color:#fff;
+    /* background-color:#fff; */
     background-repeat:no-repeat;
-    border-bottom:1px solid #ddd;
 }
 
 #left-container {
     left:0;
     background-position:center right;
-    border-left:1px solid #ddd;
     
 }
 
 #right-container {
     right:0;
     background-position:center left;
-    border-right:1px solid #ddd;
 }
 
 #right-container h4{
@@ -100,7 +97,7 @@ body {
 #infovis {
     position:relative;
     width:600px;
-    height:600px;
+    height:500px;
     margin:auto;
     overflow:hidden;
 }

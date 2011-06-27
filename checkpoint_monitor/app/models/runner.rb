@@ -142,7 +142,7 @@ src="http://maps.google.com/maps/api/js?sensor=false">
     var myOptions = {
       zoom: 13,
       minZoom: 13,
-      center: new google.maps.LatLng(37.76878,-122.4151),
+      center: new google.maps.LatLng(37.771258,-122.40881),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };  
     var map = new google.maps.Map(document.getElementById("map_canvas"),
