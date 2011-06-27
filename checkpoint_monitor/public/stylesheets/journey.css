@@ -56,16 +56,16 @@ h1, h2 {
 	padding: 5px;
 }
 
-a.menu:link {
+a.menulink:link {
 	color: #FFF; text-decoration: underline; }
 
-a.menu:active {
+a.menulink:active {
 	color: #FFF; text-decoration: none; }
 
-a.menu:visited {
+a.menulink:visited {
 	color: #FFF; text-decoration: underline; }
 
-a.menu:hover {
+a.menulink:hover {
 	color: #FFF; text-decoration: none; }
 
 .runnerlist {
