@@ -1,8 +1,8 @@
-<div style="width:100%; height:100px;"><img style="float: left;" src="<%= @runner.icon %>" />
-<%= @runner.runner_id %><br><big><big><big><%= @runner.player_name ? @runner.player_name : "" %></big></big></big></div>
+<div style="width:100%; height:100px;"><img style="float: left;margin: 0 5px 0 0;" src="<%= @runner.icon %>" />
+<big><%= @runner.runner_id %></big><br><big><big><big><%= @runner.player_name ? @runner.player_name : "" %></big></big></big></div>
 
 <% if (@is_chaser) %>
-  <br /><img src='/20110618-sf/photos/smallchaser.png' />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.
+  <div style="width:100%; height:100px;"><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallchaser.png" />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.</div>
   <% if (@num_caught > 0) %>
     <h3>Chaser descendants:</h3>
     <%= @chaser_tree.html_safe %>
@@ -11,16 +11,16 @@
   <!-- <br />Not caught yet! -->
 <% end %>
 
-<br /><img src='/20110618-sf/photos/smallrunner.png' />
+<div style="width:100%; height:100px;"><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallrunner.png" />
 <% if (@place.present?) %>
-Placed <%= @place.ordinalize %>, out of <%= @num_runners %> runners.
+<big>Placed <%= @place.ordinalize %>, out of <%= @num_runners %> runners.</big>
 <% end %>
 
 <% @your_place_by_checkin.each do |row| %>
-<br />As a runner, made it to <%= row[0].checkpoint.checkpoint_name %> at <%= row[0].checkin_time %> (<%= 
+<br /><small>As a runner, made it to <%= row[0].checkpoint.checkpoint_name %> at <%= row[0].checkin_time %> (<%= 
 row[1].ordinalize %> to reach that checkpoint, <%= 
-row[2].ordinalize %> in the game at that point).
+row[2].ordinalize %> in the game at that point).</small>
 <% end %>
-
+</div>
 <p />
 <%= @map_html.html_safe %>
