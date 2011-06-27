@@ -134,7 +134,7 @@ map_canvas { height: 100% }
 <input type="button" value="Replay" onClick="play();" />
 <div id="map_canvas" class="map_canvas" ></div>
 <!-- <div id="map_canvas" style="/* width:100%; height:100% */"></div> -->
-<p>Icons used come from <a href="http://mapicons.nicolasmollet.com/">Nicolas Mollet</a>.</p>
+<p><small>Icons used come from <a href="http://mapicons.nicolasmollet.com/">Nicolas Mollet</a>.</small></p>
 <script type="text/javascript"
 src="http://maps.google.com/maps/api/js?sensor=false">
 </script>

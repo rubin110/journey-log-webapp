@@ -1,17 +1,17 @@
-<div style="width:100%; height:100px;"><img style="float: left;margin: 0 5px 0 0;" src="<%= @runner.icon %>" />
+<div style="width:100%; height:100px; margin: 0 0 5px 0;"><img style="float: left;margin: 0 5px 0 0;" src="<%= @runner.icon %>" />
 <big><%= @runner.runner_id %></big><br><big><big><big><%= @runner.player_name ? @runner.player_name : "" %></big></big></big></div>
 
 <% if (@is_chaser) %>
-  <div style="width:100%; height:100px;"><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallchaser.png" />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.</div>
+  <div style="width:100%; height:100px; margin: 0 0 5px 0;"><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallchaser.png" />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.</div>
   <% if (@num_caught > 0) %>
     <h3>Chaser descendants:</h3>
-    <%= @chaser_tree.html_safe %>
+    <%= @chaser_tree.html_safe %><br>
   <% end %>
 <% else %>
   <!-- <br />Not caught yet! -->
 <% end %>
 
-<div style="width:100%; height:100px;"><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallrunner.png" />
+<div style="width:100%; height:auto;"><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallrunner.png" />
 <% if (@place.present?) %>
 <big>Placed <%= @place.ordinalize %>, out of <%= @num_runners %> runners.</big>
 <% end %>
