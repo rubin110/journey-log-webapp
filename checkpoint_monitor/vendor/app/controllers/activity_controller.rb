@@ -83,7 +83,7 @@ class ActivityController < ApplicationController
     </td></tr>
     </table>
     
-    <link href="/cpm/stylesheets/flot/layout.css" rel="stylesheet" type="text/css">
+    <link href="/20110618-sf/cpm/stylesheets/flot/layout.css" rel="stylesheet" type="text/css">
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/flot/excanvas.min.js"></script><![endif]-->
     <script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/flot/jquery.js"></script>
     <script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/flot/jquery.flot.js"></script>
@@ -199,8 +199,8 @@ JS
 
     return <<JS
   <div id="infovis" class="infovis"> </div>
-    <link type="text/css" href="/cpm/stylesheets/jit/base.css" rel="stylesheet" />
-    <link type="text/css" href="/cpm/stylesheets/jit/AreaChart.css" rel="stylesheet" />
+    <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/base.css" rel="stylesheet" />
+    <link type="text/css" href="/20110618-sf/cpm/stylesheets/jit/AreaChart.css" rel="stylesheet" />
         <!--[if IE]><script language="javascript" type="text/javascript" src="/cpm/javascripts/vendor/jit/excanvas.js"></script><![endif]-->
     
     <!-- JIT Library File -->
