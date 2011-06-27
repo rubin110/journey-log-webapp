@@ -17,9 +17,13 @@ body {
 	height: auto;
 }
 
+h1, h2 {
+	text-align: center;
+}
+
 .runnerlist {
-	padding: 8px;
-	font-size: 1.3em;
+	position: relative;
+	left: 10px;
 }
 
 li {
