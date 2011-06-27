@@ -30,7 +30,7 @@ body {
 /* Runner starburst chart */
 
 #container {
-    width: 1000px;
+    width: 900px;
     height: 600px;
     margin:0 auto;
     position:relative;
@@ -40,13 +40,12 @@ body {
 #right-container, 
 #center-container {
     height:600px;
-	width: 100%;
-    position: relative;
-    /* top: 0px; */
+    position:absolute;
+    top:0;
 }
 
 #left-container, #right-container {
-    width:auto;
+    width:150px;
     color:#686c70;
     text-align: left;
     overflow: auto;
@@ -74,7 +73,7 @@ body {
 
 #center-container {
     width:600px;
-    /* left:200px; */
+    left:150px;
     background-color:#1a1a1a;
     color:#ccc;
 }
