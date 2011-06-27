@@ -15,7 +15,7 @@ class Runner < ActiveRecord::Base
   end
 
   def img_link
-    "<div class='runner'><img src='#{icon}' #{is_tagged ? "class='chaser'" : ""} /></div>"
+    "<div #{is_tagged ? "class='chaser'" : ""}><img src='#{icon}' class='runner' /></div>"
   end    
 
   def map_html
