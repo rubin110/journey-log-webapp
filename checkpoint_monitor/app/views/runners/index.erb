@@ -1,5 +1,5 @@
 <h1>Journey to the End of the Night - San Francisco - June 2011</h1>
-<h2>Player list</h2>
+<h2>Player List</h2>
 
 <h3>Runners:</h3>
 <ol>
@@ -7,7 +7,7 @@
 <% @ordered_runners.each do |runner| %>
   <li>
   <%= runner.img_link.html_safe %>
-  <%= "<div class='runnerlist'><a href='/20110618-sf/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a><br><big><big>#{runner.player_name}</big></big></div>".html_safe %>
+  <%= "<div class='runnerlist'><a href='/20110618-sf/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a><br><big><big><big>#{runner.player_name}</big></big></big></div>".html_safe %>
   </li>
 <% end %>
 
@@ -22,8 +22,7 @@
 <% @ordered_chasers.each do |runner| %>
   <li>
   <%= runner.img_link.html_safe %>
-  <%= "<div class='runnerlist'><a href='/20110618-sf/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a><br><big><big>#{runner.player_name}</big></big></div><br>".html_safe %>
-  <%= "<big>Tagged #{runner.tags.size} runners</big>" %>
+  <%= "<div class='runnerlist'><a href='/20110618-sf/cpm/runners/#{runner.runner_id}'>#{runner.runner_id}</a><br><big><big><big>#{runner.player_name}</big></big></big><br><big>Tagged #{runner.tags.size} runners</big></div>".html_safe %>
   </li>
 <% end %>
 

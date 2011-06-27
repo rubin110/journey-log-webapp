@@ -8,7 +8,7 @@
 <% if (@is_chaser) %>
   <br /><img src='/20110618-sf/photos/smallchaser.png' />As a chaser, logged <%= @num_caught %> tags -- <%= @num_with_more_catches %> chasers logged more, out of <%= @num_chasers %> chasers logging tags.
   <% if (@num_caught > 0) %>
-    <br />Chaser descendants:
+    <h3>Chaser descendants:</h3>
     <%= @chaser_tree.html_safe %>
   <% end %>
 <% else %>

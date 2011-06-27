@@ -6,9 +6,13 @@ html {
 }
 
 body {
+
+}
+
+.content {
 	padding: 5px; 
 	position: absolute;
-	top: 0px;
+	top: 30px;
 	left: 50%;
 	margin: 0 0 0 -450px;
 	border: 0 1px 0 1px solid #333;
@@ -19,6 +23,17 @@ body {
 
 h1, h2 {
 	text-align: center;
+}
+
+.menu {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	height: 30px;
+	width: 900px;
+	margin: 0 0 0 -450px;
+	border: 0 1px 0 1px solid #333;
+	background-color: #000;
 }
 
 .runnerlist {
@@ -46,7 +61,7 @@ li {
 	height: 94px;
 	width: 94px;
 	overflow: hidden;
-	margin: 0 0 0 -3px;
+	margin: -3px 0 0 -3px;
 	float: left;
 }
 
