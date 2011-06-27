@@ -17,17 +17,24 @@ body {
 	height: auto;
 }
 
-li.runnerlist {
+.runnerlist {
 	padding: 8px;
+	font-size: 1.3em;
+}
+
+li {
+	height: 100px;
+	padding: 2px;
 }
 
 .runner {
 	margin: -3px;
-	display: block;
+	/* display: block; */
 	width: 100px;
 	height: 100px;
-	position: relative;
-	top: 3px;
+	float: left;
+	/* position: relative; */ 
+	/* top: 3px; */
 }
 
 .chaser {
@@ -36,8 +43,8 @@ li.runnerlist {
 	width: 94px;
 	overflow: hidden;
 	margin: 0 0 0 -3px;
+	float: left;
 }
-
 
 .map_canvas { 
 	height: 500px;
