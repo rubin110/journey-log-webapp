@@ -104,7 +104,7 @@ class RunnersController < ApplicationController
     <!-- JIT Library File -->
     <script language="javascript" type="text/javascript" src="/20110618-sf/cpm/javascripts/vendor/jit/jit-yc.js"></script>
     
-    <!-- <div id="container">
+    <div id="container">
     
     <div id="left-container">
 
@@ -113,18 +113,18 @@ class RunnersController < ApplicationController
             </div>
     
             <div id="id-list"></div>
-    </div> -->
+    </div>
     
     <div id="center-container">
         <div id="infovis"></div>    
     
     </div>
     
-    <!-- <div id="right-container">
+    <div id="right-container">
     
     <div id="inner-details"></div>
     
-    </div> -->
+    </div>
     
     <div id="log"></div>
     </div>
