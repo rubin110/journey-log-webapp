@@ -11,7 +11,7 @@ class Runner < ActiveRecord::Base
   end
 
   def icon
-    is_mugshot ? "../../photos/#{runner_id}.jpg" : "../../photos/smallrunner.png"
+    is_mugshot ? "/20110618-sf/photos/#{runner_id}.jpg" : "/20110618-sf/photos/smallrunner.png"
   end
 
   def img_link
