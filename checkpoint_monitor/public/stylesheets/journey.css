@@ -17,19 +17,25 @@ body {
 	height: auto;
 }
 
+li.runnerlist {
+	padding: 8px;
+}
+
 .runner {
 	margin: -3px;
 	display: block;
 	width: 100px;
-	height: 100px:
+	height: 100px;
+	position: relative;
+	top: 3px;
 }
 
 .chaser {
-	border: 3px solid #dd0000;	
-	float: left;
+	border: 3px solid #dd0000;
 	height: 94px;
 	width: 94px;
 	overflow: hidden;
+	margin: 0 0 0 -3px;
 }
 
 
