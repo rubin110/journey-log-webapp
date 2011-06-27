@@ -1,6 +1,6 @@
 html { 
 	/* height: 100% */
-	background-color: #000;
+	background-color: #666;
 }
 
 body {
@@ -20,6 +20,8 @@ body {
    border:2px solid #dd0000;
 }
 
-/* map_canvas { 
+.map_canvas { 
 	height: 600px !important;
-} */
+	width: 100%;
+	position: relative;
+}
