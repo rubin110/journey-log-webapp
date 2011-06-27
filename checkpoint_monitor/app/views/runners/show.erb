@@ -11,7 +11,7 @@
   <!-- <br />Not caught yet! -->
 <% end %>
 
-<div style="width:100%; height:auto;"><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallrunner.png" />
+<div style="width:100%; height:100px; margin: 0 0 5px 0;""><img style="float: left;margin: 0 5px 0 0;" src="/20110618-sf/photos/smallrunner.png" />
 <% if (@place.present?) %>
 <big>Placed <%= @place.ordinalize %>, out of <%= @num_runners %> runners.</big>
 <% end %>
@@ -21,6 +21,6 @@
 row[1].ordinalize %> to reach that checkpoint, <%= 
 row[2].ordinalize %> in the game at that point).</small>
 <% end %>
-</div>
+</div><br>
 <p />
 <%= @map_html.html_safe %>
