@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><script type="text/javascript">var NREUMQ=[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
-  <title>Journey</title>
+  <title>Journey Log - Journey to the End of the Night - San Francisco - June 2011 - Five Years Running</title>
   <link href="/20110618-sf/cpm/stylesheets/journey.css" rel="stylesheet" type="text/css" />
   <link href="/stylesheets/journey.css?1309163392" media="screen" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/scaffold.css?1309030815" media="screen" rel="stylesheet" type="text/css" />
@@ -16,7 +16,7 @@
 <meta name="csrf-token" content="3v841JITEpLJ+KC2t0PlZVydOM/b5UYtHUsrn0kC16M="/>
 </head>
 <body>
-	<div class="menu"><a class="menulink" href="/20110618-sf">Journey to the End of the Night</a> - San Francisco - June 2011 &#8226; <a class="menulink" href="/20110618-sf/cpm/runners">Player List</a> &#8226; <a class="menulink" href="/20110618-sf/cpm/runners/chaser_tree">Chaser Tree</a> &#8226; <a class="menulink" href="/20110618-sf/manifest">Manifest</a> &#8226; <a class="menulink" href="http://5yearsrunning.com">5 Years Running</a> &#8226; <a class="menulink" href="http://totheendofthenight.com">To the End of the Night</a> &#8226; <a class="menulink" href="http://sf0.org/tasks/Journey-to-the-End-of-the-Night-Five-Years-Running-in-SF/">SFØ</a></div>
+	<div class="menu"><a href="/">Journey Log</a> &#8226; <a class="menulink" href="/20110618-sf">Journey to the End of the Night</a> - San Francisco - June 2011 &#8226; <a class="menulink" href="/20110618-sf/cpm/runners">Player List</a> &#8226; <a class="menulink" href="/20110618-sf/cpm/runners/chaser_tree">Chaser Tree</a> &#8226; <a class="menulink" href="/20110618-sf/manifest">Manifest</a> &#8226; <a class="menulink" href="http://5yearsrunning.com">Five Years Running</a> &#8226; <a class="menulink" href="http://totheendofthenight.com">To the End of the Night</a> &#8226; <a class="menulink" href="http://sf0.org/tasks/Journey-to-the-End-of-the-Night-Five-Years-Running-in-SF/">SF&Oslash;</a></div>
 
 	<div class="content">
 		<img style="position: relative; top: 0px; left: 50%; height: 350px; width: 600px; margin: 0 0 0 -300px; padding: 5px;" src="_resources/5yearsrunning-blogposter1.jpg">
