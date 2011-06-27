@@ -18,11 +18,14 @@ body {
 }
 
 .runner {
-	border: 3px solid #00dd00;	
+	margin: -3px;
+	display: block;
+	width: 100px;
+	height: 100px:
 }
 
 .chaser {
-	border: 3px solid #dd0000;
+	border: 3px solid #dd0000;	
 	float: left;
 	height: 94px;
 	width: 94px;
