@@ -40,7 +40,7 @@ from tags union all select runner_id from checkins) as all_runners;").first[0]
         if (current_positions.has_key?(checkin.runner_id))
           current_counts[current_positions[checkin.runner_id]] = current_counts[current_positions[checkin.runner_id]] - 1
         end
-        if (checkin.checkpoint.checkpoint_position.present?)
+        if (checkin.checkpoint.present? && checkin.checkpoint.checkpoint_position.present?)
           current_positions[checkin.runner_id] = checkin.checkpoint.checkpoint_position
 #          logger.info("Checking in at cp #{checkin.checkpoint.checkpoint_position}, currently #{current_counts.inspect}")
           current_counts[checkin.checkpoint.checkpoint_position] = current_counts[checkin.checkpoint.checkpoint_position] + 1

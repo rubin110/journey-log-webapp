@@ -17491,3 +17491,1292 @@ Started GET "/20110618-sf/cpm/runners/YUGKW" for 173.228.85.205 at Sun Jun 26 21
   Parameters: {"runner_id"=>"YUGKW"}
 Rendered runners/show.erb within layouts/application (7.1ms)
 Completed 200 OK in 526ms (Views: 12.6ms | ActiveRecord: 311.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/2M1G8" for 173.228.85.205 at Sun Jun 26 21:06:50 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2M1G8"}
+Rendered runners/show.erb within layouts/application (6.4ms)
+Completed 200 OK in 651ms (Views: 12.1ms | ActiveRecord: 420.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/IJ1ME" for 173.228.85.205 at Sun Jun 26 21:06:52 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (9.9ms)
+Completed 200 OK in 366ms (Views: 11.0ms | ActiveRecord: 294.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/5MDRN" for 173.228.85.205 at Sun Jun 26 21:06:57 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"5MDRN"}
+Rendered runners/show.erb within layouts/application (11.0ms)
+Completed 200 OK in 218ms (Views: 12.0ms | ActiveRecord: 173.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/IJ1ME" for 173.228.123.71 at Sun Jun 26 21:08:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (7.6ms)
+Completed 200 OK in 174ms (Views: 8.5ms | ActiveRecord: 133.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/5MDRN" for 70.36.139.91 at Sun Jun 26 21:17:00 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"5MDRN"}
+Rendered runners/show.erb within layouts/application (27.0ms)
+Completed 200 OK in 530ms (Views: 67.2ms | ActiveRecord: 273.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/IJ1ME" for 70.36.139.91 at Sun Jun 26 21:17:41 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (9.4ms)
+Completed 200 OK in 91ms (Views: 10.4ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2M1G8" for 70.36.139.91 at Sun Jun 26 21:17:42 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2M1G8"}
+Rendered runners/show.erb within layouts/application (2.2ms)
+Completed 200 OK in 704ms (Views: 3.1ms | ActiveRecord: 653.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 21:29:45 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (91.2ms)
+Completed 200 OK in 1537ms (Views: 147.9ms | ActiveRecord: 1809.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/IJ1ME" for 173.228.123.71 at Sun Jun 26 21:30:02 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (16.4ms)
+Completed 200 OK in 1803ms (Views: 17.5ms | ActiveRecord: 1387.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Sun Jun 26 21:30:19 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.6ms)
+Completed 200 OK in 6363ms (Views: 27.9ms | ActiveRecord: 5741.6ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 24.7.120.98 at Sun Jun 26 21:30:37 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.3ms)
+Completed 200 OK in 823ms (Views: 3.2ms | ActiveRecord: 304.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/IJ1ME" for 24.7.120.98 at Sun Jun 26 21:30:51 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IJ1ME"}
+Rendered runners/show.erb within layouts/application (7.4ms)
+Completed 200 OK in 51ms (Views: 8.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Sun Jun 26 21:31:20 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (821.4ms)
+Completed 200 OK in 14410ms (Views: 90.6ms | ActiveRecord: 13367.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 21:34:00 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.7ms)
+Completed 200 OK in 7791ms (Views: 6.7ms | ActiveRecord: 7758.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 21:35:04 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (27.0ms)
+Completed 200 OK in 439ms (Views: 28.0ms | ActiveRecord: 389.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 21:43:11 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (12.8ms)
+Completed 200 OK in 93110ms (Views: 84.8ms | ActiveRecord: 71237.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 21:43:11 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (7.7ms)
+Completed 200 OK in 94912ms (Views: 15.1ms | ActiveRecord: 71091.8ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 21:52:47 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (7.7ms)
+Completed 200 OK in 49851ms (Views: 13.3ms | ActiveRecord: 33284.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 21:55:19 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.9ms)
+Completed 200 OK in 31659ms (Views: 7.0ms | ActiveRecord: 31620.3ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 21:55:54 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (11.0ms)
+Completed 200 OK in 19442ms (Views: 37.8ms | ActiveRecord: 17738.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:02:30 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (8.0ms)
+Completed 200 OK in 31951ms (Views: 68.1ms | ActiveRecord: 15902.8ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:02:30 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (7.9ms)
+Completed 200 OK in 32326ms (Views: 14.1ms | ActiveRecord: 21813.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:13:27 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (7.6ms)
+Completed 200 OK in 21912ms (Views: 23.2ms | ActiveRecord: 9067.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:15:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.6ms)
+Completed 200 OK in 340ms (Views: 6.8ms | ActiveRecord: 310.6ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.85.205 at Sun Jun 26 22:17:15 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (6.0ms)
+Completed 200 OK in 198ms (Views: 7.1ms | ActiveRecord: 171.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:17:45 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.0ms)
+Completed 200 OK in 411ms (Views: 6.0ms | ActiveRecord: 383.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:22:04 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.3ms)
+Completed 200 OK in 5747ms (Views: 6.4ms | ActiveRecord: 5718.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:23:41 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.0ms)
+Completed 200 OK in 2272ms (Views: 6.1ms | ActiveRecord: 2244.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:24:26 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.6ms)
+Completed 200 OK in 45ms (Views: 6.8ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:27:43 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.4ms)
+Completed 200 OK in 1001ms (Views: 6.5ms | ActiveRecord: 971.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:28:25 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (8.0ms)
+Completed 200 OK in 8578ms (Views: 52.3ms | ActiveRecord: 6238.3ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 22:33:53 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (9.6ms)
+Completed 200 OK in 2715ms (Views: 97.2ms | ActiveRecord: 2044.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 22:34:44 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (96.6ms)
+Completed 200 OK in 1941ms (Views: 101.8ms | ActiveRecord: 1350.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 22:34:18 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (2979.7ms)
+Completed 200 OK in 29111ms (Views: 245.5ms | ActiveRecord: 27947.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 22:38:39 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.5ms)
+Completed 200 OK in 702ms (Views: 3.6ms | ActiveRecord: 529.8ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 22:46:20 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (95.9ms)
+Completed 200 OK in 1601ms (Views: 100.9ms | ActiveRecord: 1151.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 22:50:24 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (91.3ms)
+Completed 200 OK in 505ms (Views: 97.0ms | ActiveRecord: 519.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 22:56:39 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (104.7ms)
+Completed 200 OK in 1876ms (Views: 109.9ms | ActiveRecord: 1643.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 23:03:17 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (27.0ms)
+Completed 200 OK in 4367ms (Views: 62.9ms | ActiveRecord: 4745.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/V1C6U" for 173.228.123.71 at Sun Jun 26 23:03:30 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"V1C6U"}
+Rendered runners/show.erb within layouts/application (3.7ms)
+Completed 200 OK in 7732ms (Views: 4.9ms | ActiveRecord: 7694.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Sun Jun 26 23:06:06 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (7.3ms)
+Completed 200 OK in 8247ms (Views: 8.4ms | ActiveRecord: 8180.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 23:09:52 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.4ms)
+Completed 200 OK in 1473ms (Views: 6.3ms | ActiveRecord: 1441.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Sun Jun 26 23:10:03 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (9.0ms)
+Completed 200 OK in 8630ms (Views: 9.9ms | ActiveRecord: 8591.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 23:12:58 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (90.9ms)
+Completed 200 OK in 1704ms (Views: 116.5ms | ActiveRecord: 2364.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 23:12:37 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (2015.6ms)
+Completed 200 OK in 25345ms (Views: 213.3ms | ActiveRecord: 24079.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Sun Jun 26 23:13:19 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (3.7ms)
+Completed 200 OK in 13802ms (Views: 4.8ms | ActiveRecord: 13627.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Sun Jun 26 23:14:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.3ms)
+Completed 200 OK in 7926ms (Views: 3.5ms | ActiveRecord: 7885.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Sun Jun 26 23:27:32 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (5.9ms)
+Completed 200 OK in 3182ms (Views: 45.9ms | ActiveRecord: 2000.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Sun Jun 26 23:27:36 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (9.6ms)
+Completed 200 OK in 670ms (Views: 14.4ms | ActiveRecord: 281.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 23:27:24 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (4840.4ms)
+Completed 200 OK in 24861ms (Views: 3749.3ms | ActiveRecord: 20143.1ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 23:27:24 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (9120.5ms)
+Completed 200 OK in 25425ms (Views: 7575.7ms | ActiveRecord: 16257.8ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 23:40:12 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (3083.6ms)
+Completed 200 OK in 80095ms (Views: 962.4ms | ActiveRecord: 78957.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 23:42:02 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (217.3ms)
+Completed 200 OK in 11011ms (Views: 188.9ms | ActiveRecord: 9924.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 23:59:09 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (778.7ms)
+Completed 200 OK in 19731ms (Views: 306.3ms | ActiveRecord: 18473.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Sun Jun 26 23:59:29 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (99.4ms)
+Completed 200 OK in 3674ms (Views: 84.0ms | ActiveRecord: 2479.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Mon Jun 27 00:01:03 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (1084.8ms)
+Completed 200 OK in 29646ms (Views: 955.7ms | ActiveRecord: 27942.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Mon Jun 27 00:17:36 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (386.1ms)
+Completed 200 OK in 5831ms (Views: 223.7ms | ActiveRecord: 4267.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Mon Jun 27 00:26:07 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (207.8ms)
+Completed 200 OK in 2566ms (Views: 100.6ms | ActiveRecord: 1510.8ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 00:31:08 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (6.0ms)
+Completed 200 OK in 546ms (Views: 82.8ms | ActiveRecord: 179.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Mon Jun 27 00:31:09 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (9.4ms)
+Completed 200 OK in 209ms (Views: 13.6ms | ActiveRecord: 166.1ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Mon Jun 27 00:31:11 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (7.5ms)
+Completed 200 OK in 125ms (Views: 14.4ms | ActiveRecord: 36.1ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 00:44:12 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (5.7ms)
+Completed 200 OK in 367ms (Views: 11.1ms | ActiveRecord: 140.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 00:44:17 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.4ms)
+Completed 200 OK in 64ms (Views: 3.4ms | ActiveRecord: 26.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 00:52:35 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (5.0ms)
+Completed 200 OK in 223ms (Views: 10.0ms | ActiveRecord: 87.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 00:52:36 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (3.2ms)
+Completed 200 OK in 168ms (Views: 4.2ms | ActiveRecord: 119.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 01:00:05 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (23.7ms)
+Completed 200 OK in 571ms (Views: 29.2ms | ActiveRecord: 298.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:04:48 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.6ms)
+Completed 200 OK in 1103ms (Views: 34.7ms | ActiveRecord: 398.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:07:58 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.3ms)
+Completed 200 OK in 744ms (Views: 3.3ms | ActiveRecord: 199.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:08:03 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.2ms)
+Completed 200 OK in 1595ms (Views: 3.3ms | ActiveRecord: 1029.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:08:15 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.8ms)
+Completed 200 OK in 700ms (Views: 7.7ms | ActiveRecord: 183.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:12:08 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.1ms)
+Completed 200 OK in 716ms (Views: 3.1ms | ActiveRecord: 189.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:13:47 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.1ms)
+Completed 200 OK in 782ms (Views: 3.0ms | ActiveRecord: 241.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:14:25 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (7.0ms)
+Completed 200 OK in 757ms (Views: 12.2ms | ActiveRecord: 227.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:17:10 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.2ms)
+Completed 200 OK in 691ms (Views: 3.1ms | ActiveRecord: 174.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:19:05 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.1ms)
+Completed 200 OK in 1068ms (Views: 8.3ms | ActiveRecord: 459.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:19:08 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.2ms)
+Completed 200 OK in 724ms (Views: 3.4ms | ActiveRecord: 192.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:22:08 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.3ms)
+Completed 200 OK in 695ms (Views: 3.3ms | ActiveRecord: 130.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:23:01 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (3.6ms)
+Completed 200 OK in 269ms (Views: 5.6ms | ActiveRecord: 206.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Mon Jun 27 01:23:15 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (85.0ms)
+Completed 200 OK in 1878ms (Views: 77.5ms | ActiveRecord: 882.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Mon Jun 27 01:30:20 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (178.3ms)
+Completed 200 OK in 2585ms (Views: 132.4ms | ActiveRecord: 1532.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:30:24 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (5.6ms)
+Completed 200 OK in 1395ms (Views: 7.7ms | ActiveRecord: 631.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:31:26 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (3.4ms)
+Completed 200 OK in 226ms (Views: 5.4ms | ActiveRecord: 150.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:36:15 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 3.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/V1C6U" for 173.228.123.71 at Mon Jun 27 01:36:41 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"V1C6U"}
+Rendered runners/show.erb within layouts/application (3.8ms)
+Completed 200 OK in 304ms (Views: 5.0ms | ActiveRecord: 245.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/V1C6U" for 173.228.123.71 at Mon Jun 27 01:37:45 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"V1C6U"}
+Rendered runners/show.erb within layouts/application (3.4ms)
+Completed 200 OK in 169ms (Views: 4.5ms | ActiveRecord: 145.1ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/V1C6U" for 173.228.123.71 at Mon Jun 27 01:37:58 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"V1C6U"}
+Rendered runners/show.erb within layouts/application (5.8ms)
+Completed 200 OK in 204ms (Views: 11.4ms | ActiveRecord: 140.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:39:00 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 3.4ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:41:01 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 3.4ms | ActiveRecord: 15.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:41:14 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (191.2ms)
+Completed 200 OK in 519ms (Views: 196.7ms | ActiveRecord: 480.8ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/V1C6U" for 173.228.123.71 at Mon Jun 27 01:41:15 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"V1C6U"}
+Rendered runners/show.erb within layouts/application (13.4ms)
+Completed 200 OK in 159ms (Views: 18.6ms | ActiveRecord: 36.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 01:41:15 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (3.7ms)
+Completed 200 OK in 162ms (Views: 4.8ms | ActiveRecord: 68.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Mon Jun 27 01:41:17 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (8.5ms)
+Completed 200 OK in 107ms (Views: 13.4ms | ActiveRecord: 17.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Mon Jun 27 01:41:18 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (8.5ms)
+Completed 200 OK in 100ms (Views: 14.2ms | ActiveRecord: 16.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Mon Jun 27 01:45:29 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (8.8ms)
+Completed 200 OK in 290ms (Views: 17.9ms | ActiveRecord: 92.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Mon Jun 27 01:45:29 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (36.4ms)
+Completed 200 OK in 266ms (Views: 45.3ms | ActiveRecord: 51.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/V1C6U" for 173.228.123.71 at Mon Jun 27 01:45:29 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"V1C6U"}
+Rendered runners/show.erb within layouts/application (5.7ms)
+Completed 200 OK in 205ms (Views: 11.5ms | ActiveRecord: 37.1ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 01:45:30 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (5.7ms)
+Completed 200 OK in 305ms (Views: 11.2ms | ActiveRecord: 55.7ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/" for 173.228.123.71 at Mon Jun 27 01:45:30 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (87.3ms)
+Completed 200 OK in 1855ms (Views: 95.8ms | ActiveRecord: 782.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:45:36 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (3.4ms)
+Completed 200 OK in 302ms (Views: 5.7ms | ActiveRecord: 126.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:48:21 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (3.3ms)
+Completed 200 OK in 718ms (Views: 22.7ms | ActiveRecord: 157.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/M5ME8" for 173.228.123.71 at Mon Jun 27 01:51:24 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M5ME8"}
+Rendered runners/show.erb within layouts/application (9.3ms)
+Completed 200 OK in 127ms (Views: 15.0ms | ActiveRecord: 96.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Mon Jun 27 01:51:27 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (465.9ms)
+Completed 200 OK in 4277ms (Views: 1034.2ms | ActiveRecord: 2305.1ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 01:51:33 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.9ms)
+Completed 200 OK in 1212ms (Views: 7.9ms | ActiveRecord: 622.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/4QX2A" for 173.228.123.71 at Mon Jun 27 01:52:57 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"4QX2A"}
+Rendered runners/show.erb within layouts/application (4.5ms)
+Completed 200 OK in 266ms (Views: 6.9ms | ActiveRecord: 107.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/XVQAY" for 173.228.123.71 at Mon Jun 27 01:54:34 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"XVQAY"}
+Rendered runners/show.erb within layouts/application (6.1ms)
+Completed 200 OK in 325ms (Views: 7.0ms | ActiveRecord: 292.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Mon Jun 27 01:55:21 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (258.7ms)
+Completed 200 OK in 2430ms (Views: 227.3ms | ActiveRecord: 1308.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2HNC7" for 173.228.123.71 at Mon Jun 27 01:55:34 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2HNC7"}
+Rendered runners/show.erb within layouts/application (5.2ms)
+Completed 200 OK in 219ms (Views: 6.3ms | ActiveRecord: 102.0ms)
+
+
+Started GET "/20110618-sf/cpm/runners/3XHWU" for 173.228.123.71 at Mon Jun 27 01:55:46 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"3XHWU"}
+Rendered runners/show.erb within layouts/application (4.7ms)
+Completed 200 OK in 115ms (Views: 5.9ms | ActiveRecord: 88.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/TXZUI" for 173.228.123.71 at Mon Jun 27 01:55:51 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"TXZUI"}
+Rendered runners/show.erb within layouts/application (5.6ms)
+Completed 200 OK in 297ms (Views: 6.7ms | ActiveRecord: 270.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/ZLUCJ" for 173.228.123.71 at Mon Jun 27 01:56:00 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"ZLUCJ"}
+Rendered runners/show.erb within layouts/application (4.2ms)
+Completed 200 OK in 181ms (Views: 5.2ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/M2IBI" for 173.228.123.71 at Mon Jun 27 01:56:12 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"M2IBI"}
+Rendered runners/show.erb within layouts/application (5.0ms)
+Completed 200 OK in 125ms (Views: 6.1ms | ActiveRecord: 96.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/V1C6U" for 173.228.123.71 at Mon Jun 27 01:56:38 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"V1C6U"}
+Rendered runners/show.erb within layouts/application (15.7ms)
+Completed 200 OK in 45ms (Views: 16.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/E6KRE" for 173.228.123.71 at Mon Jun 27 01:56:52 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"E6KRE"}
+Rendered runners/show.erb within layouts/application (3.2ms)
+Completed 200 OK in 70ms (Views: 4.2ms | ActiveRecord: 50.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/E6KRE" for 173.228.123.71 at Mon Jun 27 01:57:08 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"E6KRE"}
+Rendered runners/show.erb within layouts/application (3.1ms)
+Completed 200 OK in 22ms (Views: 4.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners/3QTP2" for 173.228.123.71 at Mon Jun 27 01:57:17 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"3QTP2"}
+Rendered runners/show.erb within layouts/application (3.8ms)
+Completed 200 OK in 37ms (Views: 4.7ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.123.71 at Mon Jun 27 01:57:53 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (2.9ms)
+Completed 200 OK in 62ms (Views: 4.0ms | ActiveRecord: 18.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Mon Jun 27 02:14:50 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (144.8ms)
+Completed 200 OK in 2090ms (Views: 130.1ms | ActiveRecord: 1088.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Mon Jun 27 02:37:01 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (134.6ms)
+Completed 200 OK in 4584ms (Views: 135.2ms | ActiveRecord: 3573.2ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 173.228.123.71 at Mon Jun 27 02:37:14 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (8.0ms)
+Completed 200 OK in 292ms (Views: 35.0ms | ActiveRecord: 195.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 173.228.123.71 at Mon Jun 27 02:42:05 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.5ms)
+Completed 200 OK in 87ms (Views: 6.4ms | ActiveRecord: 60.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 80.108.241.171 at Mon Jun 27 02:42:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.5ms)
+Completed 200 OK in 49ms (Views: 6.5ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 80.108.241.171 at Mon Jun 27 02:42:36 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (92.8ms)
+Completed 200 OK in 1656ms (Views: 71.3ms | ActiveRecord: 639.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 80.108.241.171 at Mon Jun 27 02:42:42 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.6ms)
+Completed 200 OK in 1030ms (Views: 22.8ms | ActiveRecord: 416.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 80.108.241.171 at Mon Jun 27 02:44:07 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.0ms)
+Completed 200 OK in 655ms (Views: 2.9ms | ActiveRecord: 221.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.123.71 at Mon Jun 27 02:44:22 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.1ms)
+Completed 200 OK in 1433ms (Views: 3.1ms | ActiveRecord: 857.7ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/5MDRN" for 70.36.227.84 at Mon Jun 27 08:16:12 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"5MDRN"}
+Rendered runners/show.erb within layouts/application (120.8ms)
+Completed 200 OK in 2338ms (Views: 290.0ms | ActiveRecord: 1612.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 64.81.66.135 at Mon Jun 27 08:19:19 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (265.9ms)
+Completed 200 OK in 2741ms (Views: 225.8ms | ActiveRecord: 1606.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 64.81.66.135 at Mon Jun 27 08:20:29 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (7.1ms)
+Completed 200 OK in 248ms (Views: 8.2ms | ActiveRecord: 115.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/YA8TS" for 64.81.66.135 at Mon Jun 27 08:20:38 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YA8TS"}
+Rendered runners/show.erb within layouts/application (7.2ms)
+Completed 200 OK in 379ms (Views: 8.3ms | ActiveRecord: 342.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 64.81.66.135 at Mon Jun 27 08:21:57 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (328.8ms)
+Completed 200 OK in 2156ms (Views: 113.8ms | ActiveRecord: 1053.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners/6B6E6" for 64.81.66.135 at Mon Jun 27 08:22:34 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"6B6E6"}
+Rendered runners/show.erb within layouts/application (4.5ms)
+Completed 200 OK in 438ms (Views: 5.4ms | ActiveRecord: 410.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/YA8TS" for 64.81.66.135 at Mon Jun 27 08:23:18 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YA8TS"}
+Rendered runners/show.erb within layouts/application (8.0ms)
+Completed 200 OK in 163ms (Views: 9.1ms | ActiveRecord: 124.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Mon Jun 27 09:34:35 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (375.7ms)
+Completed 200 OK in 5800ms (Views: 401.7ms | ActiveRecord: 3604.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 173.228.85.205 at Mon Jun 27 09:34:44 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (3.2ms)
+Completed 200 OK in 1915ms (Views: 42.4ms | ActiveRecord: 888.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/T593M" for 173.228.85.205 at Mon Jun 27 09:35:17 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"T593M"}
+Rendered runners/show.erb within layouts/application (9.7ms)
+Completed 200 OK in 664ms (Views: 62.7ms | ActiveRecord: 521.5ms)
+
+
+Started GET "/20110618-sf/cpm/checkpoints" for 173.228.85.205 at Mon Jun 27 09:37:57 -0700 2011
+  Processing by CheckpointsController#index as HTML
+Rendered checkpoints/index.html.erb within layouts/application (1160.0ms)
+Completed 200 OK in 1323ms (Views: 467.8ms | ActiveRecord: 853.6ms)
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Mon Jun 27 09:38:06 -0700 2011
+  Processing by ActivityController#status as HTML
+undefined method `checkpoint_position' for nil:NilClass: /home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:43:in `status'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `each'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `status'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__382432501__process_action__1804494960__callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:253:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/method_tracer.rb:191:in `trace_execution_scoped'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:248:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/rack/browser_monitoring.rb:18:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `send'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'dispatch.fcgi:25:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:57:in `serve'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:25:in `run'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `each'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `run'dispatch.fcgi:29
+Rendered activity/status.erb within layouts/application (10.7ms)
+Completed 200 OK in 1416ms (Views: 76.4ms | ActiveRecord: 765.5ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.123.71 at Mon Jun 27 09:55:42 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (137.3ms)
+Completed 200 OK in 2911ms (Views: 185.5ms | ActiveRecord: 1892.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/UY44Z" for 173.228.123.71 at Mon Jun 27 09:56:00 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"UY44Z"}
+Rendered runners/show.erb within layouts/application (8.7ms)
+Completed 200 OK in 334ms (Views: 30.1ms | ActiveRecord: 212.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 24.118.25.53 at Mon Jun 27 10:12:07 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (111.9ms)
+Completed 200 OK in 2247ms (Views: 143.6ms | ActiveRecord: 1250.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 24.118.25.53 at Mon Jun 27 10:12:35 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (2.4ms)
+Completed 200 OK in 860ms (Views: 47.0ms | ActiveRecord: 337.7ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 204.16.153.246 at Mon Jun 27 10:18:38 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (261.9ms)
+Completed 200 OK in 3317ms (Views: 250.6ms | ActiveRecord: 1790.7ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 208.80.185.15 at Mon Jun 27 11:11:09 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (755.6ms)
+Completed 200 OK in 5399ms (Views: 238.5ms | ActiveRecord: 3974.6ms)
+
+
+Started GET "/20110618-sf/cpm/runners/LKTDB" for 208.80.185.15 at Mon Jun 27 11:11:42 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"LKTDB"}
+Rendered runners/show.erb within layouts/application (19.9ms)
+Completed 200 OK in 1175ms (Views: 43.0ms | ActiveRecord: 994.7ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 199.83.223.33 at Mon Jun 27 11:31:38 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (77.3ms)
+Completed 200 OK in 2179ms (Views: 192.4ms | ActiveRecord: 1094.9ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 199.83.223.33 at Mon Jun 27 11:31:38 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (120.4ms)
+Completed 200 OK in 3568ms (Views: 112.0ms | ActiveRecord: 2165.7ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/chaser_tree" for 128.32.171.247 at Mon Jun 27 15:27:58 -0700 2011
+  Processing by RunnersController#chaser_tree as HTML
+Rendered runners/chaser_tree.erb within layouts/application (32.3ms)
+Completed 200 OK in 2491ms (Views: 99.9ms | ActiveRecord: 1312.2ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 128.32.171.247 at Mon Jun 27 15:27:58 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (241.9ms)
+Completed 200 OK in 4033ms (Views: 100.8ms | ActiveRecord: 2792.9ms)
+
+
+Started GET "/20110618-sf/cpm/runners/6B6E6" for 128.32.171.247 at Mon Jun 27 15:28:28 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"6B6E6"}
+Rendered runners/show.erb within layouts/application (6.7ms)
+Completed 200 OK in 835ms (Views: 25.9ms | ActiveRecord: 139.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/YUGKW" for 128.32.171.247 at Mon Jun 27 15:28:29 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"YUGKW"}
+Rendered runners/show.erb within layouts/application (5.1ms)
+Completed 200 OK in 428ms (Views: 6.2ms | ActiveRecord: 399.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/2XVEN" for 128.32.171.247 at Mon Jun 27 15:28:30 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"2XVEN"}
+Rendered runners/show.erb within layouts/application (6.7ms)
+Completed 200 OK in 80ms (Views: 7.8ms | ActiveRecord: 45.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/LE28P" for 128.32.171.247 at Mon Jun 27 15:32:11 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"LE28P"}
+Rendered runners/show.erb within layouts/application (16.4ms)
+Completed 200 OK in 635ms (Views: 18.6ms | ActiveRecord: 427.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/IQK4R" for 128.32.171.247 at Mon Jun 27 15:33:50 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"IQK4R"}
+Rendered runners/show.erb within layouts/application (6.5ms)
+Completed 200 OK in 388ms (Views: 7.6ms | ActiveRecord: 349.6ms)
+
+
+Started GET "/20110618-sf/cpm/runners/9I6CL" for 128.32.171.247 at Mon Jun 27 15:34:54 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"9I6CL"}
+Rendered runners/show.erb within layouts/application (2.4ms)
+Completed 200 OK in 123ms (Views: 3.5ms | ActiveRecord: 106.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/RSZSQ" for 208.80.185.15 at Mon Jun 27 15:38:03 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"RSZSQ"}
+Rendered runners/show.erb within layouts/application (5.5ms)
+Completed 200 OK in 227ms (Views: 6.5ms | ActiveRecord: 198.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 136.152.4.50 at Mon Jun 27 15:43:10 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (143.2ms)
+Completed 200 OK in 6824ms (Views: 92.1ms | ActiveRecord: 5350.6ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 66.220.147.247 at Mon Jun 27 15:43:16 -0700 2011
+  Processing by RunnersController#index as */*
+Rendered runners/index.erb within layouts/application (95.3ms)
+Completed 200 OK in 2276ms (Views: 99.2ms | ActiveRecord: 1234.6ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 136.152.4.50 at Mon Jun 27 15:47:11 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (71.6ms)
+Completed 200 OK in 1751ms (Views: 61.3ms | ActiveRecord: 739.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/29TGS" for 136.152.4.50 at Mon Jun 27 15:47:23 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"29TGS"}
+Rendered runners/show.erb within layouts/application (4.5ms)
+Completed 200 OK in 387ms (Views: 5.7ms | ActiveRecord: 364.7ms)
+
+
+Started GET "/20110618-sf/cpm/runners/29TGS" for 136.152.4.50 at Mon Jun 27 15:47:23 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"29TGS"}
+Rendered runners/show.erb within layouts/application (6.4ms)
+Completed 200 OK in 596ms (Views: 10.2ms | ActiveRecord: 369.3ms)
+
+
+Started GET "/20110618-sf/cpm/runners/ZRDUZ" for 136.152.4.50 at Mon Jun 27 15:47:50 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"ZRDUZ"}
+Rendered runners/show.erb within layouts/application (4.0ms)
+Completed 200 OK in 121ms (Views: 5.0ms | ActiveRecord: 100.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/VYJUV" for 136.152.4.50 at Mon Jun 27 15:47:58 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"VYJUV"}
+Rendered runners/show.erb within layouts/application (3.6ms)
+Completed 200 OK in 87ms (Views: 4.7ms | ActiveRecord: 68.5ms)
+
+
+Started GET "/20110618-sf/cpm/runners/ETEKS" for 136.152.4.50 at Mon Jun 27 15:48:11 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"ETEKS"}
+Rendered runners/show.erb within layouts/application (3.0ms)
+Completed 200 OK in 351ms (Views: 4.0ms | ActiveRecord: 321.7ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners" for 136.152.4.50 at Mon Jun 27 16:17:59 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (317.4ms)
+Completed 200 OK in 7372ms (Views: 126.3ms | ActiveRecord: 6794.8ms)
+
+
+Started GET "/20110618-sf/cpm/runners/29TGS" for 136.152.4.50 at Mon Jun 27 16:18:21 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"29TGS"}
+Rendered runners/show.erb within layouts/application (6.0ms)
+Completed 200 OK in 170ms (Views: 8.0ms | ActiveRecord: 69.0ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/runners/5MDRN" for 209.204.188.144 at Mon Jun 27 16:57:27 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"5MDRN"}
+Rendered runners/show.erb within layouts/application (42.6ms)
+Completed 200 OK in 507ms (Views: 62.8ms | ActiveRecord: 257.3ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Mon Jun 27 18:37:29 -0700 2011
+  Processing by ActivityController#status as HTML
+undefined method `checkpoint_position' for nil:NilClass: /home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:43:in `status'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `each'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `status'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__382432501__process_action__1804494960__callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:253:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/method_tracer.rb:191:in `trace_execution_scoped'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:248:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/rack/browser_monitoring.rb:18:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `send'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'dispatch.fcgi:25:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:57:in `serve'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:25:in `run'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `each'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `run'dispatch.fcgi:29
+Rendered activity/status.erb within layouts/application (67.1ms)
+Completed 200 OK in 2266ms (Views: 127.3ms | ActiveRecord: 1762.8ms)
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Mon Jun 27 18:37:40 -0700 2011
+  Processing by ActivityController#status as HTML
+undefined method `checkpoint_position' for nil:NilClass: /home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:43:in `status'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `each'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `status'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__382432501__process_action__1804494960__callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:253:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/method_tracer.rb:191:in `trace_execution_scoped'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:248:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/rack/browser_monitoring.rb:18:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `send'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'dispatch.fcgi:25:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:57:in `serve'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:25:in `run'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `each'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `run'dispatch.fcgi:29
+Rendered activity/status.erb within layouts/application (3.0ms)
+Completed 200 OK in 406ms (Views: 3.9ms | ActiveRecord: 57.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Mon Jun 27 18:40:50 -0700 2011
+  Processing by ActivityController#status as HTML
+undefined method `checpoint' for #<Checkin:0x693b13324f08>: /usr/lib/ruby/gems/1.8/gems/activemodel-3.0.3/lib/active_model/attribute_methods.rb:364:in `method_missing'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/attribute_methods.rb:46:in `method_missing'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:43:in `status'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `each'/home/jlog/journey-log/checkpoint_monitor/app/controllers/activity_controller.rb:39:in `status'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__382432501__process_action__1804494960__callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `send'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:253:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/method_tracer.rb:191:in `trace_execution_scoped'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:248:in `perform_action_with_newrelic_trace'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `action'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'/home/jlog/.gems/gems/newrelic_rpm-3.1.0/lib/new_relic/rack/browser_monitoring.rb:18:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `send'/usr/lib/ruby/gems/1.8/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'dispatch.fcgi:25:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:57:in `serve'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:25:in `run'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `each'/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/fastcgi.rb:24:in `run'dispatch.fcgi:29
+Rendered activity/status.erb within layouts/application (4.7ms)
+Completed 200 OK in 460ms (Views: 9.7ms | ActiveRecord: 105.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Mon Jun 27 18:41:22 -0700 2011
+  Processing by ActivityController#status as HTML
+Plotting with data {"label"=>[0, 1, 2, 3, 4, 5, 6, 7], "values"=>[{"label"=>"19:52", "values"=>[0, 4, 0, 0, 0, 0, 0, 0]}, {"label"=>"19:57", "values"=>[0, 5, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:02", "values"=>[0, 6, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:07", "values"=>[0, 9, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:12", "values"=>[0, 111, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:17", "values"=>[0, 258, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:22", "values"=>[0, 355, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:27", "values"=>[0, 384, 10, 0, 0, 0, 0, 0]}, {"label"=>"20:32", "values"=>[0, 384, 25, 0, 0, 0, 0, 0]}, {"label"=>"20:37", "values"=>[0, 392, 45, 0, 0, 0, 0, 0]}, {"label"=>"20:42", "values"=>[0, 374, 89, 0, 0, 0, 0, 0]}, {"label"=>"20:47", "values"=>[0, 364, 116, 0, 0, 0, 0, 0]}, {"label"=>"20:52", "values"=>[0, 348, 154, 0, 0, 0, 0, 0]}, {"label"=>"20:57", "values"=>[0, 327, 187, 0, 0, 0, 0, 0]}, {"label"=>"21:02", "values"=>[0, 315, 214, 0, 0, 0, 0, 0]}, {"label"=>"21:07", "values"=>[0, 303, 227, 7, 0, 0, 0, 0]}, {"label"=>"21:12", "values"=>[0, 298, 228, 23, 0, 0, 0, 0]}, {"label"=>"21:17", "values"=>[0, 288, 227, 43, 0, 0, 0, 0]}, {"label"=>"21:22", "values"=>[0, 281, 229, 69, 0, 0, 0, 0]}, {"label"=>"21:27", "values"=>[0, 271, 231, 85, 1, 0, 0, 0]}, {"label"=>"21:32", "values"=>[0, 260, 227, 101, 4, 0, 0, 0]}, {"label"=>"21:37", "values"=>[0, 256, 223, 117, 5, 0, 0, 0]}, {"label"=>"21:42", "values"=>[0, 253, 221, 132, 7, 0, 0, 0]}, {"label"=>"21:47", "values"=>[0, 250, 215, 143, 8, 0, 0, 0]}, {"label"=>"21:52", "values"=>[0, 245, 209, 159, 8, 0, 0, 0]}, {"label"=>"21:57", "values"=>[0, 245, 204, 174, 8, 1, 0, 0]}, {"label"=>"22:02", "values"=>[0, 237, 198, 188, 10, 1, 0, 0]}, {"label"=>"22:07", "values"=>[0, 232, 189, 203, 10, 1, 0, 0]}, {"label"=>"22:12", "values"=>[0, 228, 186, 220, 11, 1, 0, 0]}, {"label"=>"22:17", "values"=>[0, 225, 184, 228, 11, 1, 0, 0]}, {"label"=>"22:22", "values"=>[0, 223, 183, 233, 12, 1, 0, 0]}, {"label"=>"22:27", "values"=>[0, 223, 182, 237, 13, 1, 0, 0]}, {"label"=>"22:32", "values"=>[0, 223, 181, 231, 20, 1, 0, 0]}, {"label"=>"22:37", "values"=>[0, 222, 181, 232, 24, 1, 0, 0]}, {"label"=>"22:42", "values"=>[0, 222, 181, 226, 34, 1, 0, 0]}, {"label"=>"22:47", "values"=>[0, 222, 181, 222, 37, 2, 0, 0]}, {"label"=>"22:52", "values"=>[0, 222, 181, 217, 41, 2, 1, 0]}, {"label"=>"22:57", "values"=>[0, 222, 181, 215, 43, 2, 1, 0]}, {"label"=>"23:02", "values"=>[0, 221, 181, 212, 46, 2, 1, 1]}, {"label"=>"23:07", "values"=>[0, 221, 181, 205, 52, 3, 1, 1]}, {"label"=>"23:12", "values"=>[0, 219, 181, 198, 59, 5, 2, 1]}, {"label"=>"23:17", "values"=>[0, 218, 181, 195, 61, 9, 2, 2]}, {"label"=>"23:22", "values"=>[0, 218, 181, 191, 63, 8, 5, 3]}, {"label"=>"23:27", "values"=>[0, 217, 181, 188, 65, 11, 5, 3]}, {"label"=>"23:32", "values"=>[0, 216, 180, 182, 71, 14, 4, 4]}, {"label"=>"23:37", "values"=>[0, 211, 177, 174, 88, 17, 4, 4]}, {"label"=>"23:42", "values"=>[0, 207, 172, 161, 113, 20, 4, 4]}, {"label"=>"23:47", "values"=>[0, 205, 171, 159, 115, 24, 4, 4]}, {"label"=>"23:52", "values"=>[0, 203, 171, 150, 122, 29, 4, 4]}, {"label"=>"23:57", "values"=>[0, 203, 169, 145, 123, 35, 6, 5]}, {"label"=>"00:02", "values"=>[0, 203, 168, 143, 115, 44, 5, 8]}, {"label"=>"00:07", "values"=>[0, 203, 167, 143, 108, 46, 11, 8]}, {"label"=>"00:12", "values"=>[0, 202, 167, 142, 97, 57, 13, 8]}, {"label"=>"00:17", "values"=>[0, 202, 167, 142, 92, 57, 17, 9]}, {"label"=>"00:22", "values"=>[0, 202, 167, 142, 89, 57, 20, 9]}, {"label"=>"00:27", "values"=>[0, 202, 167, 142, 80, 54, 32, 9]}, {"label"=>"00:32", "values"=>[0, 202, 167, 142, 76, 53, 37, 9]}, {"label"=>"00:37", "values"=>[0, 202, 167, 142, 69, 56, 36, 14]}, {"label"=>"00:42", "values"=>[0, 202, 167, 142, 69, 51, 39, 16]}, {"label"=>"00:47", "values"=>[0, 202, 167, 142, 69, 41, 44, 19]}, {"label"=>"00:52", "values"=>[0, 202, 167, 142, 66, 36, 46, 25]}, {"label"=>"00:57", "values"=>[0, 202, 167, 142, 60, 34, 50, 29]}, {"label"=>"01:02", "values"=>[0, 202, 166, 142, 55, 31, 58, 30]}, {"label"=>"01:07", "values"=>[0, 202, 166, 142, 52, 22, 63, 37]}, {"label"=>"01:12", "values"=>[0, 202, 166, 142, 49, 18, 67, 40]}, {"label"=>"01:17", "values"=>[0, 202, 166, 142, 47, 16, 71, 40]}, {"label"=>"01:22", "values"=>[0, 202, 166, 142, 46, 16, 66, 46]}, {"label"=>"01:27", "values"=>[0, 202, 166, 142, 46, 16, 64, 48]}, {"label"=>"01:32", "values"=>[0, 202, 166, 142, 46, 15, 63, 50]}, {"label"=>"01:37", "values"=>[0, 202, 166, 142, 46, 15, 54, 59]}, {"label"=>"01:42", "values"=>[0, 202, 166, 142, 46, 15, 52, 61]}, {"label"=>"01:47", "values"=>[0, 202, 166, 142, 46, 15, 34, 79]}, {"label"=>"01:52", "values"=>[0, 202, 166, 142, 46, 15, 33, 80]}, {"label"=>"01:57", "values"=>[0, 202, 166, 142, 46, 15, 32, 81]}, {"label"=>"02:02", "values"=>[0, 202, 166, 142, 46, 15, 16, 97]}, {"label"=>"02:07", "values"=>[0, 202, 166, 142, 46, 15, 15, 98]}, {"label"=>"02:12", "values"=>nil}]}
+Rendered activity/status.erb within layouts/application (4.5ms)
+Completed 200 OK in 3940ms (Views: 16.1ms | ActiveRecord: 275.4ms)
+Starting the New Relic Agent.
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/20110618-sf/cpm/status" for 173.228.85.205 at Mon Jun 27 18:43:38 -0700 2011
+  Processing by ActivityController#status as HTML
+Plotting with data {"label"=>[0, 1, 2, 3, 4, 5, 6, 7], "values"=>[{"label"=>"19:52", "values"=>[0, 4, 0, 0, 0, 0, 0, 0]}, {"label"=>"19:57", "values"=>[0, 5, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:02", "values"=>[0, 6, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:07", "values"=>[0, 9, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:12", "values"=>[0, 111, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:17", "values"=>[0, 258, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:22", "values"=>[0, 355, 0, 0, 0, 0, 0, 0]}, {"label"=>"20:27", "values"=>[0, 384, 10, 0, 0, 0, 0, 0]}, {"label"=>"20:32", "values"=>[0, 384, 25, 0, 0, 0, 0, 0]}, {"label"=>"20:37", "values"=>[0, 392, 45, 0, 0, 0, 0, 0]}, {"label"=>"20:42", "values"=>[0, 374, 89, 0, 0, 0, 0, 0]}, {"label"=>"20:47", "values"=>[0, 364, 116, 0, 0, 0, 0, 0]}, {"label"=>"20:52", "values"=>[0, 348, 154, 0, 0, 0, 0, 0]}, {"label"=>"20:57", "values"=>[0, 327, 187, 0, 0, 0, 0, 0]}, {"label"=>"21:02", "values"=>[0, 315, 214, 0, 0, 0, 0, 0]}, {"label"=>"21:07", "values"=>[0, 303, 227, 7, 0, 0, 0, 0]}, {"label"=>"21:12", "values"=>[0, 298, 228, 23, 0, 0, 0, 0]}, {"label"=>"21:17", "values"=>[0, 288, 227, 43, 0, 0, 0, 0]}, {"label"=>"21:22", "values"=>[0, 281, 229, 69, 0, 0, 0, 0]}, {"label"=>"21:27", "values"=>[0, 271, 231, 85, 1, 0, 0, 0]}, {"label"=>"21:32", "values"=>[0, 260, 227, 101, 4, 0, 0, 0]}, {"label"=>"21:37", "values"=>[0, 256, 223, 117, 5, 0, 0, 0]}, {"label"=>"21:42", "values"=>[0, 253, 221, 132, 7, 0, 0, 0]}, {"label"=>"21:47", "values"=>[0, 250, 215, 143, 8, 0, 0, 0]}, {"label"=>"21:52", "values"=>[0, 245, 209, 159, 8, 0, 0, 0]}, {"label"=>"21:57", "values"=>[0, 245, 204, 174, 8, 1, 0, 0]}, {"label"=>"22:02", "values"=>[0, 237, 198, 188, 10, 1, 0, 0]}, {"label"=>"22:07", "values"=>[0, 232, 189, 203, 10, 1, 0, 0]}, {"label"=>"22:12", "values"=>[0, 228, 186, 220, 11, 1, 0, 0]}, {"label"=>"22:17", "values"=>[0, 225, 184, 228, 11, 1, 0, 0]}, {"label"=>"22:22", "values"=>[0, 223, 183, 233, 12, 1, 0, 0]}, {"label"=>"22:27", "values"=>[0, 223, 182, 237, 13, 1, 0, 0]}, {"label"=>"22:32", "values"=>[0, 223, 181, 231, 20, 1, 0, 0]}, {"label"=>"22:37", "values"=>[0, 222, 181, 232, 24, 1, 0, 0]}, {"label"=>"22:42", "values"=>[0, 222, 181, 226, 34, 1, 0, 0]}, {"label"=>"22:47", "values"=>[0, 222, 181, 222, 37, 2, 0, 0]}, {"label"=>"22:52", "values"=>[0, 222, 181, 217, 41, 2, 1, 0]}, {"label"=>"22:57", "values"=>[0, 222, 181, 215, 43, 2, 1, 0]}, {"label"=>"23:02", "values"=>[0, 221, 181, 212, 46, 2, 1, 1]}, {"label"=>"23:07", "values"=>[0, 221, 181, 205, 52, 3, 1, 1]}, {"label"=>"23:12", "values"=>[0, 219, 181, 198, 59, 5, 2, 1]}, {"label"=>"23:17", "values"=>[0, 218, 181, 195, 61, 9, 2, 2]}, {"label"=>"23:22", "values"=>[0, 218, 181, 191, 63, 8, 5, 3]}, {"label"=>"23:27", "values"=>[0, 217, 181, 188, 65, 11, 5, 3]}, {"label"=>"23:32", "values"=>[0, 216, 180, 182, 71, 14, 4, 4]}, {"label"=>"23:37", "values"=>[0, 211, 177, 174, 88, 17, 4, 4]}, {"label"=>"23:42", "values"=>[0, 207, 172, 161, 113, 20, 4, 4]}, {"label"=>"23:47", "values"=>[0, 205, 171, 159, 115, 24, 4, 4]}, {"label"=>"23:52", "values"=>[0, 203, 171, 150, 122, 29, 4, 4]}, {"label"=>"23:57", "values"=>[0, 203, 169, 145, 123, 35, 6, 5]}, {"label"=>"00:02", "values"=>[0, 203, 168, 143, 115, 44, 5, 8]}, {"label"=>"00:07", "values"=>[0, 203, 167, 143, 108, 46, 11, 8]}, {"label"=>"00:12", "values"=>[0, 202, 167, 142, 97, 57, 13, 8]}, {"label"=>"00:17", "values"=>[0, 202, 167, 142, 92, 57, 17, 9]}, {"label"=>"00:22", "values"=>[0, 202, 167, 142, 89, 57, 20, 9]}, {"label"=>"00:27", "values"=>[0, 202, 167, 142, 80, 54, 32, 9]}, {"label"=>"00:32", "values"=>[0, 202, 167, 142, 76, 53, 37, 9]}, {"label"=>"00:37", "values"=>[0, 202, 167, 142, 69, 56, 36, 14]}, {"label"=>"00:42", "values"=>[0, 202, 167, 142, 69, 51, 39, 16]}, {"label"=>"00:47", "values"=>[0, 202, 167, 142, 69, 41, 44, 19]}, {"label"=>"00:52", "values"=>[0, 202, 167, 142, 66, 36, 46, 25]}, {"label"=>"00:57", "values"=>[0, 202, 167, 142, 60, 34, 50, 29]}, {"label"=>"01:02", "values"=>[0, 202, 166, 142, 55, 31, 58, 30]}, {"label"=>"01:07", "values"=>[0, 202, 166, 142, 52, 22, 63, 37]}, {"label"=>"01:12", "values"=>[0, 202, 166, 142, 49, 18, 67, 40]}, {"label"=>"01:17", "values"=>[0, 202, 166, 142, 47, 16, 71, 40]}, {"label"=>"01:22", "values"=>[0, 202, 166, 142, 46, 16, 66, 46]}, {"label"=>"01:27", "values"=>[0, 202, 166, 142, 46, 16, 64, 48]}, {"label"=>"01:32", "values"=>[0, 202, 166, 142, 46, 15, 63, 50]}, {"label"=>"01:37", "values"=>[0, 202, 166, 142, 46, 15, 54, 59]}, {"label"=>"01:42", "values"=>[0, 202, 166, 142, 46, 15, 52, 61]}, {"label"=>"01:47", "values"=>[0, 202, 166, 142, 46, 15, 34, 79]}, {"label"=>"01:52", "values"=>[0, 202, 166, 142, 46, 15, 33, 80]}, {"label"=>"01:57", "values"=>[0, 202, 166, 142, 46, 15, 32, 81]}, {"label"=>"02:02", "values"=>[0, 202, 166, 142, 46, 15, 16, 97]}, {"label"=>"02:07", "values"=>[0, 202, 166, 142, 46, 15, 15, 98]}, {"label"=>"02:12", "values"=>nil}]}
+Rendered activity/status.erb within layouts/application (4.6ms)
+Completed 200 OK in 2823ms (Views: 10.6ms | ActiveRecord: 201.1ms)
+
+
+Started GET "/20110618-sf/cpm/runners" for 173.228.85.205 at Mon Jun 27 18:43:46 -0700 2011
+  Processing by RunnersController#index as HTML
+Rendered runners/index.erb within layouts/application (236.5ms)
+Completed 200 OK in 2955ms (Views: 226.6ms | ActiveRecord: 1744.6ms)
+
+
+Started GET "/20110618-sf/cpm/runners/FVC1B" for 173.228.85.205 at Mon Jun 27 18:45:03 -0700 2011
+  Processing by RunnersController#show as HTML
+  Parameters: {"runner_id"=>"FVC1B"}
+Rendered runners/show.erb within layouts/application (5.3ms)
+Completed 200 OK in 437ms (Views: 25.3ms | ActiveRecord: 236.1ms)
