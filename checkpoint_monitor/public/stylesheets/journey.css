@@ -77,11 +77,6 @@ a.menulink:hover {
 	left: 10px;
 }
 
-li {
-	height: 100px;
-	padding: 2px;
-}
-
 .runner {
 	margin: -3px;
 	/* display: block; */

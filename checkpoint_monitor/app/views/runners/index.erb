@@ -2,7 +2,12 @@
 
 <h3>Runners:</h3>
 <ol>
-
+<style>
+li {
+	height: 100px;
+	padding: 2px;
+}
+</style>
 <% @ordered_runners.each do |runner| %>
   <li>
   <%= runner.img_link.html_safe %>
