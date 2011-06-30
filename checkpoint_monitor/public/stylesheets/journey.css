@@ -108,7 +108,6 @@ a.menulink:hover {
 	-webkit-transform: rotate(90deg);  /* Saf3.1+, Chrome */
 	filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=1);  /* IE6,IE7 */
 	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)"; /* IE8 */
-	width: 400px;
 }
 
 

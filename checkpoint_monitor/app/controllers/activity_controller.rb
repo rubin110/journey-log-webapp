@@ -76,7 +76,7 @@ from tags union all select runner_id from checkins) as all_runners;").first[0]
     
     return <<JS
     <table><tr><td></td><td align="center">#{main}</td></tr>
-    <tr><td class="rotate"><div class="textrotate">#{ylab}</div></td><td>
+    <tr><td class="rotate"><!-- <div class="textrotate">#{ylab}</div> --></td><td>
     <div id="#{basename}_placeholder" style="width:900px;height:450px"></div>
     </td></tr>
     <tr><td></td><td align="center">#{xlab}</td></tr>
