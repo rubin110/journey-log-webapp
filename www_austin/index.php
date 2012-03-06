@@ -1,11 +1,15 @@
 <?php
 include('mobile-friendly.html');
-include('functions.php');
+require_once('functions.php');
 
 $jlogCID = $_COOKIE["jlog-cid"];
 $jlogRID = $_COOKIE["jlog-rid"];
 
-$command = explode('/', substr($_SERVER['REQUEST_URI'],1));
+$request_str = $_SERVER['REQUEST_URI'];
+$param_pos = strpos($request_str, '?');
+if ($param_pos > 0)
+  $request_str = substr($request_str, 0, $param_pos);
+$command = explode('/', substr($request_str,1));
 
 echo 'got request ' , $_SERVER['REQUEST_URI'] , '<br />';
 echo 'switching on command ' , $command[0] , '<br />';
@@ -31,9 +35,16 @@ switch($command[0]) {
     echo 'player profile for ' + $command[1];
     break;
 
+  # Runner Generate New Runner Id -- in case we don't print unique QR codes on manifests
+  case 'rid' :
+  	echo 'you are trying to generate a new runner id';
+	include('new_runner_id.php');
+    break;
+
   # Runner Create form page
-  case 'new_runner' :
+  case 'create_runner' :
     echo 'you are making a new runner (and should be passing params)';
+	include('create_runner.php');
     break;
 
   # Runner Edit page

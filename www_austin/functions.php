@@ -20,6 +20,30 @@ function connectdb($reg_mysql=false) {
 	}
 }
 
+function redirect_to($location) {
+	echo "<script type='text/javascript'>window.location = '" . $location . "';</script>";
+}
+
+function new_runner_id() {
+	$new_id = random_runner_id();
+	while (is_valid_runner($new_id)) {
+		$new_id = random_runner_id();
+	}
+	return $new_id;
+}
+
+function random_runner_id() {
+	$length = 5;
+	$chars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";	
+
+	$size = strlen( $chars );
+	for( $i = 0; $i < $length; $i++ ) {
+		$str .= $chars[ rand( 0, $size - 1 ) ];
+	}
+
+	return $str;
+}
+
 function _logger($type,$result,$message) {
 	/* $type should be TAG, CHECKIN, REGISTER, anything else?
 		We should also never log line breaks in $message
