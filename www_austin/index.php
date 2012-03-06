@@ -11,65 +11,58 @@ if ($param_pos > 0)
   $request_str = substr($request_str, 0, $param_pos);
 $command = explode('/', substr($request_str,1));
 
-echo 'got request ' , $_SERVER['REQUEST_URI'] , '<br />';
-echo 'switching on command ' , $command[0] , '<br />';
+#echo 'got request ' , $_SERVER['REQUEST_URI'] , '<br />';
+#echo 'switching on command ' , $command[0] , '<br />';
 
 switch($command[0]) {
   # Instructions page
   case 'instructions' :
-    echo 'Sending you instructions';
+    include('instructions.php');
     break;
 
   # Checkpoint Redirect page
   case 'c' :
-    echo 'checkpoint redirect for ' + $command[1];
-    break;
-
-  # Checkpoint Checkin page	
-  case 'checkins' :
-    echo 'you are checking in';
+	include('checkin.php');
     break;
 
   # Player Profile page
   case 'runners' :
-    echo 'player profile for ' + $command[1];
+    include('player_profile.php');
     break;
 
   # Runner Generate New Runner Id -- in case we don't print unique QR codes on manifests
   case 'rid' :
-  	echo 'you are trying to generate a new runner id';
 	include('new_runner_id.php');
     break;
 
   # Runner Create form page
   case 'create_runner' :
-    echo 'you are making a new runner (and should be passing params)';
 	include('create_runner.php');
     break;
 
   # Runner Edit page
-  case 'edit_runner' :
-    echo 'you are editing a runner';
+  case 'edit' :
+	include('edit.php');
     break;
 
-  # Tagged page
+  # Tagged page: note that it is /tagged/<target>/<tagger>
   case 'tagged' :
-    echo 'you are logging a tag';
+	include('tagged.php');
     break;
 
   # Logout page
   case 'logout' :
-    echo 'you are logging out';
+    include('logout.php');
     break;
 
   # Global info page
   case 'info' :
-    echo 'secret global info page';
+	include('info.php');
     break;
 	
   # Runner Redirect page
   default:
-    echo 'a runner redirect for ' , $command[1];
+	include('runner_redirect.php');
     break;
 }
 
