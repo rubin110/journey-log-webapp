@@ -18,7 +18,7 @@ if ($cookie_rid) {
 			$m = (int)($seconds_until_start / 60); $s = $seconds_until_start % 60;
 			$h = (int)($m / 60); $m = $m % 60;
 			$timestring = str_pad($h,2,'0') . ":" . str_pad($m,2,'0') . ":" . str_pad($s,2,'0');
-			$twitterString="t-$timestring until Journey starts! Hurry to Spiral Hill in Butler Park! #sxsw #jtteotn";
+			$twitterString="T - $timestring and counting until Journey starts! Fine me at Spiral Hill in Butler Park! #sxsw #jtteotn";
 			echo "<p>$twitterString</p>";
 			echo "<p>(link to tweet this: )</p>";
 		}
