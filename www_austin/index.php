@@ -2,7 +2,6 @@
 include('mobile-friendly.html');
 require_once('functions.php');
 
-$jlogCID = $_COOKIE["jlog-cid"];
 $jlogRID = $_COOKIE["jlog-rid"];
 
 $request_str = $_SERVER['REQUEST_URI'];
@@ -13,6 +12,7 @@ $command = explode('/', substr($request_str,1));
 
 #echo 'got request ' , $_SERVER['REQUEST_URI'] , '<br />';
 #echo 'switching on command ' , $command[0] , '<br />';
+_logger('REQUEST','SUCCESS',"cookie $jlogRID requested $request_str");
 
 switch($command[0]) {
   # Instructions page

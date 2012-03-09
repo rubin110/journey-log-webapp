@@ -79,7 +79,7 @@ function form_results($rid, $name, $email, $twitter, $submitted) {
 			<table>
 			<tr><td>Public Player Name:</td><td><input type="text" name="name" value="$name" /></td><td class="error">$name_error</td></tr>
 			<tr><td>Email address:</td><td><input type="text" name="email" value="$email" /></td><td class="error">$email_error</td></tr>
-			<tr><td>Twitter handle (optional)</td><td><input type="text" name="twitter" value="$twitter" /></td><td class="error">$twitter_error</td></tr>
+			<tr><td>Twitter handle (optional)</td><td>@<input type="text" name="twitter" value="$twitter" /></td><td class="error">$twitter_error</td></tr>
 			</table><br />
 			<input type="submit" value="Submit" />
 			</form>
@@ -93,7 +93,7 @@ RUNNER_FORM_WITH_ERRORS;
 			<table>
 			<tr><td>Public Player Name:</td><td><input type="text" name="name" value="$name" /></td></tr>
 			<tr><td>Email address:</td><td><input type="text" name="email" value="$email" /></td></tr>
-			<tr><td>Twitter handle (optional)</td><td><input type="text" name="twitter" value="$twitter" /></td></tr>
+			<tr><td>Twitter handle (optional)</td><td>@<input type="text" name="twitter" value="$twitter" /></td></tr>
 			</table><br />
 			<input type="submit" value="Submit" />
 			</form>
@@ -105,7 +105,7 @@ EDIT_RUNNER_FORM;
 			<table>
 			<tr><td>Public Player Name:</td><td><input type="text" name="name" /></td></tr>
 			<tr><td>Email address:</td><td><input type="text" name="email" /></td></tr>
-			<tr><td>Twitter handle (optional)</td><td><input type="text" name="twitter" /></td></tr>
+			<tr><td>Twitter handle (optional)</td><td>@<input type="text" name="twitter" /></td></tr>
 			</table><br />
 			<input type="submit" value="Submit" />
 			</form>
@@ -432,7 +432,7 @@ function clean_checkpoint_id($cid) {
 }
 
 function clean_tweet($text) {
-	return preg_replace("/ /", "%20", preg_replace("/#/","%23",$text));
+	return preg_replace("/@/", "%40", preg_replace("/ /", "%20", preg_replace("/#/","%23",$text)));
 }
 
 #Return an array of all checkpoint info

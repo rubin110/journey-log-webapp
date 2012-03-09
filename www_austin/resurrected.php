@@ -8,7 +8,7 @@ resurrect($cookie_rid);
 echo "<p>You have been resurrected.</p>";
 
 $twitterString="I'm resurrected and back in the running! #sxsw #jtteotn";
-echo "<p><a href='http://twitter.com/intent/tweet?text=$twitterString'>Tweet it!</a> $twitterString</p>";
+echo "<p><a href=\"http://twitter.com/intent/tweet?text=" . clean_tweet($twitterString) . "\">Tweet it!</a> $twitterString</p>";
 
 
 ?>
