@@ -128,8 +128,8 @@ function logout($rid) {
 }
 
 function redirect_to($location) {
-	echo "<p>would be redirecting you to <a href='",$location,"'>",$location,"</a></p>";
-	#echo "<script type='text/javascript'>window.location = '" . $location . "';</script>";
+	#echo "<p>would be redirecting you to <a href='",$location,"'>",$location,"</a></p>";
+	echo "<script type='text/javascript'>window.location = '" . $location . "';</script>";
 }
 
 # check in
