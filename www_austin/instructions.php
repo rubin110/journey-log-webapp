@@ -19,8 +19,7 @@ if ($cookie_rid) {
 			$h = (int)($m / 60); $m = $m % 60;
 			$timestring = str_pad($h,2,'0',STR_PAD_LEFT) . ":" . str_pad($m,2,'0',STR_PAD_LEFT) . ":" . str_pad($s,2,'0',STR_PAD_LEFT);
 			$twitterString="T - $timestring and counting until Journey starts! Find me at Spiral Hill in Butler Park! #sxsw #jtteotn";
-			echo "<p>$twitterString</p>";
-			echo "<p>(TODO: link to tweet this: )</p>";
+			echo "<p><a href='http://twitter.com/intent/tweet?text=" . clean_tweet($twitterString) . "'>Tweet it!</a> $twitterString</p>";
 		}
 	}
 	echo "<p><a href='/runners/" , $cookie_rid , "'>View your stats</a></p>\n";

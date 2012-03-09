@@ -431,6 +431,10 @@ function clean_checkpoint_id($cid) {
 	return strtoupper(preg_replace("/[^a-zA-Z0-9\s]/", "", $cid));
 }
 
+function clean_tweet($text) {
+	return preg_replace("/ /", "%20", preg_replace("/#/","%23",$text));
+}
+
 #Return an array of all checkpoint info
 function get_all_checkpoint_info() {
 	$mysqli = connectdb();
