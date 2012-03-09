@@ -17,9 +17,13 @@ RewriteRule ^photos(/)?$ - [L]
 RewriteRule ^agent/set(/)?$  _cidindex.php [L]
 RewriteRule ^agent/set/([a-zA-Z0-9]+)?$  _setcid.php?cid=$1 [L]
 
-## Check in runners
+## Check in runners as agent
 RewriteRule ^agent/checkin(/)?$ _checkin.php [L]
 RewriteRule ^agent/checkin/([a-zA-Z0-9]+)?$  _checkin.php?rid=$1 [L]
+
+## Check in self runners
+RewriteRule ^checkpoint(/)?$ _checkpoint.php [L]
+RewriteRule ^checkpoint/([a-zA-Z0-9]+)?$  _checkpoint.php?cid=$1 [L]
 
 ## General Stats
 RewriteRule ^agent/stats(/)?$ _stats.php [L]
