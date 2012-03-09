@@ -2,6 +2,8 @@
 //functions.php
 include("settings.php");
 
+$tz = 'US/Central';
+
 #####################################################################
 ## function connectdb()
 ## connects us to our database (DB_NAME) on server (DB_SERVER) with the defined (DB_LOGIN) 
@@ -384,10 +386,12 @@ function get_all_checkpoint_info() {
 }
 
 #Return an array of all runner checkin
-function get_runner_checkin_info() {
+function get_runner_checkin_info($rid) {
+	$rid = clean_runner_id($rid);
 	$mysqli = connectdb();
-	$result = $mysqli->query("SELECT cp.checkpoint_name, c.checked_in_earlier, c.checkin_time FROM ".CHECKPOINTS_TBL." as cp JOIN ".CHECKINS_TBL." as c ON c.checkpoint_id=cp.checkpoint_id ORDER BY c.checkin_time");
+	$result = $mysqli->query("SELECT cp.checkpoint_name, c.checked_in_earlier, c.checkin_time FROM ".CHECKPOINTS_TBL." as cp JOIN ".CHECKINS_TBL." as c ON c.checkpoint_id=cp.checkpoint_id WHERE runner_id = '$rid' ORDER BY c.checkin_time");
     $return_array = array();
+
     while($row = $result->fetch_row()) {
       $return_array[] = $row;
     }

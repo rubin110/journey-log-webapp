@@ -15,7 +15,7 @@ if (!$cookie_rid) {
 	redirect_to('/instructions');
 } else {
 	if (checkin($cookie_rid, $cid, $checked_in_so_far)) {
-		echo "<p>You checked in at " , $checkpoint_name , ". Only " , $checked_in_so_far , " runners checked in here before you did.</p>";		
+		echo "<p>You successfully checked in at " , $checkpoint_name , ". Only " , $checked_in_so_far , " runners checked in here before you did.</p>";		
 	} else {
 		echo "<p>You FAILED to check in at " , $checkpoint_name , "!</p>";				
 	}
