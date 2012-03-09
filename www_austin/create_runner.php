@@ -15,7 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		# passed validation
 		update_or_create_new_runner($rid,$name,$email,$twitter,$rid);
 		login($rid);
-		redirect_to('/runners/' . $rid);			
+		redirect_to('/instructions');
+		#redirect_to('/runners/' . $rid);			
 	} else {
 		# had errors; redisplay form
 		echo $form;
