@@ -22,6 +22,7 @@ if (!$cookie_rid) {
 		$twitterString="I survived to $checkpoint name! Made it in $timestring, with only $checked_in_so_far runners ahead of me. #sxsw #jtteotn";
 		echo "<p>$twitterString</p>";
 		echo "<p>(TODO: link to tweet this: )</p>";
+		echo "<p><a href='/runners/$cookie_rid'>Check your stats</a></p>";
 	} else {
 		echo "<p>You FAILED to check in at " , $checkpoint_name , "!</p>";				
 	}
