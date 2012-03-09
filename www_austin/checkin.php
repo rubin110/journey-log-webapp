@@ -19,7 +19,7 @@ if (!$cookie_rid) {
 		$m = (int)($seconds_since_start / 60); $s = $seconds_since_start % 60;
 		$h = (int)($m / 60); $m = $m % 60;
 		$timestring = str_pad($h,2,'0',STR_PAD_LEFT) . ":" . str_pad($m,2,'0',STR_PAD_LEFT) . ":" . str_pad($s,2,'0',STR_PAD_LEFT);
-		$twitterString="I survived to $checkpoint name! Made it in $timestring, with only $checked_in_so_far runners ahead of me. #sxsw #jtteotn";
+		$twitterString="I survived to $checkpoint_name! Made it in $timestring, with only $checked_in_so_far runners ahead of me. #sxsw #jtteotn";
 		echo "<p>$twitterString</p>";
 		echo "<p>(TODO: link to tweet this: )</p>";
 		echo "<p><a href='/runners/$cookie_rid'>Check your stats</a></p>";
