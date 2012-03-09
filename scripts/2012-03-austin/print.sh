@@ -9,7 +9,7 @@ echo "Number of Runner IDs:" $RECORDNUMBER
 for i in $(ls -1 *.png)
 do
 	echo "Printing "$n" of "$RECORDNUMBER": " $i
-	lpr -PCanon-imageRunner-7095 $i
+	lpr -PCanon-imageRunner-7095 -h -J $i $i
 	n=$((n+1))
 done
 echo "Done!"
