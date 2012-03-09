@@ -50,6 +50,11 @@ switch($command[0]) {
 	include('tagged.php');
     break;
 
+  # Resurrected page
+  case 'resurrected' :
+	include('resurrected.php');
+    break;
+
   # Logout page
   case 'logout' :
     include('logout.php');

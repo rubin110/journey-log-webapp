@@ -170,6 +170,47 @@ function checkin($rid, $cid, $checked_in_earlier) {
 	}	
 }
 
+# tag
+function tag($runner_id, $chaser_id) {
+	$runner_id = clean_runner_id($runner_id);
+	$chaser_id = clean_runner_id($chaser_id);
+	if (!$chaser_id) {
+		$chaser_id = '';
+	}
+	# mark as tagged
+	$mysqli = connectdb();
+	$stmt = $mysqli->prepare("UPDATE ".RUNNERS_TBL." SET is_tagged = 1 WHERE runner_id = ?");	
+	$stmt->bind_param('s', $runner_id);
+	$stmt->execute();
+	$stmt->close();
+	# record tag in the table
+	$stmt = $mysqli->prepare("INSERT INTO ".TAGS_TBL." (runner_id, tagger_id, tag_time) VALUES (?, ?, NOW())");	
+	$stmt->bind_param('ss', $runner_id, $chaser_id);
+	$stmt->execute();
+	$stmt->close();
+	# update the tagger's stats, if there is one
+	if (is_chaser($chaser_id)) {
+		$stmt = $mysqli->prepare("UPDATE ".RUNNERS_TBL." SET num_tagged = num_tagged + 1 WHERE runner_id = ?");	
+		$stmt->bind_param('s', $chaser_id);
+		$stmt->execute();
+		$stmt->close();		
+	}
+	_logger('TAG', LOG_SUCCESS, "$runner_id was tagged by $chaser_id");
+}
+
+# resurrect
+function resurrect($runner_id) {
+	$runner_id = clean_runner_id($runner_id);
+	# mark as un-tagged
+	$mysqli = connectdb();
+	$stmt = $mysqli->prepare("UPDATE ".RUNNERS_TBL." SET is_tagged = 0 WHERE runner_id = ?");	
+	$stmt->bind_param('s', $runner_id);
+	$stmt->execute();
+	$stmt->close();
+	_logger('RESURRECTION', LOG_SUCCESS, "$runner_id was resurrected");
+}
+
+
 
 #####################################################################
 ## generator functions -- helper functions for creating new ids and inserting new runners in the DB
@@ -320,6 +361,21 @@ function get_runner_name($rid) {
 	$stmt->close();
 	
 	return($runner_name);
+}
+
+function get_num_tagged_by($rid) {
+	$rid = clean_runner_id($rid);	
+	$mysqli = connectdb();
+	
+	$query = "SELECT num_tagged FROM ".RUNNERS_TBL." WHERE runner_id = ?";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('s', $rid);
+	$stmt->execute();
+	$stmt->bind_result($num_tagged);
+	$stmt->fetch();
+	$stmt->close();
+	
+	return($num_tagged);
 }
 
 function get_runner_twitter($rid) {

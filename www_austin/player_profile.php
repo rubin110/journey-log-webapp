@@ -25,14 +25,17 @@ if ($cookie_rid != $rid) {
 	} else {
 		echo "<p>No checkins yet.</p>";
 	}
-	echo "<br /><a href='/logout'>Logout</a>\n";
-	echo "<br /><a href='/edit'>Edit Info</a>\n";
 
 	if (is_chaser($rid)) {
+		$num_tagged = get_num_tagged_by($rid);
+		echo "<br />You have recorded $num_tagged tags so far.\n";
 		echo "<br />To record that you tagged someone, scan their QR code.\n";
+		echo "<br />Or, if you accidentally marked yourself as tagged, you can <a href='/resurrected'>un-tag yourself</a>.";
 	} else {
 		echo "<br /><a href='/tagged/", $rid, "'>I Got Tagged</a>\n";
 	}	
+	echo "<br /><a href='/logout'>Logout</a>\n";
+	echo "<br /><a href='/edit'>Edit Info</a>\n";
 }
 
 ?>
