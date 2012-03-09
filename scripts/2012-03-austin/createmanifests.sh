@@ -14,7 +14,8 @@ do
 	journey-manifest.png \
 	temp/$i-qr-l.png -geometry +10410+5840 -composite \
 	-fill black -font OCRA-Medium -pointsize 185 -annotate +10410+8070 "RUNNERID: $i" \
-	-depth 8 completed/$i-man.png
+	-gravity Center -crop 12200x9400+0+0 \
+	-depth 4 completed/$i-man.png
 	rm temp/$i-qr-l.png
 	n=$((n+1))
 done
