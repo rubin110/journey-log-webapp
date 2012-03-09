@@ -3,6 +3,8 @@
 include("settings.php");
 
 $tz = 'US/Central';
+# this is 8PM Central -- I'm assuming this is the correct time to start; if not, we can change it
+$game_start_time = 1331431200;
 
 #####################################################################
 ## function connectdb()
