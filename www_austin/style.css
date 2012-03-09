@@ -37,6 +37,11 @@ img {
 	border: 0px;
 }
 
+td.error {
+	color: #F00;
+	font-style:italic;
+}
+
 .chaser {
 	display: inline;
 	vertical-align: bottom;

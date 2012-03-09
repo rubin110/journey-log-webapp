@@ -19,12 +19,11 @@ if ($cookie_rid && $cookie_rid == $url_rid) {
 	# logged in, going to base page (no runner id in url) -- redirect to runner info
 	redirect_to('/runners/' . $cookie_rid);
 } elseif ($cookie_rid && $url_rid && ($cookie_id != $url_rid)) {
-	# scanning a different rid than the one you're logged in as; if you're a chaser, then probably a tag; otherwise...TODO: notify somehow
+	# scanning a different rid than the one you're logged in as; if you're a chaser, then probably a tag; otherwise...direct to the target's runner page (will note that you have to mark yourself as a chaser to tag them, log out to log in as them)
 	if (is_chaser($cookie_rid)) {
 		redirect_to('/tagged/' . $url_rid . '/' . $cookie_rid);
 	} else {
-		# TODO: notify somehow instead of just redirecting to your info page
-		redirect_to('/runners/' . $cookie_rid);
+		redirect_to('/runners/' . $url_rid);
 	}
 } else {
 	# no cookie and no url id -- probably direct url access by bot or player? redirect to instructions

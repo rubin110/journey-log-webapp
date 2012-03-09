@@ -30,7 +30,7 @@ switch($command[0]) {
     include('player_profile.php');
     break;
 
-  # Runner Generate New Runner Id -- in case we don't print unique QR codes on manifests
+  # Runner Generate New Runner Id -- in case we don't print unique QR codes on manifests or need a backup
   case 'rid' :
 	include('new_runner_id.php');
     break;

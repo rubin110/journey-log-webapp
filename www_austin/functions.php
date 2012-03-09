@@ -21,6 +21,96 @@ function connectdb($reg_mysql=false) {
 }
 
 #####################################################################
+## display functions -- in particular, runner create/edit form
+##I'm sure there are nice libraries to do this, and we should be using one
+#####################################################################
+
+function email_or_twitter_taken($email, $twitter) {
+	$mysqli = connectdb();
+
+	$query = "SELECT runner_id, player_email, player_twitter_handle FROM ".RUNNERS_TBL." WHERE player_email = ? OR player_twitter_handle = ? LIMIT 1";
+	$stmt = $mysqli->prepare($query);
+	$stmt->bind_param('ss', $email, $twitter);
+	$stmt->execute();
+	$stmt->bind_result($rid, $returned_email, $returned_twitter);
+	$stmt->fetch();
+	$stmt->close();
+	
+	return(array($rid, $email && ($returned_email == $email), $twitter && ($returned_twitter == $twitter)));	
+}
+
+function form_results($rid, $name, $email, $twitter, $submitted) {
+	$is_edit = is_valid_runner($rid);
+	
+	$name_error = false;
+	$email_error = false;
+	$twtter_error = false;
+
+	# do 'validation' if it's being submitted
+	if ($submitted) {
+		if (!$rid) {
+			return("<p>...how are you even here?  I have no idea who you are.  Scan your QR code.</p>");
+		}
+		if (!$name) {
+			$name_error = "*required";
+		}
+		if (!$email) {
+			$email_error = "*required";
+		}
+		if ($email || $twitter) {
+			list($rid_taken, $email_taken, $twitter_taken) = email_or_twitter_taken($email, $twitter);
+			if ($email_taken && ($rid_taken != $rid)) {
+				$email_error = "already registered";
+			}
+			if ($twitter_taken && ($rid_taken != $rid)) {
+				$twitter_error = "already registered";
+			}
+		}
+		if (!$name_error && !$email_error && !$twitter_error) {
+			return(false);
+		} else {
+			return <<<RUNNER_FORM_WITH_ERRORS
+			<form method="POST">
+			<input type="hidden" name="rid" value="$rid" />
+			<table>
+			<tr><td>Public Player Name:</td><td><input type="text" name="name" value="$name" /></td><td class="error">$name_error</td></tr>
+			<tr><td>Email address:</td><td><input type="text" name="email" value="$email" /></td><td class="error">$email_error</td></tr>
+			<tr><td>Twitter handle (optional)</td><td><input type="text" name="twitter" value="$twitter" /></td><td class="error">$twitter_error</td></tr>
+			</table><br />
+			<input type="submit" value="Submit" />
+			</form>
+RUNNER_FORM_WITH_ERRORS;
+		}
+	} else {
+		if ($is_edit) {
+			return <<<EDIT_RUNNER_FORM
+			<form method="POST">
+			<input type="hidden" name="rid" value="$rid" />
+			<table>
+			<tr><td>Public Player Name:</td><td><input type="text" name="name" value="$name" /></td></tr>
+			<tr><td>Email address:</td><td><input type="text" name="email" value="$email" /></td></tr>
+			<tr><td>Twitter handle (optional)</td><td><input type="text" name="twitter" value="$twitter" /></td></tr>
+			</table><br />
+			<input type="submit" value="Submit" />
+			</form>
+EDIT_RUNNER_FORM;
+		} else {
+			return <<<NEW_RUNNER_FORM
+			<form method="POST">
+			<input type="hidden" name="rid" value="$rid" />
+			<table>
+			<tr><td>Public Player Name:</td><td><input type="text" name="name" /></td></tr>
+			<tr><td>Email address:</td><td><input type="text" name="email" /></td></tr>
+			<tr><td>Twitter handle (optional)</td><td><input type="text" name="twitter" /></td></tr>
+			</table><br />
+			<input type="submit" value="Submit" />
+			</form>
+NEW_RUNNER_FORM;
+		}
+	}
+}
+
+#####################################################################
 ## action functions -- log in, log out, redirect, etc.
 #####################################################################
 
