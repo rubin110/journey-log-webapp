@@ -9,8 +9,8 @@ echo "Number of Runner IDs:" $RECORDNUMBER
 for i in $(ls -1 *.png)
 do
 	echo "Printing "$n" of "$RECORDNUMBER": " $i
-	convert -scale 50% -depth 1 $i $i_t.png
-	lp -d Canon-iR105 $i.png
+	convert -depth 1 -scale 50% $i $i._t.png
+	lp -d Canon-iR105 -o landscape -o scaling=97% $i._t.png
 	echo "Print sent"
 	sleep 10
 	n=$((n+1))
