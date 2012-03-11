@@ -8,4 +8,5 @@ foreach ($checkpoint_info as &$row) {
 	echo "<tr><td>",$row[0],"</td><td>",$row[1],"</td><td>",$row[2],"</td></tr>\n";
 }
 echo "</table>\n"
+header( "refresh:5;url=/info" );
 ?>
