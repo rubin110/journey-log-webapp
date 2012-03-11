@@ -2,7 +2,7 @@
 require_once('functions.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-	$rid = clean_runner_id($_GET['rid']);
+	$rid = clean_runner_id($command[1]);
 	# print out a new form with this rid
 	echo form_results($rid, "", "", "", "");
 } else {
