@@ -7,6 +7,6 @@ echo "<table><tr><th>Checkpoint name</th><th>Num checked in</th><th>First Checki
 foreach ($checkpoint_info as &$row) {
 	echo "<tr><td>",$row[0],"</td><td>",$row[1],"</td><td>",$row[2],"</td></tr>\n";
 }
-echo "</table>\n"
+echo "</table>\n";
 header( "refresh:5;url=/info" );
 ?>
